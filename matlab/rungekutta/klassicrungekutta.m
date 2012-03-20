@@ -8,7 +8,13 @@ x0=0; x1=5;
 eps=0.01;
 x=[x0; x1];
 for i=1:ceil(b/eps)
+    % x = unabhängig
+    % y = abhängig
+    % y0'=f(x,y)
     k(1:2,1)=rungekutta_f(x(1:2,i));
+    
+    % eps = h
+    % yA = y0 + h/2 
     k(1:2,2)=rungekutta_f(x(1:2,i)+eps*0.5*k(1:2,1));
     k(1:2,3)=rungekutta_f(x(1:2,i)+eps*0.5*k(1:2,2));
     k(1:2,4)=rungekutta_f(x(1:2,i)+eps*k(1:2,3));

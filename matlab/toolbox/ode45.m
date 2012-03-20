@@ -168,6 +168,15 @@ if output_sol
   sol.extdata.varargin = varargin;  
 end  
 
+%% Argumente bekommen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% t0 (eigentlich von Funkktions-Parameter 'tspan') => Zeitspanne Start/End
+% y0 ((eigentlich von Funkktions-Parameter 'y0') => Anfangswerte
+% f0 Lösungen der DGL
+% rtol (Error Tolerance ?)
+% htry (h-try ?)
+% tdir = 1 ???
+
 % Handle solver arguments
 [neq, tspan, ntspan, next, t0, tfinal, tdir, y0, f0, odeArgs, odeFcn, ...
  options, threshold, rtol, normcontrol, normy, hmax, htry, htspan, dataType] = ...
@@ -230,6 +239,7 @@ if nonNegative  % modify the derivative function
   nfevals = nfevals + 1;
 end
 
+%% Anfangswerte für t (Unabhängig) und y (Abhängig) %%%%%%%%%%%%%%%%%%%%%%%%%%%
 t = t0;
 y = y0;
 
@@ -257,6 +267,8 @@ if nargout > 0
   yout(:,nout) = y;  
 end
 
+%% INIT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Initialize method parameters.
 pow = 1/5;
 A = [1/5, 3/10, 4/5, 8/9, 1, 1];
@@ -271,22 +283,41 @@ B = [
     ];
 E = [71/57600; 0; -71/16695; 71/1920; -17253/339200; 22/525; -1/40];
 f = zeros(neq,7,dataType);
+%% eps: Mass für die interne Rechengenauigkeit %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 hmin = 16*eps(t);
+
+%% Ist normalerweise leer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if isempty(htry)
   % Compute an initial step size h using y'(t).
+  
+  % default:
+  % hmax = 0.5
+  % htspan = 5
+  % ==> absh = 0.5
   absh = min(hmax, htspan);
+  
+  % DGL normieren und skalieren
+  % ==> rh = 165.3240
   if normcontrol
     rh = (norm(f0) / max(normy,threshold)) / (0.8 * rtol^pow);
   else
     rh = norm(f0 ./ max(abs(y),threshold),inf) / (0.8 * rtol^pow);
   end
+  
   if absh * rh > 1
+    % absh neu berechnen
+    % ==> absh = 0.006
     absh = 1 / rh;
   end
+  
+  % maximum suchen
+  % ==> absh bleibt gleich
   absh = max(absh, hmin);
 else
   absh = min(hmax, max(hmin, htry));
 end
+
+%% SET F ==> k1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 f(:,1) = f0;
 
 % Initialize the output function.
@@ -315,8 +346,15 @@ while ~done
   % LOOP FOR ADVANCING ONE STEP.
   nofailed = true;                      % no failed attempts
   while true
+    % Tabellen skalieren
+    % h = Zeitschritt
+    % A = Spaltenvektor
+    % B = Matrix
     hA = h * A;
     hB = h * B;
+    
+    %% k2 - k6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % f = 5 Gewichtungen
     f(:,2) = feval(odeFcn,t+hA(1),y+f*hB(:,1),odeArgs{:});
     f(:,3) = feval(odeFcn,t+hA(2),y+f*hB(:,2),odeArgs{:});
     f(:,4) = feval(odeFcn,t+hA(3),y+f*hB(:,3),odeArgs{:});
@@ -329,15 +367,22 @@ while ~done
     end
     h = tnew - t;      % Purify h.     
     
+    % weiteres Gewicht
     ynew = y + f*hB(:,6);
+    % eigentich:
+    % f(:,7) = feval(odeFcn,t+hA(6),y+f*hB(:,6),odeArgs{:});
     f(:,7) = feval(odeFcn,tnew,ynew,odeArgs{:});
     nfevals = nfevals + 6;              
     
     % Estimate the error.
     NNrejectStep = false;
+    
+    % Spezielles Flag ??
     if normcontrol
       normynew = norm(ynew);
       errwt = max(max(normy,normynew),threshold);
+      
+      %% f * E %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       err = absh * (norm(f * E) / errwt);
       if nonNegative && (err <= rtol) && any(ynew(idxNonNegative)<0)
         errNN = norm( max(0,-ynew(idxNonNegative)) ) / errwt ;
@@ -347,6 +392,8 @@ while ~done
         end
       end      
     else
+      %% f * E %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      % Gewichte zusammenzählen => Fehler (err)
       err = absh * norm((f * E) ./ max(max(abs(y),abs(ynew)),threshold),inf);
       if nonNegative && (err <= rtol) && any(ynew(idxNonNegative)<0)
         errNN = norm( max(0,-ynew(idxNonNegative)) ./ thresholdNonNegative, inf);      
@@ -361,6 +408,8 @@ while ~done
     % tolerance rtol.  Estimate an h that will yield an error of rtol on
     % the next step or the next try at taking this step, as the case may be,
     % and use 0.8 of this value to avoid failures.
+    
+    %% Fehlerhafter Schritt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     if err > rtol                       % Failed step
       nfailed = nfailed + 1;            
       if absh <= hmin
@@ -390,6 +439,7 @@ while ~done
       h = tdir * absh;
       done = false;
       
+    %% Guter Schritt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     else                                % Successful step
 
       NNreset_f7 = false;
@@ -503,6 +553,7 @@ while ~done
     break
   end
 
+  %% Berechnung von neuem h ***************************************************
   % If there were no failures compute a new h.
   if nofailed
     % Note that absh may shrink by 0.8, and that err may be 0.
@@ -514,6 +565,7 @@ while ~done
     end
   end
   
+  %% Die neuen Werte entgültig speichern %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Advance the integration one step.
   t = tnew;
   y = ynew;
