@@ -1,0 +1,413 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\pagenumbering{roman}
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+\myTOC
+\clearpage
+\pagenumbering{arabic}
+}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language german-ch
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3.5cm
+\topmargin 3cm
+\rightmargin 3.5cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Entwicklung eines graphischen Editors zur Modellierung von Systemen mit
+ dynamischer Modellstruktur
+\end_layout
+
+\begin_layout Author
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Andreas Bachmann 
+\backslash
+and Andreas Butti
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Abstract
+\end_layout
+
+\begin_layout Standard
+Englische Version von “Zusammenfassung”
+\end_layout
+
+\begin_layout Section
+Zusammenfassung
+\end_layout
+
+\begin_layout Standard
+Wird erst am Ende der Arbeit geschrieben
+\end_layout
+
+\begin_layout Section
+Vorwort
+\end_layout
+
+\begin_layout Standard
+In der Forschung aber auch zu Unterrichtszwecken werden viele Theorien vermittel
+t und Simuliert.
+ Solche Simulationen basieren meistens auf einem Strikt Mathematischen Hintergru
+nd, meinst Integrale erster Ordnung.
+ Forschende Personen im Bereich Physik / Biologie verwenden dabei bevorzugt
+ eine Modellierungssoftware, da es nicht ihr Fachgebiet ist selbst zu programmie
+ren.
+ Andreas Butti hat sich bei der Verwendung von Simulationstools über deren
+ Plattformabhängigkeit und Benutzerunfreundlichkeit gestört.
+ Als Informatiker kommt man da schnell in Versuchung selbst etwas besserer
+ zu schreiben.
+ Nach einem Gespräch mit dem Physikdozenten, Herr Scheidegger, wurde daraus
+ dann diese BA, die jedoch nicht nur ein Benutzerfreundliches Simulationswertzeu
+g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
+ Simulationen von Biologischen Abläufen, wie das innere einer Zelle, darstellen
+ soll.
+ TODO: Danksagung
+\end_layout
+
+\begin_layout Section
+Einleitung
+\end_layout
+
+\begin_layout Standard
+Es gibt bereits viele Simulationstools, wie z.B.
+ Barekely Madonna um nur ein bekanntes Beispiel zu nennen.
+ Diese Tools unterstützten die Modelierung von Differentialgleichungen als
+ Modell, mit Containern und Flüssen.
+ Diese modellart ist schon lange bekannt, und etabliert, daher übernehmen
+ wir dieses Prinzip.
+\end_layout
+
+\begin_layout Subsection
+Bereits existierende Tools
+\end_layout
+
+\begin_layout Subsection
+Individualität unserer BA
+\end_layout
+
+\begin_layout Standard
+Mit unserer Simulation ist es zusätzlich möglich in einem XY Modell mehrere
+ Meso Kompartmente abzubilden, ein Meso Kompartment ist das vorhin genannte
+ Flussmodel.
+ Diese Meso Kompartmente können sich wären der Simulation im XY-Raum bewegen.
+ Es können Dichten angegeben werden, die über den XY Raum verteilt sind,
+ und die Meso Kompartmente können an Ihrer aktuellen Position von der dichte
+ Konsumieren oder dichte Produzieren, somit kann die Umgebung beeinflusst
+ werden.
+ Mit diesen Fähigkeiten ist es möglich das innenleben einer Zelle oder andere
+ Biologische Prozesse einfach, grafisch abzubilden.
+ Die Idee und Vorgabe dieser Simulationsmethode stammt von Herr Scheidegger,
+ und wurde zusammen mit Herr Füchslin und uns ausgearbeitet.
+\end_layout
+
+\begin_layout Subsection
+Vorgabe
+\end_layout
+
+\begin_layout Standard
+Bestehende graphische Modelleditoren erlauben eine effiziente Modellierung
+ von kompartimentalen Systemen.
+ Dabei unterstützt die graphische Oberfläche die Strukturierung des Modells
+ bzw.
+ des Systems.
+ Dies kann gerade bei der Erfassung von komplexen Systemen den Zugang zu
+ einer adäquaten Systembeschreibung erleichtern.
+ Gerade aber Modelleditoren wie Berkeley- Madonna sind auf eine kompartimentale
+ Struktur des Systems angewiesen.
+ Räumlich strukturierte bzw.
+ verteilte Systeme lassen sich nur schwer und in vereinfachter Form abbilden.
+ Die Verwendung oder Kopplung verschiedener Simulationswerkzeuge kann für
+ gewisse technische Systeme in Betracht gezogen werden (z.B.
+ elektrische Schaltung mit Komponenten, bei denen die Wärmeabstrahlung und
+ oder Wärmeleitung räumlich modelliert werden).
+ Bei vielen Systemen lässt sich aber durch eine solche Kopplung das System
+ nicht abbilden.
+ Bei biologischen Systemen z.B.
+ können sich Kompartimente bewegen (bei Zellen z.B.
+ Chemo- und Haptotaxis).
+ Zudem zeichnen sich biologische Systeme durch hierarchische Kompartimentstruktu
+ren mit Unterkompartimenten aus.
+ Ein weiterer Aspekt betrifft die Möglichkeit, dass Kompartimente in biologische
+n Systemen fusionieren oder sich teilen können.
+ Anforderungen Das zu entwickelnde Modellierungswerkzeug soll an die intuitive
+ graphische Oberfläche bestehender Modellierungswerkzeuge für kompartimentale
+ Simulationen anknüpfen.
+ Folgene Aspekte sollen konzeptuell untersucht und wenn möglich implemetiert
+ werden: - Hierarchische Kompartimente
+\end_layout
+
+\begin_layout Standard
+Hierarchische Kompartimente - Räumliche Positionierung von Kompartimenten,
+ welche die Wechselwirkung der Kompartimente auf gleicher Stufe beeinflussen
+ kann und somit Einführung von Koordinaten (erster Schritt 2-Dim.) bzw.
+ orthogonales Grid und beschreibung von Gradienten (z.B.
+ für Änderung der räumlichen Position von Kompartimenten aufgrund von z.B.
+ Gradienten) - Ausgabe eines Codes in einer Markup language (z.B.
+ SBML), welcher von einem bestehenden Solver ausgeführt werden kann (z.B.
+ Matlab)
+\end_layout
+
+\begin_layout Section
+Übersicht
+\end_layout
+
+\begin_layout Subsection
+Legende
+\end_layout
+
+\begin_layout Standard
+Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
+ bekannt ist da es vom Konzept her identisch bereits von vielen Simulationstools
+ angeboten wird.
+ Oder es kann ein «XY-Modell» erstellt werden, das dann Meso Kopartments
+ beinhaltet, diese befinden sich an einer Position (X / Y) und verweisen
+ auf ein Modell («Flow-Model-X»).
+ Im «XY-Modell» könne sich «Dichten» befinden, das sind Stoffe die eine
+ gewisse Konzentration an einer gewissen Stelle aufweisen.
+ Ein Meso Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
+ es kann dichten Konsumieren oder Produzieren.
+\end_layout
+
+\begin_layout Section
+Theoretische Grundlagen
+\end_layout
+
+\begin_layout Standard
+Simulationsverfahren...
+\end_layout
+
+\begin_layout Subsection
+Feste Schrittweite
+\end_layout
+
+\begin_layout Subsubsection
+Euler
+\end_layout
+
+\begin_layout Subsubsection
+Runge-Kutta
+\end_layout
+
+\begin_layout Subsection
+Variable Schrittweite
+\end_layout
+
+\begin_layout Subsubsection
+Dormand-Prince
+\end_layout
+
+\begin_layout Section
+Werkzeuge und Hilfsmittel
+\end_layout
+
+\begin_layout Subsection
+Programmiersprachen
+\end_layout
+
+\begin_layout Standard
+Als Programmiersprache kam Java zum Einsatz.
+ Java ist Plattformunabhängig und sehr angenehm zum Programmieren.
+ Es existieren gute Bibliotheken für grafische Darstellungen, und Java war
+ bereits beiden Studierenden bekannt.
+\end_layout
+
+\begin_layout Subsection
+Markup Language
+\end_layout
+
+\begin_layout Standard
+Als Markup Language für die Simulation kam der Matlab Syntax zum einsatz,
+ der ebenfalls vom Open Source Tool «octave» verarbeitet werden kann.
+\end_layout
+
+\begin_layout Subsection
+Entwicklungsumgebung
+\end_layout
+
+\begin_layout Standard
+Bei Java ist man nicht fest an eine Entwicklungsumgebung gebunden.
+ Das Projekt kann mit Hilfe der Ant-Buildfiles automatisch kompiliert werden,
+ somit war es kein Problem das Andreas Bachmann IntelliJ und Andreas Butti
+ Eclipse als Entwicklungsumgebung verwendet hat.
+\end_layout
+
+\begin_layout Subsection
+Testing
+\end_layout
+
+\begin_layout Standard
+Die Zeit hat leider nicht gereicht eine komplette Testumgebung einzurichten.
+ Das Automatische Testen einer GUI-Applikation ist auch nicht ganz trivial.
+ Trotzdem wurden einzelne TestCases für JUnit geschrieben, jedoch nicht
+ für die GUI.
+ Auf nachfrage war auch den Unterrichtenden Java Dozenten an der ZHAW keine
+ Lösung bekannt die für GUI Applikationen allgemein funktionieren würde.
+ Da sowieso zuwenig Zeit vorhanden war wurde das automatische Testing der
+ GUI dann Ersatzlos gestrichen.
+\end_layout
+
+\begin_layout Section
+Vorgehen
+\end_layout
+
+\begin_layout Subsection
+MVC
+\end_layout
+
+\begin_layout Subsection
+Tests und Validierung
+\end_layout
+
+\begin_layout Standard
+Test der Matheengine, Vergleich mit Berkeley-Madonna
+\end_layout
+
+\begin_layout Section
+Resultate
+\end_layout
+
+\begin_layout Standard
+Beschreibung, Screenshots, Beispielsimulationen mit Ergebniss-Diagramm
+\end_layout
+
+\begin_layout Section
+Diskussion und Ausblick
+\end_layout
+
+\begin_layout Standard
+Was Fehlt noch, was muss noch gemacht werden? Interpretation und Validierung
+ der Resultate Rückblick auf Aufgabenstellung, erreicht bzw.
+ nicht erreicht Legt dar, wie an die Resultate (konkret vom Industriepartner
+ oder weiteren Forschungsarbeiten; allgemein) angeschlossen werden kann;
+ legt dar, welche Chancen die Resultate bieten 18
+\end_layout
+
+\begin_layout Section
+Verzeichnisse
+\end_layout
+
+\begin_layout Subsection
+Literaturverzechnis
+\end_layout
+
+\begin_layout Subsection
+Glossar
+\end_layout
+
+\begin_layout Standard
+Meso-Kompartment: Ein Teil des XY-Simulationsmodells
+\end_layout
+
+\end_body
+\end_document

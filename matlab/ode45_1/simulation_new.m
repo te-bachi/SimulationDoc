@@ -25,9 +25,9 @@ UR.value = UB.value-UC.value;
 %% 
 x0 = [ sim_start sim_end ];
 y0 = [ Q.value ];
-%options = odeset('NonNegative', 1);
-options = odeset('Refine', 1);
-[x, y] = ode45('simulation_dy', x0, y0, options);
+options = odeset('NonNegative', 1);
+% options = odeset('Refine', 1);
+[x, y] = ode45(@simulation_dy, x0, y0, options);
 %%
 
 stem(x, y(:,1));
