@@ -360,27 +360,35 @@ Theoretische Grundlagen
 \end_layout
 
 \begin_layout Subsection
-Differentialgleichungen
+Gewöhnliche Differentialgleichungen
 \end_layout
 
 \begin_layout Standard
-Für das Berechnen von Simulationen dieser Art können verschiedene Techniken
- angewandt werden.
- Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: analytische oder
- numerische.
- Unsere Simulation übernimmt das numerische Vorgehen, wie es auch Berkeley
- Madonna tut.
- Das Vorgehen beruht auf einer numerischen Approximation von Gewöhnlichen
- Differentialgleichungen (engl.
- Ordinary Differential Equation, ODE).
- Eine Differentialgleichung ist eine mathematische Gleichung, die Ableitungen
- enthält und eine Stammfunktion sucht.
+Eine Gewöhnliche Differentialgleichung (engl.
+ Ordinary Differential Equation ODE) ist eine mathematische Gleichung, die
+ Ableitungen, die Funktion selbst sowie die unabhängige Variable enthalten
+ kann.
+ Lösung einer Differentialgleichung ist eine Funktion, die mit ihren Ableitungen
+ deckungsgleich mit der Differentialgleichung ist.
+ 
+\end_layout
+
+\begin_layout Standard
+Auf analytischem Weg kann eine Differentialgleichung durch Integration erfolgen.
+ Die Fallbeschleinigung soll in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fallbesch"
+
+\end_inset
+
+ als Beispiel gezeigt werden.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-a\left(t\right) & = & -g\\
+a\left(t\right) & = & -g\label{eq:fallbesch}\\
 v\left(t\right) & = & \int a\left(t\right)\cdot dt=\int-g\cdot dt=-gt+v\left(0\right)\nonumber \\
 s\left(t\right) & = & \int v\left(t\right)\cdot dt=\int\left(-gt+v\left(0\right)\right)\cdot dt=-\frac{1}{2}gt^{2}+v\left(0\right)t+s\left(0\right)\nonumber 
 \end{eqnarray}
@@ -391,15 +399,19 @@ s\left(t\right) & = & \int v\left(t\right)\cdot dt=\int\left(-gt+v\left(0\right)
 \end_layout
 
 \begin_layout Standard
-
+Für das Berechnen von Simulationen dieser Art können verschiedene Techniken
+ angewandt werden.
+ Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: analytische oder
+ numerische.
+ Unsere Simulation übernimmt das numerische Vorgehen, wie es auch Berkeley
+ Madonna tut.
+ Das Vorgehen beruht auf einer numerischen Approximation von Gewöhnlichen
+ Differentialgleichungen .
+ 
 \end_layout
 
 \begin_layout Standard
 Dabei gibt es verschiedene Verfahren um 
-\end_layout
-
-\begin_layout Subsubsection
-Feste Schrittweite
 \end_layout
 
 \begin_layout Paragraph
@@ -413,24 +425,8 @@ Einer der Ersten
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-y_{n+1}=y_{n}+h\cdot f\left(t_{n},\; y_{n}\right)
+y_{n+1}=y_{n}+h\cdot f^{\prime}\left(t_{n},\; y_{n}\right)
 \end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-a
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{multline*}
-dgg=dj\\
-ad=fasdsaa
-\end{multline*}
 
 \end_inset
 
@@ -449,10 +445,6 @@ Runge-Kutta
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-Variable Schrittweite
 \end_layout
 
 \begin_layout Standard
