@@ -262,8 +262,84 @@ Hierarchische Kompartimente - Räumliche Positionierung von Kompartimenten,
 Übersicht
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/model-uebersicht.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+bli
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Legende
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/model-uebersicht-legende.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+bla
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -284,7 +360,23 @@ Theoretische Grundlagen
 \end_layout
 
 \begin_layout Standard
-Simulationsverfahren...
+Für das Berechnen von Simulationen dieser Art können verschiedene Techniken
+ angewandt werden.
+ Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: analytische oder
+ numerische.
+ Unsere Simulation übernimmt das numerische Vorgehen, wie es auch Berkeley
+ Madonna tut.
+ Das Verfahren beruht auf einer numerischen Approximation von Gewöhnlichen
+ Differentialgleichungen (engl.
+ Ordinary Differential Equation, ODE)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "test1"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -295,16 +387,84 @@ Feste Schrittweite
 Euler
 \end_layout
 
+\begin_layout Standard
+Einer der Ersten 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "test2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{n+1}=y_{n}+h\cdot f\left(t_{n},\; y_{n}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+dgg=dj\\
+ad=fasdsaa
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Runge-Kutta
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Variable Schrittweite
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Dormand-Prince
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -317,7 +477,7 @@ Programmiersprachen
 
 \begin_layout Standard
 Als Programmiersprache kam Java zum Einsatz.
- Java ist Plattformunabhängig und sehr angenehm zum Programmieren.
+ Java ist Plattform unabhängig und sehr angenehm zum Programmieren.
  Es existieren gute Bibliotheken für grafische Darstellungen, und Java war
  bereits beiden Studierenden bekannt.
 \end_layout
@@ -327,7 +487,7 @@ Markup Language
 \end_layout
 
 \begin_layout Standard
-Als Markup Language für die Simulation kam der Matlab Syntax zum einsatz,
+Als Markup Language für die Simulation kam der Matlab Syntax zum Einsatz,
  der ebenfalls vom Open Source Tool «octave» verarbeitet werden kann.
 \end_layout
 
@@ -397,8 +557,39 @@ Was Fehlt noch, was muss noch gemacht werden? Interpretation und Validierung
 Verzeichnisse
 \end_layout
 
-\begin_layout Subsection
-Literaturverzechnis
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+refname{
+\backslash
+subsection{Literaturverzeichnis}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "references"
+options "din1505/alphadin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Subsection
