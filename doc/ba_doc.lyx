@@ -2,8 +2,9 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass scrartcl
 \begin_preamble
+\usepackage{anysize}
 \pagenumbering{roman}
 \let\myTOC\tableofcontents
 \renewcommand\tableofcontents{%
@@ -57,9 +58,9 @@ figs-within-sections
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 3.5cm
+\leftmargin 2.5cm
 \topmargin 3cm
-\rightmargin 3.5cm
+\rightmargin 2.5cm
 \bottommargin 3cm
 \secnumdepth 3
 \tocdepth 3
@@ -78,6 +79,201 @@ figs-within-sections
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+renewcommand{
+\backslash
+topfraction}{0.85}
+\end_layout
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+renewcommand{
+\backslash
+textfraction}{0.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+renewcommand{
+\backslash
+ttdefault}{pcr}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+marginsize{1cm}{1cm}{1cm}{1cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+titlehead{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{minipage}{5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+includegraphics*[scale=0.6]{images/zhaw.png}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{minipage}{11cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+begin{flushright}
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+textsc{
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+large Zürcher Hochschule für Angewandte Wissenschaften
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+normalsize Studiengang Systeminformatik 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				Zentrum für angewandte Mathematik und Physik
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+end{flushright}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+	% 
+\backslash
+vspace{2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+centerline{
+\backslash
+hrulefill}
+\end_layout
+
+\begin_layout Plain Layout
+
+	% 
+\backslash
+vspace{2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+subject{Bachelorthesis Frühlingssemester 2011}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Title
 Entwicklung eines graphischen Editors zur Modellierung von Systemen mit
  dynamischer Modellstruktur
@@ -89,9 +285,236 @@ status open
 
 \begin_layout Plain Layout
 
-Andreas Bachmann 
+Andreas Bachmann
 \backslash
-and Andreas Butti
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+small{
+\backslash
+tt{bachman0@students.zhaw.ch}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\begin_layout Plain Layout
+
+Andreas Butti 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+small{
+\backslash
+tt{buttiand@students.zhaw.ch}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+publishers{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+vspace{6cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{minipage}[t]{7cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+		{
+\backslash
+small Betreuer:}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+large Prof.
+ Dr.
+ Stephan Scheidegger
+\backslash
+
+\backslash
+{
+\backslash
+normalsize School of Engineering
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		Technikumstrasse 9
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		8400 Winterthur 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		Telefon: 058 934 74 63
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		{
+\backslash
+tt{stephan.scheidegger@zhaw.ch}}} 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{minipage}[t]{6cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+		{
+\backslash
+small Betreuer:}
+\backslash
+
+\backslash
+
+\backslash
+large Dr.
+ Rudolf Marcel Füchslin
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		{
+\backslash
+normalsize School of Engineering
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		Technikumstrasse 9
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		8400 Winterthur 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		Telefon: 058 934 75 92
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		{
+\backslash
+tt{rudolf.fuechslin@zhaw.ch}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
