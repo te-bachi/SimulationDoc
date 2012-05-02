@@ -85,188 +85,9 @@ status open
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-% 
-\backslash
-renewcommand{
-\backslash
-topfraction}{0.85}
-\end_layout
-
-\begin_layout Plain Layout
-
-% 
-\backslash
-renewcommand{
-\backslash
-textfraction}{0.1}
-\end_layout
-
-\begin_layout Plain Layout
-
-% 
-\backslash
-renewcommand{
-\backslash
-ttdefault}{pcr}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-% 
-\backslash
-marginsize{1cm}{1cm}{1cm}{1cm}
-\end_layout
-
-\begin_layout Plain Layout
-
 
 \backslash
-titlehead{
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-begin{minipage}{5cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-includegraphics*[scale=0.6]{images/zhaw.png}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-end{minipage}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-begin{minipage}{11cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-begin{flushright}
-\end_layout
-
-\begin_layout Plain Layout
-
-			
-\backslash
-textsc{
-\end_layout
-
-\begin_layout Plain Layout
-
-				
-\backslash
-large Zürcher Hochschule für Angewandte Wissenschaften
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-				
-\backslash
-normalsize Studiengang Systeminformatik 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-				Zentrum für angewandte Mathematik und Physik
-\end_layout
-
-\begin_layout Plain Layout
-
-			}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-end{flushright}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-end{minipage}
-\end_layout
-
-\begin_layout Plain Layout
-
-	% 
-\backslash
-vspace{2cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-centerline{
-\backslash
-hrulefill}
-\end_layout
-
-\begin_layout Plain Layout
-
-	% 
-\backslash
-vspace{2cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{5cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-subject{Bachelorthesis Frühlingssemester 2011}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{5cm}
+subject{Bachelorthesis Frühlingssemester 2012}
 \end_layout
 
 \end_inset
@@ -545,6 +366,29 @@ thispagestyle{empty}
 
 \end_layout
 
+\begin_layout Section*
+Abstract
+\end_layout
+
+\begin_layout Standard
+Englische Version von “Zusammenfassung”
+\end_layout
+
+\begin_layout Section*
+Zusammenfassung
+\end_layout
+
+\begin_layout Standard
+Wird erst am Ende der Arbeit geschrieben
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
@@ -558,20 +402,11 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Section
-Abstract
-\end_layout
-
 \begin_layout Standard
-Englische Version von “Zusammenfassung”
-\end_layout
+\begin_inset Newpage newpage
+\end_inset
 
-\begin_layout Section
-Zusammenfassung
-\end_layout
 
-\begin_layout Standard
-Wird erst am Ende der Arbeit geschrieben
 \end_layout
 
 \begin_layout Section
@@ -797,8 +632,19 @@ Eine Gewöhnliche Differentialgleichung (engl.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y^{\left(n\right)}=f\left(t,\; y\left(t\right),\; y^{\prime}\left(t\right),\;\ldots,\; y^{\left(n-1\right)}\left(t\right)\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Auf analytischem Weg kann eine Differentialgleichung durch Integration erfolgen.
- Die Fallbeschleinigung soll in Gleichung 
+ Die Fallbeschleinigung in Abbildung soll in Gleichung 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:fallbesch"
@@ -806,12 +652,15 @@ reference "eq:fallbesch"
 \end_inset
 
  als Beispiel gezeigt werden.
+ Wir kennen die Beschleunigungs-Funktion, suchen die Weg-Funktion, finden
+ durch Integration eine Lösung und kommen durch abermaliges Differenzieren
+ wieder auf die Ursprüngliche Beschleunigungs-Funktion zurück.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-a\left(t\right) & = & -g\label{eq:fallbesch}\\
+a\left(t\right) & = & \ddot{s}\left(t\right)=-g\label{eq:fallbesch}\\
 v\left(t\right) & = & \int a\left(t\right)\cdot dt=\int-g\cdot dt=-gt+v\left(0\right)\nonumber \\
 s\left(t\right) & = & \int v\left(t\right)\cdot dt=\int\left(-gt+v\left(0\right)\right)\cdot dt=-\frac{1}{2}gt^{2}+v\left(0\right)t+s\left(0\right)\nonumber 
 \end{eqnarray}
@@ -822,51 +671,324 @@ s\left(t\right) & = & \int v\left(t\right)\cdot dt=\int\left(-gt+v\left(0\right)
 \end_layout
 
 \begin_layout Standard
-Für das Berechnen von Simulationen dieser Art können verschiedene Techniken
- angewandt werden.
- Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: analytische oder
+Für die computerunterstützte Berechnung von Simulationen dieser Art können
+ verschiedene Techniken angewandt werden.
+ Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: symbolische oder
  numerische.
  Unsere Simulation übernimmt das numerische Vorgehen, wie es auch Berkeley
  Madonna tut.
  Das Vorgehen beruht auf einer numerischen Approximation von Gewöhnlichen
- Differentialgleichungen .
- 
+ Differentialgleichungen.
+ Diese Art kann nur Differentialgleichung 1.
+ Ordnung berechnen.
+ Eine Differentialgleichungen 2.
+ Ordnung ist in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:odezweite"
+
+\end_inset
+
+ zu sehen.
 \end_layout
 
 \begin_layout Standard
-Dabei gibt es verschiedene Verfahren um 
+\begin_inset Formula 
+\begin{equation}
+\ddot{s}\left(t\right)=-g\label{eq:odezweite}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Standard
+Eine Gewöhnliche Differentialgleichung 
+\begin_inset Formula $n.$
+\end_inset
+
+ Ordnung kann aber in 
+\begin_inset Formula $n$
+\end_inset
+
+ Differentialgleichungen 
+\begin_inset Formula $1.$
+\end_inset
+
+ Ordnung umgeformt werden.
+ In den Gleichungen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:zweiodeerste"
+
+\end_inset
+
+ wird die Differentialgleichung 
+\begin_inset Formula $2.$
+\end_inset
+
+ Ordnung in zwei Differentialgleichung
+\begin_inset Formula $1.$
+\end_inset
+
+ Ordnung umgewandelt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\dot{v}\left(t\right) & = & -g\label{eq:zweiodeerste}\\
+\dot{s}\left(t\right) & = & v\left(t\right)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In unserer Simulation haben wir verschiedene numerische Verfahren implementiert,
+ die wir nachfolgen kurz behandeln werden.
+\end_layout
+
+\begin_layout Subsubsection*
 Euler
 \end_layout
 
 \begin_layout Standard
-Einer der Ersten 
+Das Euler-Verfahren, von Leonard Euler 1768 in seinem Buch 
+\shape italic
+Institutiones Calculi Integralis
+\shape default
+ präsentiert, ist ein einfaches numerisches Verfahren.
+ Von einer Schrittweite 
+\begin_inset Formula $h$
+\end_inset
+
+ multipliziert mit der Ableitung 
+\begin_inset Formula $y'=f$
+\end_inset
+
+ zählt man den Anfangswert 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ dazu und bekommt 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-y_{n+1}=y_{n}+h\cdot f^{\prime}\left(t_{n},\; y_{n}\right)
-\end{equation}
+\begin{eqnarray}
+y^{\prime} & = & f\left(t,\; y\left(t\right)\right)\\
+y_{n+1} & = & y_{n}+h\cdot f\left(t_{n},\; y_{n}\right)\nonumber 
+\end{eqnarray}
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Standard
+In unserem Beispiel mit der Fallbeschleunigung müssen wir das Verfahren
+ zwei Mal anwenden pro Zeitschritt, da wir eine Differentialgleichung 2.
+ Ordnung lösen möchten.
+ Dabei müsen die Anfangswerte 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $s_{0}$
+\end_inset
+
+ sowie die Schrittweite 
+\begin_inset Formula $h$
+\end_inset
+
+ bekannt sein.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+h & = & 0.1\\
+v_{0} & = & 15\nonumber \\
+s_{0} & = & 0\nonumber \\
+v_{1} & = & 15+0.1\cdot\left(-9.81\right)=14.019\nonumber \\
+s_{1} & = & 0+0.1\cdot\left[15+0.1\cdot\left(-9.81\right)\right]=1.4019\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bei Differentialgleichungen 1.
+ Ordnung und kleiner Schrittweite 
+\begin_inset Formula $h$
+\end_inset
+
+ erhält man ausreichende Genauigkeit.
+ Unser Beispiel mit 2.
+ Ordnung büst bei jedem Schritt an Genauigkeit ein.
+ Es gibt bessere Verfahrung, die auch Ordnungen höheren Grades mit weniger
+ Genauigkeitsverlust zulassen.
+\end_layout
+
+\begin_layout Subsubsection*
 Runge-Kutta
 \end_layout
 
 \begin_layout Standard
+Um eine bessere Genauigkeit zu erhalten haben Carl Runge und Martin Wilhelm
+ Kutta ein leistungsfähigeres Verfahren entwickelt.
+ Um dieses Verfahren besser zu Verstehen, wird zuerst eine Tabelle eingeführt.
+ Die Tabelle wurde in den 1960er Jahren von John Charles Butcher entwickelt
+ und nennt sich Butcher tableau in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:butcher"
+
+\end_inset
+
+.
+ Die Tabelle beinhaltet einen Vektor 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, eine Matrix 
+\begin_inset Formula $A=\left(a_{ij}\right)$
+\end_inset
+
+ und einen Vektor 
+\begin_inset Formula $b_{j}$
+\end_inset
+
+ wobei 
+\begin_inset Formula $i,\; j=1,...,s,\;=1,...,s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
+\begin{array}{c|cccc}
+c_{1} & a_{11} & a_{12} & \dots & a_{1s}\\
+c_{2} & a_{21} & a_{22} & \dots & a_{2s}\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+c_{s} & a_{s1} & a_{s2} & \dots & a_{ss}\\
+\hline  & b_{1} & b_{2} & \dots & b_{s}
+\end{array}\label{eq:butcher}
 \end{equation}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+Wie beim Euler-Verfahren ergibt sich ein neuer Wert 
+\begin_inset Formula $y_{n+1}$
+\end_inset
+
+ aus dem alten Wert 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ addiert mit einer festen Schrittweite 
+\begin_inset Formula $h$
+\end_inset
+
+ multiplitiert mit Ableitungen.
+ Doch beim Runge-Kutta-Verfahren werden statt einer Ableitung verschieden
+ gewichtete Ableitungen 
+\begin_inset Formula $b_{i}k_{i}$
+\end_inset
+
+ aufsummiert, wobei das Gewicht 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ und die Ableitung 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{n+1}=y_{n}+h\sum_{i=1}^{s}b_{i}k_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine Ableitung, auch Zwischenschritt genannt, ist in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:intermstep"
+
+\end_inset
+
+ erläutert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{i}=f\left(t_{n}+hc_{i},\; y_{n}+h\sum_{j=1}^{s}a_{ij}k_{i}\right),\; i=1,...,s\label{eq:intermstep}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für den ersten Parameter der Funktion 
+\begin_inset Formula $f\left(t\; y\left(t\right)\right)$
+\end_inset
+
+ benötigen wir einen Koeffizienten 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ Jedes 
+\begin_inset Formula $c_{i},\; i=1,...,s$
+\end_inset
+
+ bildet eine Summe aller Elemente eine Zeile der Matrix 
+\begin_inset Formula $A=\left(a_{ij}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sum_{j=1}^{s}a_{ij}=c_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
@@ -882,6 +1004,10 @@ Runge-Kutta
 
 \begin_layout Paragraph
 Dormand-Prince
+\end_layout
+
+\begin_layout Standard
+f
 \end_layout
 
 \begin_layout Standard
