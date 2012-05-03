@@ -626,8 +626,18 @@ Eine Gewöhnliche Differentialgleichung (engl.
  Ordinary Differential Equation ODE) ist eine mathematische Gleichung, die
  Ableitungen, die Funktion selbst sowie die unabhängige Variable enthalten
  kann.
- Lösung einer Differentialgleichung ist eine Funktion, die mit ihren Ableitungen
- deckungsgleich mit der Differentialgleichung ist.
+ Ableitungen und die Funktion selbst treten nach genau einer unabhängigen
+ Variable auf.
+ Lösung 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ einer Differentialgleichung 
+\begin_inset Formula $y^{\left(n\right)}$
+\end_inset
+
+ist eine Funktion, die mit ihren Ableitungen deckungsgleich mit der Differential
+gleichung selbst ist.
  
 \end_layout
 
@@ -652,9 +662,16 @@ reference "eq:fallbesch"
 \end_inset
 
  als Beispiel gezeigt werden.
- Wir kennen die Beschleunigungs-Funktion, suchen die Weg-Funktion, finden
- durch Integration eine Lösung und kommen durch abermaliges Differenzieren
- wieder auf die Ursprüngliche Beschleunigungs-Funktion zurück.
+ Wir kennen die Beschleunigungs-Funktion 
+\begin_inset Formula $a\left(t\right)$
+\end_inset
+
+, suchen die Weg-Funktion 
+\begin_inset Formula $s\left(t\right)$
+\end_inset
+
+, finden durch Integration eine Lösung und kommen durch abermaliges Differenzier
+en wieder auf die Ursprüngliche Beschleunigungs-Funktion zurück.
 \end_layout
 
 \begin_layout Standard
@@ -662,7 +679,9 @@ reference "eq:fallbesch"
 \begin{eqnarray}
 a\left(t\right) & = & \ddot{s}\left(t\right)=-g\label{eq:fallbesch}\\
 v\left(t\right) & = & \int a\left(t\right)\cdot dt=\int-g\cdot dt=-gt+v\left(0\right)\nonumber \\
-s\left(t\right) & = & \int v\left(t\right)\cdot dt=\int\left(-gt+v\left(0\right)\right)\cdot dt=-\frac{1}{2}gt^{2}+v\left(0\right)t+s\left(0\right)\nonumber 
+s\left(t\right) & = & \int v\left(t\right)\cdot dt=\int\left(-gt+v\left(0\right)\right)\cdot dt=-\frac{1}{2}gt^{2}+v\left(0\right)t+s\left(0\right)\nonumber \\
+v\left(t\right) & = & \frac{d}{dt}\left[-\frac{1}{2}gt^{2}+v\left(0\right)t+s\left(0\right)\right]=-gt+v\left(0\right)\nonumber \\
+a\left(t\right) & = & \frac{d}{dt}\left[-gt+v\left(0\right)\right]=-g\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -675,7 +694,7 @@ Für die computerunterstützte Berechnung von Simulationen dieser Art können
  verschiedene Techniken angewandt werden.
  Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: symbolische oder
  numerische.
- Unsere Simulation übernimmt das numerische Vorgehen, wie es auch Berkeley
+ Unsere Simulation übernimmt das numerische Verfahren, wie es auch Berkeley
  Madonna tut.
  Das Vorgehen beruht auf einer numerischen Approximation von Gewöhnlichen
  Differentialgleichungen.
@@ -757,7 +776,11 @@ Euler
 \end_layout
 
 \begin_layout Standard
-Das Euler-Verfahren, von Leonard Euler 1768 in seinem Buch 
+Das Euler-Verfahren, von 
+\series bold
+Leonard Euler
+\series default
+ 1768 in seinem Buch 
 \shape italic
 Institutiones Calculi Integralis
 \shape default
@@ -784,7 +807,7 @@ Institutiones Calculi Integralis
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-y^{\prime} & = & f\left(t,\; y\left(t\right)\right)\\
+y^{\prime} & = & f\left(t,\; y\left(t\right)\right)\label{eq:euler}\\
 y_{n+1} & = & y_{n}+h\cdot f\left(t_{n},\; y_{n}\right)\nonumber 
 \end{eqnarray}
 
@@ -841,15 +864,21 @@ Bei Differentialgleichungen 1.
 \end_layout
 
 \begin_layout Subsubsection*
-Runge-Kutta
+Butcher Tableau
 \end_layout
 
 \begin_layout Standard
-Um eine bessere Genauigkeit zu erhalten haben Carl Runge und Martin Wilhelm
- Kutta ein leistungsfähigeres Verfahren entwickelt.
- Um dieses Verfahren besser zu Verstehen, wird zuerst eine Tabelle eingeführt.
- Die Tabelle wurde in den 1960er Jahren von John Charles Butcher entwickelt
- und nennt sich Butcher tableau in Gleichung 
+Um weitere Verfahren besser zu Verstehen, wird zuerst eine Tabelle eingeführt.
+ Die Tabelle wurde in den 1960er Jahren von 
+\series bold
+John Charles Butcher
+\series default
+ entwickelt für den besseren Umgang mit dem nachfolgenden Runge-Kutta-Verfahren
+ und nennt sich 
+\shape italic
+Butcher tableau
+\shape default
+ in Gleichung 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:butcher"
@@ -866,24 +895,50 @@ reference "eq:butcher"
 \end_inset
 
  und einen Vektor 
-\begin_inset Formula $b_{j}$
+\begin_inset Formula $b_{i}$
 \end_inset
 
  wobei 
-\begin_inset Formula $i,\; j=1,...,s,\;=1,...,s$
+\begin_inset Formula $i,=1,...,s,\; j=1,...,s$
 \end_inset
 
+ die Zeilen- und Spalten-Indizes und 
+\begin_inset Formula $s$
+\end_inset
 
+ die Dimension ist.
+ Verwendet wird nur ein Teil der Matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, nähmlich ein Dreieck von 
+\begin_inset Formula $a_{21}$
+\end_inset
+
+ schräg herunter zu 
+\begin_inset Formula $a_{s\left(s-1\right)}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\begin{array}{c|cccc}
+\begin{array}{c|c}
+c & A\\
+\hline  & b^{T}
+\end{array}=\begin{array}{c|cccc}
 c_{1} & a_{11} & a_{12} & \dots & a_{1s}\\
 c_{2} & a_{21} & a_{22} & \dots & a_{2s}\\
 \vdots & \vdots & \vdots & \ddots & \vdots\\
 c_{s} & a_{s1} & a_{s2} & \dots & a_{ss}\\
+\hline  & b_{1} & b_{2} & \dots & b_{s}
+\end{array}=\begin{array}{c|cccc}
+0\\
+c_{2} & a_{21}\\
+\vdots & \vdots & \ddots\\
+c_{s} & a_{s1} & \dots & a_{s\left(s-1\right)}\\
 \hline  & b_{1} & b_{2} & \dots & b_{s}
 \end{array}\label{eq:butcher}
 \end{equation}
@@ -894,7 +949,14 @@ c_{s} & a_{s1} & a_{s2} & \dots & a_{ss}\\
 \end_layout
 
 \begin_layout Standard
-Wie beim Euler-Verfahren ergibt sich ein neuer Wert 
+Wie beim Euler-Verfahren in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:euler"
+
+\end_inset
+
+ ergibt sich ein neuer Wert 
 \begin_inset Formula $y_{n+1}$
 \end_inset
 
@@ -906,7 +968,7 @@ Wie beim Euler-Verfahren ergibt sich ein neuer Wert
 \begin_inset Formula $h$
 \end_inset
 
- multiplitiert mit Ableitungen.
+ multiplitiert mit der Ableitung.
  Doch beim Runge-Kutta-Verfahren werden statt einer Ableitung verschieden
  gewichtete Ableitungen 
 \begin_inset Formula $b_{i}k_{i}$
@@ -943,12 +1005,35 @@ reference "eq:intermstep"
 \end_inset
 
  erläutert.
+ Je grösser die Dimension 
+\begin_inset Formula $s$
+\end_inset
+
+ ist, desto mehr Zwischenschritte werden berechnet.
+ Zu Beginn jedes Schrittes wird der Vektor 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+ zurückgesetzt.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-k_{i}=f\left(t_{n}+hc_{i},\; y_{n}+h\sum_{j=1}^{s}a_{ij}k_{i}\right),\; i=1,...,s\label{eq:intermstep}
+k_{i}=f\left(t_{n}+hc_{i},\; y_{n}+h\sum_{j=1}^{s}a_{ij}k_{j}\right),\; i=1,...,s\label{eq:intermstep}
 \end{equation}
 
 \end_inset
@@ -965,7 +1050,11 @@ Für den ersten Parameter der Funktion
 \begin_inset Formula $c_{i}$
 \end_inset
 
-.
+, der die unabhängige Variable 
+\begin_inset Formula $t_{n}$
+\end_inset
+
+ variert.
  Jedes 
 \begin_inset Formula $c_{i},\; i=1,...,s$
 \end_inset
@@ -980,7 +1069,67 @@ Für den ersten Parameter der Funktion
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\sum_{j=1}^{s}a_{ij}=c_{i}
+c_{i}=\sum_{j=1}^{s}a_{ij}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Klassisches Runge-Kutta
+\end_layout
+
+\begin_layout Standard
+Um eine bessere Genauigkeit zu erhalten haben 
+\series bold
+Carl Runge
+\series default
+ und 
+\series bold
+Martin Wilhelm Kutta
+\series default
+ 1900, 60 Jahre vor der Präsentation des 
+\shape italic
+Buchter Tableaus
+\shape default
+, ein leistungsfähigeres Verfahren als Euler in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:euler"
+
+\end_inset
+
+ entwickelt, die Differentialgleichungen numerisch zu lösen.
+ Das heisst, sie kannten die Möglichkeit noch nicht, die Nachfolgen soll
+ jedoch der Ansatz des des Buchter Tableau verwendet werden.
+ Dabei rechnet das Klassische 4 Zwischenschritte, arbeitet also mit Dimension
+ 
+\begin_inset Formula $s=4$
+\end_inset
+
+.
+ Die Tabelle und die dazugehörigen Gleichungen sind in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rk4-table"
+
+\end_inset
+
+ zu finden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c|cccc}
+0\\
+\frac{1}{2} & \frac{1}{2}\\
+\frac{1}{2} & 0 & \frac{1}{2}\\
+1 & 0 & 0 & 1\\
+\hline  & \frac{1}{6} & \frac{1}{3} & \frac{1}{3} & \frac{1}{6}
+\end{array}\label{eq:rk4-table}
 \end{equation}
 
 \end_inset
@@ -989,13 +1138,35 @@ Für den ersten Parameter der Funktion
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+k_{1} & = & f(t_{n},\; y_{n})\\
+k_{2} & = & f(t_{n}+hc_{2},\; y_{n}+h\cdot\left[a_{21}k_{1}\right])\\
+k_{3} & = & f(t_{n}+hc_{3},\; y_{n}+h\cdot\left[a_{31}k_{1}+a_{32}k_{2}\right])\\
+k_{4} & = & f(t_{n}+hc_{4},\; y_{n}+h\cdot\left[a_{41}k_{1}+a_{42}k_{2}+a_{43}k_{3}\right])
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+k_{1} & = & f(t_{n},\; y_{n})\\
+k_{2} & = & f(t_{n}+h\cdot\frac{1}{2},\; y_{n}+h\cdot\frac{1}{2}\cdot k_{1})\\
+k_{3} & = & f(t_{n}+h\cdot\frac{1}{2},\; y_{n}+h\cdot\frac{1}{2}\cdot k_{2})\\
+k_{4} & = & f(t_{n}+h\cdot1,\; y_{n}+h\cdot1\cdot k_{3})
+\end{eqnarray*}
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\end{equation}
+\[
+y_{n+1}=y_{n}+h\cdot\left(\frac{1}{6}\cdot k_{1}+\frac{1}{3}\cdot k_{2}+\frac{1}{3}\cdot k_{3}+\frac{1}{6}\cdot k_{4}\right)
+\]
 
 \end_inset
 
