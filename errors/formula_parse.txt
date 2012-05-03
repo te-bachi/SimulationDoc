@@ -1,0 +1,44 @@
+check timer activated
+org.nfunk.jep.ParseException: Encountered "<EOF>" at line 1, column 4.
+Was expecting one of:
+    ")" ...
+    <INDENTIFIER1> ...
+    <INDENTIFIER2> ...
+    "+" ...
+    "-" ...
+    "!" ...
+    <STRING_LITERAL> ...
+    <INTEGER_LITERAL> ...
+    <FLOATING_POINT_LITERAL> ...
+    "(" ...
+    "[" ...
+    
+	at org.nfunk.jep.Parser.generateParseException(Parser.java:2525)
+	at org.nfunk.jep.Parser.jj_consume_token(Parser.java:2387)
+	at org.nfunk.jep.Parser.Function(Parser.java:1352)
+	at org.nfunk.jep.Parser.UnaryExpressionNotPlusMinus(Parser.java:1173)
+	at org.nfunk.jep.Parser.PowerExpression(Parser.java:1114)
+	at org.nfunk.jep.Parser.UnaryExpression(Parser.java:1105)
+	at org.nfunk.jep.Parser.MultiplicativeExpression(Parser.java:763)
+	at org.nfunk.jep.Parser.AdditiveExpression(Parser.java:664)
+	at org.nfunk.jep.Parser.RelationalExpression(Parser.java:485)
+	at org.nfunk.jep.Parser.EqualExpression(Parser.java:386)
+	at org.nfunk.jep.Parser.AndExpression(Parser.java:335)
+	at org.nfunk.jep.Parser.OrExpression(Parser.java:284)
+	at org.nfunk.jep.Parser.RightExpression(Parser.java:280)
+	at org.nfunk.jep.Parser.Expression(Parser.java:226)
+	at org.nfunk.jep.Parser.Start(Parser.java:142)
+	at org.nfunk.jep.Parser.parseStream(Parser.java:17)
+	at org.nfunk.jep.JEP.parse(JEP.java:613)
+	at ch.zhaw.simulation.math.Parser.simplyfy(Parser.java:252)
+	at ch.zhaw.simulation.editor.xy.density.DensityDraw.setFormula(DensityDraw.java:180)
+	at ch.zhaw.simulation.editor.xy.XYEditorView.updateDensity(XYEditorView.java:178)
+	at ch.zhaw.simulation.window.xy.XYWindow$1.actionPerformed(XYWindow.java:32)
+	at ch.zhaw.simulation.window.xy.sidebar.DensitySidebar$5.densityChanged(DensitySidebar.java:133)
+	at ch.zhaw.simulation.model.xy.SimulationXYModel.fireDensityChanged(SimulationXYModel.java:255)
+	at ch.zhaw.simulation.model.xy.SimulationXYModel.fireObjectChangedAutoparser(SimulationXYModel.java:285)
+	at ch.zhaw.simulation.gui.codeditor.FormulaEditorPanel.checkFormula(FormulaEditorPanel.java:172)
+	at ch.zhaw.simulation.gui.codeditor.FormulaEditorPanel$2.run(FormulaEditorPanel.java:120)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Fehler: Formel fehler
