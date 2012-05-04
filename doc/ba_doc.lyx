@@ -402,14 +402,7 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
+\begin_layout Section*
 Vorwort
 \end_layout
 
@@ -431,6 +424,10 @@ g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
  Simulationen von Biologischen Abläufen, wie das innere einer Zelle, darstellen
  soll.
  TODO: Danksagung
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -517,7 +514,7 @@ Hierarchische Kompartimente - Räumliche Positionierung von Kompartimenten,
 \end_layout
 
 \begin_layout Section
-Übersicht
+Methode
 \end_layout
 
 \begin_layout Standard
