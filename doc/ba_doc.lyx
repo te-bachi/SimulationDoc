@@ -948,6 +948,196 @@ Die Zeit hat leider nicht gereicht eine komplette Testumgebung einzurichten.
  GUI dann Ersatzlos gestrichen.
 \end_layout
 
+\begin_layout Subsection
+Plugin Handling
+\end_layout
+
+\begin_layout Standard
+Beschreibung der Pluginschnittstelle / Lademechanismus
+\end_layout
+
+\begin_layout Subsection
+Dateiformat
+\end_layout
+
+\begin_layout Standard
+Als Dateiformat wird ein eigens entwickeltes, auf XML basierendes Dateiformat
+ verwendet.
+ Dieses Dateiformat spiegelt die Internen Strukturen ziemlich genau ab.
+ Zudem gibt es Plugin Schnittstelle um fremdformate zu importieren, es ist
+ somit möglich beliebige Fremdformate zu importieren, es muss dafür lediglich
+ ein Plugin erstellt werden und im richtigen Verzeichniss abgelegt werden.
+\end_layout
+
+\begin_layout Paragraph
+Fremdformat importe
+\end_layout
+
+\begin_layout Standard
+Es wurden zwei Importplugins erstellt, eins für Berkeley Madonna, uns eins
+ für Dynasys.
+ Um einen Sinvollen Test der Pluginschnittstelle vorzunehmen waren zwei
+ Plugins notwendig.
+\end_layout
+
+\begin_layout Standard
+Dynasys ist seit 2009 unter der GPL freigegeben, somit war ein Einblick
+ in den Pascal Code möglich.
+ Die Pascal Objekte wurden binär serialisiert, und da es sich bei Dynasys
+ noch um eine 16bit Applikation handelt werden nicht alle Daten korrekt
+ eingelesen.
+ Trotz einschränkungen ist es somit möglich kleinere Dateien komplett, und
+ grössere Dateien teilweise einzulesen.
+\end_layout
+
+\begin_layout Standard
+Bei Berkeley Madonna war kein Quellcode verfügbar, jedoch basiert der grafische
+ Modellierungsteil von Berkeley Madonna auf Java.
+ Die Datei an sich ist binär, enthält jedoch die Magic Bytes 0xACED, welches
+ von Java als Start für eine Object Stream verwendet werden.
+ Der Stream enthält nur primitive Datentypen, und Objekte aus der Java Runtime,
+ es müssen also keine spezifischen Klassen vorhanden sein.
+ Mit Beispieldateien war es möglich das Format zu reverse engeneeren.
+ Es wird nicht alles korrekt importiert, es konnten jedoch die aus der Physikvor
+lesung vorhandenen Dateien korrekt importiert werden.
+\end_layout
+
+\begin_layout Standard
+Die Nächste Version von Berkeley Madonna, Version 9, verwendet nun aber
+ ein neues, XML basierendes Format, welches nicht implementiert wurde.
+ Es könnte jedoch auch dieses Format mit einem zusätzlichen Plugin eingelesen
+ werden.
+\end_layout
+
+\begin_layout Standard
+=> http://docs.oracle.com/javase/6/docs/platform/serialization/spec/protocol.html
+\end_layout
+
+\begin_layout Paragraph*
+Internes Dateiformat
+\end_layout
+
+\begin_layout Standard
+Die von (AB)² Simulation erstellen Dateien enden auf .simz, es handelt sich
+ dabei um ein standard ZIP-File, welches 4 Files enthält:
+\end_layout
+
+\begin_layout Itemize
+configuration.xml
+\end_layout
+
+\begin_layout Itemize
+mimetype
+\end_layout
+
+\begin_layout Itemize
+simulation.xml
+\end_layout
+
+\begin_layout Itemize
+version
+\end_layout
+
+\begin_layout Standard
+Version ist ein Java Property File, mit zwei Einträgen:
+\end_layout
+
+\begin_layout Quote
+version=1
+\end_layout
+
+\begin_layout Quote
+compatible=1
+\end_layout
+
+\begin_layout Standard
+«version» ist ein Ganzzahlwert, die Version die Datei, «compatible» ist
+ ebenfalls eine Ganzzahl, die angibt mit welcher Version die Datei immer
+ noch eingelesen werden kann, ohne das Problema uftreten.
+ Kleinere Unstimmigkeiten werden in Kauf genommen, aber das Modell kann
+ immer noch eingelesen werden.
+\end_layout
+
+\begin_layout Standard
+Wird eine Inkompatible Änderung am Dateiformat vorgenommen, so müssen beide
+ Versionsnummern um eins hochgezählt werden, wird eine kompatible Erweiterung
+ am Dateisystem vorgenommen so wird lediglich «version» hochgezählt.
+\end_layout
+
+\begin_layout Standard
+mimetype ist ein Textfile mit einem einzigen String, «application/zhaw.simulation.
+project».
+ Diese Datei wird oft verwendet um den Typ eines auf Zipbasierenden Dateiformats
+ zu erkennen.
+ Zum Beispiel verwendet .odt als mimetype «application/vnd.oasis.opendocument.text»,
+ dank solchen Kennungen kann Zipfile eindeutig als gültiges Simulationsfile
+ erkennen.
+\end_layout
+
+\begin_layout Standard
+configuration.xml enthält die Konfiguration der Plugins, z.B.
+\end_layout
+
+\begin_layout Standard
+=>
+\end_layout
+
+\begin_layout Standard
+http://stackoverflow.com/questions/1966425/source-code-highlighting-in-latex
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=html]
+\end_layout
+
+\begin_layout Plain Layout
+
+<?xml version="1.0" encoding="UTF-8"?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<simconfig>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<double name="simulation.dt" value="0.02"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<double name="simulation.intern.type" value="0.0"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+</simconfig>
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+TODO: simulation.xml
+\end_layout
+
 \begin_layout Section
 Vorgehen
 \end_layout
