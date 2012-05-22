@@ -1,0 +1,372 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 3cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Sehr geehrter Herr Scheidegger
+\end_layout
+
+\begin_layout Standard
+Das tönt sehr nach Anfangswertproblem (AWP).
+ Die Dimension in der Simulation ist 
+\begin_inset Formula $\left(x,\; y\right)=\mathbb{Z}^{2}$
+\end_inset
+
+.
+ Für dieses Beispiel wird jedoch nur 
+\begin_inset Formula $x=\mathbb{\mathbb{Z}}$
+\end_inset
+
+ verwendet.
+\end_layout
+
+\begin_layout Itemize
+Wenn wir ein Beschleunigungsfeld 
+\begin_inset Formula $A\left(x\left(t\right),\; t\right)$
+\end_inset
+
+ haben, brauchen wir auch ein Anfangs-Geschwindigkeitsfeld 
+\begin_inset Formula $V\left(x\left(t\right),\; t\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+Wenn 
+\begin_inset Formula $A\left(x\left(t\right),\; t\right)$
+\end_inset
+
+ NICHT von der Zeit (oder Position?) abhängen: konstant - bei jedem Zeitschritt
+ nur Geschwindigkeitsfeld 
+\begin_inset Formula $V\left(x\left(t\right),\; t\right)$
+\end_inset
+
+ muss neu berechnet werden?
+\end_layout
+
+\begin_layout Itemize
+Wenn 
+\begin_inset Formula $A\left(x\left(t\right),\; t\right)$
+\end_inset
+
+ von der Zeit (oder Position?) abhängen: bei jedem Zeitschritt Beschleunigungsfe
+ld 
+\begin_inset Formula $A\left(x\left(t\right),\; t\right)$
+\end_inset
+
+ und Geschwindigkeitsfeld 
+\begin_inset Formula $V\left(x\left(t\right),\; t\right)$
+\end_inset
+
+ neu berechnen?
+\end_layout
+
+\begin_layout Itemize
+Soll ich pro Meso-Kompartiment ein exaktes x (Double 
+\begin_inset Formula $\approx\mathbb{R}$
+\end_inset
+
+) und ein approximiertes x (Integer 
+\begin_inset Formula $=\mathbb{Z}$
+\end_inset
+
+) speichern und je nach approximiertem x ein Wert aus den Feldern holen?
+ Oder nur ein approximiertes x pro Zeitschritt speichern, was zu einer Blockade
+ der Meso-Geschwindigkeit führen könnte, wenn z.B.
+ 
+\begin_inset Formula $V=0.9$
+\end_inset
+
+ (const.) ?
+\end_layout
+
+\begin_layout Standard
+Für das Beispiel wird ein konstantes Beschleundigungsfeld 
+\begin_inset Formula $A\left(x\left(t\right),\; t\right)$
+\end_inset
+
+ verwendet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Vektorfeld.png
+	scale 75
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Zeitverlauf, 
+\begin_inset Formula $A\left(x\left(t\right),\; t\right)$
+\end_inset
+
+ konstant
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Variante 
+\begin_inset Formula $V\left({\color{green}x\left(t\right)},\; t+dt\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Berechnung der Integrale:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+x & \in & \mathbb{Z}\\
+V,\; A & \in & \mathbb{R}\\
+V\left({\color{green}x\left(t\right)},\; t+dt\right) & = & V\left({\color{green}x\left(t\right)},\; t\right)+A\left({\color{green}x\left(t\right)},\; t\right)\cdot dt\\
+x\left(t+dt\right) & = & x\left(t\right)+V\left(x\left(t\right),\; t\right)\cdot dt
+\end{eqnarray}
+
+\end_inset
+
+Anfangswerte:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+dt & = & 0.5\; s\\
+x\left(0\right) & = & 2\; px\\
+V\left(2,\;0\right) & = & 2\;\frac{px}{s}\\
+A\left(2,\;0\right) & = & 2\;\frac{px}{s^{2}}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Berechnung des Zeitschrittes 
+\begin_inset Formula $t+dt=0.5$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+t & = & 0.0\; s\\
+t+dt & = & 0.5\; s\\
+x\left(0.0\right) & = & 2\; px\\
+V\left(2,\;0.5\right) & = & V\left(2,\;0\right)+A\left(2,\;0\right)\cdot dt=3\;\frac{px}{s}+2\;\frac{px}{s^{2}}\cdot0.5\; s=4\;\frac{px}{s}\\
+V\left(3,\;0.5\right) & = & V\left(3,\;0\right)+A\left(3,\;0\right)\cdot dt=6\;\frac{px}{s}+4\;\frac{px}{s^{2}}\cdot0.5\; s=8\;\frac{px}{s}\\
+x\left(0.5\right) & = & x\left(0\right)+V\left(2,\;0\right)\cdot dt=2\; px+2\;\frac{px}{s}\cdot0.5\; s=3\; px
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Berechnung des Zeitschrittes 
+\begin_inset Formula $t+dt=1.0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+t & = & 0.5\; s\\
+t+dt & = & 1.0\; s\\
+x\left(0.5\right) & = & 3\; px\\
+V\left(3,\;1.0\right) & = & V\left(3,\;0.5\right)+A\left(3,\;0.5\right)\cdot dt=8\;\frac{px}{s}+4\;\frac{px}{s^{2}}\cdot0.5\; s=10\;\frac{px}{s}\\
+x\left(1.0\right) & = & x\left(0.5\right)+V\left(3,\;0.5\right)\cdot dt=3\; px+8\;\frac{px}{s}\cdot0.5\; s=7\; px
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Berechnung des Zeitschrittes 
+\begin_inset Formula $t+dt=1.5$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+t & = & 1.0\; s\\
+t+dt & = & 1.5\; s\\
+x\left(1.0\right) & = & 7\; px\\
+V\left(7,\;1.5\right) & = & V\left(7,\;1.0\right)+A\left(7,\;1.0\right)\cdot dt=-7\;\frac{px}{s}+-2\;\frac{px}{s^{2}}\cdot0.5\; s=-8\;\frac{px}{s}\\
+x\left(1.5\right) & = & x\left(1.0\right)+V\left(3,\;1.0\right)\cdot dt=7\; px+10\;\frac{px}{s}\cdot0.5\; s=12\; px
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Hinkt nicht das Beschleunigungsfeld 
+\begin_inset Formula $A\left(t,\; x\right)$
+\end_inset
+
+ und das Geschwindigkeitsfeld 
+\begin_inset Formula $V\left(t,\; x\right)$
+\end_inset
+
+ einen Zeitschritt hinterher?
+\end_layout
+
+\begin_layout Itemize
+Was, wenn x aus dem Bereich herausfällt? 
+\begin_inset Formula $x\in\left\{ 1,\;...,\;10\right\} ,$
+\end_inset
+
+ doch 
+\begin_inset Formula $x=12$
+\end_inset
+
+? Dann gibt es auch keine Werte aus den Feldern.
+ Felder wie auch x, y sind beschränkt.
+\end_layout
+
+\begin_layout Section*
+Variante 
+\begin_inset Formula $V\left({\color{red}x\left(t{\color{red}+dt}\right)},\; t+dt\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ich bin mir nicht sicher, ob die erste Variante mathematisch korrekt ist...
+ wäre dann das hier korrekt?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+x\left(t+dt\right) & = & x\left(t\right)+V\left(x\left(t\right),\; t\right)\cdot dt\\
+V\left({\color{red}x\left(t{\color{red}+dt}\right)},\; t+dt\right) & = & V\left({\color{red}x\left({\color{red}t+dt}\right)},\; t\right)+A\left({\color{red}x\left({\color{red}t+dt}\right)},\; t\right)\cdot dt
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+oder
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+x\left(t+dt\right) & = & x\left(t\right)+V\left(x\left(t\right),\; t\right)\cdot dt\\
+V\left({\color{red}x\left(t{\color{red}+dt}\right)},\; t+dt\right) & = & V\left({\color{green}x\left(t\right)},\; t\right)+A\left({\color{green}x\left(t\right)},\; t\right)\cdot dt
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wie würde sich das auf die Berechnung auswirken?
+\end_layout
+
+\end_body
+\end_document

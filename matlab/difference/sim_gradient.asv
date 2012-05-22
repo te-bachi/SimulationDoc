@@ -1,0 +1,19 @@
+
+function [dx dy] = sim_gradient(f)
+    [xlen ylen] = size(f);
+    dx = zeros(xlen, ylen);
+    dy = zeros(xlen, ylen);
+    for x = 1:xlen
+        for y = 1:ylen
+            if x == xlen || y == ylen
+                dx(y,x) = 0;
+                dy(y,x) = 0;
+            else
+                dx(y,x) = f
+            end;
+        end;
+    end;
+    
+    dx = f/2;
+    dy = f/2;
+end

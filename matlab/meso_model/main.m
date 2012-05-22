@@ -7,8 +7,8 @@ meso2.x = 5;
 meso2.y = 10;
 meso2.func = @hello;
 
-[x y] = meso1.func(6, 9);
-fprintf(1, '%d %d\n', x, y);
+[x y zzz] = meso1.func(6, 9, 500);
+fprintf(1, '%d %d %d\n', x, y, zzz);
 
-[x y] = meso2.func(10, 5);
-fprintf(1, '%d %d\n', x, y);
+[x y zzz] = meso2.func(10, 5, 600);
+fprintf(1, '%d %d %d\n', x, y, zzz);

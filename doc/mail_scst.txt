@@ -1,0 +1,27 @@
+Sehr geehrter Herr Scheidegger
+
+Das tönt sehr nach Anfangswertproblem (AWP). Wenn wir ein Beschleunigungsfeld haben, brauchen wir initial auch ein Geschwindigkeitsfeld:
+dt = 0.5 s
+x(t) = x(0) = 15 px
+v(t, x) = v(0, 15) = 4 px/s
+a(t, x) = a(0, 15) = 2 px/s^2
+
+v(0.5, 15) = v(0) + a(0) * dt = 4 px/s + 2 px/s^2 * 0.5 s = 5 px/s
+x(0.5) = x(0) + v(0) * dt = 15 px + 4 px/s * 0.5 s = 17 px
+
+v(2) = v(1) + a(1) * dt
+x(2) = x(1) + v(1) * dt
+
+Wenn a(t) und v(t) NICHT von der Zeit oder Position abhängen: konstant.
+Wenn a(t) und v(t) von der Zeit oder Position abhängen: bei jedem Zeitschritt beide Felder neu berechnen
+
+> bezüglich erster Ableitung (Geschwindigkeit) haben Sie recht: x(t+dt)
+> =x(t) + (dx(t)/dt)*dt. Hingegen bei der zweiten Ableitung muss ein
+> zweistufiges Verfahren gewählt werden, es ist dann:
+> (dx(t+dt)/dt) = dx(t)/dt + x''(t)*dt mit x'' = d^2x/dt^2
+> und dann
+> x(t+dt) =x(t) + (dx(t)/dt)*dt
+> (wie bei konstanter Geschwindigkeit)
+> Es braucht also genauso zwei Intgerationsschritte, wie wenn Sie
+> analytisch integrieren würden
+
