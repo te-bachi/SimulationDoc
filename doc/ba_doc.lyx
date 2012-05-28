@@ -4,6 +4,32 @@
 \begin_header
 \textclass scrartcl
 \begin_preamble
+\usepackage{color,listings} %bindet das Paket Listings ein
+
+% Der lstset-Befehl ermöglicht haufenweise Einstellungen zur Formatierung
+\lstset{language=html,
+captionpos=b, % Beschriftung ist unterhalb
+frame=lines, % Oberhalb und unterhalb des Listings ist eine Linie
+basicstyle=\ttfamily, % Schriftart
+keywordstyle=\color{blue}, % Farbe für die Keywords wie public, void, object u.s.w.
+commentstyle=\color{green}, % Farbe der Kommentare
+stringstyle=\color{red}, % Farbe der Zeichenketten
+numbers=left, % Zeilennummern links vom Code
+numberstyle=\tiny, % kleine Zeilennummern
+numbersep=5pt,
+breaklines=true, % Wordwrap a.k.a. Zeilenumbruch aktiviert
+showstringspaces=false,
+% emph legt Farben für bestimmte Wörter manuell fest
+emph={double,bool,int,unsigned,char,true,false,void},
+emphstyle=\color{blue},
+emph={Assert,Test},
+emphstyle=\color{red},
+emph={[2]\using,\#define,\#ifdef,\#endif}, emphstyle={[2]\color{blue}}
+}
+
+
+
+
 \usepackage{anysize}
 \pagenumbering{roman}
 \let\myTOC\tableofcontents
@@ -41,7 +67,19 @@ figs-within-sections
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_title "Entwicklung eines graphischen Editors zur Modellierung von Systemen mit dynamischer Modellstruktur"
+\pdf_author "Andreas Bachmann, Andreas Butti"
+\pdf_subject "(AB)² Simulation"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
 \papersize a4paper
 \use_geometry true
 \use_amsmath 1
@@ -409,7 +447,7 @@ Vorwort
 \begin_layout Standard
 In der Forschung aber auch zu Unterrichtszwecken werden viele Theorien vermittel
 t und Simuliert.
- Solche Simulationen basieren meistens auf einem Strikt Mathematischen Hintergru
+ Solche Simulationen basieren meistens auf einem strikt mathematischen Hintergru
 nd, meinst Integrale erster Ordnung.
  Forschende Personen im Bereich Physik / Biologie verwenden dabei bevorzugt
  eine Modellierungssoftware, da es nicht ihr Fachgebiet ist selbst zu programmie
@@ -439,8 +477,20 @@ Es gibt bereits viele Simulationstools, wie z.B.
  Barekely Madonna um nur ein bekanntes Beispiel zu nennen.
  Diese Tools unterstützten die Modelierung von Differentialgleichungen als
  Modell, mit Containern und Flüssen.
- Diese modellart ist schon lange bekannt, und etabliert, daher übernehmen
- wir dieses Prinzip.
+\end_layout
+
+\begin_layout Standard
+Das gleiche Prinzip wird auch von Symlink verwendet, dieses verwendet als
+ Symbole jedoch konsequent die Elektrotechnischen Abbildungen, es gibt Verbindun
+g, Verstärker, Verzögerungen (x[t-1]) etc.
+ Obwohl das Modell damit etwas anders aussieht ist die mathematische Abbildung
+ schlussendlich die gleiche.
+\end_layout
+
+\begin_layout Standard
+Da unsere Simulation keine Elektrotechnischen Hintergrund hat haben wir
+ für die Darstellungen unserer Flussmodelle ebenfalls Container mit Flüssen
+ (Integral) verwendet.
 \end_layout
 
 \begin_layout Subsection
@@ -478,7 +528,7 @@ Bestehende graphische Modelleditoren erlauben eine effiziente Modellierung
  des Systems.
  Dies kann gerade bei der Erfassung von komplexen Systemen den Zugang zu
  einer adäquaten Systembeschreibung erleichtern.
- Gerade aber Modelleditoren wie Berkeley- Madonna sind auf eine kompartimentale
+ Gerade aber Modelleditoren wie Berkeley-Madonna sind auf eine kompartimentale
  Struktur des Systems angewiesen.
  Räumlich strukturierte bzw.
  verteilte Systeme lassen sich nur schwer und in vereinfachter Form abbilden.
@@ -1227,19 +1277,30 @@ Bei Java ist man nicht fest an eine Entwicklungsumgebung gebunden.
  Eclipse als Entwicklungsumgebung verwendet hat.
 \end_layout
 
+\begin_layout Standard
+Es kam JDK 1.6 (Java 6) zum Einsatz, obwohl unterdessen Java 7 erschienen
+ ist sind wir bei 6 geblieben, denn es ist immer noch sehr verbreitet, und
+ Java 7 würde uns keinen Vorteil bringen.
+\end_layout
+
 \begin_layout Subsection
 Testing
 \end_layout
 
 \begin_layout Standard
-Die Zeit hat leider nicht gereicht eine komplette Testumgebung einzurichten.
- Das Automatische Testen einer GUI-Applikation ist auch nicht ganz trivial.
- Trotzdem wurden einzelne TestCases für JUnit geschrieben, jedoch nicht
- für die GUI.
- Auf nachfrage war auch den Unterrichtenden Java Dozenten an der ZHAW keine
- Lösung bekannt die für GUI Applikationen allgemein funktionieren würde.
- Da sowieso zuwenig Zeit vorhanden war wurde das automatische Testing der
- GUI dann Ersatzlos gestrichen.
+Testing ist bei einem Softwareprojekt ein sehr wichtiger Punkt.
+ Leider ist bis heute noch kein genereller Ansatz bekannt der es ermöglicht
+ GUI-Applikationen sinnvoll zu testen.
+ Es ist zwar mit JUnit möglich das Domänenmodell zu testen, dies bedeutet
+ leider nicht das die GUI auch funktioniert.
+ Unser Domänenmodell ist jedoch sehr trivial, es gibt kaum Logik die getestet
+ werden könnte.
+ Daher sind auch kaum Testfälle erfasst.
+\end_layout
+
+\begin_layout Standard
+Die Simulation an sich lässt sich mit Unittests auch nur schwer testen,
+ daher haben wir diese Tests auch von Hand durchgeführt.
 \end_layout
 
 \begin_layout Subsection
@@ -1247,7 +1308,92 @@ Plugin Handling
 \end_layout
 
 \begin_layout Standard
-Beschreibung der Pluginschnittstelle / Lademechanismus
+Die Applikation hat einige Punkte, die sinvollerweise durch Plugins erweitert
+ werden können.
+ Es gibt bereits fertige Frameworks die Pluginhandlings ermöglichen, eines
+ der bekannten ist Eclipse mit dem OSGi.
+ Dieses basiert auf Extension Points und Extensions, welche wider Extensio
+ Pointes bereitstellen können.
+ Die komplette Applikation wird dann als Plugin aufgebaut, Abhängigkeiten
+ können spezifiziert werden und Seiteneffekte können vermieden werden durch
+ die Abschottung einzelner Plugins gegeneinander.
+ Sogar das mehrfache Laden einer Library in verschiedenen Versionen ist
+ ohne Probleme möglich.
+\end_layout
+
+\begin_layout Standard
+Für unsere Applikation ist soviel Flexibilität aber nicht nötige, zudem
+ würde dies auch einen hohen mehraufwand bei der Implementation bedeutet.
+\end_layout
+
+\begin_layout Standard
+Unsere Pluginimplementation funktioniert daher viel einfacher:
+\end_layout
+
+\begin_layout Enumerate
+Es wird ein Interface für ein Plugin definiert, dies geschieht in der Hauptappli
+kation
+\end_layout
+
+\begin_layout Enumerate
+Ein Plugin implementiert diese Schnittstelle.
+ Zudem wird ein XML File erstellt, indem steht
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Der Name des Plugins
+\end_layout
+
+\begin_layout Enumerate
+Eine Beschreibung
+\end_layout
+
+\begin_layout Enumerate
+Der Autor
+\end_layout
+
+\begin_layout Enumerate
+Die Klasse die geladen werden soll beim Start des Plugins
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Der Javacode und das XML File werden in ein .jar gepackt und in einem vordefinier
+ten Ordner abgelegt (meist konfigurierbar in config.properties)
+\end_layout
+
+\begin_layout Enumerate
+Die Applikation durchsucht beim Start diesen Ordner, öffnet alle .jar Dateien
+ und lädt das plugin.xml File.
+ Hat dies alles geklappt wird das Jarfile in den aktuellen Kontext geladen
+ und die Klasse ausgeführt
+\end_layout
+
+\begin_layout Enumerate
+Es gibt keine Querabhängigkeiten, das Plugin wird direkt in den Applikationkonte
+xt geladen, und hat vollen Zugriff auf die Applikation
+\end_layout
+
+\begin_layout Standard
+Es sind momentan zwei Pluginschnittstellen vorhanden
+\end_layout
+
+\begin_layout Enumerate
+Laden von Fremdformate: Plugins für Berkeley Madonna und Dynasys sind vorhanden,
+ siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:Fremdformat-importe"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Simulation: Plugins für Interne Simulation und Matlab Codegeneration: TODO
+ Querverweis
 \end_layout
 
 \begin_layout Subsection
@@ -1258,19 +1404,26 @@ Dateiformat
 Als Dateiformat wird ein eigens entwickeltes, auf XML basierendes Dateiformat
  verwendet.
  Dieses Dateiformat spiegelt die Internen Strukturen ziemlich genau ab.
- Zudem gibt es Plugin Schnittstelle um fremdformate zu importieren, es ist
+ Zudem gibt es Plugin Schnittstelle um Fremdformate zu importieren, es ist
  somit möglich beliebige Fremdformate zu importieren, es muss dafür lediglich
- ein Plugin erstellt werden und im richtigen Verzeichniss abgelegt werden.
+ ein Plugin erstellt werden und im richtigen Verzeichnis abgelegt werden.
 \end_layout
 
 \begin_layout Paragraph
 Fremdformat importe
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Fremdformat-importe"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Es wurden zwei Importplugins erstellt, eins für Berkeley Madonna, uns eins
  für Dynasys.
- Um einen Sinvollen Test der Pluginschnittstelle vorzunehmen waren zwei
+ Um einen sinnvollen Test der Pluginschnittstelle vorzunehmen waren zwei
  Plugins notwendig.
 \end_layout
 
@@ -1280,7 +1433,7 @@ Dynasys ist seit 2009 unter der GPL freigegeben, somit war ein Einblick
  Die Pascal Objekte wurden binär serialisiert, und da es sich bei Dynasys
  noch um eine 16bit Applikation handelt werden nicht alle Daten korrekt
  eingelesen.
- Trotz einschränkungen ist es somit möglich kleinere Dateien komplett, und
+ Trotz Einschränkungen ist es somit möglich kleinere Dateien komplett, und
  grössere Dateien teilweise einzulesen.
 \end_layout
 
@@ -1304,7 +1457,8 @@ Die Nächste Version von Berkeley Madonna, Version 9, verwendet nun aber
 \end_layout
 
 \begin_layout Standard
-=> http://docs.oracle.com/javase/6/docs/platform/serialization/spec/protocol.html
+TODO => http://docs.oracle.com/javase/6/docs/platform/serialization/spec/protocol.h
+tml
 \end_layout
 
 \begin_layout Paragraph*
@@ -1347,9 +1501,10 @@ compatible=1
 \begin_layout Standard
 «version» ist ein Ganzzahlwert, die Version die Datei, «compatible» ist
  ebenfalls eine Ganzzahl, die angibt mit welcher Version die Datei immer
- noch eingelesen werden kann, ohne das Problema uftreten.
+ noch eingelesen werden kann, ohne das Probleme auftreten.
  Kleinere Unstimmigkeiten werden in Kauf genommen, aber das Modell kann
- immer noch eingelesen werden.
+ immer noch eingelesen werden, somit ist die Rückwärtskompatibilität genau
+ geregelt.
 \end_layout
 
 \begin_layout Standard
@@ -1370,14 +1525,6 @@ project».
 
 \begin_layout Standard
 configuration.xml enthält die Konfiguration der Plugins, z.B.
-\end_layout
-
-\begin_layout Standard
-=>
-\end_layout
-
-\begin_layout Standard
-http://stackoverflow.com/questions/1966425/source-code-highlighting-in-latex
 \end_layout
 
 \begin_layout Standard
@@ -1403,12 +1550,17 @@ begin{lstlisting}[language=html]
 
 \begin_layout Plain Layout
 
-	<double name="simulation.dt" value="0.02"/>
+    <double name="simulation.dt" value="0.1"/>
 \end_layout
 
 \begin_layout Plain Layout
 
-	<double name="simulation.intern.type" value="0.0"/>
+    <double name="simulation.end" value="5.0"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <double name="simulation.start" value="0.0"/>
 \end_layout
 
 \begin_layout Plain Layout
@@ -1429,7 +1581,244 @@ end{lstlisting}
 \end_layout
 
 \begin_layout Standard
-TODO: simulation.xml
+Diese Einstellungen können von den Plugins beliebig festgelegt werden, hier
+ sind nur Einstellungen gespiechert, und keine Business Daten.
+\end_layout
+
+\begin_layout Standard
+simulation.xml Enthält das Modell, oder bei einem XY-Model auch mehrere Modelle.
+ Diese Datei sieht folgendermassen aus (gekürzt, kommentiert):
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=html]
+\end_layout
+
+\begin_layout Plain Layout
+
+<?xml version="1.0" encoding="UTF-8"?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<simulation>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <model grid="20" height="400" type="xy" width="400" zerox="200" zeroy="200">
+\end_layout
+
+\begin_layout Plain Layout
+
+        <meso derivative="FIRST_DERIVATIVE" directionx="grad(&quot;d1&quot;,
+ &quot;x&quot;)" directiony="1" name="m0" value="model3" x="151" y="89"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <meso derivative="FIRST_DERIVATIVE" directionx="sin(1/2)" directiony="co
+s(1/2)" name="m1" value="model3" x="10" y="88"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <meso derivative="FIRST_DERIVATIVE" directionx="1" directiony="1"
+ name="m5" value="model2" x="256" y="281"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <global name="g0" value="5" x="252" y="37"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        <density name="d1" text="" value="10*sin(x/20)+10*cos(y/20)"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <density name="d2" text="" value="x"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+       <model name="model2" type="flow">
+\end_layout
+
+\begin_layout Plain Layout
+
+            <container name="Q" value="0" x="262" y="109"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+            <parameter name="UC" value="Q/C" x="220" y="238"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+           <!-- Fluss, "helperpoint" sind die Bezier Hilfspunkte -->
+\end_layout
+
+\begin_layout Plain Layout
+
+           <flowConnector name="I" value="UR/R">
+\end_layout
+
+\begin_layout Plain Layout
+
+                <source>
+\end_layout
+
+\begin_layout Plain Layout
+
+                    <helperpoint x="116" y="147"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+                    <infinite x="34" y="116"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+                </source>
+\end_layout
+
+\begin_layout Plain Layout
+
+                <target to="Q">
+\end_layout
+
+\begin_layout Plain Layout
+
+                    <helperpoint x="230" y="145"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+                </target>
+\end_layout
+
+\begin_layout Plain Layout
+
+                <valve x="140" y="118"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+            </flowConnector>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            <!-- Parameter Verbindung -->
+\end_layout
+
+\begin_layout Plain Layout
+
+            <connector from="Q" to="UC">
+\end_layout
+
+\begin_layout Plain Layout
+
+                <helperpoint x="256" y="207"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+            </connector>
+\end_layout
+
+\begin_layout Plain Layout
+
+        </model>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <model name="model3" type="flow">
+\end_layout
+
+\begin_layout Plain Layout
+
+            <!-- Anderes Submodel...
+ -->
+\end_layout
+
+\begin_layout Plain Layout
+
+        </model>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </model>
+\end_layout
+
+\begin_layout Plain Layout
+
+</simulation>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Dateiformat ist weitgehend selbsterklärend.
+ Es wurde erstellt um das Modell unserer Applikation möglichst genau abzubilden.
+ Es wurde nicht angestrebt einen Standard zu erschaffen / mit anderen Applikatio
+nen über dieses Format zu interagieren.
+\end_layout
+
+\begin_layout Standard
+Grundsätzlich gilt: jeder XML Tag entspricht einem Objekt, jedes Attribut
+ eines Tags entspricht einem Attribut eines Objekts (einfaches Attribut
+ wie ein String).
+ Jeder Tag innerhalb eines anderen Tags entspricht einem Attribut eines
+ Objekts (komplexes Attribut, z.B.
+ Punkt mit zwei Koordinaten).
+ Somit entspricht das Format nicht ganz den XML Richtlinien, welches alle
+ relevanten Informationen als Tags und alle Metainformationen als Attribute
+ abspeichert, ist aber dem Code sehr nahe und auch einfach zu verstehen.
 \end_layout
 
 \begin_layout Section
@@ -1437,7 +1826,351 @@ Vorgehen
 \end_layout
 
 \begin_layout Subsection
-MVC
+Softwarearchitektur
+\end_layout
+
+\begin_layout Subsubsection*
+Projektunterteilung
+\end_layout
+
+\begin_layout Standard
+Die Applikation besteht aus mehreren Javaprojekten, die hier in einer Übersicht
+ kurz beschrieben werden
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+AppDefinition:
+\series default
+ Dieses Projekt beinhaltet Interfaces der Applikation, die nicht im Projekt
+ «Simulation» untergebracht werden konnten, da ansonsten eine Zyklische
+ Abhängigkeit entstanden wäre
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+BJavalibs:
+\series default
+ Generelle Java GUI Libraries von Andreas Butti, dieser Code ist grösstenteils
+ vor der BA entstanden
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Editor:
+\series default
+ Abstrakter Editor für XY- und Flow Modelle.
+ Beinhaltet alle basis Klassen, Globale Parameter, Clipboard, Undo / Redo,
+ Toolbar / Menubar und den Formeleditor
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Editor.Flow:
+\series default
+ Der Editor für Flussdiagramme, basierend auf «Editor»
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Editor.XY:
+\series default
+ Der Editor für XY-Diagramme, basierend auf «Editor»
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+ExternLibraries:
+\series default
+ Dies ist nur ein Pseudoprojekt, und beinhaltet kein Code.
+ Hier sind unsere externen Libraries untergebracht.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+JFreeChart: Diagramm Library
+\end_layout
+
+\begin_layout Enumerate
+JCommon: Wird von JFreeChart benötigt
+\end_layout
+
+\begin_layout Enumerate
+JXLayer: Wird verwendet um beim Simulieren den Editor Unscharf darzustellen
+ und ein Statusdialog direkt im Editor darzustellen
+\end_layout
+
+\begin_layout Enumerate
+SwingX: Erweiterte Swing GUI-Komponenten, werden an diversen Stellen benötigt
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+ImageExport:
+\series default
+ Der «Speichern als Bild» Dialog
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+ImportFilter:
+\series default
+ Definition für Importplugins
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+ImportFilter.Dynasys:
+\series default
+ Dynsys Import Plugin
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+ImportFilter.Madonna:
+\series default
+ Berkeley Madonna Import Plugin
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Model:
+\series default
+ Das «Domänenmodell», dies ist die interne Abbildung aller Daten die modelliert
+ werden können.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+NetbeansDirchooser:
+\series default
+ Dieser Code entstammt dem Netbeans Projekt, es ermöglicht die komfortable
+ auswahl eines Ordners, die mit Swing Boardmittel wesentlich weniger konfortabel
+ wäre: Es können die Ordner wie gewohnt als Baum ausgeklappt werden.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+OnscreenKeyboard:
+\series default
+ Hierbei handelt es sich um die Tastatur für die Spezialzeichen, die bei
+ Feldern im Diagramm zur Verfügung steht.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Plugin:
+\series default
+ Dies ist die Implementation um Plugins zu laden.
+ Diese 285 Zeilen Code stammen aus einem vorgängigen Projekt von Andreas
+ Butti
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Simulation:
+\series default
+ Dies ist der Einsprungpunkt der Applikation.
+ Hier befinden sich auch die globalen Komponenten
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+About Dialog
+\end_layout
+
+\begin_layout Enumerate
+Einstellungen
+\end_layout
+
+\begin_layout Enumerate
+Speichern / Laden
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+SimulationBuild:
+\series default
+ Dies ist ein Pseudoprojekt das nur für den Build der Applikation benötigt
+ wird, es enthält kein Code
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+SimulationDiagram:
+\series default
+ Dieses Projekt enthält die Darstellung eines Diagramms, obwohl das eigentliche
+ Diagramm von JFreeChart dargestellt wird gibt es einiges um das Diagramm,
+ wie die Legende oder die Konfiguration, welche in diesem Projekt zu finden
+ sind
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+SimulationJepLib-2.4.1:
+\series default
+ JEP ist ein Open Source Parser, welcher für die Interne Simulation und
+ das Prüfen von Formeln eingesetzt wird.
+ Da das Projekt offiziell nicht mehr supported wird wurde der Sourcecode
+ komplett kopiert um kleine Fehlerkorrekturen vorzunehmen.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+SimulationPlugin:
+\series default
+ Die Definition des Simulationplugins
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+SimulationPlugin.Intern:
+\series default
+ Interne Simulation, die Formeln werden mit JEP berechnet.
+ Das Plugin unterstützt nur das Flow-Modell, das XY-Modell ist nicht implementie
+rt.
+ Es wird nur Runge-Kutta und Euler unterstützt.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+SimulationPlugin.MatlabOctave:
+\series default
+ Dieses Plugin generiert den Matlab Markup.
+ Ohne dieses Plugin ist die Simulation von XY-Modellen nicht möglich.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+SimulationSidebar:
+\series default
+ Hier befinden sich Definitionen für die Sidebar der Applikation, diese
+ mussten in ein eigenes Projekt ausgelagert werden um keine Zyklischen Abhängigk
+eiten zu Produzieren, gehören jedoch eigentlich zum Editor.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Sysintegration:
+\series default
+ Hier werden die Plattform / Systemabhängigen Komponenten abgelegt, dies
+ beinhaltet unter anderem
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Alle Icons (bei der aktuellen Implementation wird jedoch nicht nach Plattform
+ unterschieden)
+\end_layout
+
+\begin_layout Enumerate
+Bookmark Implementationen (z.B.
+ die Auswahl «Desktop» beim Speichern eines Bildes stammt von hier)
+\end_layout
+
+\begin_layout Enumerate
+Toolbar Implementation: Die von Swing bereitgestellte Toolbar sieht auf
+ Mac OS X komisch aus, daher hier eine angepasste Version.
+ Zudem enthält diese Implementation einige für die Simulation zugeschnittene
+ Anpassungen.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+VectorExport:
+\series default
+ Hier enthalten ist die Library Freehep und einige Helferklassen.
+ Mithilfe dieses Projektes werden beim Bilderexport SVG, EMF und EPS Dateien
+ erzeugt.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+XYResultViewer:
+\series default
+ Bei diesem Projekt handelt es sich um das «Diagramm» von XY-Simulationen.
+ Es kann die Bewegungen und die Dichten darstellen.
+ Im Gegensatz zur Darstellung von Flow-Simulationen müssen hier 3 Dimensionale
+ Daten dargestellt werden.
+ Die dritte Dimension ist hier die Zeit, und wird durch einen Slider dargestellt.
+\end_layout
+
+\begin_layout Standard
+Die Aufteilung in 25 Projekte erscheint auf den ersten Blick etwas unübersichtli
+ch, auf den zweiten Blick entsprechen die meisten Projekte aber einzelnen
+ Komponenten der Applikation die auch in der Applikation entsprechend aufgeteilt
+ sind, und machen daher Sinn.
+ Lediglich 2 Projekte wurden aus technischen Gründen (zyklische Abhängigkeiten)
+ erstellt, und entsprechen keinen eigenen Komponenten.
+\end_layout
+
+\begin_layout Subsubsection*
+Design Pattern
+\end_layout
+
+\begin_layout Standard
+Die Applikation wurde nach MVC (Model View Control) bzw.
+ Domänenmodell aufgebaut.
+ Das Bedeutet das die Daten, die Logik und der View nur lose gekoppelt sind,
+ und somit auch der View ersetzt werden könnte, ohne das der Rest angepasst
+ werden müsste.
+ Diese beiden Designpattern beschreiben ein ziemlich ähnliches vorgehen,
+ wobei MVC sich hauptsächlich auf einen GUI Komponenten beziehen lässt,
+ wie z.B.
+ ein TreeView, während das Domänenmodell sich auf eine komplette Applikation
+ anwenden lässt.
+ Beides sind Vorgehensmuster, und keine exakten Vorgaben.
+\end_layout
+
+\begin_layout Standard
+Das (Domänen)Modell befindet sich im Projekt «Model» und ist entsprechend
+ von allem anderen entkoppelt.
+ Die Simulation ist nur vom Model abhängig, und es besteht keine direkte
+ Verbindung zur GUI.
+ Die Gui selbst ist ein relativ grosser Teil der Applikation, und ist auch
+ nicht überall klar abgegrenzt.
+\end_layout
+
+\begin_layout Standard
+Komponeten wie Undo / Redo sind bei uns komplett in der GUI untergebracht,
+ da diese auch komplett von dieser abhängig sind.
+ Designtechnisch ist die Einordnung solcher Komponenten nicht eindeutig,
+ denn z.B.
+ Undo / Redo enthält ein Modell, nämlich die letzten Änderungen.
+ Es enthält zudem Logik, es kann Änderungen Rückgängig machen / Wiederherstellen.
+ Es ist aber ein GUI Komponent, denn es ist 100% von der GUI abhängig.
+ Wenn wir jedoch definieren das es sich bei den Undo / Redo Daten nicht
+ um Business Daten, sondern um Metadaten handelt sollte es auch nach den
+ Pattern kein Problem sein wenn wir es Innerhalb der GUI unterbringen.
+ Zudem war dies die einzig technisch sinvolle Möglichkeit.
 \end_layout
 
 \begin_layout Subsection
@@ -1458,6 +2191,155 @@ Beschreibung, Screenshots, Beispielsimulationen mit Ergebniss-Diagramm
 
 \begin_layout Section
 Diskussion und Ausblick
+\end_layout
+
+\begin_layout Subsection*
+Markup Language
+\end_layout
+
+\begin_layout Standard
+Wir haben uns die Matlab Markup Language entschieden, da wir auf viele vordefini
+erten Funktionen (
+\begin_inset Quotes eld
+\end_inset
+
+Toolbox
+\begin_inset Quotes erd
+\end_inset
+
+) zurückgreifen konnten, und uns somit den Mathematischen Teil teilweise
+ vereinfachen.
+\end_layout
+
+\begin_layout Standard
+Es haben sich jedoch immer wider Probleme mit den in Matlab vordefinierten
+ Funktionen ergeben, grundsätzlich erfüllen die Funktionen unsere Anforderungen,
+ dies haben wir auch vorgängig abgeklärt, jedoch sind bei der Verwendung
+ Probleme aufgetreten, die die Verwendung der Toolboxfunktionen verunmöglichten.
+\end_layout
+
+\begin_layout Itemize
+Numerische Integration: Es kann zwar ein Integral numerisch integriert werden,
+ jedoch müssen wir mehrere Integrale Simultan lösen, was von der Matlab
+ Toolbox nicht unterstützt wird
+\end_layout
+
+\begin_layout Itemize
+Gradienten berechnen mit 
+\begin_inset Quotes eld
+\end_inset
+
+grad
+\begin_inset Quotes erd
+\end_inset
+
+: Wird ein Gradienten im Diskreten Raum berechnet, so tritt immer das Problem
+ auf das die Zahlen in einem Gitter abgelegt werden müssen, was mathematisch
+ natürlich falsch ist.
+ Matlab versucht den Mathematischen Fehler gleichmässig auf alle Richtungen
+ zu verteilen, dies bedeutet das wenn eine Spitze abgeleitet wird, so entsteht
+ ein Plateu.
+ Diese Plateus sind für unsere Simulation extrem ungünstig.
+ Daher haben wir jetzt einen Gradienten implementiert der einfach um 0.5
+ Einheiten im Raster verschoben ist.
+ Dies bewirkt zwar ein Abdriften in eine Richtung, ist jedoch bei der Simulation
+ wesentlich weniger schlimm als ein Plateu.
+ Ein Plateu kann bewirken das sich ein Meso Kompartment, welches sich zur
+ nidrigsten Konzentration bewegen soll, nicht mehr bewegt.
+\end_layout
+
+\begin_layout Standard
+Wir erstellen nun den Kompletten Matlab Code selbst, es werden keine Toolboxen
+ verwendet.
+ Nach dem erstellen eines Temporären Files wird ein neuer Matlab / Octave
+ Prozess erstellt, und dieser führt die Simulation aus.
+\end_layout
+
+\begin_layout Standard
+Leider hat sich das Fehlerhandling viel schwieriger gestaltet als erwartet,
+ denn z.B.
+ Matlab beendet sich nicht nach einem Fehler mit einem entsprechenden Exit
+ Code, sondern geht in den Interaktiven Modus über.
+\end_layout
+
+\begin_layout Standard
+Zudem ist die Plattformunabhängigkeit nicht gewährleistet, denn es muss
+ für jede Plattform separat getestet werden, was wir auch gemacht haben
+ und festgestellt haben das es nicht auf allen Plattformen funktioniert.
+\end_layout
+
+\begin_layout Standard
+Aufgrund aller dieser Tatsachen haben wir entschieden das der weg mit einer
+ Markup Language der falsche war:
+\end_layout
+
+\begin_layout Itemize
+Fehlerhändling schwirig
+\end_layout
+
+\begin_layout Itemize
+Plattformunabhängigkeit funktioniert nur bedingt
+\end_layout
+
+\begin_layout Itemize
+Keine Programmiertechnischen Vorteile
+\end_layout
+
+\begin_layout Itemize
+Geschwindigkeitseinbussen (bei kleinen Simulationen fällt insbesondere der
+ Start einer externen Applikation stark ins Gewicht)
+\end_layout
+
+\begin_layout Standard
+Wir haben daher entschieden das eine zukünftige Entwicklung nicht auf dieser
+ Basis, sondern der Code komplett intern ausgeführt wird.
+ Daher haben wir auch keine Zeit mehr ins Fehlerhandling / Plattformunabhängigke
+it etc.
+ investiert.
+ Eine Interne Simulation bringt zusätzlich folgende Vorteile:
+\end_layout
+
+\begin_layout Itemize
+Eine Formel, die bei der Eingabe vom Parser validiert wurde ist auch zu
+ 100%ig sicher ausführbar, wenn eine Formel mit dem Internen Parser validiert
+ wurde und dann als Matlab Code ausgegeben wird ist dies nicht sicher, denn
+ die Parser unterscheiden sich in Details, die unter Umständen nicht alle
+ korrekt gehändelt werden.
+ Zudem wird jede Formel beim internen Parser in einem separaten Kontext
+ ausgeführt, was bei Matlab nicht der Fall ist, somit können unter ungünstigen
+ Umständen Seiteneffekte auftreten, welche beim Internen Parser praktisch
+ ausgeschlossen sind.
+\end_layout
+
+\begin_layout Itemize
+Fehler sind immer gehändelt, und können normalerweise Ihren Ursprungsobjekt
+ zugeordnet werden (z.B.
+ einem Container), wenn im Matlab Code ein Fehler auftritt kann dieser nur
+ einer Zeile zugeordnet werden, es ist jedoch für den Anwender nicht offensichtl
+ich wo der Ursprung des Fehlers liegt.
+\end_layout
+
+\begin_layout Itemize
+Die Simulation kann einfach abgebrochen werden: Wenn die externe Simulation
+ abgebrochen werden muss ist dies wesentlich komplizierter, und funktioniert
+ ggf.
+ nicht unter allen Umständen.
+\end_layout
+
+\begin_layout Itemize
+Parallelisierung: Heutzutage besitzt jeder moderne PC mehr als einen Rechenkern.
+ Mit Matlab / Octave ist es jedoch nicht möglich dies zu nutzen.
+ Bei einer Internen Simulation wäre dies möglich, wenn auch aufwendig.
+ Somit könnte die Simulation grösserer Modelle um Faktoren beschleunigt
+ werden.
+ (Voraussetzung: mehr als ein Core, und das Modell muss entsprechend unabhängige
+ Teile aufweisen, ein Aufteilen eines einzelnen Integrals ist theoretisch
+ zwar möglich, praktisch ist es jedoch langsamer als die Simulation auf
+ einem CPU, da die Synchronisation sehr viel Leistung benötigt) => MPC
+\end_layout
+
+\begin_layout Subsection*
+TODO
 \end_layout
 
 \begin_layout Standard
