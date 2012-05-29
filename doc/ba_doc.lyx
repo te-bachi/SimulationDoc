@@ -445,6 +445,12 @@ Vorwort
 \end_layout
 
 \begin_layout Standard
+
+\color red
+(= persönliches)
+\end_layout
+
+\begin_layout Standard
 In der Forschung aber auch zu Unterrichtszwecken werden viele Theorien vermittel
 t und Simuliert.
  Solche Simulationen basieren meistens auf einem strikt mathematischen Hintergru
@@ -473,8 +479,20 @@ Einleitung
 \end_layout
 
 \begin_layout Standard
+
+\color red
+fusion->trennen von Meso (nicht implementiert)
+\end_layout
+
+\begin_layout Standard
+
+\color red
+FSM->nicht invivo
+\end_layout
+
+\begin_layout Standard
 Es gibt bereits viele Simulationstools, wie z.B.
- Barekely Madonna um nur ein bekanntes Beispiel zu nennen.
+ Berekely Madonna um nur ein bekanntes Beispiel zu nennen.
  Diese Tools unterstützten die Modelierung von Differentialgleichungen als
  Modell, mit Containern und Flüssen.
 \end_layout
@@ -495,25 +513,6 @@ Da unsere Simulation keine Elektrotechnischen Hintergrund hat haben wir
 
 \begin_layout Subsection
 Bereits existierende Tools
-\end_layout
-
-\begin_layout Subsection
-Individualität unserer BA
-\end_layout
-
-\begin_layout Standard
-Mit unserer Simulation ist es zusätzlich möglich in einem XY Modell mehrere
- Meso Kompartmente abzubilden, ein Meso Kompartment ist das vorhin genannte
- Flussmodel.
- Diese Meso Kompartmente können sich wären der Simulation im XY-Raum bewegen.
- Es können Dichten angegeben werden, die über den XY Raum verteilt sind,
- und die Meso Kompartmente können an Ihrer aktuellen Position von der dichte
- Konsumieren oder dichte Produzieren, somit kann die Umgebung beeinflusst
- werden.
- Mit diesen Fähigkeiten ist es möglich das innenleben einer Zelle oder andere
- Biologische Prozesse einfach, grafisch abzubilden.
- Die Idee und Vorgabe dieser Simulationsmethode stammt von Herr Scheidegger,
- und wurde zusammen mit Herr Füchslin und uns ausgearbeitet.
 \end_layout
 
 \begin_layout Subsection
@@ -563,109 +562,56 @@ Hierarchische Kompartimente - Räumliche Positionierung von Kompartimenten,
  Matlab)
 \end_layout
 
-\begin_layout Section
-Methode
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/model-uebersicht.png
-	width 12cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-bli
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
-Legende
+Problemstellung (oder Motivation)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
 
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/model-uebersicht-legende.png
-	width 8cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-bla
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+\color red
+Motivation durch Problemstellung!
 \end_layout
 
 \begin_layout Standard
-Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
- bekannt ist da es vom Konzept her identisch bereits von vielen Simulationstools
- angeboten wird.
- Oder es kann ein «XY-Modell» erstellt werden, das dann Meso Kopartments
- beinhaltet, diese befinden sich an einer Position (X / Y) und verweisen
- auf ein Modell («Flow-Model-X»).
- Im «XY-Modell» könne sich «Dichten» befinden, das sind Stoffe die eine
- gewisse Konzentration an einer gewissen Stelle aufweisen.
- Ein Meso Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
- es kann dichten Konsumieren oder Produzieren.
+
+\color red
+signalig chains (SimuLink), Biologie.
+ Motivation->Problem->Insiliko
+\end_layout
+
+\begin_layout Standard
+Mit unserer Simulation ist es zusätzlich möglich in einem XY Modell mehrere
+ Meso Kompartmente abzubilden, ein Meso Kompartment ist das vorhin genannte
+ Flussmodel.
+ Diese Meso Kompartmente können sich wären der Simulation im XY-Raum bewegen.
+ Es können Dichten angegeben werden, die über den XY Raum verteilt sind,
+ und die Meso Kompartmente können an Ihrer aktuellen Position von der dichte
+ Konsumieren oder dichte Produzieren, somit kann die Umgebung beeinflusst
+ werden.
+ Mit diesen Fähigkeiten ist es möglich das innenleben einer Zelle oder andere
+ Biologische Prozesse einfach, grafisch abzubilden.
+ Die Idee und Vorgabe dieser Simulationsmethode stammt von Herr Scheidegger,
+ und wurde zusammen mit Herr Füchslin und uns ausgearbeitet.
 \end_layout
 
 \begin_layout Section
 Theoretische Grundlagen
 \end_layout
 
+\begin_layout Standard
+
+\color red
+partielle differentialgleichung->wann?
+\end_layout
+
+\begin_layout Standard
+
+\color red
+analytisch->nur linear
+\end_layout
+
 \begin_layout Subsection
-Gewöhnliche Differentialgleichungen
+Numerische Lösungsverfahren
 \end_layout
 
 \begin_layout Standard
@@ -722,6 +668,12 @@ en wieder auf die Ursprüngliche Beschleunigungs-Funktion zurück.
 \end_layout
 
 \begin_layout Standard
+
+\color red
+schlechtes Beispiel
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
 a\left(t\right) & = & \ddot{s}\left(t\right)=-g\label{eq:fallbesch}\\
@@ -734,6 +686,12 @@ a\left(t\right) & = & \frac{d}{dt}\left[-gt+v\left(0\right)\right]=-g\nonumber
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\color red
+kürzen
 \end_layout
 
 \begin_layout Standard
@@ -818,6 +776,26 @@ In unserer Simulation haben wir verschiedene numerische Verfahren implementiert,
  die wir nachfolgen kurz behandeln werden.
 \end_layout
 
+\begin_layout Standard
+
+\color red
+ODE: warum gute Beschreibung bio.
+ Systeme?
+\end_layout
+
+\begin_layout Standard
+
+\color red
+(warum PDE angezeigt)
+\end_layout
+
+\begin_layout Standard
+
+\color red
+analytische vs.
+ numerische Lösungen
+\end_layout
+
 \begin_layout Subsubsection*
 Euler
 \end_layout
@@ -880,6 +858,12 @@ In unserem Beispiel mit der Fallbeschleunigung müssen wir das Verfahren
 \end_inset
 
  bekannt sein.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+kürzen
 \end_layout
 
 \begin_layout Standard
@@ -1243,7 +1227,111 @@ Gradienten-Verfahren
 \end_layout
 
 \begin_layout Section
+Methode
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Diffusionsgleichung, Meso-> stoff konsumieren / ausscheiden
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/model-uebersicht.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+bli
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Legende
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/model-uebersicht-legende.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+bla
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
+ bekannt ist da es vom Konzept her identisch bereits von vielen Simulationstools
+ angeboten wird.
+ Oder es kann ein «XY-Modell» erstellt werden, das dann Meso Kopartments
+ beinhaltet, diese befinden sich an einer Position (X / Y) und verweisen
+ auf ein Modell («Flow-Model-X»).
+ Im «XY-Modell» könne sich «Dichten» befinden, das sind Stoffe die eine
+ gewisse Konzentration an einer gewissen Stelle aufweisen.
+ Ein Meso Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
+ es kann Dichten konsumieren oder produzieren.
+\end_layout
+
+\begin_layout Section
 Werkzeuge und Hilfsmittel
+\end_layout
+
+\begin_layout Standard
+Wie ist Lösung und warum diese Lösung?
+\end_layout
+
+\begin_layout Standard
+Problem beschreiben: herausfinden was Problem ist / wo Problem ist und Lösungen
+ finden
 \end_layout
 
 \begin_layout Subsection
@@ -1262,12 +1350,46 @@ Markup Language
 \end_layout
 
 \begin_layout Standard
+
+\color red
+Was ist eine Markup Language?
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Warum dieser Weg?
+\end_layout
+
+\begin_layout Standard
 Als Markup Language für die Simulation kam der Matlab Syntax zum Einsatz,
  der ebenfalls vom Open Source Tool «octave» verarbeitet werden kann.
 \end_layout
 
 \begin_layout Subsection
 Entwicklungsumgebung
+\end_layout
+
+\begin_layout Standard
+
+\color red
+statt 
+\begin_inset Quotes eld
+\end_inset
+
+Andreas Ba und Andreas Bu
+\begin_inset Quotes erd
+\end_inset
+
+ besser 
+\begin_inset Quotes eld
+\end_inset
+
+es wurde
+\begin_inset Quotes erd
+\end_inset
+
+ -> nicht personifizieren
 \end_layout
 
 \begin_layout Standard
@@ -1285,6 +1407,12 @@ Es kam JDK 1.6 (Java 6) zum Einsatz, obwohl unterdessen Java 7 erschienen
 
 \begin_layout Subsection
 Testing
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Keine Geschichten über etwas, was nicht interessiert (no stories)
 \end_layout
 
 \begin_layout Standard
