@@ -544,13 +544,12 @@ Bestehende graphische Modelleditoren erlauben eine effiziente Modellierung
 ren mit Unterkompartimenten aus.
  Ein weiterer Aspekt betrifft die Möglichkeit, dass Kompartimente in biologische
 n Systemen fusionieren oder sich teilen können.
- Anforderungen 
-\color red
-(?)
-\color inherit
- Das zu entwickelnde Modellierungswerkzeug soll an die intuitive graphische
- Oberfläche bestehender Modellierungswerkzeuge für kompartimentale Simulationen
- anknüpfen.
+\end_layout
+
+\begin_layout Standard
+Anforderungen: Das zu entwickelnde Modellierungswerkzeug soll an die intuitive
+ graphische Oberfläche bestehender Modellierungswerkzeuge für kompartimentale
+ Simulationen anknüpfen.
  Folgene Aspekte sollen konzeptuell untersucht und wenn möglich implemetiert
  werden:
 \end_layout
@@ -611,19 +610,27 @@ Theoretische Grundlagen
 \end_layout
 
 \begin_layout Standard
-
-\color red
-partielle differentialgleichung->wann?
+Um Biologische Prozesse zu verstehen, nachzubilden und zu entwickeln werden
+ mathematische Systeme modelliert und danach mit rechnerunterstützten Solvern
+ Näherungslösungen berechnet.
+ Als Beispiel kann sich die Population eines Algenvolkes in einem See mit
+ der Zeit ändern, je nachdem welche äussere Einflüsse auf die Algen einwirken.
+ Die Geburten- und Sterberate bilden die Änderung der Population.
+ Dabei werden oftmals Differentialgleichung verwendet.
 \end_layout
 
 \begin_layout Standard
-
-\color red
-analytisch->nur linear
+In diesem Abschnitt wird eine Einführung in die numerischen Lösungsverfahren
+ beschrieben, die ein Modelleditor wie unser Simulations-Tool ausführt um
+ eine approximierte Lösung zu erhalten.
 \end_layout
 
 \begin_layout Subsection
 Numerische Lösungsverfahren
+\end_layout
+
+\begin_layout Subsubsection*
+Gewöhnliche Differentialgleichungen
 \end_layout
 
 \begin_layout Standard
@@ -797,9 +804,16 @@ reference "eq:zweiodeerste"
 
 \end_layout
 
+\begin_layout Subsubsection*
+Partielle Differentialgleichungen
+\end_layout
+
 \begin_layout Standard
-In unserer Simulation haben wir verschiedene numerische Verfahren implementiert,
- die wir nachfolgen kurz behandeln werden.
+Eine Partielle Differentialgleichung (engl.
+ Partial Differential Equation PDE) ist eine mathematische Gleichung, die
+ partielle Ableitungen enthalten, also Ableitungen von Funktionen mehrere
+ Variablen.
+ Dabei  
 \end_layout
 
 \begin_layout Standard
@@ -820,6 +834,23 @@ ODE: warum gute Beschreibung bio.
 \color red
 analytische vs.
  numerische Lösungen
+\end_layout
+
+\begin_layout Standard
+
+\color red
+partielle differentialgleichung->wann?
+\end_layout
+
+\begin_layout Standard
+
+\color red
+analytisch->nur linear
+\end_layout
+
+\begin_layout Standard
+In unserer Simulation haben wir verschiedene numerische Verfahren implementiert,
+ die wir nachfolgen kurz behandeln werden.
 \end_layout
 
 \begin_layout Subsubsection*
