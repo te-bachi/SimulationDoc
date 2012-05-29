@@ -544,20 +544,32 @@ Bestehende graphische Modelleditoren erlauben eine effiziente Modellierung
 ren mit Unterkompartimenten aus.
  Ein weiterer Aspekt betrifft die Möglichkeit, dass Kompartimente in biologische
 n Systemen fusionieren oder sich teilen können.
- Anforderungen Das zu entwickelnde Modellierungswerkzeug soll an die intuitive
- graphische Oberfläche bestehender Modellierungswerkzeuge für kompartimentale
- Simulationen anknüpfen.
+ Anforderungen 
+\color red
+(?)
+\color inherit
+ Das zu entwickelnde Modellierungswerkzeug soll an die intuitive graphische
+ Oberfläche bestehender Modellierungswerkzeuge für kompartimentale Simulationen
+ anknüpfen.
  Folgene Aspekte sollen konzeptuell untersucht und wenn möglich implemetiert
- werden: - Hierarchische Kompartimente
+ werden:
 \end_layout
 
-\begin_layout Standard
-Hierarchische Kompartimente - Räumliche Positionierung von Kompartimenten,
- welche die Wechselwirkung der Kompartimente auf gleicher Stufe beeinflussen
- kann und somit Einführung von Koordinaten (erster Schritt 2-Dim.) bzw.
+\begin_layout Itemize
+Hierarchische Kompartimente
+\end_layout
+
+\begin_layout Itemize
+Räumliche Positionierung von Kompartimenten, welche die Wechselwirkung der
+ Kompartimente auf gleicher Stufe beeinflussen kann und somit Einführung
+ von Koordinaten (erster Schritt 2-Dim.) bzw.
  orthogonales Grid und beschreibung von Gradienten (z.B.
  für Änderung der räumlichen Position von Kompartimenten aufgrund von z.B.
- Gradienten) - Ausgabe eines Codes in einer Markup language (z.B.
+ Gradienten)
+\end_layout
+
+\begin_layout Itemize
+Ausgabe eines Codes in einer Markup Language (z.B.
  SBML), welcher von einem bestehenden Solver ausgeführt werden kann (z.B.
  Matlab)
 \end_layout
@@ -647,7 +659,21 @@ y^{\left(n\right)}=f\left(t,\; y\left(t\right),\; y^{\prime}\left(t\right),\;\ld
 
 \begin_layout Standard
 Auf analytischem Weg kann eine Differentialgleichung durch Integration erfolgen.
- Die Fallbeschleinigung in Abbildung soll in Gleichung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\int y^{\left(n\right)}\left(t\right)\cdot dt=y\left(t\right)^{\left(n-1\right)}+C
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Fallbeschleinigung in Abbildung ??? soll in Gleichung 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:fallbesch"
@@ -1135,8 +1161,8 @@ reference "eq:euler"
  entwickelt, die Differentialgleichungen numerisch zu lösen.
  Das heisst, sie kannten die Möglichkeit noch nicht, die Nachfolgen soll
  jedoch der Ansatz des des Buchter Tableau verwendet werden.
- Dabei rechnet das Klassische 4 Zwischenschritte, arbeitet also mit Dimension
- 
+ Dabei rechnet das Klassische vier Zwischenschritte oder Stützstellen, arbeitet
+ also mit Dimension 
 \begin_inset Formula $s=4$
 \end_inset
 
