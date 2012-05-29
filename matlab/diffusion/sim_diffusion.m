@@ -2,7 +2,6 @@
 function [g] = sim_diffusion(f, dt, a)
     [ylen xlen] = size(f);
     df = zeros(ylen, xlen);
-    g  = zeros(ylen, xlen);
     for y = 1:ylen
         for x = 1:xlen
             if x == 1 && y == 1
