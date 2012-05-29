@@ -1432,32 +1432,6 @@ Es kam JDK 1.6 (Java 6) zum Einsatz, obwohl unterdessen Java 7 erschienen
 \end_layout
 
 \begin_layout Subsection
-Testing
-\end_layout
-
-\begin_layout Standard
-
-\color red
-Keine Geschichten über etwas, was nicht interessiert (no stories)
-\end_layout
-
-\begin_layout Standard
-Testing ist bei einem Softwareprojekt ein sehr wichtiger Punkt.
- Leider ist bis heute noch kein genereller Ansatz bekannt der es ermöglicht
- GUI-Applikationen sinnvoll zu testen.
- Es ist zwar mit JUnit möglich das Domänenmodell zu testen, dies bedeutet
- leider nicht das die GUI auch funktioniert.
- Unser Domänenmodell ist jedoch sehr trivial, es gibt kaum Logik die getestet
- werden könnte.
- Daher sind auch kaum Testfälle erfasst.
-\end_layout
-
-\begin_layout Standard
-Die Simulation an sich lässt sich mit Unittests auch nur schwer testen,
- daher haben wir diese Tests auch von Hand durchgeführt.
-\end_layout
-
-\begin_layout Subsection
 Plugin Handling
 \end_layout
 
@@ -2325,6 +2299,72 @@ Komponeten wie Undo / Redo sind bei uns komplett in der GUI untergebracht,
  um Business Daten, sondern um Metadaten handelt sollte es auch nach den
  Pattern kein Problem sein wenn wir es Innerhalb der GUI unterbringen.
  Zudem war dies die einzig technisch sinvolle Möglichkeit.
+\end_layout
+
+\begin_layout Subsection
+Technische Beschreibung Softwarekomponenten
+\end_layout
+
+\begin_layout Subsubsection*
+Model
+\end_layout
+
+\begin_layout Standard
+Das Datenmodell ist wie folgendermassen aufgebaut: Der Einsprungpunkt ist
+ das «SimulationDocument», welches entweder ein «SimulationFlowModel» oder
+ ein «SimulationXYModel» beinhaltet.
+ Sowohl das Flow als auch das XY Modell erben von , «AbstractSimulationModel»,
+ dieses beinhaltet «AbstractSimulationData», welches ebenfalls eine Abstrakte
+ Klasse für alle Simulationskomponenten darstellt, wie
+\end_layout
+
+\begin_layout Itemize
+Container
+\end_layout
+
+\begin_layout Itemize
+Parameter
+\end_layout
+
+\begin_layout Itemize
+Global
+\end_layout
+
+\begin_layout Itemize
+Meso Kompartment.
+\end_layout
+
+\begin_layout Standard
+«SimulationFlowModel» enthält zusätzlich noch Verbindungen, welche entweder
+ ein Fluss oder eine Parameterverbidung darstellen.
+ Abgebildet werden diese als «AbstractConnectorData<?>».
+ Wobei der Fluss «FlowConnectorData» und der «ParameterConnectorData» die
+ beiden möglichen Implementationen darstellen.
+\end_layout
+
+\begin_layout Standard
+«SimulationXYModel» enthält zusätzlich zur Basisklasse noch Dichten, welche
+ von der Klasse «DensityData» sind, hier besteht keine Abstraktion, es gibt
+ nur eine Implementation.
+\end_layout
+
+\begin_layout Standard
+Zudem kann ein XY Model beliebig viele Flow Modelle enthalten, welche über
+ «SubModelList» gehandelt werden.
+\end_layout
+
+\begin_layout Standard
+Die Modelle enthalten jede Menge an Methoden zur Manipulation der Daten,
+ welche hier nicht aufgeführt werden, diese können der Codedokumentation
+ oder dem Code entnommen werden.
+\end_layout
+
+\begin_layout Subsubsection*
+Editor
+\end_layout
+
+\begin_layout Standard
+Der Editor ist einer der komplexesten Elemente dieser Applikation.
 \end_layout
 
 \begin_layout Subsection
