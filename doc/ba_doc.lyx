@@ -2395,7 +2395,408 @@ Editor
 \end_layout
 
 \begin_layout Standard
-Der Editor ist einer der komplexesten Elemente dieser Applikation.
+Der Editor ist einer der komplexeren Elemente dieser Applikation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/Vererbung Editor.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Editor besteht aus mehreren Komponenten, grob aufgelistet in der Grafik.
+\end_layout
+
+\begin_layout Standard
+Der eigentliche Editor Component ist ein eine Ableitung von «AbstractEditorView»
+, entweder «FlowEditorView» oder «XYEditorView».
+ Diese Komponenten haben ein paar ungewöhnliche Eigenheiten.
+ Die Methode paint ist überschrieben, und beim Zeichen werden alle Aktionen
+ selbst koordiniert.
+ Dies ist notwendig um Pfeile, die selbst kein JComponent sind korrekt abzubilde
+n.
+ Pfeile können nicht als JComponent abgebildet werden, da ein JComponent
+ immer rechteckig ist, und unsere Pfeile dies im Normalfall nicht sind.
+ Bei der Darstellung ist dies noch kein Problem, aber der Pfeil würde dann
+ auf der gesamten Fläche auch alle Mouse-Events konsumieren, diese müssten
+ dann weitergeleitet werden wenn nötig etc.
+ Darum haben wir für die Pfeile eine Architektur gewählt die Swing Architektur
+ bricht, da wir eine Darstellung gewählt haben die unüblich ist und daher
+ von Swing so nicht unterstützt wird.
+\end_layout
+
+\begin_layout Standard
+Auch die Selektion wird nach dem Zeichen aller Komponenten einfach überzeichnet.
+ Es gibt zudem die Möglichkeit das Komponenten einen Schatten zeichnen,
+ dies wird angewendet um Abhängigkeiten von / zu Globalen darzustellen.
+ Wir eine Globale angewählt werden alle abhängigen Elemente mit einem Schatten
+ versehen.
+\end_layout
+
+\begin_layout Standard
+Als Layoutmanager kommt «SimulationLayout» zum Einsatz, welches alle «AbstractDa
+taView<?>» korrekt platziert.
+ Alle anderen Komponenten werden nicht umplatziert, dies bedeutet wenn etwas
+ anderes angezeigt wird muss dieses manuell mit «setBounds» platziert werden,
+ was auch verwendet wird z.B.
+ bei der Pfeil-erstell-UI (
+\color red
+TODO Name?
+\color inherit
+).
+\end_layout
+
+\begin_layout Standard
+Die Clipboard implementation ist Architekturbedingt in mehrere Klassen aufgeteil
+t, unterstützt unter anderem das Kopieren als Rastergrafik.
+ Das Exportieren als Vektorgrafik konnte nicht erfolgreich implementiert
+ werden, da dies je nach Betriebsystem anders gehandhabt wird, und damit
+ es z.B.
+ unter Windows zuverlässig funktioniert muss eine Vektorgrafik (EMF / WMF)
+ eingebettet in einem RTF exportiert werden, während unter Linux eher ein
+ SVG direkt in die Zwischenablage kopiert wird.
+ Alle Simulationsinternen Datenstrukturen werden in die Datenstruktur «TransferD
+ata» abgefüllt.
+ Zudem werden alle Objekte mit IDs versehen, damit nach dem einfügen die
+ Pfeile wider verbunden werden können.
+\end_layout
+
+\begin_layout Standard
+Der Bilderexport gestaltet sich relativ einfach, dank der verwendeten «freehep»
+ Library wird einfach mit dem Graphics von «freehep» «paint» aufgerufen,
+ den eigentlichen Export übernimmt die Library.
+\end_layout
+
+\begin_layout Standard
+Undo / Redo war und ist einer der umständlichen teile der Implementation,
+ denn es muss für jede Aktion die der User vornimmt manuell eine Implementation
+ vorgenommen werden, die diese Aktion auch wider Rückgängig machen kann.
+ Dies ist auch beim erweitern der Applikation zu bedenken, denn wenn dies
+ vergessen geht ist die Konsistenz nicht mehr gewährleistet, was zu Fehlern
+ führt.
+ Für das Debugging des Undo / Redo Mechanismus musste daher eine kleine
+ Hilfe implementiert werden.
+ Wir die Applikation mit dem Parameter 
+\begin_inset Quotes eld
+\end_inset
+
+--debug-undo
+\begin_inset Quotes erd
+\end_inset
+
+ aufgerufen erscheint ein Dialog der alle Aktionen des aktuellen Undo /
+ Redo Handlers live auflistete, und je nach Status einfärbt.
+ Zu bedenken ist das nach dem erstellen einer neuen Datei ein neuer Undo
+ / Redo Handler erstellt wird, und der Dialog daher nicht mehr funktioniert.
+\end_layout
+
+\begin_layout Subsubsection*
+Errorhandling / Logging
+\end_layout
+
+\begin_layout Standard
+Bei Serverapplikationen ist es üblich das alle Aktionen geloggt werden,
+ bei GUI Applikationen ist es weniger üblich, daher haben wir uns entschieden
+ nur die Fehler zu loggen.
+ Andere Ausgaben werden direkt auf STDOUT geschrieben, und sind somit nur
+ lesbar wenn dieser entweder umgeleitet oder (AB)² Simulation direkt auf
+ einer Konsole gestartet wird.
+ Dies ist jedoch nur bei der Entwicklung sinnvoll, alle Meldungen die für
+ den Benutzer relevant sind werden als Popups ausgegeben.
+\end_layout
+
+\begin_layout Standard
+Ein wichtiger Punkt, der oft vergessen geht, ist das die Exceptions im Eventloop
+ auch abgefangen werden müssen.
+ Dies geschieht mit 
+\begin_inset Quotes eld
+\end_inset
+
+Errorhandler.registerAwtErrorHandler();
+\begin_inset Quotes erd
+\end_inset
+
+ somit wird unserer eigener Errohandler als Eventloop errorhandler registriert,
+ und kann somit alle Fehler die nicht gecatcht sind und im Eventloop auftreten
+ abfange, dem User anzeigen und loggen.
+\end_layout
+
+\begin_layout Standard
+Fehler die zu erwarten sind werden in unserer Applikation abgefangen, und
+ dem Benutzer eine Entsprechende Meldung angezeigt.
+ Zu erwartende Fehler sind z.B.
+ Ungültige Benutzereingaben, nicht genügend Schreibrechte oder Fehler bei
+ Formeln wie log(-1).
+ Unerwartete Fehler sind z.B.
+ IOException aufgrund eines kaputten Datenträgers, manipulierte Simulationsdatei
+en etc.
+\end_layout
+
+\begin_layout Standard
+Alle zu erwartenden Fehler werden den Benutzer mit «Messagebox.showError»
+ dargestellt, während unerwartete Fehler mit «Errorhandler.showError(e, <optional
+e Beschreibung>);» dargestellt und automatisch geloggt werden.
+ Der Pfad für das Logging wird in der Konfigurationsdatei festgelegt.
+\end_layout
+
+\begin_layout Subsubsection*
+GUI Konsistenz
+\end_layout
+
+\begin_layout Standard
+Es wurde viel Wert gelegt das die GUI konsistent erscheint.
+ Dabei wurde das Benutzerhandling an Linux / OS X angelehnt.
+\end_layout
+
+\begin_layout Itemize
+Konfigurationsdialoge wie die Einstellungen / Formeldialog / Diagrammeinstellung
+en enthalten keine 
+\begin_inset Quotes eld
+\end_inset
+
+OK
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Übernehmen
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Abbrechen
+\begin_inset Quotes erd
+\end_inset
+
+ Buttons, sondern alle Änderungen werden sofort übernommen.
+ (Teilweise werden die Änderungen auch erst beim Schliessen des Dialoges
+ gespeichert, was aber für den User irrelevant ist)
+\end_layout
+
+\begin_layout Itemize
+Jegliche Messageboxen werden von der Klasse «Messagebox» dargestellt, welche
+ den Defaultbutton grösser, fett und immer ganz rechts darstellt.
+ 
+\end_layout
+
+\begin_layout Itemize
+Alle Layouts werden mit Layoutmanager gelayoutet, dies bedeutet wenn ein
+ Benutzer z.B.
+ eine grössere Schrift hat ist dies kein Problem, es können alle Dialoge
+ vergrössert werden und der Inhalt wird auch vergrössert.
+ Einzige Ausnahme ist der Editor: Das Simulationdokument wird nicht 
+\begin_inset Quotes eld
+\end_inset
+
+gezoomt
+\begin_inset Quotes erd
+\end_inset
+
+ wenn der Editor vergrössert wird.
+\end_layout
+
+\begin_layout Itemize
+Es wird nur die nötige Konfiguration angeboten: Nur die Einstellungen die
+ auf jedem System verschieden sind / Von externen Parametern abhängig sind
+ werden angeboten.
+ Globale sind grün und Parameter gelb.
+ Es macht keinen Sinn solche Dinge konfigurierbar zu machen, das verwirrt
+ die Benutzer höchstens.
+\end_layout
+
+\begin_layout Itemize
+Es werden keine 
+\begin_inset Quotes eld
+\end_inset
+
+Sind Sie sicher?
+\begin_inset Quotes erd
+\end_inset
+
+ Meldungen angezeigt.
+ Es können aber alle Aktionen die das Dokument verändern Rückgängig gemacht
+ werden (solange der Editor offen bleibt) somit sind solche Nachfragen nicht
+ nötig / sinnvoll.
+\end_layout
+
+\begin_layout Itemize
+Fehler bei der Datenvalidierung werden grafisch hervorgehoben, oder es ist
+ erst gar nicht möglich ungültige Werte einzugeben.
+\end_layout
+
+\begin_layout Subsubsection*
+Konfiguration / Einstellungen (Backend)
+\end_layout
+
+\begin_layout Standard
+Beim Start der Applikation wird eine Datei ./config/config.properties eingelesen,
+ diese Datei muss existieren, ansonsten werde Fehler auftreten.
+ In dieser Datei sind alle Konfigurierbaren Einstellungen gespeichert, die
+ der Benutzer aber nicht umstellen soll / muss / kann.
+ Diese sind:
+\end_layout
+
+\begin_layout Itemize
+portable=[true | false]: Wenn portable = true ist die Applikation Portabel,
+ es werden alle Einstellungen relativ zur Applikation gespeichert.
+ Ist die Einstellung false werden alle Einstellungen im Betriebsystemspezifische
+n Ordner abgelegt (es gibt keine Registry Einträge unter Windows)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Linux: ~/.config
+\end_layout
+
+\begin_layout Itemize
+Mac ~/Library
+\end_layout
+
+\begin_layout Itemize
+Windows 
+\begin_inset Quotes eld
+\end_inset
+
+C:
+\backslash
+Users
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+C:
+\backslash
+Document and Settings
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+errorlogPath=errorlog/: Der Pfad wo das Fehlermeldungen abgelegt werden
+ (ggf.
+ relativ zur, je nach «portable»)
+\end_layout
+
+\begin_layout Itemize
+settingsPath=config/: Der Pfad für die Einstellungen (ggf.
+ relativ zur, je nach «portable»)
+\end_layout
+
+\begin_layout Itemize
+importPluginFolder=plugin/import/: Immer relativ zur App, wo die .jar's oder
+ .xml's gesucht werden um die Plugins zu laden, hier die Importplugins für
+ Fremdformate.
+\end_layout
+
+\begin_layout Itemize
+simulationPluginFolder=plugin/simulation/: Siehe oben; Hier die Plugins
+ zur Simulation
+\end_layout
+
+\begin_layout Itemize
+predefinedDash: Die Liniendefinitionen für das Diagram.
+ Getrennt mit Semikolon (;).
+ Durchgezogene Linie: 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+; 5 Punkte gestrichelte Linie: 
+\begin_inset Quotes eld
+\end_inset
+
+5 5
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+defaultsFonts: Die Fonts die verwendet werden für das Diagram, die erste
+ Schrift, die installiert ist, der mit Semikolon (;) separierter Liste wird
+ verwendet
+\end_layout
+
+\begin_layout Itemize
+keyboard...: Definition des Sonderzeichen On-Screen-Keyboard, wird verwendet
+ um bei den Diagrammen in den Namen Sonderzeichen einzugeben.
+ Parameter definieren das Aussehen der Tastatur und werden hier nicht alle
+ Im Detail erläutert.
+ Die Zeichen die Angezeigt werden sind hier definiert, man beachte die Unicodesc
+hreibweise (wird z.B.
+ von Eclipse automatisch escaped): keyboard.keys=
+\backslash
+u03B1;
+\backslash
+u03B2;
+\backslash
+u03B3;...
+\end_layout
+
+\begin_layout Standard
+Im Settingsordner werden mehre Dateien abgelegt, alle Einstellungen die
+ von der Applikation und den Plugins definiert werden sind in der Datei
+ 
+\begin_inset Quotes eld
+\end_inset
+
+settings.ini
+\begin_inset Quotes erd
+\end_inset
+
+ abgelegt.
+ Es ist nicht vorgesehen das die Datei von Hand editiert wird.
+ Sollte Probleme mit den Einstellungen auftreten kann die Datei einfach
+ gelöscht werden, es werden dann die Defaulteinstellungen verwendet.
+\end_layout
+
+\begin_layout Standard
+Die Dateien endend auf 
+\begin_inset Quotes eld
+\end_inset
+
+.windowPos
+\begin_inset Quotes erd
+\end_inset
+
+ Speichern die Position der Fenster, um nach dem nächsten Start der Applikation
+ alle Fenster wider an der gleichen Position anzuzeigen.
+\end_layout
+
+\begin_layout Standard
+Dies kann zu probleme führen, z.B.
+ wenn die Bildschirmkonfiguration verändert wurde / Beamer an / abgesteckt
+ wurde.
+ Um solche Probleme zu lösen können einfach alle Dateien endend auf 
+\begin_inset Quotes eld
+\end_inset
+
+.windowPos
+\begin_inset Quotes erd
+\end_inset
+
+ gelöscht werden, dann werden beim nächsten Start alle Fenster auf dem Hauptbild
+schirm zentriert angezeigt.
 \end_layout
 
 \begin_layout Subsection
@@ -2620,6 +3021,10 @@ Glossar
 
 \begin_layout Standard
 Meso-Kompartment: Ein Teil des XY-Simulationsmodells
+\end_layout
+
+\begin_layout Standard
+Swing: Java GUI Framework
 \end_layout
 
 \end_body
