@@ -627,7 +627,7 @@ Mit unserer Simulation ist es zusätzlich möglich in einem XY Modell mehrere
 \end_layout
 
 \begin_layout Section
-Theoretische Grundlagen
+Numerische Lösungsverfahren
 \end_layout
 
 \begin_layout Standard
@@ -636,21 +636,42 @@ Um Biologische Prozesse zu verstehen, nachzubilden und zu entwickeln werden
  Näherungslösungen berechnet.
  Als Beispiel kann sich die Population eines Algenvolkes in einem See mit
  der Zeit ändern, je nachdem welche äussere Einflüsse auf die Algen einwirken.
- Die Geburten- und Sterberate bilden die Änderung der Population.
+ Die Geburten- und Sterberate bilden die Änderung der Population über die
+ Zeit.
  Dabei werden oftmals Differentialgleichung verwendet.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "scst_bio"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 In diesem Abschnitt wird eine Einführung in die numerischen Lösungsverfahren
  beschrieben, die ein Modelleditor wie unser Simulations-Tool ausführt um
  eine approximierte Lösung zu erhalten.
+ In unserer Simulation haben wir verschiedene numerische Verfahren implementiert
+, die wir nachfolgen kurz behandeln werden.
+ Die 
 \end_layout
 
 \begin_layout Subsection
-Numerische Lösungsverfahren
+Analytisch oder Numerisch
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "springer_kost"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Gewöhnliche Differentialgleichungen
 \end_layout
 
@@ -692,7 +713,7 @@ Auf analytischem Weg kann eine Differentialgleichung durch Integration erfolgen.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\int y^{\left(n\right)}\left(t\right)\cdot dt=y\left(t\right)^{\left(n-1\right)}+C
+\int y^{\left(n\right)}\cdot dt=y{}^{\left(n-1\right)}+C
 \end{equation}
 
 \end_inset
@@ -724,7 +745,7 @@ en wieder auf die Ursprüngliche Beschleunigungs-Funktion zurück.
 \begin_layout Standard
 
 \color red
-schlechtes Beispiel
+scst: schlechtes Beispiel -> welches dann?
 \end_layout
 
 \begin_layout Standard
@@ -745,7 +766,7 @@ a\left(t\right) & = & \frac{d}{dt}\left[-gt+v\left(0\right)\right]=-g\nonumber
 \begin_layout Standard
 
 \color red
-kürzen
+scst: kürzen -> warum?
 \end_layout
 
 \begin_layout Standard
@@ -825,7 +846,7 @@ reference "eq:zweiodeerste"
 
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Partielle Differentialgleichungen
 \end_layout
 
@@ -834,44 +855,44 @@ Eine Partielle Differentialgleichung (engl.
  Partial Differential Equation PDE) ist eine mathematische Gleichung, die
  partielle Ableitungen enthalten, also Ableitungen von Funktionen mehrere
  Variablen.
- Dabei  
+ Eine Dichte, zum Beispiel Nahrung oder Ausscheidungen, überdeckt eine Fläche,
+ zum Beispiel ein See, im 
+\begin_inset Formula $\left(x,\; y\right)=\mathbb{R}^{2}$
+\end_inset
+
+ mit der Funktion 
+\begin_inset Formula $f\left(x\; y,\; t\right).$
+\end_inset
+
+ Ein Algenvolk verändert diese Dichte über die Zeit aber auch bei jeder
+ Position unterschiedlich stark.
+ Bei komplexen Systemen kann es zu analytisch unlösbaren Differentialgleichungen
+ führen.
+ Generell können nur Lineare Partielle Differentialgleichung analytisch
+ gelöst werden.
+ Hier hilft die Numerik weiter, die zwar nur näherungsweise Lösungen ausgibt,
+ doch besser eine Näherung als keine Lösung.
+ Zwei wichtige numerische Verfahren sind die Finite-Differenzen-Methode
+ (FDM) und die Finite-Elemente-Methode (FEM).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "scst_bio"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-
-\color red
-ODE: warum gute Beschreibung bio.
- Systeme?
+Die Finite-Differenzen-Methode die für die Simulation benötigt werden sind
+ das Gradienten-Verfahren und die Diffusiongleichung, die später erläutert
+ werden.
+ 
 \end_layout
 
-\begin_layout Standard
-
-\color red
-(warum PDE angezeigt)
-\end_layout
-
-\begin_layout Standard
-
-\color red
-analytische vs.
- numerische Lösungen
-\end_layout
-
-\begin_layout Standard
-
-\color red
-partielle differentialgleichung->wann?
-\end_layout
-
-\begin_layout Standard
-
-\color red
-analytisch->nur linear
-\end_layout
-
-\begin_layout Standard
-In unserer Simulation haben wir verschiedene numerische Verfahren implementiert,
- die wir nachfolgen kurz behandeln werden.
+\begin_layout Subsection
+Einschrittverfahren
 \end_layout
 
 \begin_layout Subsubsection*
@@ -910,8 +931,9 @@ Institutiones Calculi Integralis
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-y^{\prime} & = & f\left(t,\; y\left(t\right)\right)\label{eq:euler}\\
-y_{n+1} & = & y_{n}+h\cdot f\left(t_{n},\; y_{n}\right)\nonumber 
+\dot{y} & = & f\left(t,\; y\left(t\right)\right)\label{eq:euler}\\
+y_{n+1} & = & y_{n}+h\cdot f\left(t_{n},\; y_{n}\right)\nonumber \\
+t_{n+1} & = & t_{n}+h
 \end{eqnarray}
 
 \end_inset
@@ -941,7 +963,7 @@ In unserem Beispiel mit der Fallbeschleunigung müssen wir das Verfahren
 \begin_layout Standard
 
 \color red
-kürzen
+scst: kürzen -> warum?
 \end_layout
 
 \begin_layout Standard
@@ -1114,7 +1136,7 @@ reference "eq:intermstep"
 \end_inset
 
  erläutert.
- Je grösser die Dimension 
+ Je grösser die Dimension der Stufe 
 \begin_inset Formula $s$
 \end_inset
 
@@ -1136,13 +1158,50 @@ reference "eq:intermstep"
 \noun off
 \color none
 \lang english
- zurückgesetzt.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang german-ch
+zurückgesetzt.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 k_{i}=f\left(t_{n}+hc_{i},\; y_{n}+h\sum_{j=1}^{s}a_{ij}k_{j}\right),\; i=1,...,s\label{eq:intermstep}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Ordnungsbedingung, welche Ordnung 
+\begin_inset Formula $p$
+\end_inset
+
+ ein 
+\shape italic
+Butcher tableau
+\shape default
+ besitzt, wird aus Zeitgründen aussenvorgelassen, jedoch kann die Ordnung
+ p höchstens die Stufe s erreichen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p\leq s
 \end{equation}
 
 \end_inset
@@ -1214,8 +1273,12 @@ reference "eq:euler"
  Das heisst, sie kannten die Möglichkeit noch nicht, die Nachfolgen soll
  jedoch der Ansatz des des Buchter Tableau verwendet werden.
  Dabei rechnet das Klassische vier Zwischenschritte oder Stützstellen, arbeitet
- also mit Dimension 
+ also mit Dimension der Stufe 
 \begin_inset Formula $s=4$
+\end_inset
+
+ und einer Ordnung 
+\begin_inset Formula $p=4$
 \end_inset
 
 .
@@ -1231,15 +1294,18 @@ reference "eq:rk4-table"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\begin{array}{c|cccc}
+\begin{eqnarray}
+\begin{array}{c|c}
+c & A\\
+\hline  & b^{T}
+\end{array} & = & \begin{array}{c|cccc}
 0\\
 \frac{1}{2} & \frac{1}{2}\\
 \frac{1}{2} & 0 & \frac{1}{2}\\
 1 & 0 & 0 & 1\\
 \hline  & \frac{1}{6} & \frac{1}{3} & \frac{1}{3} & \frac{1}{6}
 \end{array}\label{eq:rk4-table}
-\end{equation}
+\end{eqnarray}
 
 \end_inset
 
@@ -1273,9 +1339,10 @@ k_{4} & = & f(t_{n}+h\cdot1,\; y_{n}+h\cdot1\cdot k_{3})
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-y_{n+1}=y_{n}+h\cdot\left(\frac{1}{6}\cdot k_{1}+\frac{1}{3}\cdot k_{2}+\frac{1}{3}\cdot k_{3}+\frac{1}{6}\cdot k_{4}\right)
-\]
+\begin{eqnarray*}
+y_{n+1} & = & y_{n}+h\cdot\left(\frac{1}{6}\cdot k_{1}+\frac{1}{3}\cdot k_{2}+\frac{1}{3}\cdot k_{3}+\frac{1}{6}\cdot k_{4}\right)\\
+t_{n+1} & = & t_{n}+h
+\end{eqnarray*}
 
 \end_inset
 
@@ -1287,13 +1354,34 @@ Dormand-Prince
 \end_layout
 
 \begin_layout Standard
-f
+Eine noch Genauere Methode wurde in den 1980er von 
+\series bold
+John R.
+ Dormand
+\series default
+ und 
+\series bold
+Peter J.
+ Prince
+\series default
+ entwickelt, die eine höhere Ordnung aufweise wie das Klassische.
+ Diese Methode gehört zu den 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "teubner_hanke"
 
 \end_inset
 
@@ -3111,7 +3199,7 @@ Aufgrund aller dieser Tatsachen haben wir entschieden, dass der Weg mit
 \end_layout
 
 \begin_layout Itemize
-Fehlerhändling schwirig
+Fehlerhandling schwierig
 \end_layout
 
 \begin_layout Itemize
