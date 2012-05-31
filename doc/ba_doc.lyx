@@ -11,8 +11,10 @@
 \usepackage{caption}
 
 \lstset{
+aboveskip=10pt,
+belowskip=10pt,
 basicstyle=\footnotesize\ttfamily,	% Standardschrift
-%numbers=left,	% Ort der Zeilennummern
+numbers=left,	% Ort der Zeilennummern
 numberstyle=\tiny,	% Stil der Zeilennummern
 %stepnumber=2,	% Abstand zwischen den Zeilennummern
 numbersep=5pt,	% Abstand der Nummern zum Text
@@ -22,7 +24,7 @@ breaklines=true,	% Zeilen werden Umgebrochen
 keywordstyle=\color{blue}, % Farbe für die Keywords wie public, void, object u.s.w.
 commentstyle=\color{green}, % Farbe der Kommentare
 stringstyle=\color{red}, % Farbe der Zeichenketten
-frame=p, % Linie unten
+frame=b, % Linie unten
 showspaces=false,           % Leerzeichen anzeigen?
 showtabs=false,             % Tabs anzeigen?
 xleftmargin=17pt,
@@ -1411,14 +1413,170 @@ Problem beschreiben: herausfinden was Problem ist / wo Problem ist und Lösungen
 \end_layout
 
 \begin_layout Subsection
-Programmiersprachen
+Programmiersprachen & Entwicklungsumgebung
 \end_layout
 
 \begin_layout Standard
-Als Programmiersprache kam Java zum Einsatz.
- Java ist Plattform unabhängig und sehr angenehm zum Programmieren.
- Es existieren gute Bibliotheken für grafische Darstellungen, und Java war
- bereits beiden Studierenden bekannt.
+Als Vorgabe haben wir erhalten das wir eine GUI Applikation schreiben sollen
+ die Plattform unabhängig funktionieren sollte.
+ Daher haben wir uns für Java entschieden.
+ Java ist dank der Java Virtual Machine fast komplett Plattform unabhängig,
+ und bietet mit Swing ein komplettes Framework für GUI Applikationen.
+\end_layout
+
+\begin_layout Standard
+Die eigentliche Simulation wird mit Plugins realisiert, daher beschränkt
+ sich die Auswahl der Programmiersprache nur auf den Editor, das Plugin
+ kann in einer beliebigen Sprache geschrieben werden, es muss lediglich
+ eine Java Klasse geschrieben werden, die dieses Plugin lädt, dies ist z.B.
+ mit JNI (Java Native Interface) möglich.
+\end_layout
+
+\begin_layout Standard
+Alternative Plattformunabhängige Programmiersprachen mit Vor- und Nachteilen:
+\end_layout
+
+\begin_layout Itemize
+C / C++ (Weiter C++ genannt)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Positiv
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Da C++ eine Hardwarenahe Sprache ist könnten Hardwarebeschleunigungen wie
+ z.B.
+ MMX bei Intel Prozessoren genutzt werden.
+ Dies muss jedoch von Hand vorgenommen werden, und es ist zu beachten das
+ diese Optimierungen für jede Prozessorarchitektur (z.B.
+ Intel 32 bit, Intel 64 bit, ARM) separat vorgenommen werden müsste
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Negativ
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+C++ Beinhaltet keine GUI Bibliotheken, je nach Plattform kommen verschiedene
+ Frameworks wie MFC (Windows), Cocoa (Mac OS X), GTK / QT (Linux) zum Einsatz.
+ Die Framerworks GTK und QT sind jedoch auch Plattformunabhängig einsetzbar,
+ und lassen sich auch unter Mac OS X / Windows einsetzen, dies ist jedoch
+ mit einem höheren Aufwand verbunden als z.B.
+ bei Java.
+\end_layout
+
+\begin_layout Itemize
+Die Applikation müsste für Jedes Betriebssystem / Jede CPU Architektur neu
+ übersetzt werden.
+ Unterschiede wie z.B.
+ Little- / Big-Endian müssen bei der Enwicklung berücksichtigt werden, ansonsten
+ können Fehler auftreten.
+\end_layout
+
+\begin_layout Itemize
+Das Programmieren ist aufwändiger, da in C++ Prototypen in Headerfiles deklarier
+t werden müssen, diese müssen in korrekter Reihenfolge inklusive etc.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+.NET
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Positiv
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Die .NET Umgebung von Microsoft läuft wie Java ebenfalls in einer VM, beinhaltet
+ eine GUI Library und ist vom Syntax Java ähnlich
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Negativ
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Microsoft bietet nur eine VM für Windows an, es existiert zwar Mono als
+ VM für Linux, Mac OS X ist jedoch schlecht unterstützt.
+ Mono unterstützt nicht alle GUI Elemente die von Microsoft unterstützt
+ werden.
+\end_layout
+
+\begin_layout Itemize
+Die Kompatibilität verschiedener .NET Versionen (z.B.
+ 2.0 und 4.0) ist wesentlich schlechter als bei Java.
+ Bei Java lässt sich auch Code der für eine ältere Version geschrieben wurde
+ kompilieren, was bei .NET oftmals nicht der Fall ist.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Skriptsprachen wie Python, Ruby etc.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Positiv
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Einfache & Flexible Entwicklung
+\end_layout
+
+\begin_layout Itemize
+Kein kompilieren Notwendig
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Negativ
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Grundsätzlich langsamer als Java (Python / Ruby können auch zu Java Bytecode
+ kompiliert werden, dann fällt dieser Punkt weg, wir gehen aber von der
+ Standard Runtime aus)
+\end_layout
+
+\begin_layout Itemize
+Wie bei C++ keine Standard GUI Library, es muss ebenfalls auf GTK / QT zurückgeg
+riffen werden
+\end_layout
+
+\begin_layout Itemize
+Das Fehlerhandling ist schwerer, da bei Skriptsprachen oftmals Fehler erst
+ zur Laufzeit festgestellt werden.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Java ist für den Benutzer die einfachste Lösung, da er nur die JVM installiert
+ haben muss, es gibt keine weiteren Abhängigkeiten wie z.B.
+ bei Skriptsprachen wie Python, welches zusätzlich noch GTK benötigen würde.
+\end_layout
+
+\begin_layout Standard
+Java wird zudem beim Start automatisch auf die Vorhandene Hardware optimiert,
+ was im allgemeinen eine bessere Performance zur folge hat als wenn mit
+ C++ versucht wird zu optimieren, da der kaum für alle möglichen Architekturen
+ optimiert wird.
+ Dies hat natürlich auch einen Nachteil zur Folge: der Start der Applikation
+ ist relativ langsam.
 \end_layout
 
 \begin_layout Subsection
@@ -2321,7 +2479,7 @@ Die Applikation wurde nach MVC (Model View Control) bzw.
  Das Bedeutet das die Daten, die Logik und der View nur lose gekoppelt sind,
  und somit auch der View ersetzt werden könnte, ohne das der Rest angepasst
  werden müsste.
- Diese beiden Designpattern beschreiben ein ziemlich ähnliches vorgehen,
+ Diese beiden Design Pattern beschreiben ein ziemlich ähnliches vorgehen,
  wobei MVC sich hauptsächlich auf einen GUI Komponenten beziehen lässt,
  wie z.B.
  ein TreeView, während das Domänenmodell sich auf eine komplette Applikation
@@ -2334,7 +2492,7 @@ Das (Domänen)Modell befindet sich im Projekt «Model» und ist entsprechend
  von allem anderen entkoppelt.
  Die Simulation ist nur vom Model abhängig, und es besteht keine direkte
  Verbindung zur GUI.
- Die Gui selbst ist ein relativ grosser Teil der Applikation, und ist auch
+ Die GUI selbst ist ein relativ grosser Teil der Applikation, und ist auch
  nicht überall klar abgegrenzt.
 \end_layout
 
@@ -2419,8 +2577,35 @@ Der Editor ist einer der komplexeren Elemente dieser Applikation.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/Vererbung Editor.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Übersicht Editoraufbau
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -2510,7 +2695,7 @@ Undo / Redo war und ist einer der umständlichen teile der Implementation,
 
  aufgerufen erscheint ein Dialog der alle Aktionen des aktuellen Undo /
  Redo Handlers live auflistete, und je nach Status einfärbt.
- Zu bedenken ist das nach dem erstellen einer neuen Datei ein neuer Undo
+ Zu bedenken ist, dass nach dem erstellen einer neuen Datei ein neuer Undo
  / Redo Handler erstellt wird, und der Dialog daher nicht mehr funktioniert.
 \end_layout
 
@@ -2530,8 +2715,8 @@ Bei Serverapplikationen ist es üblich das alle Aktionen geloggt werden,
 \end_layout
 
 \begin_layout Standard
-Ein wichtiger Punkt, der oft vergessen geht, ist das die Exceptions im Eventloop
- auch abgefangen werden müssen.
+Ein wichtiger Punkt, der oft vergessen geht, ist, dass die Exceptions im
+ Eventloop auch abgefangen werden müssen.
  Dies geschieht mit 
 \begin_inset Quotes eld
 \end_inset
@@ -2807,7 +2992,7 @@ Die Dateien endend auf
 Dies kann zu probleme führen, z.B.
  wenn die Bildschirmkonfiguration verändert wurde / Beamer an / abgesteckt
  wurde.
- Um solche Probleme zu lösen können einfach alle Dateien endend auf 
+ Um solche Probleme zu lösen, können einfach alle Dateien endend auf 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2858,10 +3043,10 @@ Toolbox
 \end_layout
 
 \begin_layout Standard
-Es haben sich jedoch immer wider Probleme mit den in Matlab vordefinierten
- Funktionen ergeben, grundsätzlich erfüllen die Funktionen unsere Anforderungen,
- dies haben wir auch vorgängig abgeklärt, jedoch sind bei der Verwendung
- Probleme aufgetreten, die die Verwendung der Toolboxfunktionen verunmöglichten.
+Es haben sich jedoch immer wieder Probleme mit den in Matlab vordefinierten
+ Funktionen ergeben, grundsätzlich erfüllen die Funktionen unsere Anforderungen.
+ Dies haben wir auch vorgängig abgeklärt, jedoch sind bei der Verwendung
+ Probleme aufgetreten, die die Verwendung der Toolboxfunktionen verunmöglichten:
 \end_layout
 
 \begin_layout Itemize
@@ -2879,7 +3064,7 @@ grad
 \begin_inset Quotes erd
 \end_inset
 
-: Wird ein Gradienten im Diskreten Raum berechnet, so tritt immer das Problem
+: Wird ein Gradienten im diskreten Raum berechnet, so tritt immer das Problem
  auf das die Zahlen in einem Gitter abgelegt werden müssen, was mathematisch
  natürlich falsch ist.
  Matlab versucht den Mathematischen Fehler gleichmässig auf alle Richtungen
@@ -2888,14 +3073,14 @@ grad
  Diese Plateus sind für unsere Simulation extrem ungünstig.
  Daher haben wir jetzt einen Gradienten implementiert der einfach um 0.5
  Einheiten im Raster verschoben ist.
- Dies bewirkt zwar ein Abdriften in eine Richtung, ist jedoch bei der Simulation
- wesentlich weniger schlimm als ein Plateu.
+ Dies bewirkt zwar ein Abdriften in eine Richtung, dies stört aber die Simulatio
+n weniger als ein Plateu.
  Ein Plateu kann bewirken das sich ein Meso Kompartment, welches sich zur
  nidrigsten Konzentration bewegen soll, nicht mehr bewegt.
 \end_layout
 
 \begin_layout Standard
-Wir erstellen nun den Kompletten Matlab Code selbst, es werden keine Toolboxen
+Wir erstellen nun den kompletten Matlab Code selbst, es werden keine Toolboxen
  verwendet.
  Nach dem erstellen eines Temporären Files wird ein neuer Matlab / Octave
  Prozess erstellt, und dieser führt die Simulation aus.
@@ -2915,8 +3100,14 @@ Zudem ist die Plattformunabhängigkeit nicht gewährleistet, denn es muss
 \end_layout
 
 \begin_layout Standard
-Aufgrund aller dieser Tatsachen haben wir entschieden das der weg mit einer
- Markup Language der falsche war:
+
+\color red
+NICHT DER FALSCHE WEG aber schwirig
+\end_layout
+
+\begin_layout Standard
+Aufgrund aller dieser Tatsachen haben wir entschieden, dass der Weg mit
+ einer Markup Language der falsche war:
 \end_layout
 
 \begin_layout Itemize
@@ -3031,8 +3222,8 @@ options "din1505/alphadin"
 
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Part
+Anhang
 \end_layout
 
 \begin_layout Subsection
