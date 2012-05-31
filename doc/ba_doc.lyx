@@ -4,36 +4,55 @@
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\usepackage{color,listings} %bindet das Paket Listings ein
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Codeformatting
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{caption}
 
-% Der lstset-Befehl ermöglicht haufenweise Einstellungen zur Formatierung
-\lstset{language=html,
-captionpos=b, % Beschriftung ist unterhalb
-frame=lines, % Oberhalb und unterhalb des Listings ist eine Linie
-basicstyle=\ttfamily, % Schriftart
+\lstset{
+basicstyle=\footnotesize\ttfamily,	% Standardschrift
+%numbers=left,	% Ort der Zeilennummern
+numberstyle=\tiny,	% Stil der Zeilennummern
+%stepnumber=2,	% Abstand zwischen den Zeilennummern
+numbersep=5pt,	% Abstand der Nummern zum Text
+tabsize=4,		% Groesse von Tabs
+extendedchars=true,	%
+breaklines=true,	% Zeilen werden Umgebrochen
 keywordstyle=\color{blue}, % Farbe für die Keywords wie public, void, object u.s.w.
 commentstyle=\color{green}, % Farbe der Kommentare
 stringstyle=\color{red}, % Farbe der Zeichenketten
-numbers=left, % Zeilennummern links vom Code
-numberstyle=\tiny, % kleine Zeilennummern
-numbersep=5pt,
-breaklines=true, % Wordwrap a.k.a. Zeilenumbruch aktiviert
-showstringspaces=false,
-% emph legt Farben für bestimmte Wörter manuell fest
-emph={double,bool,int,unsigned,char,true,false,void},
-emphstyle=\color{blue},
-emph={Assert,Test},
-emphstyle=\color{red},
-emph={[2]\using,\#define,\#ifdef,\#endif}, emphstyle={[2]\color{blue}}
+frame=p, % Linie unten
+showspaces=false,           % Leerzeichen anzeigen?
+showtabs=false,             % Tabs anzeigen?
+xleftmargin=17pt,
+framexleftmargin=17pt,
+framexrightmargin=5pt,
+framexbottommargin=4pt,
+showstringspaces=false      % Leerzeichen in Strings anzeigen?
 }
 
+ \lstloadlanguages{% Check Dokumentation for further languages ...
+%[Visual]Basic
+%Pascal
+%C
+%C++
+XML
+%HTML
+%Java
+ }
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 \usepackage{anysize}
 \pagenumbering{roman}
 \let\myTOC\tableofcontents
-\renewcommand\tableofcontents{%
+\renewcommand\tableofcontents{
 \myTOC
 \clearpage
 \pagenumbering{arabic}
@@ -1564,8 +1583,9 @@ Als Dateiformat wird ein eigens entwickeltes, auf XML basierendes Dateiformat
  verwendet.
  Dieses Dateiformat spiegelt die Internen Strukturen ziemlich genau ab.
  Zudem gibt es Plugin Schnittstelle um Fremdformate zu importieren, es ist
- somit möglich beliebige Fremdformate zu importieren, es muss dafür lediglich
- ein Plugin erstellt werden und im richtigen Verzeichnis abgelegt werden.
+ somit möglich, beliebige Fremdformate zu importieren.
+ Es muss dafür lediglich ein Plugin erstellt werden und im richtigen Verzeichnis
+ abgelegt werden.
 \end_layout
 
 \begin_layout Paragraph
@@ -1694,7 +1714,7 @@ status open
 
 
 \backslash
-begin{lstlisting}[language=html]
+begin{lstlisting}[label=XML,caption=configuration.xml, language=html]
 \end_layout
 
 \begin_layout Plain Layout
@@ -1757,7 +1777,7 @@ status open
 
 
 \backslash
-begin{lstlisting}[language=html]
+begin{lstlisting}[label=XML,caption=simulation.xml, language=html]
 \end_layout
 
 \begin_layout Plain Layout
@@ -1837,7 +1857,7 @@ s(1/2)" name="m1" value="model3" x="10" y="88"/>
 
 \begin_layout Plain Layout
 
-           <!-- Fluss, "helperpoint" sind die Bezier Hilfspunkte -->
+           <!-- Fluss, <helperpoint> sind die Bezier Hilfspunkte -->
 \end_layout
 
 \begin_layout Plain Layout
