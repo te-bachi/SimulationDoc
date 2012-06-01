@@ -3304,23 +3304,8 @@ Tabwidth: 4
 \end_layout
 
 \begin_layout Standard
-Encoding: UTF8: Wichtig! Ansonsten funktionieren Spezialzeichen wie 
-\begin_inset Quotes eld
-\end_inset
-
-ẋ
-\begin_inset Quotes erd
-\end_inset
-
- und 
-\begin_inset Quotes eld
-\end_inset
-
-ẍ
-\begin_inset Quotes erd
-\end_inset
-
- nicht.
+Encoding: UTF8: Wichtig! Ansonsten funktionieren Spezialzeichen wie x-Punkt
+ und x-Punt-Punkt nicht.
 \end_layout
 
 \begin_layout Subsection
