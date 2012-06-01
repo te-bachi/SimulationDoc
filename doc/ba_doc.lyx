@@ -627,6 +627,77 @@ Mit unserer Simulation ist es zusätzlich möglich in einem XY Modell mehrere
 \end_layout
 
 \begin_layout Section
+Methode
+\end_layout
+
+\begin_layout Subsection
+Graphische Darstellung der Modelle
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Diffusionsgleichung, Meso-> stoff konsumieren / ausscheiden
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/model-uebersicht.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/model-uebersicht-legende.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+bla
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
+ bekannt ist da es vom Konzept her identisch bereits von vielen Simulationstools
+ angeboten wird.
+ Oder es kann ein «XY-Modell» erstellt werden, das dann Meso Kopartments
+ beinhaltet, diese befinden sich an einer Position (X / Y) und verweisen
+ auf ein Modell («Flow-Model-X»).
+ Im «XY-Modell» könne sich «Dichten» befinden, das sind Stoffe die eine
+ gewisse Konzentration an einer gewissen Stelle aufweisen.
+ Ein Meso Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
+ es kann Dichten konsumieren oder produzieren.
+\end_layout
+
+\begin_layout Subsection
 Numerische Lösungsverfahren
 \end_layout
 
@@ -650,14 +721,17 @@ key "scst_bio"
 
 \begin_layout Standard
 In diesem Abschnitt wird eine Einführung in die numerischen Lösungsverfahren
- beschrieben, die ein Modelleditor wie unser Simulations-Tool ausführt um
- eine approximierte Lösung zu erhalten.
+ beschrieben, die ein Modelleditor ausführt um eine approximierte Lösung
+ zu erhalten.
  In unserer Simulation haben wir verschiedene numerische Verfahren implementiert
 , die wir nachfolgen kurz behandeln werden.
- Die 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsubsection
 Analytisch oder Numerisch
 \end_layout
 
@@ -671,7 +745,7 @@ key "springer_kost"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Gewöhnliche Differentialgleichungen
 \end_layout
 
@@ -846,7 +920,7 @@ reference "eq:zweiodeerste"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Partielle Differentialgleichungen
 \end_layout
 
@@ -891,7 +965,7 @@ Die Finite-Differenzen-Methode die für die Simulation benötigt werden sind
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Einschrittverfahren
 \end_layout
 
@@ -1388,106 +1462,11 @@ key "teubner_hanke"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Gradienten-Verfahren
 \end_layout
 
-\begin_layout Section
-Methode
-\end_layout
-
-\begin_layout Standard
-
-\color red
-Diffusionsgleichung, Meso-> stoff konsumieren / ausscheiden
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/model-uebersicht.png
-	width 12cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-bli
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
-Legende
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/model-uebersicht-legende.png
-	width 8cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-bla
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
- bekannt ist da es vom Konzept her identisch bereits von vielen Simulationstools
- angeboten wird.
- Oder es kann ein «XY-Modell» erstellt werden, das dann Meso Kopartments
- beinhaltet, diese befinden sich an einer Position (X / Y) und verweisen
- auf ein Modell («Flow-Model-X»).
- Im «XY-Modell» könne sich «Dichten» befinden, das sind Stoffe die eine
- gewisse Konzentration an einer gewissen Stelle aufweisen.
- Ein Meso Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
- es kann Dichten konsumieren oder produzieren.
-\end_layout
-
-\begin_layout Section
 Werkzeuge und Hilfsmittel
 \end_layout
 
@@ -1500,7 +1479,7 @@ Problem beschreiben: herausfinden was Problem ist / wo Problem ist und Lösungen
  finden
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Programmiersprachen & Entwicklungsumgebung
 \end_layout
 
@@ -1559,7 +1538,7 @@ C++ Beinhaltet keine GUI Bibliotheken, je nach Plattform kommen verschiedene
 \end_layout
 
 \begin_layout Itemize
-Die Applikation müsste für Jedes Betriebssystem / Jede CPU Architektur neu
+Die Applikation müsste für jedes Betriebssystem / jede CPU Architektur neu
  übersetzt werden.
  Unterschiede wie z.B.
  Little- / Big-Endian müssen bei der Enwicklung berücksichtigt werden, ansonsten
@@ -1568,7 +1547,9 @@ Die Applikation müsste für Jedes Betriebssystem / Jede CPU Architektur neu
 
 \begin_layout Itemize
 Das Programmieren ist aufwändiger, da in C++ Prototypen in Headerfiles deklarier
-t werden müssen, diese müssen in korrekter Reihenfolge inklusive etc.
+t werden müssen, diese müssen in korrekter Reihenfolge 
+\color red
+inklusive etc.
 \end_layout
 
 \end_deeper
@@ -1625,7 +1606,7 @@ Einfache & Flexible Entwicklung
 \end_layout
 
 \begin_layout Itemize
-Kein kompilieren Notwendig
+Kein Kompilieren notwendig
 \end_layout
 
 \end_deeper
@@ -1667,7 +1648,7 @@ Java wird zudem beim Start automatisch auf die Vorhandene Hardware optimiert,
  ist relativ langsam.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Markup Language
 \end_layout
 
@@ -1688,7 +1669,7 @@ Als Markup Language für die Simulation kam der Matlab Syntax zum Einsatz,
  der ebenfalls vom Open Source Tool «octave» verarbeitet werden kann.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Entwicklungsumgebung
 \end_layout
 
@@ -1727,7 +1708,7 @@ Es kam JDK 1.6 (Java 6) zum Einsatz, obwohl unterdessen Java 7 erschienen
  Java 7 würde uns keinen Vorteil bringen.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Plugin Handling
 \end_layout
 
@@ -1820,7 +1801,7 @@ Simulation: Plugins für Interne Simulation und Matlab Codegeneration: TODO
  Querverweis
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Dateiformat
 \end_layout
 
@@ -3190,7 +3171,7 @@ Zudem ist die Plattformunabhängigkeit nicht gewährleistet, denn es muss
 \begin_layout Standard
 
 \color red
-NICHT DER FALSCHE WEG aber schwirig
+NICHT DER FALSCHE WEG aber schwierig
 \end_layout
 
 \begin_layout Standard
