@@ -641,6 +641,12 @@ Diffusionsgleichung, Meso-> stoff konsumieren / ausscheiden
 \end_layout
 
 \begin_layout Standard
+
+\color blue
+Text: für die graphise Darstellung...
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -1487,8 +1493,8 @@ Programmiersprachen & Entwicklungsumgebung
 Als Vorgabe haben wir erhalten das wir eine GUI Applikation schreiben sollen
  die Plattform unabhängig funktionieren sollte.
  Daher haben wir uns für Java entschieden.
- Java ist dank der Java Virtual Machine fast komplett Plattform unabhängig,
- und bietet mit Swing ein komplettes Framework für GUI Applikationen.
+ Java ist dank der Java Virtual Machine komplett Plattform unabhängig, und
+ bietet mit Swing ein komplettes Framework für GUI Applikationen.
 \end_layout
 
 \begin_layout Standard
@@ -1497,10 +1503,13 @@ Die eigentliche Simulation wird mit Plugins realisiert, daher beschränkt
  kann in einer beliebigen Sprache geschrieben werden, es muss lediglich
  eine Java Klasse geschrieben werden, die dieses Plugin lädt, dies ist z.B.
  mit JNI (Java Native Interface) möglich.
+ Die Argumente für / gegen eine Sprache gelten aber grundsätzlich auch für
+ die Simulation, abgesehen vom GUI Framework, das für die Simulation nicht
+ benötigt wird.
 \end_layout
 
 \begin_layout Standard
-Alternative Plattformunabhängige Programmiersprachen mit Vor- und Nachteilen:
+Alternative Plattform unabhängige Programmiersprachen mit Vor- und Nachteilen:
 \end_layout
 
 \begin_layout Itemize
@@ -1519,7 +1528,7 @@ Da C++ eine Hardwarenahe Sprache ist könnten Hardwarebeschleunigungen wie
  MMX bei Intel Prozessoren genutzt werden.
  Dies muss jedoch von Hand vorgenommen werden, und es ist zu beachten das
  diese Optimierungen für jede Prozessorarchitektur (z.B.
- Intel 32 bit, Intel 64 bit, ARM) separat vorgenommen werden müsste
+ Intel 32 bit, Intel 64 bit, ARM) separat vorgenommen werden müsste.
 \end_layout
 
 \end_deeper
@@ -1547,9 +1556,8 @@ Die Applikation müsste für jedes Betriebssystem / jede CPU Architektur neu
 
 \begin_layout Itemize
 Das Programmieren ist aufwändiger, da in C++ Prototypen in Headerfiles deklarier
-t werden müssen, diese müssen in korrekter Reihenfolge 
-\color red
-inklusive etc.
+t werden müssen, diese müssen in korrekter Reihenfolge inkludiert werden
+ etc.
 \end_layout
 
 \end_deeper
@@ -2654,6 +2662,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/Vererbung Editor.eps
+	scale 50
 
 \end_inset
 
@@ -3256,10 +3265,6 @@ Was Fehlt noch, was muss noch gemacht werden? Interpretation und Validierung
  legt dar, welche Chancen die Resultate bieten 18
 \end_layout
 
-\begin_layout Section
-Verzeichnisse
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -3272,7 +3277,7 @@ renewcommand
 \backslash
 refname{
 \backslash
-subsection{Literaturverzeichnis}}
+section{Literaturverzeichnis}}
 \end_layout
 
 \end_inset
@@ -3353,8 +3358,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/new_plugin/Bildschirmfoto-Properties for SimulationPlugin.Sinnlos .png
+	scale 50
 
 \end_inset
 
@@ -3556,7 +3563,548 @@ begin{lstlisting}[label=Plugin Beispiel,caption=SimulationSinnlosPlugin.java,
 
 \begin_layout Plain Layout
 
-TODO
+package ch.zhaw.simulation.sim.sinnlos;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.util.Vector;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import javax.swing.JPanel;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import org.jdesktop.swingx.JXTaskPane;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import butti.javalibs.config.Settings;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.math.exception.SimulationModelException;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.SimulationDocument;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.SimulationType;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.flow.SimulationFlowModel;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.flow.element.SimulationContainerData;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.simulation.SimulationConfiguration;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.ExecutionListener;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.ExecutionListener.FinishState;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.PluginDataProvider;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.SimulationPlugin;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.data.SimulationCollection;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.data.XYDensityRaw;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class SimulationSinnlosPlugin implements SimulationPlugin {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	private ExecutionListener execListener;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public boolean load() throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// erfolgreich geladen, bei return false kann das Plugin nicht verwendet
+\end_layout
+
+\begin_layout Plain Layout
+
+		// werden!
+\end_layout
+
+\begin_layout Plain Layout
+
+		return true;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void unload() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public JPanel getSettingsPanel() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// keine Einstellungen (Einstellungsidalog)
+\end_layout
+
+\begin_layout Plain Layout
+
+		return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public JXTaskPane getConfigurationSidebar(SimulationType type) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// keine Einstellungen (Sidebar)
+\end_layout
+
+\begin_layout Plain Layout
+
+		return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void init(Settings settings, SimulationConfiguration config, PluginDataP
+rovider provider) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.execListener = provider.getExecutionListener();
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void checkDocument(SimulationDocument doc) throws SimulationModelExcepti
+on {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Validierung immer erfolgreich
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void executeSimulation(final SimulationDocument doc) throws Exception
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (doc.getType() == SimulationType.FLOW_SIMULATION) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			new Thread(new Runnable() {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+				public void run() {
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationSinnlosPlugin.this.execListener.executionStarted("Simulation
+ gestartet");
+\end_layout
+
+\begin_layout Plain Layout
+
+					try {
+\end_layout
+
+\begin_layout Plain Layout
+
+						Thread.sleep(1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+					} catch (InterruptedException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+					}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationSinnlosPlugin.this.execListener.setState(50);
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationSinnlosPlugin.this.execListener.setExecutionMessage("Fast fertig!");
+\end_layout
+
+\begin_layout Plain Layout
+
+					try {
+\end_layout
+
+\begin_layout Plain Layout
+
+						Thread.sleep(1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+					} catch (InterruptedException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+					}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationFlowModel flowModel = doc.getFlowModel();
+\end_layout
+
+\begin_layout Plain Layout
+
+					for (SimulationContainerData c : flowModel.getSimulationContainer())
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+						System.out.println("-> " + c.getName() + " = " + c.getFormula());
+\end_layout
+
+\begin_layout Plain Layout
+
+					}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationSinnlosPlugin.this.execListener.executionFinished("Keine Implementat
+ion", FinishState.ERROR);
+\end_layout
+
+\begin_layout Plain Layout
+
+				}
+\end_layout
+
+\begin_layout Plain Layout
+
+			}).start();
+\end_layout
+
+\begin_layout Plain Layout
+
+		} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Unerwarteter Fehler, wird von der Applikation gehändelt
+\end_layout
+
+\begin_layout Plain Layout
+
+			throw new Exception("Der Programmierer hatte Feierabend!");
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public SimulationCollection getSimulationResults(SimulationDocument doc)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// keine Daten...
+\end_layout
+
+\begin_layout Plain Layout
+
+		return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public Vector<XYDensityRaw> getXYResults(SimulationDocument doc) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// keine Daten...
+\end_layout
+
+\begin_layout Plain Layout
+
+		return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void cancelSimulation() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Kann nicht abgebrochen werden...
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.execListener.setExecutionMessage("Nicht möglich!");
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3660,8 +4208,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/new_plugin/Bildschirmfoto-5.png
+	scale 50
 
 \end_inset
 
@@ -3701,8 +4251,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/new_plugin/Fehler.png
+	scale 30
 
 \end_inset
 
@@ -3743,12 +4295,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/new_plugin/Bildschirmfoto-Properties for Simulation .png
+	scale 50
 
 \end_inset
 
-scre
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3780,8 +4334,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/new_plugin/Bildschirmfoto-6.png
+	scale 50
 
 \end_inset
 
@@ -3820,8 +4376,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/new_plugin/Bildschirmfoto-7.png
+	scale 50
 
 \end_inset
 
