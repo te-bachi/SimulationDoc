@@ -154,6 +154,14 @@ subject{Bachelorthesis Frühlingssemester 2012}
 
 \end_layout
 
+\begin_layout Titlehead
+Zentrum für Angewandte Mathematik und Physik
+\begin_inset Newline newline
+\end_inset
+
+Zürcher Hochschule für Angewandte Wissenschaften
+\end_layout
+
 \begin_layout Title
 Entwicklung eines graphischen Editors zur Modellierung von Systemen mit
  dynamischer Modellstruktur
@@ -215,9 +223,18 @@ tt{buttiand@students.zhaw.ch}}
 
 \end_layout
 
+\begin_layout Date
+8.
+ Juni 2012
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \begin_layout Plain Layout
 
@@ -627,98 +644,66 @@ Mit unserer Simulation ist es zusätzlich möglich in einem XY Modell mehrere
 \end_layout
 
 \begin_layout Section
-Methode
-\end_layout
-
-\begin_layout Subsection
-Graphische Darstellung der Modelle
-\end_layout
-
-\begin_layout Standard
-
-\color red
-Diffusionsgleichung, Meso-> stoff konsumieren / ausscheiden
-\end_layout
-
-\begin_layout Standard
-
-\color blue
-Text: für die graphise Darstellung...
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/model-uebersicht.png
-	width 12cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/model-uebersicht-legende.png
-	width 8cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-bla
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
- bekannt ist da es vom Konzept her identisch bereits von vielen Simulationstools
- angeboten wird.
- Oder es kann ein «XY-Modell» erstellt werden, das dann Meso Kopartments
- beinhaltet, diese befinden sich an einer Position (X / Y) und verweisen
- auf ein Modell («Flow-Model-X»).
- Im «XY-Modell» könne sich «Dichten» befinden, das sind Stoffe die eine
- gewisse Konzentration an einer gewissen Stelle aufweisen.
- Ein Meso Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
- es kann Dichten konsumieren oder produzieren.
-\end_layout
-
-\begin_layout Subsection
-Numerische Lösungsverfahren
+Theorie
 \end_layout
 
 \begin_layout Standard
 Um Biologische Prozesse zu verstehen, nachzubilden und zu entwickeln werden
  mathematische Systeme modelliert und danach mit rechnerunterstützten Solvern
  Näherungslösungen berechnet.
- Als Beispiel kann sich die Population eines Algenvolkes in einem See mit
- der Zeit ändern, je nachdem welche äussere Einflüsse auf die Algen einwirken.
- Die Geburten- und Sterberate bilden die Änderung der Population über die
- Zeit.
+ Als Beispiel kann sich die Population 
+\begin_inset Formula $N$
+\end_inset
+
+ eines Bakterienvolkes in einer Petrischale mit der Zeit ändern, je nach
+ dem welche äussere Einflüsse auf die Bakterien einwirken.
+ Die Geburten- und Sterberate bilden die Änderung der Population.
  Dabei werden oftmals Differentialgleichung verwendet.
+ Im Falle von Bakterien kann von einem exponentiellen Wachstum ausgegangen
+ werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dN}{dt} & = & Geburtenrate-Sterberate\\
+\frac{dN}{dt} & = & \alpha N-\beta N\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Doch das Wachstum ist Beschränk auf das Nährmedium in der Petrischale.
+ Das Bakterienvolk kann sich nicht mehr Fortpflanzen, wenn keine Nahrung
+ mehr zur Verfügung steht.
+ Eine Nährstoffkonzentration 
+\begin_inset Formula $c\left(t\right)$
+\end_inset
+
+ wird eingeführt.
+ Je mehr Bakterien entstehen, desto schneller fällt die Konzentration.
+ Die Konzentration wiederum wird als Hemmungsterm in die Wachstumsfunktion
+ aufgenommen.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "scst_bio"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dc}{dt} & = & Zuflüsse-Abflüsse\\
+\frac{dc}{dt} & = & -\gamma N\nonumber \\
+\frac{dN}{dt} & = & c\left(t\right)\cdot\alpha N-\beta N\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -730,18 +715,73 @@ In diesem Abschnitt wird eine Einführung in die numerischen Lösungsverfahren
  beschrieben, die ein Modelleditor ausführt um eine approximierte Lösung
  zu erhalten.
  In unserer Simulation haben wir verschiedene numerische Verfahren implementiert
-, die wir nachfolgen kurz behandeln werden.
+, die im Folgenden kurz vorgestellt werden.
 \end_layout
 
 \begin_layout Standard
+Da sich diese Dokumentation an die Physik oder Biologie und nicht an die
+ Mathematik richtet, wird keine mathematische Nomenklatur verwendet.
+ So wird aus dem Zeitschritt 
+\begin_inset Formula $h$
+\end_inset
 
+ der Mathematik ein 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ der Physik und aus einer Ableitung 
+\begin_inset Formula $y^{\prime}$
+\end_inset
+
+ der Mathematik ein 
+\begin_inset Formula $\dot{y}$
+\end_inset
+
+ der Physik nach der Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+ oder in ausgeschriebener Form 
+\begin_inset Formula $\frac{dy}{dt}$
+\end_inset
+
+ .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Analytisch oder Numerisch
 \end_layout
 
 \begin_layout Standard
+In diesem Abschnitt wird der Nutzen aber auch die Grenzen des analytischen
+ Verfahrens aufgezeigt.
+ Auch wenn das numerische Verfahren schon früh bekannt war, wurden komplexe
+ Modelle erst seit dem Siegeszug des Computers numerisch gerechnet.
+ Zuvor war der numerische Weg zu Zeitaufwändig, da er von Hand berechnet
+ werden musste.
+ Komplizierte Geometrien wurden soweit vereinfacht, das sie analytisch oder
+ gar nicht gelöst werden konnten.
+ 
+\end_layout
+
+\begin_layout Standard
+In der allgemeinen Verwendung unterscheidet sich das numerische vom analytischen
+ Verfahren mit der diskretisierung der Werte.
+ Analytisch bleibt das Verfahren im Kontinuum.
+ Es gibt keine Lücken zwischen zwei Werten.
+ Bei der Numerik aber kann eine Zahl nur als Folge von Bits dargestellt
+ werden.
+ Wenn ein Bit ändert, ändert sich die Zahl und zwischendrin gibt es eine
+ Lücke.
+\end_layout
+
+\begin_layout Standard
+Falls das analytische Verfahren löstbar ist, ist das Resultat exakt.
+ Jedoch können nur einfache Geometrien berechnet werden.
+ Komplexe Geometrien, wie nicht lineare Differentialgleichungen, können
+ nur in Ausnahmefällen analytisch gelöst werden, worauf in heutiger Zeit
+ fast ausschliesslich ein numerisches Verfahren verwendung findet.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "springer_kost"
@@ -749,6 +789,10 @@ key "springer_kost"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Analytische Lösungsverfahren
 \end_layout
 
 \begin_layout Subsubsection
@@ -778,7 +822,7 @@ gleichung selbst ist.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-y^{\left(n\right)}=f\left(t,\; y\left(t\right),\; y^{\prime}\left(t\right),\;\ldots,\; y^{\left(n-1\right)}\left(t\right)\right)
+y^{\left(n\right)}=f\left(t,\; y\left(t\right),\;\dot{y}\left(t\right),\;\ldots,\; y^{\left(n-1\right)}\left(t\right)\right)
 \end{equation}
 
 \end_inset
@@ -787,7 +831,8 @@ y^{\left(n\right)}=f\left(t,\; y\left(t\right),\; y^{\prime}\left(t\right),\;\ld
 \end_layout
 
 \begin_layout Standard
-Auf analytischem Weg kann eine Differentialgleichung durch Integration erfolgen.
+Auf analytischem Weg kann eine Differentialgleichung durch unbestimmte Integrati
+on erfolgen.
 \end_layout
 
 \begin_layout Standard
@@ -802,59 +847,11 @@ Auf analytischem Weg kann eine Differentialgleichung durch Integration erfolgen.
 \end_layout
 
 \begin_layout Standard
-Die Fallbeschleinigung in Abbildung ??? soll in Gleichung 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:fallbesch"
-
-\end_inset
-
- als Beispiel gezeigt werden.
- Wir kennen die Beschleunigungs-Funktion 
-\begin_inset Formula $a\left(t\right)$
-\end_inset
-
-, suchen die Weg-Funktion 
-\begin_inset Formula $s\left(t\right)$
-\end_inset
-
-, finden durch Integration eine Lösung und kommen durch abermaliges Differenzier
-en wieder auf die Ursprüngliche Beschleunigungs-Funktion zurück.
-\end_layout
-
-\begin_layout Standard
-
-\color red
-scst: schlechtes Beispiel -> welches dann?
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-a\left(t\right) & = & \ddot{s}\left(t\right)=-g\label{eq:fallbesch}\\
-v\left(t\right) & = & \int a\left(t\right)\cdot dt=\int-g\cdot dt=-gt+v\left(0\right)\nonumber \\
-s\left(t\right) & = & \int v\left(t\right)\cdot dt=\int\left(-gt+v\left(0\right)\right)\cdot dt=-\frac{1}{2}gt^{2}+v\left(0\right)t+s\left(0\right)\nonumber \\
-v\left(t\right) & = & \frac{d}{dt}\left[-\frac{1}{2}gt^{2}+v\left(0\right)t+s\left(0\right)\right]=-gt+v\left(0\right)\nonumber \\
-a\left(t\right) & = & \frac{d}{dt}\left[-gt+v\left(0\right)\right]=-g\nonumber 
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\color red
-scst: kürzen -> warum?
-\end_layout
-
-\begin_layout Standard
 Für die computerunterstützte Berechnung von Simulationen dieser Art können
  verschiedene Techniken angewandt werden.
- Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: symbolische oder
- numerische.
- Unsere Simulation übernimmt das numerische Verfahren, wie es auch Berkeley
+ Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: analytisch/symbolische
+ oder numerische.
+ Unsere Simulation verwendet das numerische Verfahren, wie es auch Berkeley
  Madonna tut.
  Das Vorgehen beruht auf einer numerischen Approximation von Gewöhnlichen
  Differentialgleichungen.
@@ -874,7 +871,7 @@ reference "eq:odezweite"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ddot{s}\left(t\right)=-g\label{eq:odezweite}
+a=\ddot{s}\left(t\right)=-g\label{eq:odezweite}
 \end{equation}
 
 \end_inset
@@ -945,7 +942,11 @@ Eine Partielle Differentialgleichung (engl.
 \end_inset
 
  Ein Algenvolk verändert diese Dichte über die Zeit aber auch bei jeder
- Position unterschiedlich stark.
+ Position 
+\begin_inset Formula $\left(x,\; y\right)$
+\end_inset
+
+ unterschiedlich stark.
  Bei komplexen Systemen kann es zu analytisch unlösbaren Differentialgleichungen
  führen.
  Generell können nur Lineare Partielle Differentialgleichung analytisch
@@ -966,9 +967,13 @@ key "scst_bio"
 
 \begin_layout Standard
 Die Finite-Differenzen-Methode die für die Simulation benötigt werden sind
- das Gradienten-Verfahren und die Diffusiongleichung, die später erläutert
- werden.
+ implementiert worden das Gradienten-Verfahren und die Diffusiongleichung,
+ die später erläutert werden.
  
+\end_layout
+
+\begin_layout Subsection
+Numerische Lösungsverfahren
 \end_layout
 
 \begin_layout Subsubsection
@@ -990,11 +995,11 @@ Institutiones Calculi Integralis
 \shape default
  präsentiert, ist ein einfaches numerisches Verfahren.
  Von einer Schrittweite 
-\begin_inset Formula $h$
+\begin_inset Formula $\Delta t$
 \end_inset
 
  multipliziert mit der Ableitung 
-\begin_inset Formula $y'=f$
+\begin_inset Formula $\dot{y}=f$
 \end_inset
 
  zählt man den Anfangswert 
@@ -1012,8 +1017,8 @@ Institutiones Calculi Integralis
 \begin_inset Formula 
 \begin{eqnarray}
 \dot{y} & = & f\left(t,\; y\left(t\right)\right)\label{eq:euler}\\
-y_{n+1} & = & y_{n}+h\cdot f\left(t_{n},\; y_{n}\right)\nonumber \\
-t_{n+1} & = & t_{n}+h
+y_{n+1} & = & y_{n}+\Delta t\cdot f\left(t_{n},\; y_{n}\right)\nonumber \\
+t_{n+1} & = & t_{n}+\Delta t
 \end{eqnarray}
 
 \end_inset
@@ -1098,7 +1103,7 @@ reference "eq:butcher"
 
 .
  Die Tabelle beinhaltet einen Vektor 
-\begin_inset Formula $c_{i}$
+\begin_inset Formula $c$
 \end_inset
 
 , eine Matrix 
@@ -1106,18 +1111,18 @@ reference "eq:butcher"
 \end_inset
 
  und einen Vektor 
-\begin_inset Formula $b_{i}$
+\begin_inset Formula $b$
 \end_inset
 
  wobei 
-\begin_inset Formula $i,=1,...,s,\; j=1,...,s$
+\begin_inset Formula $i=1..s,\; j=1..s$
 \end_inset
 
  die Zeilen- und Spalten-Indizes und 
 \begin_inset Formula $s$
 \end_inset
 
- die Dimension ist.
+ die Dimension der Stufe ist.
  Verwendet wird nur ein Teil der Matrix 
 \begin_inset Formula $A$
 \end_inset
@@ -1145,7 +1150,7 @@ c_{2} & a_{21} & a_{22} & \dots & a_{2s}\\
 \vdots & \vdots & \vdots & \ddots & \vdots\\
 c_{s} & a_{s1} & a_{s2} & \dots & a_{ss}\\
 \hline  & b_{1} & b_{2} & \dots & b_{s}
-\end{array}=\begin{array}{c|cccc}
+\end{array}\rightarrow\begin{array}{c|cccc}
 0\\
 c_{2} & a_{21}\\
 \vdots & \vdots & \ddots\\
@@ -1176,7 +1181,7 @@ reference "eq:euler"
 \end_inset
 
  addiert mit einer festen Schrittweite 
-\begin_inset Formula $h$
+\begin_inset Formula $\Delta t$
 \end_inset
 
  multiplitiert mit der Ableitung.
@@ -1199,7 +1204,7 @@ reference "eq:euler"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-y_{n+1}=y_{n}+h\sum_{i=1}^{s}b_{i}k_{i}
+y_{n+1}=y_{n}+\Delta t\cdot\sum_{i=1}^{s}b_{i}k_{i}
 \end{equation}
 
 \end_inset
@@ -1208,7 +1213,31 @@ y_{n+1}=y_{n}+h\sum_{i=1}^{s}b_{i}k_{i}
 \end_layout
 
 \begin_layout Standard
-Eine Ableitung, auch Zwischenschritt genannt, ist in Gleichung 
+Alle Gewichte 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ zusammen müssen 
+\begin_inset Formula $1$
+\end_inset
+
+ ergeben, sonst würde das Verfahren einen Teil der Ausgangswerte verlieren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sum_{i=1}^{s}b_{i}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine Ableitung, auch Zwischenschritt oder Stützstelle genannt, ist in Gleichung
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:intermstep"
@@ -1222,66 +1251,33 @@ reference "eq:intermstep"
 
  ist, desto mehr Zwischenschritte werden berechnet.
  Zu Beginn jedes Schrittes wird der Vektor 
-\begin_inset Formula $k_{i}$
+\begin_inset Formula $k$
 \end_inset
 
+ zurückgesetzt auf 
+\begin_inset Formula $0$
+\end_inset
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang english
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang german-ch
-zurückgesetzt.
+.
+ Das heisst, beim ersten Zwischenschritt 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+ ist 
+\begin_inset Formula $c_{1}=0,\; k_{i}=0,\; i=1,...,s$
+\end_inset
+
+ und es ergibt sich 
+\begin_inset Formula $k_{1}=f\left(t_{n},\; y_{n}\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-k_{i}=f\left(t_{n}+hc_{i},\; y_{n}+h\sum_{j=1}^{s}a_{ij}k_{j}\right),\; i=1,...,s\label{eq:intermstep}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Die Ordnungsbedingung, welche Ordnung 
-\begin_inset Formula $p$
-\end_inset
-
- ein 
-\shape italic
-Butcher tableau
-\shape default
- besitzt, wird aus Zeitgründen aussenvorgelassen, jedoch kann die Ordnung
- p höchstens die Stufe s erreichen.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-p\leq s
+k_{i}=f\left(t_{n}+\Delta t\cdot c_{i},\; y_{n}+\Delta t\cdot\sum_{j=1}^{s}a_{ij}k_{j}\right),\; i=1,...,s\label{eq:intermstep}
 \end{equation}
 
 \end_inset
@@ -1292,6 +1288,13 @@ p\leq s
 \begin_layout Standard
 Für den ersten Parameter der Funktion 
 \begin_inset Formula $f\left(t\; y\left(t\right)\right)$
+\end_inset
+
+ in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:intermstep"
+
 \end_inset
 
  benötigen wir einen Koeffizienten 
@@ -1318,6 +1321,38 @@ Für den ersten Parameter der Funktion
 \begin_inset Formula 
 \begin{equation}
 c_{i}=\sum_{j=1}^{s}a_{ij}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Ordnungsbedingung, welche Ordnung 
+\begin_inset Formula $p$
+\end_inset
+
+ ein 
+\shape italic
+Butcher tableau
+\shape default
+ besitzt, wird aus Zeitgründen aussenvorgelassen, jedoch kann die Ordnung
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ höchstens die Stufe 
+\begin_inset Formula $s$
+\end_inset
+
+ erreichen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p\leq s
 \end{equation}
 
 \end_inset
@@ -1470,6 +1505,83 @@ key "teubner_hanke"
 
 \begin_layout Subsubsection
 Gradienten-Verfahren
+\end_layout
+
+\begin_layout Section
+Methode
+\end_layout
+
+\begin_layout Subsection
+Graphische Darstellung der Modelle
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Diffusionsgleichung, Meso-> stoff konsumieren / ausscheiden
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+Text: für die graphise Darstellung...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/model-uebersicht.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/model-uebersicht-legende.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+bla
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
+ bekannt ist da es vom Konzept her identisch bereits von vielen Simulationstools
+ angeboten wird.
+ Oder es kann ein «XY-Modell» erstellt werden, das dann Meso Kopartments
+ beinhaltet, diese befinden sich an einer Position (X / Y) und verweisen
+ auf ein Modell («Flow-Model-X»).
+ Im «XY-Modell» könne sich «Dichten» befinden, das sind Stoffe die eine
+ gewisse Konzentration an einer gewissen Stelle aufweisen.
+ Ein Meso Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
+ es kann Dichten konsumieren oder produzieren.
 \end_layout
 
 \begin_layout Subsection
@@ -3062,6 +3174,10 @@ Dies kann zu probleme führen, z.B.
 schirm zentriert angezeigt.
 \end_layout
 
+\begin_layout Subsubsection*
+Numerische Lösungsverfahren
+\end_layout
+
 \begin_layout Subsection
 Tests und Validierung
 \end_layout
@@ -3072,6 +3188,23 @@ Test der Matheengine, Vergleich mit Berkeley-Madonna
 
 \begin_layout Section
 Resultate
+\end_layout
+
+\begin_layout Standard
+Ergebnisse
+\end_layout
+
+\begin_layout Subsection
+Numerische Lösungsverfahren
+\end_layout
+
+\begin_layout Subsubsection
+Diffusionsgleichung
+\end_layout
+
+\begin_layout Standard
+Um die Implementierung der numerischen Diffusionsgleichung zu überprüfen
+ 
 \end_layout
 
 \begin_layout Standard
