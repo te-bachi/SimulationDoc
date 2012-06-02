@@ -641,6 +641,12 @@ Diffusionsgleichung, Meso-> stoff konsumieren / ausscheiden
 \end_layout
 
 \begin_layout Standard
+
+\color blue
+Text: für die graphise Darstellung...
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -1499,8 +1505,8 @@ Programmiersprachen & Entwicklungsumgebung
 Als Vorgabe haben wir erhalten das wir eine GUI Applikation schreiben sollen
  die Plattform unabhängig funktionieren sollte.
  Daher haben wir uns für Java entschieden.
- Java ist dank der Java Virtual Machine fast komplett Plattform unabhängig,
- und bietet mit Swing ein komplettes Framework für GUI Applikationen.
+ Java ist dank der Java Virtual Machine komplett Plattform unabhängig, und
+ bietet mit Swing ein komplettes Framework für GUI Applikationen.
 \end_layout
 
 \begin_layout Standard
@@ -1509,10 +1515,13 @@ Die eigentliche Simulation wird mit Plugins realisiert, daher beschränkt
  kann in einer beliebigen Sprache geschrieben werden, es muss lediglich
  eine Java Klasse geschrieben werden, die dieses Plugin lädt, dies ist z.B.
  mit JNI (Java Native Interface) möglich.
+ Die Argumente für / gegen eine Sprache gelten aber grundsätzlich auch für
+ die Simulation, abgesehen vom GUI Framework, das für die Simulation nicht
+ benötigt wird.
 \end_layout
 
 \begin_layout Standard
-Alternative Plattformunabhängige Programmiersprachen mit Vor- und Nachteilen:
+Alternative Plattform unabhängige Programmiersprachen mit Vor- und Nachteilen:
 \end_layout
 
 \begin_layout Itemize
@@ -1531,7 +1540,7 @@ Da C++ eine Hardwarenahe Sprache ist könnten Hardwarebeschleunigungen wie
  MMX bei Intel Prozessoren genutzt werden.
  Dies muss jedoch von Hand vorgenommen werden, und es ist zu beachten das
  diese Optimierungen für jede Prozessorarchitektur (z.B.
- Intel 32 bit, Intel 64 bit, ARM) separat vorgenommen werden müsste
+ Intel 32 bit, Intel 64 bit, ARM) separat vorgenommen werden müsste.
 \end_layout
 
 \end_deeper
@@ -1559,9 +1568,8 @@ Die Applikation müsste für jedes Betriebssystem / jede CPU Architektur neu
 
 \begin_layout Itemize
 Das Programmieren ist aufwändiger, da in C++ Prototypen in Headerfiles deklarier
-t werden müssen, diese müssen in korrekter Reihenfolge 
-\color red
-inklusive etc.
+t werden müssen, diese müssen in korrekter Reihenfolge inkludiert werden
+ etc.
 \end_layout
 
 \end_deeper
@@ -2666,6 +2674,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/Vererbung Editor.eps
+	scale 50
 
 \end_inset
 
@@ -3268,10 +3277,6 @@ Was Fehlt noch, was muss noch gemacht werden? Interpretation und Validierung
  legt dar, welche Chancen die Resultate bieten 18
 \end_layout
 
-\begin_layout Section
-Verzeichnisse
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -3284,7 +3289,7 @@ renewcommand
 \backslash
 refname{
 \backslash
-subsection{Literaturverzeichnis}}
+section{Literaturverzeichnis}}
 \end_layout
 
 \end_inset
@@ -3308,6 +3313,19 @@ Anhang
 \end_layout
 
 \begin_layout Subsection
+Codeanmerkungen
+\end_layout
+
+\begin_layout Standard
+Tabwidth: 4
+\end_layout
+
+\begin_layout Standard
+Encoding: UTF8: Wichtig! Ansonsten funktionieren Spezialzeichen wie x-Punkt
+ und x-Punt-Punkt nicht.
+\end_layout
+
+\begin_layout Subsection
 Glossar
 \end_layout
 
@@ -3317,6 +3335,1088 @@ Meso-Kompartment: Ein Teil des XY-Simulationsmodells
 
 \begin_layout Standard
 Swing: Java GUI Framework
+\end_layout
+
+\begin_layout Subsection
+Weiterentwicklung
+\end_layout
+
+\begin_layout Standard
+Hier wird anhand von Beispielen beschrieben wie die Applikation weiterentwickelt
+ werden kann.
+ Die Beispiele an sich sind Sinnlos, und dienen lediglich der Illustration.
+ Die Anleitung bezieht sich auf Eclipse unter Linux, es ist jedoch nicht
+ relevant welche IDE das verwendet wird.
+ Java Kenntnisse sind erforderlich, es wird davon ausgegangen das alle Projekte
+ der Simulation bereits importiert wurden und fehlerfrei kompilieren (Innerhalb
+ der IDE, Ant ist für diese Beispiele nicht erforderlich, da Eclipse, InteliJ,
+ Netbeans und alle modernen IDEs automatisch den Javacode kompillieren).
+\end_layout
+
+\begin_layout Subsubsection
+Erstellen eines neuen Simulationsplugins
+\end_layout
+
+\begin_layout Standard
+Es wird ein neues Javaprojekt erstellt, mit den Name «SimulationPlugin.Sinnlos».
+ In den Projekteinstellungen wird der «Java Build Path» konfiguriert, es
+ werden folgende Projekte referenziert:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/new_plugin/Bildschirmfoto-Properties for SimulationPlugin.Sinnlos .png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Java Buildpath
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+BJavalibs: Nötig für die Klasse Settings, welche die Einstellungen der Applikati
+on zur Verfügung stellt.
+ Alle Einstellungen die gelesen / geschrieben werden erhalten zusätzlich
+ ein prefix beim Namen.
+ Wird also z.B.
+ der Key 
+\begin_inset Quotes eld
+\end_inset
+
+hallo
+\begin_inset Quotes erd
+\end_inset
+
+ gelesen wird intern 
+\begin_inset Quotes eld
+\end_inset
+
+prefix.hallo
+\begin_inset Quotes erd
+\end_inset
+
+ gelesen, wobei der Prefix in diesem Falle 
+\begin_inset Quotes eld
+\end_inset
+
+simplugin.<name des Plugins>
+\begin_inset Quotes erd
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Itemize
+ExternLibraries: wird benötigt für «JXTaskPane», welches von SwingX stammt.
+ Dies ist ein Element in der Sidebar der Simulationsapplikation.
+\end_layout
+
+\begin_layout Itemize
+Model: Das Model wird benötigt da es alle Daten enthält
+\end_layout
+
+\begin_layout Itemize
+Plugin: Die generelle definition des Plugins, wird benötigt weil wir ein
+ Plugin implementieren
+\end_layout
+
+\begin_layout Itemize
+SimulationJepLib-2.4.1: Wird benötigt aufgrund von «SimulationModelException»
+ (und ggf.
+ den davon erbenden Klassen, die alle auch zur Verfügung stehen)
+\end_layout
+
+\begin_layout Itemize
+SimulationPlugin: Die definition des Simulationplugins
+\end_layout
+
+\begin_layout Standard
+Es wird eine neue Package erstellt, hier «ch.zhaw.simulation.sim.sinnlos» die
+ Package muss unique sein, es dürfen nicht zwei Plugins die gleichen Package
+ Namen verwenden, ansonsten kann es zu Problemen kommen!
+\end_layout
+
+\begin_layout Standard
+Es wird eine neue Klasse erstellt: «SimulationSinnlosPlugin», welche «Simulation
+Plugin» implementiert.
+ Alle erforderlichen Methoden werden in die Klasse eingefügt: Bei Eclipse
+ «Add unimplemented methods», dies erstellt 10 Methoden:
+\end_layout
+
+\begin_layout Itemize
+public boolean load() throws Exception: Die Initialisierung des Plugins
+ beim laden, wird im Normalfall nicht benötigt.
+\end_layout
+
+\begin_layout Itemize
+public void unload(): Diese Methode wird vor dem Beenden der Applikation
+ aufgerufen.
+ Grundsätzlich ist es möglich Plugins wärend der Laufzeit zu entladen /
+ neu zu laden, wird jedoch hier von der Applikation nicht unterstütz.
+\end_layout
+
+\begin_layout Itemize
+public JPanel getSettingsPanel(): Wird hier ein Wert != null zurückgegeben
+ wird dieser als eigener Tab in den Einstellungen angezeigt.
+\end_layout
+
+\begin_layout Itemize
+public JXTaskPane getConfigurationSidebar(SimulationType type): Wird hier
+ ein Wert != null zurückgegeben wird das Panel in der Sidebar angezeigt.
+ «type» gibt an ob die Konfiguration für ein XY oder für ein Flow model
+ benötigt wird.
+\end_layout
+
+\begin_layout Itemize
+public void init(Settings settings, SimulationConfiguration config, PluginDataPr
+ovider provider): Hier wird das Plugin normalerweise initialisiert.
+ «settings» sind die globalen Einstellungen, die auf Applikationsebene gespeiche
+rt werden, wie z.B.
+ Defaultwerte.
+ «config» sind die Einstellungen des aktuellen Dokuments, werden gespeichert
+ aber sind immer vom aktuellen Dokument abhängig, und nicht global! «provider»
+ stellt Objekte zur Verfügung, die z.B.
+ für die GUI benötigt werden:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+public JFrame getParent(): Wenn ein Dialog angezeigt werden soll kann dies
+ als parent verwendet werden, und der Dialog kann mit setLocationRelativeTo(pare
+nt); zentriert auf dem parent angezeigt werden.
+\end_layout
+
+\begin_layout Itemize
+public ExecutionListener getExecutionListener(): Hier werden alle Statusmeldunge
+n übermittelt (Fehler / Progress etc.)
+\end_layout
+
+\begin_layout Itemize
+public SimulationType getSimulationType(): Hier erhalten wir nochmals den
+ Simulationstyp (FLOW / XY)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+public void checkDocument(SimulationDocument doc) throws SimulationModelExceptio
+n: Prüft ob eine Simulation möglich ist.
+ Wenn das Plugin keine Dichten unterstützt kann dies hier abgefangen werden.
+\end_layout
+
+\begin_layout Itemize
+public void executeSimulation(SimulationDocument doc) throws Exception:
+ Führt die Simulation aus
+\end_layout
+
+\begin_layout Itemize
+public SimulationCollection getSimulationResults(SimulationDocument doc):
+ Gibt die Resultate der Flow Simulation zurück, wird immer verwendet (da
+ auch die XY Simulation Flow Simulationen enthält)
+\end_layout
+
+\begin_layout Itemize
+public Vector<XYDensityRaw> getXYResults(SimulationDocument doc): Gibt die
+ Resultate der XY Simulation zurück
+\end_layout
+
+\begin_layout Itemize
+public void cancelSimulation(): Wird aufgerufen wenn die Simulation abgebrochen
+ werden soll (von extern)
+\end_layout
+
+\begin_layout Standard
+Es ist davon auszugehen das alle Daten die dem Simulationsplugin übergeben
+ werden bereits validiert sind, also Formeln etc., daher ist keine Validierung
+ im Plugin erforderlich.
+ Wenn ungültige Daten übergeben werden ist dies nicht im Plugin abzufangen,
+ sondern in der Applikation.
+ Wir vervollständigen nun den Code mit folgendem Beispiel:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Plugin Beispiel,caption=SimulationSinnlosPlugin.java,
+ language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+package ch.zhaw.simulation.sim.sinnlos;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.util.Vector;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import javax.swing.JPanel;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import org.jdesktop.swingx.JXTaskPane;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import butti.javalibs.config.Settings;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.math.exception.SimulationModelException;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.SimulationDocument;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.SimulationType;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.flow.SimulationFlowModel;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.flow.element.SimulationContainerData;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.simulation.SimulationConfiguration;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.ExecutionListener;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.ExecutionListener.FinishState;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.PluginDataProvider;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.SimulationPlugin;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.data.SimulationCollection;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.plugin.data.XYDensityRaw;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class SimulationSinnlosPlugin implements SimulationPlugin {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	private ExecutionListener execListener;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public boolean load() throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// erfolgreich geladen, bei return false kann das Plugin nicht verwendet
+\end_layout
+
+\begin_layout Plain Layout
+
+		// werden!
+\end_layout
+
+\begin_layout Plain Layout
+
+		return true;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void unload() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public JPanel getSettingsPanel() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// keine Einstellungen (Einstellungsidalog)
+\end_layout
+
+\begin_layout Plain Layout
+
+		return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public JXTaskPane getConfigurationSidebar(SimulationType type) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// keine Einstellungen (Sidebar)
+\end_layout
+
+\begin_layout Plain Layout
+
+		return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void init(Settings settings, SimulationConfiguration config, PluginDataP
+rovider provider) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.execListener = provider.getExecutionListener();
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void checkDocument(SimulationDocument doc) throws SimulationModelExcepti
+on {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Validierung immer erfolgreich
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void executeSimulation(final SimulationDocument doc) throws Exception
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (doc.getType() == SimulationType.FLOW_SIMULATION) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			new Thread(new Runnable() {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+				public void run() {
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationSinnlosPlugin.this.execListener.executionStarted("Simulation
+ gestartet");
+\end_layout
+
+\begin_layout Plain Layout
+
+					try {
+\end_layout
+
+\begin_layout Plain Layout
+
+						Thread.sleep(1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+					} catch (InterruptedException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+					}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationSinnlosPlugin.this.execListener.setState(50);
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationSinnlosPlugin.this.execListener.setExecutionMessage("Fast fertig!");
+\end_layout
+
+\begin_layout Plain Layout
+
+					try {
+\end_layout
+
+\begin_layout Plain Layout
+
+						Thread.sleep(1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+					} catch (InterruptedException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+					}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationFlowModel flowModel = doc.getFlowModel();
+\end_layout
+
+\begin_layout Plain Layout
+
+					for (SimulationContainerData c : flowModel.getSimulationContainer())
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+						System.out.println("-> " + c.getName() + " = " + c.getFormula());
+\end_layout
+
+\begin_layout Plain Layout
+
+					}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+					SimulationSinnlosPlugin.this.execListener.executionFinished("Keine Implementat
+ion", FinishState.ERROR);
+\end_layout
+
+\begin_layout Plain Layout
+
+				}
+\end_layout
+
+\begin_layout Plain Layout
+
+			}).start();
+\end_layout
+
+\begin_layout Plain Layout
+
+		} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Unerwarteter Fehler, wird von der Applikation gehändelt
+\end_layout
+
+\begin_layout Plain Layout
+
+			throw new Exception("Der Programmierer hatte Feierabend!");
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public SimulationCollection getSimulationResults(SimulationDocument doc)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// keine Daten...
+\end_layout
+
+\begin_layout Plain Layout
+
+		return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public Vector<XYDensityRaw> getXYResults(SimulationDocument doc) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// keine Daten...
+\end_layout
+
+\begin_layout Plain Layout
+
+		return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void cancelSimulation() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Kann nicht abgebrochen werden...
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.execListener.setExecutionMessage("Nicht möglich!");
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unser Plugin ist somit fertig, aber es wird noch nicht geladen.
+ Um es laden zu können muss zuerst ein XML File mit den Daten des Plugins
+ erstellt werden.
+ Dies wird vom Plugin Loader benötigt, dies geschieht am einfachsten indem
+ ein bereits vorhandenes XML File eines anderen Plugins kopiert und angepasst
+ wird.
+ Das File «plugin.xml» wird direkt im Root des Projektes abgelegt, und zwar
+ mit folgendem Inhalt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=XML,caption=simulation.xml, language=html]
+\end_layout
+
+\begin_layout Plain Layout
+
+<?xml version="1.0" encoding="UTF-8"?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<plugin>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<class>ch.zhaw.simulation.sim.sinnlos.SimulationSinnlosPlugin</class>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<name>Sinnlos</name>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<description>Beispiel Plugin</description>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<author>Hans Muster</author>
+\end_layout
+
+\begin_layout Plain Layout
+
+</plugin>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um das Plugin nun zu kompilieren muss noch ein Antfile erstellt werden,
+ auch dieses kann von einem bestehenden Plugin kopiert werden.
+ Jedoch muss dann bei jeder Änderung das Antfile erneut ausgeführt werden,
+ was ziemlich mühsam ist, daher gehen wir einen einfacheren Weg: wir kopieren
+ das plugin.xml im Projekt «Simulation» in den Ordner «plugin/simulation»
+ unter dem Name «Sinnlos.xml»
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/new_plugin/Bildschirmfoto-5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Sinnlos.xml im korrekten Verzeichnis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Danach wird die Applikation gestartet, dies geschieht durch ausführen der
+ Klasse «ch.zhaw.simulation.startup.SimulationMain» aus dem Projekt «Simulation».
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/new_plugin/Fehler.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Fehler beim laden des Plugins
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nun erscheint ein Fehler, dass das Plugin nicht geladen werden konnte.
+ Der Fehler wird geloggt, jedoch wird die Exception incl.
+ allen Texten (in diesem Fall sind keine Zusatzlichen Texte vorhanden) auf
+ der Konsole ausgegeben.
+ In diesem Fall konnte die Klasse nicht geladen werden, dies kann einfach
+ gelöst werden, indem beim Projekt «Simulation» das Projekt «SimulationPlugin.Sin
+nlos» in den Referenzierten Projekte (Java Build Path) hinzugefügt wird.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/new_plugin/Bildschirmfoto-Properties for Simulation .png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Projekt «Simulation» Einstellungen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Danach sollte das Plugin korrekt funktionieren, es muss noch in der Sidebar
+ ausgewählt werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/new_plugin/Bildschirmfoto-6.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Wählen des neuen Plugins
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Testen / Weiterentwickeln ist jetzt dem Leser überlassen!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/new_plugin/Bildschirmfoto-7.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Start der Simulation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
