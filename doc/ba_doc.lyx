@@ -728,7 +728,33 @@ In diesem Abschnitt wird eine Einführung in die numerischen Lösungsverfahren
 \end_layout
 
 \begin_layout Standard
+Da sich diese Dokumentation an die Physik oder Biologie und nicht an die
+ Mathematik richtet, wird keine mathematische Nomenklatur verwendet.
+ So wird aus dem Zeitschritt 
+\begin_inset Formula $h$
+\end_inset
 
+ der Mathematik ein 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ der Physik und aus einer Ableitung 
+\begin_inset Formula $y^{\prime}$
+\end_inset
+
+ der Mathematik ein 
+\begin_inset Formula $\dot{y}$
+\end_inset
+
+ der Physik nach der Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+ oder in ausgeschriebener Form 
+\begin_inset Formula $\frac{dy}{dt}$
+\end_inset
+
+ .
 \end_layout
 
 \begin_layout Subsubsection
@@ -736,6 +762,35 @@ Analytisch oder Numerisch
 \end_layout
 
 \begin_layout Standard
+In diesem Abschnitt wird der Nutzen aber auch die Grenzen des analytischen
+ Verfahrens aufgezeigt.
+ Auch wenn das numerische Verfahren schon früh bekannt war, wurden komplexe
+ Modelle erst seit dem Siegeszug des Computers numerisch gerechnet.
+ Zuvor war der numerische Weg zu Zeitaufwändig, da er von Hand berechnet
+ werden musste.
+ Komplizierte Geometrien wurden soweit vereinfacht, das sie analytisch oder
+ gar nicht gelöst werden konnten.
+ 
+\end_layout
+
+\begin_layout Standard
+In der allgemeinen Verwendung unterscheidet sich das numerische vom analytischen
+ Verfahren mit der diskretisierung der Werte.
+ Analytisch bleibt das Verfahren im Kontinuum.
+ Es gibt keine Lücken zwischen zwei Werten.
+ Bei der Numerik aber kann eine Zahl nur als Folge von Bits dargestellt
+ werden.
+ Wenn ein Bit ändert, ändert sich die Zahl und zwischendrin gibt es eine
+ Lücke.
+\end_layout
+
+\begin_layout Standard
+Falls das analytische Verfahren löstbar ist, ist das Resultat exakt.
+ Jedoch können nur einfache Geometrien berechnet werden.
+ Komplexe Geometrien, wie nicht lineare Differentialgleichungen, können
+ nur in Ausnahmefällen analytisch gelöst werden, worauf in heutiger Zeit
+ fast ausschliesslich ein numerisches Verfahren verwendung findet.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "springer_kost"
@@ -772,7 +827,7 @@ gleichung selbst ist.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-y^{\left(n\right)}=f\left(t,\; y\left(t\right),\; y^{\prime}\left(t\right),\;\ldots,\; y^{\left(n-1\right)}\left(t\right)\right)
+y^{\left(n\right)}=f\left(t,\; y\left(t\right),\;\dot{y}\left(t\right),\;\ldots,\; y^{\left(n-1\right)}\left(t\right)\right)
 \end{equation}
 
 \end_inset
@@ -781,7 +836,8 @@ y^{\left(n\right)}=f\left(t,\; y\left(t\right),\; y^{\prime}\left(t\right),\;\ld
 \end_layout
 
 \begin_layout Standard
-Auf analytischem Weg kann eine Differentialgleichung durch Integration erfolgen.
+Auf analytischem Weg kann eine Differentialgleichung durch unbestimmte Integrati
+on erfolgen.
 \end_layout
 
 \begin_layout Standard
@@ -796,59 +852,11 @@ Auf analytischem Weg kann eine Differentialgleichung durch Integration erfolgen.
 \end_layout
 
 \begin_layout Standard
-Die Fallbeschleinigung in Abbildung ??? soll in Gleichung 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:fallbesch"
-
-\end_inset
-
- als Beispiel gezeigt werden.
- Wir kennen die Beschleunigungs-Funktion 
-\begin_inset Formula $a\left(t\right)$
-\end_inset
-
-, suchen die Weg-Funktion 
-\begin_inset Formula $s\left(t\right)$
-\end_inset
-
-, finden durch Integration eine Lösung und kommen durch abermaliges Differenzier
-en wieder auf die Ursprüngliche Beschleunigungs-Funktion zurück.
-\end_layout
-
-\begin_layout Standard
-
-\color red
-scst: schlechtes Beispiel -> welches dann?
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-a\left(t\right) & = & \ddot{s}\left(t\right)=-g\label{eq:fallbesch}\\
-v\left(t\right) & = & \int a\left(t\right)\cdot dt=\int-g\cdot dt=-gt+v\left(0\right)\nonumber \\
-s\left(t\right) & = & \int v\left(t\right)\cdot dt=\int\left(-gt+v\left(0\right)\right)\cdot dt=-\frac{1}{2}gt^{2}+v\left(0\right)t+s\left(0\right)\nonumber \\
-v\left(t\right) & = & \frac{d}{dt}\left[-\frac{1}{2}gt^{2}+v\left(0\right)t+s\left(0\right)\right]=-gt+v\left(0\right)\nonumber \\
-a\left(t\right) & = & \frac{d}{dt}\left[-gt+v\left(0\right)\right]=-g\nonumber 
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\color red
-scst: kürzen -> warum?
-\end_layout
-
-\begin_layout Standard
 Für die computerunterstützte Berechnung von Simulationen dieser Art können
  verschiedene Techniken angewandt werden.
- Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: symbolische oder
- numerische.
- Unsere Simulation übernimmt das numerische Verfahren, wie es auch Berkeley
+ Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: analytisch/symbolische
+ oder numerische.
+ Unsere Simulation verwendet das numerische Verfahren, wie es auch Berkeley
  Madonna tut.
  Das Vorgehen beruht auf einer numerischen Approximation von Gewöhnlichen
  Differentialgleichungen.
@@ -868,7 +876,7 @@ reference "eq:odezweite"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ddot{s}\left(t\right)=-g\label{eq:odezweite}
+a=\ddot{s}\left(t\right)=-g\label{eq:odezweite}
 \end{equation}
 
 \end_inset
@@ -939,7 +947,11 @@ Eine Partielle Differentialgleichung (engl.
 \end_inset
 
  Ein Algenvolk verändert diese Dichte über die Zeit aber auch bei jeder
- Position unterschiedlich stark.
+ Position 
+\begin_inset Formula $\left(x,\; y\right)$
+\end_inset
+
+ unterschiedlich stark.
  Bei komplexen Systemen kann es zu analytisch unlösbaren Differentialgleichungen
  führen.
  Generell können nur Lineare Partielle Differentialgleichung analytisch
@@ -960,8 +972,8 @@ key "scst_bio"
 
 \begin_layout Standard
 Die Finite-Differenzen-Methode die für die Simulation benötigt werden sind
- das Gradienten-Verfahren und die Diffusiongleichung, die später erläutert
- werden.
+ implementiert worden das Gradienten-Verfahren und die Diffusiongleichung,
+ die später erläutert werden.
  
 \end_layout
 
