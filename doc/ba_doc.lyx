@@ -652,12 +652,20 @@ Um Biologische Prozesse zu verstehen, nachzubilden und zu entwickeln werden
  mathematische Systeme modelliert und danach mit rechnerunterstützten Solvern
  Näherungslösungen berechnet.
  Als Beispiel kann sich die Population 
-\begin_inset Formula $N$
+\begin_inset Formula $N\left(t\right)$
 \end_inset
 
  eines Bakterienvolkes in einer Petrischale mit der Zeit ändern, je nach
  dem welche äussere Einflüsse auf die Bakterien einwirken.
- Die Geburten- und Sterberate bilden die Änderung der Population.
+ Die Geburten- und Sterberate bilden die Änderung 
+\begin_inset Formula $\frac{dN}{dt}$
+\end_inset
+
+ der Population 
+\begin_inset Formula $N\left(t\right)$
+\end_inset
+
+.
  Dabei werden oftmals Differentialgleichung verwendet.
  Im Falle von Bakterien kann von einem exponentiellen Wachstum ausgegangen
  werden.
@@ -667,7 +675,7 @@ Um Biologische Prozesse zu verstehen, nachzubilden und zu entwickeln werden
 \begin_inset Formula 
 \begin{eqnarray}
 \frac{dN}{dt} & = & Geburtenrate-Sterberate\\
-\frac{dN}{dt} & = & \alpha N-\beta N\nonumber 
+\frac{dN}{dt} & = & \alpha N-\beta N,\quad N\geq0\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -685,8 +693,51 @@ Doch das Wachstum ist Beschränk auf das Nährmedium in der Petrischale.
 
  wird eingeführt.
  Je mehr Bakterien entstehen, desto schneller fällt die Konzentration.
- Die Konzentration wiederum wird als Hemmungsterm in die Wachstumsfunktion
+ Die fallende Konzentration 
+\begin_inset Formula $c\left(t\right)$
+\end_inset
+
+ wiederum wird als Hemmungsterm in die Wachstumsfunktion 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\frac{dN}{dt}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang german-ch
  aufgenommen.
+ Diese Populationsfunktion 
+\begin_inset Formula $N\left(t\right)$
+\end_inset
+
+ gehört zu den Logistischen Funktionen, die wiederum Teil der Sigmoidfunktionen
+ ist.
+ Zu Beginn wächst die Funktion beinahe exponentiell.
+ Ihren Höhepunkt erreicht sie am Wendepunkt, wenn die Änderung der Population
+ am grössten ist.
+ Nach endlicher Zeit tritt eine Sättigung ein.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -700,9 +751,9 @@ key "scst_bio"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{dc}{dt} & = & Zuflüsse-Abflüsse\\
-\frac{dc}{dt} & = & -\gamma N\nonumber \\
-\frac{dN}{dt} & = & c\left(t\right)\cdot\alpha N-\beta N\nonumber 
+\frac{dc}{dt} & = & Zuflüsse-Abflüsse\label{eq:konz_wachs}\\
+\frac{dc}{dt} & = & -\gamma N,\quad c\geq0\nonumber \\
+\frac{dN}{dt} & = & c\left(t\right)\cdot\alpha N-\beta N,\quad N\geq0\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -993,32 +1044,16 @@ Leonard Euler
 \shape italic
 Institutiones Calculi Integralis
 \shape default
- präsentiert, ist ein einfaches numerisches Verfahren.
- Von einer Schrittweite 
-\begin_inset Formula $\Delta t$
-\end_inset
-
- multipliziert mit der Ableitung 
-\begin_inset Formula $\dot{y}=f$
-\end_inset
-
- zählt man den Anfangswert 
-\begin_inset Formula $y_{0}$
-\end_inset
-
- dazu und bekommt 
-\begin_inset Formula $y_{1}$
-\end_inset
-
-.
+ präsentiert, ist ein einfaches numerisches Verfahren, dass näherungsweise
+ Lösungen einer Integration rechnet.
+ Ausgangslage ist eine Differentialgleichung.
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\dot{y} & = & f\left(t,\; y\left(t\right)\right)\label{eq:euler}\\
-y_{n+1} & = & y_{n}+\Delta t\cdot f\left(t_{n},\; y_{n}\right)\nonumber \\
-t_{n+1} & = & t_{n}+\Delta t
+\frac{dy}{dt} & = & f\left(t,\; y\left(t\right)\right)
 \end{eqnarray}
 
 \end_inset
@@ -1027,38 +1062,37 @@ t_{n+1} & = & t_{n}+\Delta t
 \end_layout
 
 \begin_layout Standard
-In unserem Beispiel mit der Fallbeschleunigung müssen wir das Verfahren
- zwei Mal anwenden pro Zeitschritt, da wir eine Differentialgleichung 2.
- Ordnung lösen möchten.
- Dabei müsen die Anfangswerte 
-\begin_inset Formula $v_{0}$
-\end_inset
-
- und 
-\begin_inset Formula $s_{0}$
-\end_inset
-
- sowie die Schrittweite 
-\begin_inset Formula $h$
-\end_inset
-
- bekannt sein.
-\end_layout
-
-\begin_layout Standard
-
-\color red
-scst: kürzen -> warum?
+Da die Numerik mit diskreten Werten rechnet, kann eine Ableitung umgeschrieben
+ werden in einen Differenzenquotient .
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-h & = & 0.1\\
-v_{0} & = & 15\nonumber \\
-s_{0} & = & 0\nonumber \\
-v_{1} & = & 15+0.1\cdot\left(-9.81\right)=14.019\nonumber \\
-s_{1} & = & 0+0.1\cdot\left[15+0.1\cdot\left(-9.81\right)\right]=1.4019\nonumber 
+\frac{\Delta y}{\Delta t} & = & f\left(t,\; y\left(t\right)\right)\\
+\Delta y & = & \Delta t\cdot f\left(t,\; y\left(t\right)\right)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit der Differentialgleichung und dem Anfangswert 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ kann schrittweise bis zur gewünschten Endzeit numerisch Integriert werden.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+y_{n+1} & = & y_{n}+\Delta y\label{eq:euler}\\
+y_{n+1} & = & y_{n}+\Delta t\cdot f\left(t_{n},\; y_{n}\right)\\
+t_{n+1} & = & t_{n}+\Delta t
 \end{eqnarray}
 
 \end_inset
@@ -1069,12 +1103,12 @@ s_{1} & = & 0+0.1\cdot\left[15+0.1\cdot\left(-9.81\right)\right]=1.4019\nonumber
 \begin_layout Standard
 Bei Differentialgleichungen 1.
  Ordnung und kleiner Schrittweite 
-\begin_inset Formula $h$
+\begin_inset Formula $\Delta t$
 \end_inset
 
  erhält man ausreichende Genauigkeit.
- Unser Beispiel mit 2.
- Ordnung büst bei jedem Schritt an Genauigkeit ein.
+ Ab einer höheren Ordnungen büst dieses Verfahren bei jedem Schritt an Genauigke
+it ein.
  Es gibt bessere Verfahrung, die auch Ordnungen höheren Grades mit weniger
  Genauigkeitsverlust zulassen.
 \end_layout
@@ -1204,7 +1238,7 @@ reference "eq:euler"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-y_{n+1}=y_{n}+\Delta t\cdot\sum_{i=1}^{s}b_{i}k_{i}
+y_{n+1}=y_{n}+\Delta t\cdot\sum_{i=1}^{s}b_{i}k_{i}\label{eq:butcher_ode}
 \end{equation}
 
 \end_inset
@@ -1337,8 +1371,15 @@ Die Ordnungsbedingung, welche Ordnung
 \shape italic
 Butcher tableau
 \shape default
- besitzt, wird aus Zeitgründen aussenvorgelassen, jedoch kann die Ordnung
- 
+ besitzt, wird aus Zeitgründen aussenvorgelassen und auf die Referenz 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "oberle_ode"
+
+\end_inset
+
+ verwiesen.
+ Jedoch kann die Ordnung 
 \begin_inset Formula $p$
 \end_inset
 
@@ -1384,9 +1425,13 @@ reference "eq:euler"
 
 \end_inset
 
- entwickelt, die Differentialgleichungen numerisch zu lösen.
- Das heisst, sie kannten die Möglichkeit noch nicht, die Nachfolgen soll
- jedoch der Ansatz des des Buchter Tableau verwendet werden.
+ entwickelt, die Differentialgleichungen numerisch lösen.
+ Das heisst, sie kannten die Möglichkeit einer Tabelle noch nicht.
+ Nachfolgen soll jedoch der Ansatz des 
+\shape italic
+Buchter tableau
+\shape default
+ verwendet werden.
  Dabei rechnet das Klassische vier Zwischenschritte oder Stützstellen, arbeitet
  also mit Dimension der Stufe 
 \begin_inset Formula $s=4$
@@ -1397,7 +1442,7 @@ reference "eq:euler"
 \end_inset
 
 .
- Die Tabelle und die dazugehörigen Gleichungen sind in Gleichung 
+ Die dazugehörigen Tabelle ist in Gleichung 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:rk4-table"
@@ -1428,24 +1473,98 @@ c & A\\
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-k_{1} & = & f(t_{n},\; y_{n})\\
-k_{2} & = & f(t_{n}+hc_{2},\; y_{n}+h\cdot\left[a_{21}k_{1}\right])\\
-k_{3} & = & f(t_{n}+hc_{3},\; y_{n}+h\cdot\left[a_{31}k_{1}+a_{32}k_{2}\right])\\
-k_{4} & = & f(t_{n}+hc_{4},\; y_{n}+h\cdot\left[a_{41}k_{1}+a_{42}k_{2}+a_{43}k_{3}\right])
-\end{eqnarray*}
+Mit 
+\begin_inset Formula $s=4$
+\end_inset
+
+ werden 4 Zwischenschritte berechnet, wobei wie in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:intermstep"
 
 \end_inset
 
+ beschrieben 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
 
+\begin_inset Formula $t_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang german-ch
+ und 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $y_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang german-ch
+ variert werden.
+ Dabei beschränkt sich die Matrix 
+\begin_inset Formula $A=\left(a_{ij}\right)$
+\end_inset
+
+ auf das erwähnte Dreieck, da 
+\begin_inset Formula $a_{ij}=0,\; j=i..s$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{eqnarray}
 k_{1} & = & f(t_{n},\; y_{n})\\
-k_{2} & = & f(t_{n}+h\cdot\frac{1}{2},\; y_{n}+h\cdot\frac{1}{2}\cdot k_{1})\\
-k_{3} & = & f(t_{n}+h\cdot\frac{1}{2},\; y_{n}+h\cdot\frac{1}{2}\cdot k_{2})\\
-k_{4} & = & f(t_{n}+h\cdot1,\; y_{n}+h\cdot1\cdot k_{3})
-\end{eqnarray*}
+k_{2} & = & f(t_{n}+\Delta t\cdot c_{2},\; y_{n}+\Delta t\cdot\left[a_{21}k_{1}\right])\nonumber \\
+k_{3} & = & f(t_{n}+\Delta t\cdot c_{3},\; y_{n}+\Delta t\cdot\left[a_{31}k_{1}+a_{32}k_{2}\right])\nonumber \\
+k_{4} & = & f(t_{n}+\Delta t\cdot c_{4},\; y_{n}+\Delta t\cdot\left[a_{41}k_{1}+a_{42}k_{2}+a_{43}k_{3}\right])\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -1453,11 +1572,56 @@ k_{4} & = & f(t_{n}+h\cdot1,\; y_{n}+h\cdot1\cdot k_{3})
 \end_layout
 
 \begin_layout Standard
+Durch einsetzen der Werte aus der Matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ in die Argumente kann nochmals gekürzt werden, da auch im Dreieck noch
+ Null-Werte vorhanden sind.
+ 
 \begin_inset Formula 
-\begin{eqnarray*}
-y_{n+1} & = & y_{n}+h\cdot\left(\frac{1}{6}\cdot k_{1}+\frac{1}{3}\cdot k_{2}+\frac{1}{3}\cdot k_{3}+\frac{1}{6}\cdot k_{4}\right)\\
-t_{n+1} & = & t_{n}+h
-\end{eqnarray*}
+\begin{eqnarray}
+k_{1} & = & f(t_{n},\; y_{n})\\
+k_{2} & = & f(t_{n}+\Delta t\cdot\frac{1}{2},\; y_{n}+\Delta t\cdot\frac{1}{2}\cdot k_{1})\nonumber \\
+k_{3} & = & f(t_{n}+\Delta t\cdot\frac{1}{2},\; y_{n}+\Delta t\cdot\frac{1}{2}\cdot k_{2})\nonumber \\
+k_{4} & = & f(t_{n}+\Delta t\cdot1,\; y_{n}+\Delta t\cdot1\cdot k_{3})\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Schlussendlich wird eine Summe gewichteter Zwischenschritte berechnet, die
+ wie beim Euler-Verfahren die Funktion 
+\begin_inset Formula $f\left(t,\; y\left(t\right)\right)$
+\end_inset
+
+ in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:euler"
+
+\end_inset
+
+ übernimmt.
+ Welche Gewichte genommen werden wird in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:butcher_ode"
+
+\end_inset
+
+ erläutert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+y_{n+1} & = & y_{n}+\Delta t\cdot\left(\frac{1}{6}\cdot k_{1}+\frac{1}{3}\cdot k_{2}+\frac{1}{3}\cdot k_{3}+\frac{1}{6}\cdot k_{4}\right)\\
+t_{n+1} & = & t_{n}+\Delta t\nonumber 
+\end{eqnarray}
 
 \end_inset
 
