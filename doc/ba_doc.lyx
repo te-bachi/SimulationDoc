@@ -1648,12 +1648,29 @@ Java ist für den Benutzer die einfachste Lösung, da er nur die JVM installiert
 \end_layout
 
 \begin_layout Standard
-Java wird zudem beim Start automatisch auf die Vorhandene Hardware optimiert,
- was im allgemeinen eine bessere Performance zur folge hat als wenn mit
+Java wird zudem beim Start automatisch auf die vorhandene Hardware optimiert,
+ was im allgemeinen eine bessere Performance zur Folge hat als wenn mit
  C++ versucht wird zu optimieren, da der kaum für alle möglichen Architekturen
- optimiert wird.
- Dies hat natürlich auch einen Nachteil zur Folge: der Start der Applikation
- ist relativ langsam.
+ optimiert wird, sondern nur für eine Spezifische Architektur.
+ Als grosser Nachteil von Java ist dafür der lange Start zu nennen, wären
+ dieser Zeit werden dann unter anderem die Optimierungen vorgenommen.
+ Zudem brauchen Java Applikationen aufgrund des Overhead der VM mehr Arbeitspeic
+her.
+ Dafür kriegt man bei Java bei jedem Absturz / Fehler einen Stacktracke,
+ während man sich bei C++ aufgrund eines fehlenden Speicherschutzes unter
+ Umständen sogar den Stack zerstören kann, was eine sehr schwirige Fehlesuche
+ zur Folge hat, da der Fehler grundsätzlich nach dem Absturz nicht lokalisiert
+ werden kann, und daher mühsam Stückweise getestet / Analysiert werden muss.
+ Festplattenspeicher wird nicht berücksichtigt, da in den heutigen Zeiten
+ dieser sowieso im Überfluss vorhanden ist, und ein Vergleich schwierig
+ ist, da Libraries / Runtime auch mit eingerechnet werden müssten.
+\end_layout
+
+\begin_layout Standard
+Als Entwicklungsumgebung kamen Sowohl Eclipse als auch IntelyJ zum Einsatz,
+ für beide IDEs sind Projektfiles vorhanden.
+ Es kam JDK 1.6 (Java 6) zum Einsatz, JDK 1.7 (Java 7) ist noch nicht soweit
+ verbreitet, und würde der Applikationen keine Vorteil bringen.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1675,45 +1692,6 @@ Warum dieser Weg?
 \begin_layout Standard
 Als Markup Language für die Simulation kam der Matlab Syntax zum Einsatz,
  der ebenfalls vom Open Source Tool «octave» verarbeitet werden kann.
-\end_layout
-
-\begin_layout Subsubsection
-Entwicklungsumgebung
-\end_layout
-
-\begin_layout Standard
-
-\color red
-statt 
-\begin_inset Quotes eld
-\end_inset
-
-Andreas Ba und Andreas Bu
-\begin_inset Quotes erd
-\end_inset
-
- besser 
-\begin_inset Quotes eld
-\end_inset
-
-es wurde
-\begin_inset Quotes erd
-\end_inset
-
- -> nicht personifizieren
-\end_layout
-
-\begin_layout Standard
-Bei Java ist man nicht fest an eine Entwicklungsumgebung gebunden.
- Das Projekt kann mit Hilfe der Ant-Buildfiles automatisch kompiliert werden,
- somit war es kein Problem das Andreas Bachmann IntelliJ und Andreas Butti
- Eclipse als Entwicklungsumgebung verwendet hat.
-\end_layout
-
-\begin_layout Standard
-Es kam JDK 1.6 (Java 6) zum Einsatz, obwohl unterdessen Java 7 erschienen
- ist sind wir bei 6 geblieben, denn es ist immer noch sehr verbreitet, und
- Java 7 würde uns keinen Vorteil bringen.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2660,6 +2638,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Vererbung Editor.eps
 	scale 50
@@ -3003,7 +2982,8 @@ predefinedDash: Die Liniendefinitionen für das Diagram.
 \begin_inset Quotes erd
 \end_inset
 
-; 5 Punkte gestrichelte Linie: 
+ (leerer String, wobei in der Konfiguration keine Anführungszeichen angegeben
+ werden.), 5 Punkte gestrichelte Linie: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3300,7 +3280,7 @@ options "din1505/alphadin"
 Anhang
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Codeanmerkungen
 \end_layout
 
@@ -3313,7 +3293,7 @@ Encoding: UTF8: Wichtig! Ansonsten funktionieren Spezialzeichen wie x-Punkt
  und x-Punt-Punkt nicht.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Glossar
 \end_layout
 
@@ -3325,23 +3305,23 @@ Meso-Kompartment: Ein Teil des XY-Simulationsmodells
 Swing: Java GUI Framework
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Weiterentwicklung
 \end_layout
 
 \begin_layout Standard
 Hier wird anhand von Beispielen beschrieben wie die Applikation weiterentwickelt
  werden kann.
- Die Beispiele an sich sind Sinnlos, und dienen lediglich der Illustration.
+ Die Beispiele an sich sind erfüllen nur den Zweck der Illustration.
  Die Anleitung bezieht sich auf Eclipse unter Linux, es ist jedoch nicht
  relevant welche IDE das verwendet wird.
  Java Kenntnisse sind erforderlich, es wird davon ausgegangen das alle Projekte
  der Simulation bereits importiert wurden und fehlerfrei kompilieren (Innerhalb
  der IDE, Ant ist für diese Beispiele nicht erforderlich, da Eclipse, InteliJ,
- Netbeans und alle modernen IDEs automatisch den Javacode kompillieren).
+ Netbeans und alle modernen IDEs automatisch den Javacode kompilieren).
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Erstellen eines neuen Simulationsplugins
 \end_layout
 
@@ -4398,9 +4378,619 @@ Start der Simulation
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Erstellen eines neuen GUI Elementes
+\end_layout
+
+\begin_layout Standard
+asdf
+\end_layout
+
+\begin_layout Subsection
+Ant Buildsystem
+\end_layout
+
+\begin_layout Standard
+Ant wird von uns verwendet um die Simulationsapplikation zu Builden
+\end_layout
+
+\begin_layout Subsection
+Setup
+\end_layout
+
+\begin_layout Standard
+asdf
+\end_layout
+
+\begin_layout Section
+Benutzerhandbuch
+\end_layout
+
+\begin_layout Standard
+Das Benutzerhandbuch soll die Grundlegenden Funktionen der Applikation beschreib
+en.
+ Es wird davon ausgegangen das die grundlegende Funktionsweise von Simulationsto
+ols bereits bekannt ist, wie z.B.
+ von Berkeley Madonna / Dynasys, die ähnlich funktionieren.
+\end_layout
+
+\begin_layout Subsection
+Installation
+\end_layout
+
+\begin_layout Standard
+asdf
+\end_layout
+
+\begin_layout Subsubsection
+Portable Version
+\end_layout
+
+\begin_layout Standard
+Die Portable Version benötigt keine Installation.
+ Die Applikation wird als .zip zur Verfügung gestellt, und wird einfach entpackt.
+ Ist die Applikation entpackt kann der komplette Ordner einfach kopiert
+ werden, z.B.
+ auf einen USB Stick, und kann dann an jedem beliebigen PC der über eine
+ Java Runtime verfügt gestartet werden.
+\end_layout
+
+\begin_layout Standard
+Unter Linux / Unix / Mac OS X wird die Applikation gestartet indem das Shellscri
+pt Simulation.sh gestartet wird.
+\end_layout
+
+\begin_layout Standard
+Unter Windows wird die Applikation gestartet indem Simulation.exe gestartet
+ wird.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+TODO Screenshots!
+\end_layout
+
+\begin_layout Subsection
+Übersicht / Begriffsdefinitionen
+\end_layout
+
+\begin_layout Standard
+Das Bedienkonzept der Applikation ist relativ einfach.
+ Auf den Einsatz eines Kontextmenüs wurde verzichtet.
+ (Je nach Betriebsystem kann ein Kontextmenü angeboten werden, alle diese
+ Aktionen sind jedoch auch mit Tastenkombinationen oder im Menü / der Toolbar
+ zu finden).
+\end_layout
+
+\begin_layout Standard
+Alle Wichtigen Operationen werden in der Toolbar dargestellt, diese kann
+ auch über ein Drop-Down Menü verfügen, dies wird mit einem kleinen Pfeil
+ nach unten signalisiert.
+ Für alle gebräuchlichen Aktionen wird eine Tastenkombination angeboten,
+ siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Tastenkombinationen"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Editierschritte können Rückgängig gemacht werden (bis max.
+ 100 Schritte), dafür wird auf 
+\begin_inset Quotes eld
+\end_inset
+
+Sind Sie sicher...
+\begin_inset Quotes erd
+\end_inset
+
+ Nachfragen verzichtet.
+ Trotzdem liegt es in der Verantwortung des Benutzers regelmässig zu speichern,
+ und ggf.
+ Backups anzulegen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Uebersicht.png
+	lyxscale 25
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Übersicht Applikation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Plain Layout
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beim Starten der Applikation wird das 
+\series bold
+Hauptfenster
+\series default
+ angezeigt.
+ Dieses gibt es in zwei Varianten, eine für die XY Simulation und eine für
+ die Flow Simulation, diese sind abgesehen von einer leicht verschiedene
+ Funktionalität jedoch identisch.
+\end_layout
+
+\begin_layout Enumerate
+Die 
+\series bold
+Toolbar
+\series default
+, oben die 
+\series bold
+Menübar
+\series default
+.
+ Links in der Toolbar sind die Elemente die eingefügt werden können.
+ Weiter rechts sind die Speichern / Rückgängig / Widerherstellen und Layout
+ Buttons
+\end_layout
+
+\begin_layout Enumerate
+Die 
+\series bold
+Zeichnungsfläche
+\series default
+, hier wird das Model gezeichnet.
+\end_layout
+
+\begin_layout Enumerate
+Die 
+\series bold
+Sidebar
+\series default
+, hier werden die Einstellungen für die Simulation und für die aktuell Selektier
+ten Elemente vorgenommen.
+\end_layout
+
+\begin_layout Enumerate
+Die 
+\series bold
+Statusleiste
+\series default
+.
+ Hier wird der Benutzer darüber Informiert was er als nächstes machen kann.
+\end_layout
+
+\begin_layout Subsection
+Erstellen eines einfachen Flowmodells
+\end_layout
+
+\begin_layout Standard
+Hier wird erläutert wie ein Flow Modell erstellt werden kann.
+\end_layout
+
+\begin_layout Enumerate
+Die Applikation wird gestartet / es wird «Datei / Neu» bzw.
+ «Datei / Neu - Flow Model» gewählt, je nachdem ob man bereits ein Flow
+ oder ein XY Modell geöffnet hat.
+\end_layout
+
+\begin_layout Enumerate
+Es wird ein Container erstellt: Entweder wird auf den grauen Zylinder in
+ der Toolbar geklickt oder es wird «C» gedrückt.
+ Danach wird in die Zeichnungsfläche geklickt.
+\end_layout
+
+\begin_layout Enumerate
+Wenn auf den Container gecklickt wird wird er orange, er ist nun selektiert.
+ Zudem wird oben rechts vom Container ein kleiner blauer Pfeil dargestellt,
+ mit diesem Pfeil können direkt Verbindungen vorgenommen werden.
+ Verbindungen können aber auch über die Toolbar erstellt werden.
+\end_layout
+
+\begin_layout Enumerate
+asdf
+\end_layout
+
+\begin_layout Subsection
+Tastenkombinationen
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Tastenkombinationen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tastenkombinationen werden hier in der Auflistung immer mit CTRL angegeben.
+ Auf Mac OS X ist anstelle von CTRL normalerweise COMMAND (
+\begin_inset Quotes eld
+\end_inset
+
+Blumenkohl
+\begin_inset Quotes erd
+\end_inset
+
+) zu verwenden.
+\end_layout
+
+\begin_layout Subsubsection
+Grundlegend
+\end_layout
+
+\begin_layout Standard
+Dies ist Liste mit den gängigen / nützlichen Tastenkombinationen die oftmals
+ bereits vom Betriebssystem bereitgestellt werden.
+ Diese Liste ist nicht vollständig.
+ Diese Kombinationen funktionieren an vielen Orten der Applikation, z.B.
+ im Hauptfenster, in einzelnen Texteingabefeldern, im Formeleditor etc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tastenkombination
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Funktion
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CTRL + A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alles markieren
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CTRL + C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kopieren
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CTRL + V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Einfügen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CTRL + X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ausschneiden
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CTRL + S
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Speichern
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CTRL + O
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Öffnen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CTRL + N
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Neu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Hauptfenster
+\end_layout
+
+\begin_layout Standard
+Für die Tastenkombinationen ohne Hilfstaste (CTRL etc.) muss der Fokus auf
+ der Zeichnungsfläche liegen.
+ Dies geschieht indem einfach kurz in einen freien Bereich der Zeichnungsfläche
+ geklickt wird.
+ Die Meisten Tastenkombinationen werden im Menü angegeben, oder in den Tooltips
+ der Toolbuttons in Klammern angegeben.
+ Diese Liste ist nicht vollständig.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tastenkombination
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Funktion
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Einfügen eines Parameters (Nur Flow)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Einfügen eines Containers (Nur Flow)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+g
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Einfügen eines Global
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Einfügen eines Textes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Meso Kompartment (Nur XY)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Simulation Starten
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
