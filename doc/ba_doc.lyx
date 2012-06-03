@@ -48,8 +48,12 @@ XML
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tabelle
 
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.25}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{anysize}
 \pagenumbering{roman}
@@ -666,7 +670,7 @@ Um Biologische Prozesse zu verstehen, nachzubilden und zu entwickeln werden
 \end_inset
 
 .
- Dabei werden oftmals Differentialgleichung verwendet.
+ Dabei werden oftmals Differentialgleichung (DGL) verwendet.
  Im Falle von Bakterien kann von einem exponentiellen Wachstum ausgegangen
  werden.
 \end_layout
@@ -738,7 +742,14 @@ Doch das Wachstum ist Beschränk auf das Nährmedium in der Petrischale.
  Ihren Höhepunkt erreicht sie am Wendepunkt, wenn die Änderung der Population
  am grössten ist.
  Nach endlicher Zeit tritt eine Sättigung ein.
- 
+ Die Herausforderung ist aber, welche Werte 
+\begin_inset Formula $N_{0},\; c_{0}$
+\end_inset
+
+ initial verwendet werden.
+ Denn, wenn eine alternative Anfangsbedingung genommen wird, verändert sich
+ auch die Lösung.
+ Dies wird als Anfangswertproblem (AWP) bezeichnet 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "scst_bio"
@@ -983,17 +994,24 @@ Eine Partielle Differentialgleichung (engl.
  Partial Differential Equation PDE) ist eine mathematische Gleichung, die
  partielle Ableitungen enthalten, also Ableitungen von Funktionen mehrere
  Variablen.
- Eine Dichte, zum Beispiel Nahrung oder Ausscheidungen, überdeckt eine Fläche,
- zum Beispiel ein See, im 
+ Eine Dichte, zum Beispiel Nährboden, überdeckt eine Fläche, zum Beispiel
+ eine Petrischale, im 
 \begin_inset Formula $\left(x,\; y\right)=\mathbb{R}^{2}$
 \end_inset
 
- mit der Funktion 
+ mit einer Funktion 
 \begin_inset Formula $f\left(x\; y,\; t\right).$
 \end_inset
 
- Ein Algenvolk verändert diese Dichte über die Zeit aber auch bei jeder
- Position 
+ Ein Bakterienvolk 
+\begin_inset Formula $N\left(t\right)$
+\end_inset
+
+ verändert diese Dichte über die Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+ aber auch bei jeder Position 
 \begin_inset Formula $\left(x,\; y\right)$
 \end_inset
 
@@ -1029,6 +1047,132 @@ Numerische Lösungsverfahren
 
 \begin_layout Subsubsection
 Einschrittverfahren
+\end_layout
+
+\begin_layout Standard
+Zum näherungsweise Lösen von Anfangswertproblemen kann ein Einschrittverfahren
+ von einem Integrationschritt 
+\begin_inset Formula $t_{n}$
+\end_inset
+
+ zum Nächsten 
+\begin_inset Formula $t_{n+1}$
+\end_inset
+
+ nur auf den gerade eben berechneten Wert 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ zurückgreifen, wie in Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diskrete-DGL"
+
+\end_inset
+
+ zu sehen ist, nicht aber auf weiter zurückliegende Werte wie 
+\begin_inset Formula $y_{n-1}$
+\end_inset
+
+.
+ Falls eine Reihe von zuvor berechneten Werte genutzt werden möchte, ist
+ ein Mehrschrittverfahren zu wählen.
+ Unterschieden wird ein Verfahren auch noch in zwei Unterformen.
+ Ein 
+\series bold
+explizites Verfahren
+\series default
+ berechnet die Näherungswerte 
+\begin_inset Formula $y_{n+1}$
+\end_inset
+
+ nur aus Funktionswerten 
+\begin_inset Formula $f\left(t_{n},\; y_{n}\right)$
+\end_inset
+
+, die einen Schritt zurück liegen.
+ Ein 
+\series bold
+implizites Verfahren
+\series default
+ bezieht auch Funktionswerte 
+\begin_inset Formula $f\left(t_{n+1},\; y_{n+1}\right)$
+\end_inset
+
+ im aktuellen Schritt mit ein.
+ Ein Verfahren kann 
+\begin_inset Formula $s$
+\end_inset
+
+ 
+\series bold
+Stufen
+\series default
+ aufweisen, die 
+\begin_inset Formula $s$
+\end_inset
+
+ Funktionswerte-Berechnungen ausführt um einen Näherungswert 
+\begin_inset Formula $y_{n+1}$
+\end_inset
+
+ zu erhalten.
+ Wie genau ein Verfahren rechnet kann mit der 
+\series bold
+Ordnung
+\series default
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ (Konsistenzordnung) ausgesagt werden.
+ Genauer heisst hier mit weniger Abweichung vom exakten Wert (Fehler) pro
+ Schritt, die sich über die Zeit kumulieren.
+ Je genauer ein Verfahren rechnet, also je grösser die Ordnung ist, desto
+ mehr Aufwand muss betrieben werden um einen besseren Näherungswert zu erhalten.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dgl_diskret.pdf
+	scale 50
+	BoundingBox 40bp 275bp 550bp 525bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diskrete Lösung einer DGL
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diskrete-DGL"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1136,7 +1280,7 @@ reference "eq:butcher"
 \end_inset
 
 .
- Die Tabelle beinhaltet einen Vektor 
+ Die Tabelle beinhaltet einen Variations-Vektor 
 \begin_inset Formula $c$
 \end_inset
 
@@ -1144,7 +1288,7 @@ reference "eq:butcher"
 \begin_inset Formula $A=\left(a_{ij}\right)$
 \end_inset
 
- und einen Vektor 
+ und einen Gewichts-Vektor 
 \begin_inset Formula $b$
 \end_inset
 
@@ -1633,7 +1777,7 @@ Dormand-Prince
 \end_layout
 
 \begin_layout Standard
-Eine noch Genauere Methode wurde in den 1980er von 
+Eine noch genauere Methode wurde in den 1980er von 
 \series bold
 John R.
  Dormand
@@ -1644,13 +1788,46 @@ Peter J.
  Prince
 \series default
  entwickelt, die eine höhere Ordnung aufweise wie das Klassische.
- Diese Methode gehört zu den 
+ Diese Methode gehört zu den eingebetteten Verfahren.
+ Eingebetted darum, weil es noch einen zweiten Gewichts-Vektor 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+ neben dem ursprünglichen Gewichts-Vektor 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ besitzt.
+ Die Gewichts-Vektoren sind von unterschiedlicher Ordnung.
+ Das Butcher Tableu ist in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dorm_tableau"
+
+\end_inset
+
+ zu finden.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\end{equation}
+\begin{eqnarray}
+\begin{array}{c|c}
+\mathbf{c} & A\\
+\hline  & \mathbf{b_{1}^{T}}\\
+ & \mathbf{b_{2}^{T}}
+\end{array} & = & \begin{array}{c|rrrrrrr}
+0\\
+\frac{1}{5} & \frac{1}{5}\\
+\frac{3}{10} & \frac{3}{40} & \frac{4}{5}\\
+\frac{4}{5} & \frac{44}{45} & -\frac{4}{5} & \frac{4}{5}\\
+\frac{8}{9} & \frac{19372}{6561} & -\frac{4}{5} & \frac{4}{5} & \frac{4}{5}\\
+1 & \frac{9017}{3168} & -\frac{4}{5} & \frac{4}{5} & \frac{4}{5} & -\frac{4}{5}\\
+1 & \frac{35}{384} & \frac{4}{5} & \frac{4}{5} & \frac{4}{5} & -\frac{4}{5} & \frac{4}{5}\\
+\hline p=4 & \frac{35}{384} & 0 & \frac{35}{384} & \frac{35}{384} & -\frac{35}{384} & \frac{35}{384} & \frac{35}{384}\\
+p=5 & \frac{35}{384} & 0 & \frac{35}{384} & \frac{35}{384} & -\frac{35}{384} & \frac{35}{384} & 0
+\end{array}\label{eq:dorm_tableau}
+\end{eqnarray}
 
 \end_inset
 
@@ -1658,13 +1835,79 @@ Peter J.
 \end_layout
 
 \begin_layout Standard
+Zuerst rechnet man wie beim klassischen Runge-Kutta alle 
+\begin_inset Formula $k_{i},\; i=1,...,s$
+\end_inset
+
+ wie in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:intermstep"
+
+\end_inset
+
+ aus.
+ Die Differenz 
+\begin_inset Formula $\left|z_{n+1}-y_{n+1}\right|$
+\end_inset
+
+ zwischen dem Näherungswert 5.
+ Ordnung 
+\begin_inset Formula $z_{n+1}$
+\end_inset
+
+ und dem Näherungswert 4.
+ Ordnung 
+\begin_inset Formula $y_{n+1}$
+\end_inset
+
+ ergibt die Fehlertoleranz.
+ Wenn die Toleranz zu gross wird, wird so lange die Schrittweite 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\Delta t$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang german-ch
+ erniedrigt, bis der Fehler wieder in der Toleranz liegt.
+ Dieses Verfahren hat demzufolge eine Schrittweitensteuerung.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "teubner_hanke"
+key "teubner_hanke,dankert_ode"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Die (AB)² Simulation besitzt zwar im Flow-Modell-Editor eine Möglichkeit
+ die Simulation mit der Dormand-Prince-Methode auszuführen, ist aber noch
+ nicht ausreichen getestet worden und darum noch im Alpha-Stadium.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3539,7 +3782,12 @@ Was Fehlt noch, was muss noch gemacht werden? Interpretation und Validierung
  der Resultate Rückblick auf Aufgabenstellung, erreicht bzw.
  nicht erreicht Legt dar, wie an die Resultate (konkret vom Industriepartner
  oder weiteren Forschungsarbeiten; allgemein) angeschlossen werden kann;
- legt dar, welche Chancen die Resultate bieten 18
+ legt dar, welche Chancen die Resultate bieten 18.
+\end_layout
+
+\begin_layout Standard
+Container können nur positiv und negativ werden, nicht nur positiv, zumindest
+ nicht im Matlab Plugin.
 \end_layout
 
 \begin_layout Standard
