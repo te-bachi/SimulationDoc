@@ -501,7 +501,7 @@ nd, meinst Integrale erster Ordnung.
  eine Modellierungssoftware, da es nicht ihr Fachgebiet ist selbst zu programmie
 ren.
  Andreas Butti hat sich bei der Verwendung von Simulationstools über deren
- Plattformabhängigkeit und Benutzerunfreundlichkeit gestört.
+ Plattformunabhängigkeit und Benutzerunfreundlichkeit gestört.
  Als Informatiker kommt man da schnell in Versuchung selbst etwas besserer
  zu schreiben.
  Nach einem Gespräch mit dem Physikdozenten, Herr Scheidegger, wurde daraus
@@ -1914,6 +1914,13 @@ Die (AB)² Simulation besitzt zwar im Flow-Modell-Editor eine Möglichkeit
 Gradienten-Verfahren
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Methode
 \end_layout
@@ -1965,7 +1972,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-bla
+TODO
 \end_layout
 
 \end_inset
@@ -1979,6 +1986,12 @@ bla
 \end_layout
 
 \begin_layout Standard
+
+\color red
+TODO: Global: Parameter kann berechnung enthalten
+\end_layout
+
+\begin_layout Standard
 Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
  bekannt ist da es vom Konzept her identisch bereits von vielen Simulationstools
  angeboten wird.
@@ -1987,7 +2000,7 @@ Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
  auf ein Modell («Flow-Model-X»).
  Im «XY-Modell» könne sich «Dichten» befinden, das sind Stoffe die eine
  gewisse Konzentration an einer gewissen Stelle aufweisen.
- Ein Meso Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
+ Ein Meso-Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
  es kann Dichten konsumieren oder produzieren.
 \end_layout
 
@@ -2009,11 +2022,17 @@ Programmiersprachen & Entwicklungsumgebung
 \end_layout
 
 \begin_layout Standard
-Als Vorgabe haben wir erhalten das wir eine GUI Applikation schreiben sollen
- die Plattform unabhängig funktionieren sollte.
+Die Vorgabe bestand unter anderem in einem GUI, welches plattformunabhängig
+ funktionieren sollte.
  Daher haben wir uns für Java entschieden.
- Java ist dank der Java Virtual Machine komplett Plattform unabhängig, und
+ Java ist dank der Java Virtual Machine komplett plattformunabhängig, und
  bietet mit Swing ein komplettes Framework für GUI Applikationen.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+TODO!!!!! Nachfolgender Absatz umformulieren
 \end_layout
 
 \begin_layout Standard
@@ -2028,7 +2047,7 @@ Die eigentliche Simulation wird mit Plugins realisiert, daher beschränkt
 \end_layout
 
 \begin_layout Standard
-Alternative Plattform unabhängige Programmiersprachen mit Vor- und Nachteilen:
+Alternative plattformunabhängige Programmiersprachen mit Vor- und Nachteilen:
 \end_layout
 
 \begin_layout Itemize
@@ -2042,7 +2061,7 @@ Positiv
 
 \begin_deeper
 \begin_layout Itemize
-Da C++ eine Hardwarenahe Sprache ist könnten Hardwarebeschleunigungen wie
+Da C++ eine hardwarenahe Sprache ist könnten Hardwarebeschleunigungen wie
  z.B.
  MMX bei Intel Prozessoren genutzt werden.
  Dies muss jedoch von Hand vorgenommen werden, und es ist zu beachten das
@@ -2167,11 +2186,17 @@ Java ist für den Benutzer die einfachste Lösung, da er nur die JVM installiert
 \end_layout
 
 \begin_layout Standard
+
+\color red
+TODO: Nachfolgenden Satz umformulieren
+\end_layout
+
+\begin_layout Standard
 Java wird zudem beim Start automatisch auf die vorhandene Hardware optimiert,
  was im allgemeinen eine bessere Performance zur Folge hat als wenn mit
  C++ versucht wird zu optimieren, da der kaum für alle möglichen Architekturen
  optimiert wird, sondern nur für eine Spezifische Architektur.
- Als grosser Nachteil von Java ist dafür der lange Start zu nennen, wären
+ Als grosser Nachteil von Java ist dafür der langsame Start zu nennen, wären
  dieser Zeit werden dann unter anderem die Optimierungen vorgenommen.
  Zudem brauchen Java Applikationen aufgrund des Overhead der VM mehr Arbeitspeic
 her.
@@ -2186,10 +2211,16 @@ her.
 \end_layout
 
 \begin_layout Standard
-Als Entwicklungsumgebung kamen Sowohl Eclipse als auch IntelyJ zum Einsatz,
+Als Entwicklungsumgebung kamen sowohl Eclipse als auch IntelyJ zum Einsatz,
  für beide IDEs sind Projektfiles vorhanden.
  Es kam JDK 1.6 (Java 6) zum Einsatz, JDK 1.7 (Java 7) ist noch nicht soweit
  verbreitet, und würde der Applikationen keine Vorteil bringen.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+TODO Versionen von Plugins etc.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2321,7 +2352,7 @@ Als Dateiformat wird ein eigens entwickeltes, auf XML basierendes Dateiformat
 \end_layout
 
 \begin_layout Paragraph
-Fremdformat importe
+Fremdformat-importe
 \begin_inset CommandInset label
 LatexCommand label
 name "par:Fremdformat-importe"
@@ -2368,6 +2399,8 @@ Die Nächste Version von Berkeley Madonna, Version 9, verwendet nun aber
 \end_layout
 
 \begin_layout Standard
+
+\color red
 TODO => http://docs.oracle.com/javase/6/docs/platform/serialization/spec/protocol.h
 tml
 \end_layout
@@ -3000,6 +3033,12 @@ Alle Icons (bei der aktuellen Implementation wird jedoch nicht nach Plattform
 \end_layout
 
 \begin_layout Enumerate
+
+\color red
+TODO: SVG konvertiert etc.
+\end_layout
+
+\begin_layout Enumerate
 Bookmark Implementationen (z.B.
  die Auswahl «Desktop» beim Speichern eines Bildes stammt von hier)
 \end_layout
@@ -3190,12 +3229,9 @@ status open
 
 \begin_layout Standard
 Der Editor besteht aus mehreren Komponenten, grob aufgelistet in der Grafik.
-\end_layout
-
-\begin_layout Standard
-Der eigentliche Editor Component ist ein eine Ableitung von «AbstractEditorView»
-, entweder «FlowEditorView» oder «XYEditorView».
- Diese Komponenten haben ein paar ungewöhnliche Eigenheiten.
+ Der eigentliche Editor Component ist ein eine Ableitung von «AbstractEditorView
+», entweder «FlowEditorView» oder «XYEditorView».
+ Diese Komponenten haben ein paar Eigenheiten.
  Die Methode paint ist überschrieben, und beim Zeichen werden alle Aktionen
  selbst koordiniert.
  Dies ist notwendig um Pfeile, die selbst kein JComponent sind korrekt abzubilde
@@ -3232,8 +3268,8 @@ TODO Name?
 \end_layout
 
 \begin_layout Standard
-Die Clipboard implementation ist Architekturbedingt in mehrere Klassen aufgeteil
-t, unterstützt unter anderem das Kopieren als Rastergrafik.
+Die Clipboard Implementierung ist Architekturbedingt in mehrere Klassen
+ aufgeteilt, unterstützt unter anderem das Kopieren als Rastergrafik.
  Das Exportieren als Vektorgrafik konnte nicht erfolgreich implementiert
  werden, da dies je nach Betriebsystem anders gehandhabt wird, und damit
  es z.B.
@@ -3361,7 +3397,7 @@ Abbrechen
 
  Buttons, sondern alle Änderungen werden sofort übernommen.
  (Teilweise werden die Änderungen auch erst beim Schliessen des Dialoges
- gespeichert, was aber für den User irrelevant ist)
+ gespeichert, was aber für den User irrelevant ist).
 \end_layout
 
 \begin_layout Itemize
@@ -3636,7 +3672,7 @@ Toolbox
 \begin_inset Quotes erd
 \end_inset
 
-) zurückgreifen konnten, und uns somit den Mathematischen Teil teilweise
+) zurückgreifen konnten, und uns somit den mathematischen Teil teilweise
  vereinfachen.
 \end_layout
 
@@ -4969,7 +5005,9 @@ Installation
 \end_layout
 
 \begin_layout Standard
-asdf
+
+\color red
+TODO
 \end_layout
 
 \begin_layout Subsubsection
@@ -5163,7 +5201,9 @@ Wenn auf den Container gecklickt wird wird er orange, er ist nun selektiert.
 \end_layout
 
 \begin_layout Enumerate
-asdf
+
+\color red
+TODO
 \end_layout
 
 \begin_layout Subsection
