@@ -3089,7 +3089,7 @@ TODO Name?
 Die Clipboard Implementierung ist Architekturbedingt in mehrere Klassen
  aufgeteilt, unterstützt unter anderem das Kopieren als Rastergrafik.
  Das Exportieren als Vektorgrafik konnte nicht erfolgreich implementiert
- werden, da dies je nach Betriebsystem anders gehandhabt wird, und damit
+ werden, da dies je nach Betriebssystem anders gehandhabt wird, und damit
  es z.B.
  unter Windows zuverlässig funktioniert muss eine Vektorgrafik (EMF / WMF)
  eingebettet in einem RTF exportiert werden, während unter Linux eher ein
@@ -3684,12 +3684,11 @@ Codeanmerkungen
 \end_layout
 
 \begin_layout Standard
-Tabwidth: 4
-\end_layout
-
-\begin_layout Standard
-Encoding: UTF8: Wichtig! Ansonsten funktionieren Spezialzeichen wie x-Punkt
- und x-Punt-Punkt nicht.
+Der Javacode wurde mit Tabulatoren eingerückt, welche auf 4 Leerzeichen
+ eingestellt sind.
+ Das Encoding der Dateien ist UTR-8.
+ Wird das Encoding falsch eingestellt können Sonderzeichen und Umlaute nicht
+ mehr dargestellt werden.
 \end_layout
 
 \begin_layout Section
@@ -3718,6 +3717,31 @@ Hier wird anhand von Beispielen beschrieben wie die Applikation weiterentwickelt
  der Simulation bereits importiert wurden und fehlerfrei kompilieren (Innerhalb
  der IDE, Ant ist für diese Beispiele nicht erforderlich, da Eclipse, InteliJ,
  Netbeans und alle modernen IDEs automatisch den Javacode kompilieren).
+\end_layout
+
+\begin_layout Subsection
+Verwendete Tools / Libraries
+\end_layout
+
+\begin_layout Itemize
+Java Version: 1.6 / 6 (Java 1.6 ist die interne Versionsnummer, Java 6 ist
+ die Marketingbezeichnung)
+\end_layout
+
+\begin_layout Itemize
+Eclipse: 3.7.1
+\end_layout
+
+\begin_layout Itemize
+NSIS: 2.46 (18.04.2010)
+\end_layout
+
+\begin_layout Itemize
+PSPad: 4.5.6 (als Editor für NSIS Skripts, siehe: http://nsis.sourceforge.net/PSPad)
+\end_layout
+
+\begin_layout Itemize
+Launch4J: 3.0.2 (02.01.2011)
 \end_layout
 
 \begin_layout Subsection
@@ -4787,7 +4811,9 @@ Erstellen eines neuen GUI Elementes
 \end_layout
 
 \begin_layout Standard
-asdf
+
+\color red
+TODO
 \end_layout
 
 \begin_layout Subsection
@@ -4795,17 +4821,338 @@ Ant Buildsystem
 \end_layout
 
 \begin_layout Standard
-Ant wird von uns verwendet um die Simulationsapplikation zu Builden
+Um das Projekt zu builden wird Ant verwendet.
+ Ant ist zu finden auf http://ant.apache.org/, und wird hier nicht weiter
+ erleutert, es wird stattdessen auf das Handbuch und auf die Onlinedokumentation
+ verwiesen.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+Das Projekt indem gebuildet wird ist «SimulationBuild», dieses enthält ein
+ «build.xml», welches alle «build.xml» der Projekt aufruft.
+ Dieses kompiliert alle Java Projekt, und kopiert die nötigen Ressourcen
+ in den Ordner build/distrib bzw.
+ build/tmp.
+ Diese Skripts funktionieren grundsätzlich Systemunabhängig.
+ 
+\color red
+TODO: SETUP
+\end_layout
+
+\begin_layout Subsubsection
 Setup
 \end_layout
 
 \begin_layout Standard
-asdf
+Der Setup wird ebenfalls vom Ant Buildsystem erstellt.
+ Es hat separate Skripts für jedes Betriebssystem, welche nicht unter allen
+ Betriebssystem ausgeführt werden könne, aufgrund von technischen Beschränkungen.
+ Einstellungen wie Dateitypen, Icons, Executable, Setup werden von verschiedenen
+ Betriebssystem verschieden gehandhabt.
 \end_layout
 
+\begin_layout Itemize
+Linux (Unix, Posix)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Applikationen werden normalerweise als Packages (.deb, .rpm..., meist zip oder
+ tar.gz Archive) installiert, welche nicht manuell heruntergeladen werden,
+ sondern über Repositories bereitgestellt werden.
+\end_layout
+
+\begin_layout Itemize
+Updates werden automatisch über die Repsitories vorgenommen.
+ (ausser bei von Hand installierter Software)
+\end_layout
+
+\begin_layout Itemize
+Die komplette Konfiguration der Dateizuordnungen etc.
+ wird über Dateien vorgenommen, welche ebenfalls in der Package enthalten
+ sind.
+\end_layout
+
+\begin_layout Itemize
+Icons, Übersetzungen etc.
+ werden als Files in vordefinierten Ordnern abgelegt (z.B.
+ /usr/shared)
+\end_layout
+
+\begin_layout Itemize
+Abhängigkeiten werden normalerweise über den Packagemanager automatisch
+ aus den Repositiories nachinstalliert.
+ (also alle für die Laufzeit notwendigen Libraries)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Mac OS X (
+\begin_inset Quotes eld
+\end_inset
+
+Darwin
+\begin_inset Quotes erd
+\end_inset
+
+, Unix, Posix)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Applikationen werden entweder über den Appstore Installiert, dann verhält
+ sich das ganze gleich wie bei Linux mit den Repsitories.
+ Ansonsten können Applikationen einfach per Drag & Drop in den «Programme»
+ Ordner gezogen werden, und sind somit installiert.
+\end_layout
+
+\begin_layout Itemize
+Updates werden über de Appstore vorgenommen, bei von Hand installierten
+ Anwendungen muss dieses von Hand vorgenommen werden, wobei viele Applikationen
+ einen eigenen Updatemechanismus mitbrigen.
+\end_layout
+
+\begin_layout Itemize
+Die Applikation selbst ist keine Datei, sondern ein Ordner der auf .app endet.
+ Dieser wird von Mac OS X in der GUI als einzelne Datei dargestellt.
+ Die Bezeichnung eines solchen Ordners ist eine 
+\begin_inset Quotes eld
+\end_inset
+
+Package
+\begin_inset Quotes erd
+\end_inset
+
+, nicht zu verwechseln mit der 
+\begin_inset Quotes eld
+\end_inset
+
+Package
+\begin_inset Quotes erd
+\end_inset
+
+ bei Linux.
+ Diese 
+\begin_inset Quotes eld
+\end_inset
+
+Package
+\begin_inset Quotes erd
+\end_inset
+
+ enthält auch die Information welche Dateitypen von der Applikation unterstütz
+ werden.
+\end_layout
+
+\begin_layout Itemize
+Icons, Übersetzungen etc.
+ sind als Files in den Packages enthalten
+\end_layout
+
+\begin_layout Itemize
+Libraries, sind entweder bereits im System vorhanden, oder können in den
+ Packages untergebracht werden, und sind somit der Applikation zugeordnet.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Windows (Microsoft Windows)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Applikationen werden im Normalfall von Hand installiert, und können über
+ einen Setup.exe oder über ein .mis Paket installiert werden.
+\end_layout
+
+\begin_layout Itemize
+Updates werden von Hand installiert, sofern die Applikation keinen Mechanismus
+ dafür bietet.
+\end_layout
+
+\begin_layout Itemize
+Die Zuordnungen der Dateien liegt in der Registrierung, und muss entweder
+ vom Setup oder von Programm selbst beim Starten angelegt werden.
+ Zu beachten ist das diese auch wieder entfernt werden muss bei der Deinstallati
+on!
+\end_layout
+
+\begin_layout Itemize
+Ausführbare Dateien (.exe) können Ressourcen enthalten, z.B.
+ Icons.
+ Aber z.B.
+ Shared Libraries (.dll) können nicht als Ressourcen geladen werden, und
+ müssen als separate Datei abgelegt werden.
+\end_layout
+
+\begin_layout Itemize
+Libraries müssen vom Setup irgendwo abgelegt werden, dies kann das Programmverze
+ichnis oder auch das System32 Verzeichnis sein.
+ Es muss jedoch beachtet werden das wenn zweimal die gleiche Library, ggf.
+ noch in verschiedenen Versionen, installiert ist Probleme auftreten können.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Unser Setup wird infolge auf drei verschiedene Arten erstellt.
+ Für Linux wird keine Package sondern nur eine .zip Datei mit allen zur Laufzeit
+ erforderlichen Daten bereitgestellt.
+ Da es sich um eine Open Source Applikation handelt ist anzustreben das
+ diese in die offiziellen Repsotories gebracht wird und somit Updates etc.
+ automatisch installiert werden.
+\end_layout
+
+\begin_layout Standard
+Für Mac OS X wird eine Package erstellt, welche einfach per Drag & Drop
+ installiert werden kann.
+ Dies wird mit «build.xml» aus dem Unterordner «mac» vorgenommen.
+ Um den Setup zu erstellen muss php-cli installiert sein, es wird ein PHP
+ File verwendet um das info.plist file zu erstellen.
+ (es handelt sich um ein sehr kleines Skript, welches problemlos auf eine
+ andere Skriptsprache portiert werden könnte).
+ Zu beachten ist das die Erstellung des Mac OS X Setup auf Windows nicht
+ funktioniert, da unter Windows die Executable Flags im Filesystem nicht
+ vorhanden sind.
+ Der Wrapper für Mac OS X kann mit 
+\begin_inset Quotes eld
+\end_inset
+
+/Developer/Applications/Utilities/Jar Bundler
+\begin_inset Quotes erd
+\end_inset
+
+ erstellt werden.
+\end_layout
+
+\begin_layout Standard
+Für Windows wurde ein Launcher erstellt (mit Launch4J: http://launch4j.sourceforg
+e.net/).
+ Dieser Launcher startet die Applikation.
+ Für den Setup wurde NSIS (Nullsoft Scriptable Install System: http://nsis.source
+forge.net) verwendet.
+ Es muss das Setupskript «Simulation.nsi» mit NSIS kompiliert werden.
+ Dies muss unter Windows geschehen.
+\end_layout
+
+\begin_layout Standard
+Für Linux ist nur ein Shellscript vorhanden, dies wird beim Build automatisch
+ erstellt.
+\end_layout
+
+\begin_layout Subsection
+Vorhandene Fehler / Fehlende Funktionalität
+\end_layout
+
+\begin_layout Standard
+Die Applikation ist noch nicht fertig, es gibt noch Fehler in der Applikation
+ und es gibt noch Funktionen die wünschenswert wären.
+ Hier wird aufgelistet was bekannt ist bzw.
+ besprochen wurde.
+ Fehler sind teilweise mit TODOs im Code markiert, auch weniger wichtige
+ Punkte die hier nicht aufgelistet sind.
+\end_layout
+
+\begin_layout Itemize
+Bugs, Fehler: Fehler die Behoben werden müssen um die korrekte Funktionalität
+ zu gewährleisten
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Fehler im Simulationsmodell werden meist korrekt erkannt und dargestellt,
+ trotzdem ist es teilweise möglich eine Simulation zu starten, die dann
+ fehlschlägt.
+ Dies sollte nicht möglich sein.
+\end_layout
+
+\begin_layout Itemize
+Im Flow Model wird nicht immer genug neu gezeichnet wenn ein Fluss verändert
+ wird.
+ Teilweise wird sichtbar nur ein Teil neu gezeichnet, was dann ein 
+\begin_inset Quotes eld
+\end_inset
+
+Loch
+\begin_inset Quotes erd
+\end_inset
+
+ im Fluss zur Folge hat.
+ Durch aufspannenen eines Selektionsvierecks wird alles korrekt neu gezeichnet.
+ Das Problem ist das, dass die Bounds der Bezierkurve beim verschieben nicht
+ immer korrekt berechnet wird, es muss der alte und der neue Bereich berechnet
+ und die Vereinigungsmenge neu gezeichnet werden.
+\end_layout
+
+\begin_layout Itemize
+Beim exportieren eines XY Diagrammes wird die dichte nicht exportiert.
+ Die Dichte wird jedoch exportiert wenn die Simulationsresultate angezeigt
+ werden, und dann ein Bild exportiert wird.
+\end_layout
+
+\begin_layout Itemize
+«NetbeansDirchooser» hat ein Bug beim vertikalen scrollen wird die horizontale
+ Scrollbar kleiner.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Darstellungs unschönheiten
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Die Mac OS X Toolbar Implementation funktioniert nicht überall korrekt,
+ und musste daher teilweise abgeschaltet werden.
+ Dies hat zur Folge das Buttons angezeigt werden, welche bei Mac OS X unüblich
+ sind.
+\end_layout
+
+\begin_layout Itemize
+Die Density Legende ist nicht besonders schön dargestellt, es wird viel
+ Platz verschwendet, ggf.
+ könnte die legende auch horizontal statt vertikal angezeigt werden.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Missing features
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Beim Copy & Paste und beim Vektorgrafik Export wäre es wünschenswert teilbereich
+e exportieren zu können, das Interface «ImageExportable» sieht dies vor,
+ jedoch wird es bisher von keiner Implementation unterstützt.
+\end_layout
+
+\begin_layout Itemize
+Wird ein Name eines Simulationsobjekt angepasst, z.B.
+ einem Container, wäre es wünschenswert wenn alle Formel refactored werden.
+\end_layout
+
+\begin_layout Itemize
+Die Dichte sollte nicht nur farblich, sondern auch mit Pfeilen dargestellt
+ werden können.
+\end_layout
+
+\begin_layout Itemize
+Die Klasse «ArrowDragView» ist zuständig um eine Verbindung zwischen z.B.
+ zwei Containern herzustellen.
+ Auch wenn mit dem blauen Pfeil verbunden wird (beim selektierten Container)
+ kann keine Flussverbindung mehr herstellt werden wenn bereits eine Parameter
+ Verbindung besteht.
+ Die Verbindung kann nur über den Flusspfeil in der Toolbar hergestellt
+ werden.
+ Diese sollte korrigiert werden.
+\end_layout
+
+\begin_layout Itemize
+Es sollte möglich sein in einem Flussdiagramm, das sich innerhalb eines
+ XY-Diagramms befindet, auf z.B.
+ die globalen des XY-Diagramms zuzugreifen, dies ist momentan nicht möglich.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Benutzerhandbuch
 \end_layout
