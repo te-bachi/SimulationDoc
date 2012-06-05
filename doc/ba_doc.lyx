@@ -1729,7 +1729,164 @@ Die (AB)² Simulation besitzt zwar im Flow-Modell-Editor eine Möglichkeit
 \end_layout
 
 \begin_layout Subsubsection
+Diffusionsgleichung
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Filterung mit Maske.pdf
+	BoundingBox 40bp 610bp 400bp 820bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diskrete Faltung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+g
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+y_{n+1} & = & y_{n}+dt\cdot D\cdot\left[f\left(y+1,\; x\right)+f\left(y-1,\; x\right)+f\left(y,\; x+1\right)+f\left(y,\; x-1\right)-4\cdot f\left(y,\; x\right)\right]
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Maske Diffusion.pdf
+	BoundingBox 40bp 400bp 200bp 570bp
+	clip
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Maske für eine diskrete Diffusion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Gradienten-Verfahren
+\end_layout
+
+\begin_layout Standard
+gla
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{df}{dx}\left(x\; y\right) & = & f\left(x+1,\; y\right)-f\left(x,\; y\right)\\
+\frac{df}{dy}\left(x\; y\right) & = & f\left(x,\; y+1\right)-f\left(x,\; y\right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+f
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Maske Gradient.pdf
+	BoundingBox 70bp 400bp 330bp 550bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Maske für eine diskrete Differenz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3419,6 +3576,10 @@ Resultate
 Ergebnisse
 \end_layout
 
+\begin_layout Standard
+Beschreibung, Screenshots, Beispielsimulationen mit Ergebniss-Diagramm
+\end_layout
+
 \begin_layout Subsection
 Numerische Lösungsverfahren
 \end_layout
@@ -3428,12 +3589,152 @@ Diffusionsgleichung
 \end_layout
 
 \begin_layout Standard
-Um die Implementierung der numerischen Diffusionsgleichung zu überprüfen
- 
+Um die Implementierung der numerischen Diffusionsgleichung zu testen, soll
+ eine Funktion gefunden werden, die am Anfang und am Ende der Diffusion
+ mit anderen Methoden nachgeprüft werden kann.
+ Die Greenschen Funktion erfüllt diese Voraussetzungen.
+ Die Lösung der Greenschen Funktion erhält die Grössen, die eine weitere
+ Voraussetzung für die Prüfung der Diffusionsgleichung ist.
+ Allgemein ist die Greenschen Funktion normiert auf 
+\begin_inset Formula $\int G=1$
+\end_inset
+
+, hat ihr Maximum im Null-Punkt und besitzt einen Vektor 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+, der die Position eines Punkte festlegt, die Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+, einen konstanten Diffusionskoeffizient 
+\begin_inset Formula $D$
+\end_inset
+
+ und eine konstante Dimension 
+\begin_inset Formula $d$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Beschreibung, Screenshots, Beispielsimulationen mit Ergebniss-Diagramm
+\begin_inset Formula 
+\begin{eqnarray}
+G\left(\vec{r},\; t\right) & = & \frac{1}{\left(4\pi Dt\right)^{\frac{d}{2}}}\cdot e^{-\left(\frac{\vec{r}^{2}}{4Dt}\right)}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die (AB)² Simulation arbeitet im XY-Modell nur in Dimension 
+\begin_inset Formula $d=2$
+\end_inset
+
+, stellt also eine Fläche dar, und hat demzufolge einen Vektor 
+\begin_inset Formula $\vec{r}=\left(x,\; y\right)$
+\end_inset
+
+.
+ Die Fläche besitzt zwischen 
+\begin_inset Formula $10^{2}$
+\end_inset
+
+ bis 
+\begin_inset Formula $10^{3}$
+\end_inset
+
+ Punkte pro Richtung.
+ Da die Greenschen Funktion normiert ist und über eine grosse Fläche führt,
+ würde ein Wert einer Zelle sehr klein werden und für die Auswertung eventuell
+ zu Problemen führen.
+ Darum wird ein Faktor dazumultipliziert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+G\left(x,\; y,\; t\right) & = & 1000\cdot\frac{1}{4\pi Dt}\cdot e^{-\left(\frac{x^{2}+y^{2}}{4Dt}\right)}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zu Beginn wird die Dichtefunktion im XY-Modell auf eine Greenschen Funktion
+ initialisiert, wobei Diffusionskoeffizient 
+\begin_inset Formula $D$
+\end_inset
+
+ und Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+ bekannt sein müssen.
+ Eine Zeit 
+\begin_inset Formula $t=0$
+\end_inset
+
+ würde zu einer Division durch Null führen und eine Zeit um 
+\begin_inset Formula $t=0$
+\end_inset
+
+ herum gäbe eine sehr steile Verteilung.
+ Für dieses Beispiel wird eine Initial-Zeit 
+\begin_inset Formula $t=50$
+\end_inset
+
+ und ein Diffusionskoeffizient 
+\begin_inset Formula $D=0.3$
+\end_inset
+
+ gewählt.
+ Die normiert Funktion 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Greensche Funktion.pdf
+	scale 50
+	BoundingBox 50bp 140bp 800bp 450bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
