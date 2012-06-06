@@ -5442,7 +5442,7 @@ name "sub:Einfügen-neuer-Icons"
 
 \begin_layout Standard
 Als Icons wurden hauptsächlich SVG Icons verwendet, dies bedeutet das die
- Icons auf eine beliebige grösse Skaliert werden könne, und trotzdem nicht
+ Icons auf eine beliebige Grösse Skaliert werden könne, und trotzdem nicht
  an Qualität verlieren.
  Die Icons stammen von:
 \end_layout
@@ -5457,11 +5457,58 @@ Humanity (Ubuntu / Canonical): https://launchpad.net/humanity
 
 \begin_layout Standard
 Die Icons wurden Teilweise angepasst, dies wurde mit Inkscape vorgenommen.
- Insk
 \end_layout
 
 \begin_layout Standard
-asdf
+Anfangs wollten wird die Icons mit einem Java SVG Parser öffnen und darstellen,
+ dies ist jedoch relativ langsam, zudem waren die SVG Libraries extrem langsam,
+ verglichem mit dem laden eines .png.
+ Daher haben wir uns entschieden das wir zwar immer noch bei den SVG bleiben,
+ es wird jedoch bei der ersten Verwendung durch Inkscape in ein PNG der
+ richtigen Grösse konvertiert.
+ Dadurch ist die Grafik immer noch beliebig skalierbar, aber auch schnell
+ im laden.
+ Die Klasse «IconLoader» konvertiert die Bilder automatisch, sofern:
+\end_layout
+
+\begin_layout Itemize
+Die Applikation nicht aus einem .jar gestartet wird
+\end_layout
+
+\begin_layout Itemize
+Der Ordner in der die Applikation liegt auf 
+\begin_inset Quotes eld
+\end_inset
+
+/bin
+\begin_inset Quotes erd
+\end_inset
+
+ endet (default von Eclipse)
+\end_layout
+
+\begin_layout Itemize
+Inkscape im Path ist.
+\end_layout
+
+\begin_layout Standard
+Ein neues Icon wird im Projekt «Sysintegration» eingefügt, in der Package:
+ «ch.zhaw.simulation.icon.svg».
+\end_layout
+
+\begin_layout Standard
+Danach wird die Applikation gestartet, das Icon wird geladen mit: 
+\begin_inset Quotes eld
+\end_inset
+
+IconLoader.getIcon("<name ohne extension>", <Grösse in px>)
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Das Bild wird automatisch konvertiert und geladen, wenn es nicht klappt
+ wird auf «stderr» ein Fehler ausgegeben, und stattdessen ein komplett rotes
+ Bild angezeigt.
 \end_layout
 
 \begin_layout Subsection
@@ -7103,11 +7150,12 @@ Inhalt der CD
 
 \end_deeper
 \begin_layout Itemize
-/doku
+/doku: Die Dokumentation, als Source und PDF
 \end_layout
 
 \begin_layout Itemize
-/src
+/src: Der Quellcode der gesamten Applikation, incl.
+ Libraries
 \end_layout
 
 \end_body
