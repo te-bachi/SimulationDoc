@@ -759,8 +759,6 @@ Eine Partielle Differentialgleichung (engl.
  unterschiedlich stark.
  Bei komplexen Systemen kann es zu analytisch unlösbaren Differentialgleichungen
  führen.
- Generell können nur Lineare Partielle Differentialgleichung analytisch
- gelöst werden.
  Hier hilft die Numerik weiter, die näherungsweise Lösungen ausgibt.
  Zwei wichtige numerische Verfahren sind die Finite-Differenzen-Methode
  (FDM) und die Finite-Elemente-Methode (FEM).
@@ -7396,7 +7394,11 @@ Installation erfolgreich
 
 \begin_layout Subsubsection
 Vorhandene Fehler / Fehlende Funktionalität
+\end_layout
+
 \end_inset
+
+
 \end_layout
 
 \begin_layout Standard
