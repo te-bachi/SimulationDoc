@@ -5456,7 +5456,7 @@ Setup
 Der Setup wird ebenfalls vom Ant Buildsystem erstellt.
  Es hat separate Skripts für jedes Betriebssystem, welche nicht unter allen
  Betriebssystem ausgeführt werden könne, aufgrund von technischen Beschränkungen.
- Verschiedene Betriebsysteme handhaben Einstellungen wie Dateitypen, Icons,
+ Verschiedene Betriebssysteme handhaben Einstellungen wie Dateitypen, Icons,
  Executable, Setup etc.
  verschieden.
  Hier eine kurze Übersicht:
@@ -6520,16 +6520,119 @@ Es wird ein Container erstellt: Entweder wird auf den grauen Zylinder in
 \end_layout
 
 \begin_layout Enumerate
-Wenn auf den Container gecklickt wird wird er orange, er ist nun selektiert.
+Wenn auf den Container geklickt wird wird er orange, er ist nun selektiert.
  Zudem wird oben rechts vom Container ein kleiner blauer Pfeil dargestellt,
  mit diesem Pfeil können direkt Verbindungen vorgenommen werden.
- Verbindungen können aber auch über die Toolbar erstellt werden.
+ Verbindungen können aber auch über die Toolbar erstellt werden (der blaue,
+ dicke Pfeil).
 \end_layout
 
 \begin_layout Enumerate
+Die Verbindung wird ins Nichts, also auf eine freie Stelle im Hintergrund
+ verbunden.
+\end_layout
 
-\color red
-TODO
+\begin_layout Enumerate
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Bildschirmfoto-7.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ergebnis von Punkt 1 - 4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Es wird auf «con0» doppelgeklickt, dann wird der Wert 100 eingetragen und
+ das Fenster wider geschlossen.
+ Das Fragezeichen müsste nun verschwunden sein.
+\end_layout
+
+\begin_layout Enumerate
+Es wird auf «fluss0» doppelgeklickt, dann wird der Wert 1 eingetragen und
+ das Fenster wieder geschlossen.
+ Auch hier müsste nun das Fragezeichen weg sein.
+\end_layout
+
+\begin_layout Enumerate
+In der Sidebar wird «Interne Simulation» gewählt, als «Startzeit» wird 0,
+ als «Endzeit» 150 und als «dt» 0.1 gewählt.
+ Als Simulationstype kann «Euler» belassen werden.
+\end_layout
+
+\begin_layout Enumerate
+Es wird auf «Simulieren» geklickt, oder «F9» gedrückt.
+ Die Simulation läuft ab und zeigt folgendes Diagramm an: 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Bildschirmfoto-8.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagramm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Interpretation des Diagramms: Der Container (rote Linie) enthält anfangs
+ 100, wird dann mit 1/Zeiteinheit entleert und erhält dann logischerweise
+ beim Zeitpunkt 100 nur noch 0.
+ Danach wird der Inhalt des Countainers negativ.
 \end_layout
 
 \begin_layout Subsection
@@ -6913,7 +7016,7 @@ Inhalt der CD
 \end_layout
 
 \begin_layout Itemize
-/setup: Die Setups für die verschiedenen Betriebsysteme
+/setup: Die Setups für die verschiedenen Betriebssysteme
 \end_layout
 
 \begin_deeper
