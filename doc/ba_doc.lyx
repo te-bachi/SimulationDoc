@@ -3496,11 +3496,8 @@ taView<?>» korrekt platziert.
  Alle anderen Komponenten werden nicht umplatziert, dies bedeutet wenn etwas
  anderes angezeigt wird muss dieses manuell mit «setBounds» platziert werden,
  was auch verwendet wird z.B.
- bei der Pfeil-erstell-UI (
-\color red
-TODO Name?
-\color inherit
-).
+ beim blauen Verbindungspfeil, der erscheint wenn ein Objekt selektiert
+ wird.
 \end_layout
 
 \begin_layout Standard
@@ -5970,12 +5967,8 @@ end{lstlisting}
 
 \end_inset
 
-
-\begin_inset Newline newline
-\end_inset
-
 eingefügt.
- Dies ergibt einen Compiler Fehler, da MenuToolbarActionType.XY_ADD_BLOCK
+ Dies ergibt einen Compiler Fehler, da «MenuToolbarActionType.XY_ADD_BLOCK»
  nicht erfasst ist, also erfassen wir es doch.
  Bei Eclipse geht das mit CTRL+1
 \end_layout
@@ -6156,6 +6149,7 @@ ert!
 
 
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6164,6 +6158,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/new_element/BlockView.png
+	scale 50
 
 \end_inset
 
