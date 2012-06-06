@@ -1508,9 +1508,10 @@ John R.
 Peter J.
  Prince
 \series default
- entwickelt, die eine höhere Ordnung aufweise wie das Klassische.
+ entwickelt, die eine höhere Ordnung aufweise wie das Klassische Runge-Kutta
+ Verfahren.
  Diese Methode gehört zu den eingebetteten Verfahren.
- Eingebetted darum, weil es noch einen zweiten Gewichts-Vektor 
+ Eingebettet darum, weil es noch einen zweiten Gewichts-Vektor 
 \begin_inset Formula $b_{2}$
 \end_inset
 
@@ -1725,7 +1726,7 @@ key "teubner_hanke,dankert_ode"
 \begin_layout Standard
 Die (AB)² Simulation besitzt zwar im Flow-Modell-Editor eine Möglichkeit
  die Simulation mit der Dormand-Prince-Methode auszuführen, ist aber noch
- nicht ausreichen getestet worden und darum noch im Alpha-Stadium.
+ nicht ausreichen getestet worden.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1733,7 +1734,151 @@ Diffusionsgleichung
 \end_layout
 
 \begin_layout Standard
-s
+Ein Beispiel aus der Natur soll eines von vielen Anwendungsgebieten aufzeigen.
+ Eine Zelle ist von einer Zellmembran umschlossen, die die Zelle schützt.
+ Die Zelle kann aber durch ihre teildurchlässige Membran Nährstoffe aufnehmen
+ oder abstossen.
+ Der Stoffaustausch ist ein Diffusionsprozess.
+ Ein Diffusionsprozess versucht Konzentrationsunterschiede auszugleichen
+ bis ein Gleichgewicht hergestellt ist.
+\end_layout
+
+\begin_layout Standard
+Die Diffusionsgleichung umschreibt eine einfache Diffusion und ist in Gleichung
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:diffusion"
+
+\end_inset
+
+ in analytischer Form zu sehen, wobei 
+\begin_inset Formula $D$
+\end_inset
+
+ der Diffusionskoeffizient, 
+\begin_inset Formula $\Delta f$
+\end_inset
+
+ der Laplace-Operator über die Funktion 
+\begin_inset Formula $f$
+\end_inset
+
+ und 
+\begin_inset Formula $d$
+\end_inset
+
+ die Dimension ist.
+ In der Fläche wird eine Dimension 
+\begin_inset Formula $d=2$
+\end_inset
+
+ verwendet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta & = & \sum_{i=1}^{d}\frac{\partial^{2}}{\partial r_{i}^{2}}\label{eq:diffusion}\\
+\frac{\partial}{\partial t}f\left(\vec{r},\; t\right) & = & D\cdot\Delta f\left(\vec{r},\; t\right)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für die (AB)² Simulation diskretisiert sich die Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:diffusion"
+
+\end_inset
+
+ in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:diffusion_num"
+
+\end_inset
+
+.
+ Dabei bedient man sich der Finite-Differenzen-Methode (FDM).
+ In Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diskrete-Faltung"
+
+\end_inset
+
+ und 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Maske-Diffusion"
+
+\end_inset
+
+ kann die Gleichung nochmals nachverfolgt werden, wobei das Ursprungsbild
+ 
+\begin_inset Formula $u_{n}$
+\end_inset
+
+ und das Zielbild 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+ ist.
+ Das Symbol 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\Delta$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang german-ch
+ wird hier als Different verstanden.
+ Der Punkt 
+\begin_inset Formula $\left(x,\; y\right)$
+\end_inset
+
+ liegt in der Mitte der Maske.
+ Die Maske geht über das ganze Bild.
+ In der Simulation wird die Diffusion in einer Matrize gelöst.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta u & = & f\left(x,\; y+1\right)+f\left(x,\; y-1\right)+f\left(x+1,\; y\right)+f\left(x-1,\; y\right)-4\cdot f\left(x,\; y\right)\label{eq:diffusion_num}\\
+u_{n+1} & = & u_{n}+\Delta t\cdot D\cdot\Delta u\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1759,7 +1904,9 @@ status open
 
 \begin_layout Plain Layout
 Diskrete Faltung
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diskrete-Faltung"
 
 \end_inset
 
@@ -1771,23 +1918,9 @@ Diskrete Faltung
 
 \end_layout
 
-\begin_layout Standard
-g
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-y_{n+1} & = & y_{n}+dt\cdot D\cdot\left[f\left(y+1,\; x\right)+f\left(y-1,\; x\right)+f\left(y,\; x+1\right)+f\left(y,\; x-1\right)-4\cdot f\left(y,\; x\right)\right]
-\end{eqnarray}
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-d
 \end_layout
 
 \begin_layout Standard
@@ -1800,6 +1933,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Maske Diffusion.pdf
+	scale 75
 	BoundingBox 40bp 400bp 200bp 570bp
 	clip
 
@@ -1810,6 +1944,13 @@ status open
 
 \begin_layout Plain Layout
 Maske für eine diskrete Diffusion
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Maske-Diffusion"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1831,14 +1972,36 @@ Gradienten-Verfahren
 \end_layout
 
 \begin_layout Standard
-gla
+Eine Zelle braucht Nahrung um zu überleben.
+ Sie fühlt sich am sichersten, wenn Nahrung im Überfluss vorhanden ist.
+ Wenn um sie herum mehr Nahrung auf einen potentiellen Konsumenten wartet
+ als die Position, in der die Zelle sich momentan befinden, versucht sie
+ ihre Position zu ändern.
+\end_layout
+
+\begin_layout Standard
+Ein einfaches Verfahren in der Numerik um ein lokales Maximum eines Skalarfeldes
+ zu finden, ist das Gradienten-Verfahren.
+ Dabei befindet man sich an einer Position 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+ im Skalarfeld.
+ Mit dem Nabla-Operator 
+\begin_inset Formula $\nabla$
+\end_inset
+
+ wird eine Gradient-Operation auf das Skalarfeld angewendet, dass ein Vektorfeld
+ als Resultat hat.
+ Im Vektorfeld, an der gleichen Position wie im Skalarfeld, befindet sich
+ ein Verschiebungs-Vektor, der anzeigt, in welcher Richtung das lokale Maximum
+ ist.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{df}{dx}\left(x\; y\right) & = & f\left(x+1,\; y\right)-f\left(x,\; y\right)\\
-\frac{df}{dy}\left(x\; y\right) & = & f\left(x,\; y+1\right)-f\left(x,\; y\right)
+\vec{r}_{n+1} & = & \vec{r}_{n}+\Delta t\cdot\nabla f\left(\vec{r}_{n}\right)
 \end{eqnarray}
 
 \end_inset
@@ -1847,7 +2010,64 @@ gla
 \end_layout
 
 \begin_layout Standard
-f
+In der (AB)² Simulation ist der Raum nur eine Fläche.
+ Das hier implementierte Gradienten-Verfahren ist eine Finite-Differenzen-Method
+e (FDM).
+ Um die neue Position 
+\begin_inset Formula $\left(x_{n+1},\; y_{n+1}\right)$
+\end_inset
+
+zu bestimmen, braucht es die aktuelle Position 
+\begin_inset Formula $\left(x_{n},\; y_{n}\right)$
+\end_inset
+
+, die Differenzen 
+\begin_inset Formula $\left(\Delta x,\;\Delta y\right)$
+\end_inset
+
+ und den Zeitschritt 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+.
+ Zur Berechnung der Differenzen kann eine diskrete Faltung in Abbildung
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diskrete-Faltung"
+
+\end_inset
+
+ mit einer Maske in 
+\begin_inset Formula $x$
+\end_inset
+
+-Richtung und in 
+\begin_inset Formula $y$
+\end_inset
+
+-Richtung wie in Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Maske-Gradient"
+
+\end_inset
+
+ benutzt werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta x & = & f\left(x+1,\; y\right)-f\left(x,\; y\right)\\
+\Delta y & = & f\left(x,\; y+1\right)-f\left(x,\; y\right)\\
+x_{n+1} & = & x_{n}+\Delta t\cdot\Delta x\\
+y_{n+1} & = & y_{n}+\Delta t\cdot\Delta y
+\end{eqnarray}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1860,6 +2080,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Maske Gradient.pdf
+	scale 75
 	BoundingBox 70bp 400bp 330bp 550bp
 	clip
 
@@ -1872,7 +2093,14 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Maske für eine diskrete Differenz
+Maske für einen diskreten Gradienten
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Maske-Gradient"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3668,7 +3896,7 @@ Die (AB)² Simulation arbeitet im XY-Modell nur in Dimension
 \end_inset
 
 .
- Die Fläche besitzt zwischen 
+ Die Fläche besitzt normalerweise zwischen 
 \begin_inset Formula $10^{2}$
 \end_inset
 
@@ -3757,13 +3985,17 @@ status open
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Gradienten-Verfahren
+\end_layout
+
+\begin_layout Standard
+Das Verfahren kann überschiessen.
 \end_layout
 
 \begin_layout Section
@@ -3980,7 +4212,7 @@ Codeanmerkungen
 \begin_layout Standard
 Der Javacode wurde mit Tabulatoren eingerückt, welche auf 4 Leerzeichen
  eingestellt sind.
- Das Encoding der Dateien ist UTR-8.
+ Das Encoding der Dateien ist UTF-8.
  Wird das Encoding falsch eingestellt können Sonderzeichen und Umlaute nicht
  mehr dargestellt werden.
 \end_layout
@@ -4024,6 +4256,10 @@ Java Version: 1.6 / 6 (Java 1.6 ist die interne Versionsnummer, Java 6 ist
 
 \begin_layout Itemize
 Eclipse: 3.7.1
+\end_layout
+
+\begin_layout Itemize
+IntelliJ: 11.1.1
 \end_layout
 
 \begin_layout Itemize
@@ -5333,7 +5569,7 @@ Für Linux ist nur ein Shellscript vorhanden, dies wird beim Build automatisch
  erstellt.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Vorhandene Fehler / Fehlende Funktionalität
 \end_layout
 
