@@ -300,7 +300,7 @@ Bestehende graphische Modelleditoren erlauben eine effiziente Modellierung
  Die Verwendung oder Kopplung verschiedener Simulationswerkzeuge kann für
  gewisse technische Systeme in Betracht gezogen werden (z.B.
  elektrische Schaltung mit Komponenten, bei denen die Wärmeabstrahlung und
- oder Wärmeleitung räumlich modelliert werden).
+ / oder Wärmeleitung räumlich modelliert werden).
  Bei vielen Systemen lässt sich aber durch eine solche Kopplung das System
  nicht abbilden.
  Bei biologischen Systemen z.B.
@@ -316,7 +316,7 @@ n Systemen fusionieren oder sich teilen können.
 Anforderungen: Das zu entwickelnde Modellierungswerkzeug soll an die intuitive
  graphische Oberfläche bestehender Modellierungswerkzeuge für kompartimentale
  Simulationen anknüpfen.
- Folgene Aspekte sollen konzeptuell untersucht und wenn möglich implemetiert
+ Folgende Aspekte sollen konzeptuell untersucht und wenn möglich implemetiert
  werden:
 \end_layout
 
@@ -328,7 +328,7 @@ Hierarchische Kompartimente
 Räumliche Positionierung von Kompartimenten, welche die Wechselwirkung der
  Kompartimente auf gleicher Stufe beeinflussen kann und somit Einführung
  von Koordinaten (erster Schritt 2-Dim.) bzw.
- orthogonales Grid und beschreibung von Gradienten (z.B.
+ orthogonales Grid und Beschreibung von Gradienten (z.B.
  für Änderung der räumlichen Position von Kompartimenten aufgrund von z.B.
  Gradienten)
 \end_layout
@@ -359,11 +359,11 @@ Statt: unsere Simulation, Andreas, oder so andere Formen wählen
 \color magenta
 Mit unserer Simulation
 \color inherit
- ist es zusätzlich möglich in einem XY Modell mehrere Meso Kompartmente
- abzubilden, ein Meso Kompartment ist das vorhin genannte Flussmodel.
- Diese Meso Kompartmente können sich wären der Simulation im XY-Raum bewegen.
+ ist es zusätzlich möglich in einem XY Modell mehrere Meso-Kompartimente
+ abzubilden, ein Meso-Kompartment ist das vorhin genannte Flussmodel.
+ Diese Meso-Kompartimente können sich wären der Simulation im XY-Raum bewegen.
  Es können Dichten angegeben werden, die über den XY Raum verteilt sind,
- und die Meso Kompartmente können an Ihrer aktuellen Position von der dichte
+ und die Meso-Kompartimente können an Ihrer aktuellen Position von der dichte
  Konsumieren oder dichte Produzieren, somit kann die Umgebung beeinflusst
  werden.
  Mit diesen Fähigkeiten ist es möglich das innenleben einer Zelle oder andere
@@ -427,7 +427,7 @@ Im Falle von Bakterien kann von einem exponentiellen Wachstum ausgegangen
 \end_layout
 
 \begin_layout Standard
-Das Wachstum kann Beschränk werden auf ein Nährmedium in der Petrischale.
+Das Wachstum kann Beschränkt werden auf ein Nährmedium in der Petrischale.
  Das Bakterienvolk kann sich nicht mehr Fortpflanzen, wenn keine Nahrung
  mehr zur Verfügung steht.
  Eine Nährstoffkonzentration 
@@ -584,7 +584,7 @@ Bei der Numerik kann eine Zahl nur als Folge von Bits dargestellt werden.
  Das heisst, die Numerik rechnet nur eine Näherungslösung.
  Komplexe Geometrien, wie nicht lineare Differentialgleichungen, können
  nur in Ausnahmefällen analytisch gelöst werden, worauf in heutiger Zeit
- fast ausschliesslich ein numerisches Verfahren verwendung findet.
+ fast ausschliesslich ein numerisches Verfahren Verwendung findet.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -653,7 +653,7 @@ Für die computerunterstützte Berechnung von Simulationen dieser Art können
  oder numerische.
  Unsere Simulation verwendet das numerische Verfahren, wie es auch Berkeley
  Madonna tut.
- Das Vorgehen beruht auf einer numerischen Approximation von Gewöhnlichen
+ Das Vorgehen beruht auf einer numerischen Approximation von gewöhnlichen
  Differentialgleichungen.
  Diese Art kann nur Differentialgleichung 1.
  Ordnung berechnen.
@@ -2232,14 +2232,14 @@ Schematische Darstellung des Simulationseditors
 \end_layout
 
 \begin_layout Standard
-Mit dem Simulationstool kann entweder ein herkömmliches «Flow-Modell» erstellt
+Mit dem Simulationstool kann entweder ein herkömmliches Flow-Modell erstellt
  werden, das vom Konzept her bereits bekannt ist von vielen Simulationstools.
- Oder es kann ein «XY-Modell» erstellt werden, das dann Meso Kopartments
- beinhaltet, diese befinden sich an einer Position (X / Y) und verweisen
- auf ein Modell («Flow-Model-X»).
- Im «XY-Modell» könne sich «Dichten» befinden, das sind Stoffe die eine
- gewisse Konzentration an einer gewissen Stelle aufweisen.
- Ein Meso-Kompartment kann sich wären der Simulation im «XY-Modell» bewegen,
+ Oder es kann ein XY-Modell erstellt werden, das dann Meso-Kopartments beinhalte
+t, diese befinden sich an einer Position (X / Y) und verweisen auf ein Modell
+ (Flow-Model-X).
+ Im XY-Modell könne sich «Dichten» befinden, das sind Stoffe die eine gewisse
+ Konzentration an einer gewissen Stelle aufweisen.
+ Ein Meso-Kompartment kann sich wären der Simulation im XY-Modell bewegen,
  es kann Dichten konsumieren oder produzieren.
 \end_layout
 
@@ -2564,7 +2564,7 @@ Positiv
 Da C++ eine hardwarenahe Sprache ist könnten Hardwarebeschleunigungen wie
  z.B.
  MMX bei Intel Prozessoren genutzt werden.
- Dies muss jedoch von Hand vorgenommen werden, und es ist zu beachten das
+ Dies muss jedoch von Hand vorgenommen werden, und es ist zu beachten, dass
  diese Optimierungen für jede Prozessorarchitektur (z.B.
  Intel 32 bit, Intel 64 bit, ARM) separat vorgenommen werden müsste.
 \end_layout
@@ -2581,15 +2581,15 @@ C++ Beinhaltet keine GUI Bibliotheken, je nach Plattform kommen verschiedene
  Die Framerworks GTK und QT sind jedoch auch Plattformunabhängig einsetzbar,
  und lassen sich auch unter Mac OS X / Windows einsetzen, dies ist jedoch
  mit einem höheren Aufwand verbunden als z.B.
- bei Java.
+ bei Java mit Swing.
 \end_layout
 
 \begin_layout Itemize
 Die Applikation müsste für jedes Betriebssystem / jede CPU Architektur neu
  übersetzt werden.
  Unterschiede wie z.B.
- Little- / Big-Endian müssen bei der Enwicklung berücksichtigt werden, ansonsten
- können Fehler auftreten.
+ Little- / Big-Endian müssen bei der Entwicklung berücksichtigt werden,
+ ansonsten können Fehler auftreten.
 \end_layout
 
 \begin_layout Itemize
@@ -2696,8 +2696,8 @@ Java optimiert beim starten der Applikation automatisch auf die vorhandene
  Wird der gleiche, optimierte Code auf 64 bit Prozessoren ausgeführt so
  ist dieser nicht mehr optimal.
  Noch schlimmer wird es wenn dieser Code nun für einen ARM Prozessor kompiliert
- wird, so wird die manuelle optimierung sich warscheinlich sogar negativ
- auswirken..
+ wird, so wird die manuelle Optimierung sich wahrscheinlich sogar negativ
+ auswirken.
  ARM Prozessoren werden immer häufiger verbaut, unter anderem auch in Subnoteboo
 ks.
 \end_layout
@@ -2717,13 +2717,14 @@ Markup Language
 Als Markup Language für die Simulation kam der Matlab Syntax zum Einsatz,
  der ebenfalls vom Open Source Tool «octave» verarbeitet werden kann.
  Somit ist es möglich die Simulation ausserhalb der Applikation laufen zu
- lassen, in einer Umgebung, die mathematische Funktionionen anbietet die
- uns intern nicht zur Verfügung stehen, bzw.
+ lassen, in einer Umgebung, die mathematische Funktionen anbietet, die uns
+ intern nicht zur Verfügung stehen, bzw.
  die wir selbst hätten schreiben müssen.
 \end_layout
 
 \begin_layout Standard
-Zudem ist es möglich das der generierte Code noch angepasst werden kann.
+Zudem ist es möglich, dass der generierte Code noch angepasst werden kann
+ vor der Simulation.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2742,15 +2743,9 @@ Die Applikation hat einige Punkte, die sinvollerweise durch Plugins erweitert
  die Abschottung einzelner Plugins gegeneinander.
  Sogar das mehrfache Laden einer Library in verschiedenen Versionen ist
  ohne Probleme möglich.
-\end_layout
-
-\begin_layout Standard
-Für unsere Applikation ist soviel Flexibilität aber nicht nötige, zudem
- würde dies auch einen hohen mehraufwand bei der Implementation bedeutet.
-\end_layout
-
-\begin_layout Standard
-Unsere Pluginimplementation funktioniert daher viel einfacher:
+ Für unsere Applikation ist soviel Flexibilität aber nicht nötige, zudem
+ würde dies auch einen hohen Mehraufwand bei der Implementation bedeutet.
+ Unsere Pluginimplementation funktioniert daher viel einfacher:
 \end_layout
 
 \begin_layout Enumerate
@@ -2815,8 +2810,9 @@ reference "par:Fremdformat-importe"
 \end_layout
 
 \begin_layout Enumerate
-Simulation: Plugins für Interne Simulation und Matlab Codegeneration: TODO
- Querverweis
+Simulation: Plugins für Interne Simulation und Matlab Codegeneration: 
+\color red
+TODO Querverweis
 \end_layout
 
 \begin_layout Subsubsection
@@ -2855,8 +2851,9 @@ Es wurden zwei Importplugins erstellt, eins für Berkeley Madonna, uns eins
 Dynasys ist seit 2009 unter der GPL freigegeben, somit war ein Einblick
  in den Pascal Code möglich.
  Die Pascal Objekte wurden binär serialisiert, und da es sich bei Dynasys
- noch um eine 16bit Applikation handelt werden nicht alle Daten korrekt
- eingelesen.
+ noch um eine 16bit Applikation handelt konnte der Code nicht kompiliert
+ werden zur Analyse (keine entsprechender Compiler vorhanden).
+ Daher werden nicht alle Daten korrekt eingelesen.
  Trotz Einschränkungen ist es somit möglich kleinere Dateien komplett, und
  grössere Dateien teilweise einzulesen.
 \end_layout
@@ -4339,8 +4336,8 @@ grad
  Einheiten im Raster verschoben ist.
  Dies bewirkt zwar ein Abdriften in eine Richtung, dies stört aber die Simulatio
 n weniger als ein Plateu.
- Ein Plateu kann bewirken das sich ein Meso Kompartment, welches sich zur
- nidrigsten Konzentration bewegen soll, nicht mehr bewegt.
+ Ein Plateu kann bewirken das sich ein Meso-Kompartment, welches sich zur
+ niedrigsten Konzentration bewegen soll, nicht mehr bewegt.
 \end_layout
 
 \begin_layout Standard
