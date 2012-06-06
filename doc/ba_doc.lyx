@@ -236,6 +236,10 @@ g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
 
 \end_layout
 
+\begin_layout Part
+Hauptteil
+\end_layout
+
 \begin_layout Section
 Einleitung
 \end_layout
@@ -2148,15 +2152,39 @@ Graphische Darstellung der Modelle
 \end_layout
 
 \begin_layout Standard
+Die Modelle werden mit einem graphischen Editor abgebildet.
+ Dazu gibt es zwei Modelle, das Flow-Modell, welches Flüsse abbildet, ist
+ das Innere der Meso-Kompartment, das XY-Modell ist die Fläche auf der sich
+ die Meso-Kompartment bewegen.
+ Es können Dichten definiert werden.
+ Eine Dichte verhält sich in unserer Simulation wie ein digitalisiertes
+ Bild, jeder Pixel ist ein Topf, der eine bestimmte Menge Stoff enthält.
+ Dieser Stoff kann von den Meso-Kompartments konsumiert bzw.
+ produziert werden, wodurch sich das das 
+\begin_inset Quotes eld
+\end_inset
 
-\color red
-Diffusionsgleichung, Meso-> stoff konsumieren / ausscheiden
-\end_layout
+Bild
+\begin_inset Quotes erd
+\end_inset
 
-\begin_layout Standard
+ während der Simulation ändert.
+ Ebenso können sich die Meso-Kompartments anhand der Dichten bewegen, je
+ nach 
+\begin_inset Quotes eld
+\end_inset
 
-\color blue
-Text: für die graphise Darstellung...
+Vorliebe
+\begin_inset Quotes erd
+\end_inset
+
+ / Dichte zu den Maimas oder zu den Minimas.
+ Die Dichte diffundiert während der Simulation, um wieder die Analogie mit
+ dem Bild herzustellen bedeutet das in etwa das gleich wie wenn auf ein
+ Bild ein Grauscher Weichzeichner angewendet wird.
+ Dies bedeutet das wenn die Simulation unendlich laufen würde, und keine
+ Meso-Kompartments vorhanden sind die etwas verändern so wird die Dichte
+ irgendwann überall gleich hoch sein.
 \end_layout
 
 \begin_layout Standard
@@ -2167,8 +2195,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename images/model-uebersicht.png
+	filename images/model-uebersicht.eps
 	width 12cm
 
 \end_inset
@@ -2177,8 +2206,9 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename images/model-uebersicht-legende.png
+	filename images/model-uebersicht-legende.eps
 	width 8cm
 
 \end_inset
@@ -2190,7 +2220,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-TODO
+Schematische Darstellung des Simulationseditors
 \end_layout
 
 \end_inset
@@ -2204,15 +2234,8 @@ TODO
 \end_layout
 
 \begin_layout Standard
-
-\color red
-TODO: Global: Parameter kann berechnung enthalten
-\end_layout
-
-\begin_layout Standard
-Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
- bekannt ist da es vom Konzept her identisch bereits von vielen Simulationstools
- angeboten wird.
+Mit dem Simulationstool kann entweder ein herkömmliches «Flow-Modell» erstellt
+ werden, das vom Konzept her bereits bekannt ist von vielen Simulationstools.
  Oder es kann ein «XY-Modell» erstellt werden, das dann Meso Kopartments
  beinhaltet, diese befinden sich an einer Position (X / Y) und verweisen
  auf ein Modell («Flow-Model-X»).
@@ -2222,17 +2245,283 @@ Es kann entweder ein Herkömmliches «Flow-Modell» erstellt werden, das bereits
  es kann Dichten konsumieren oder produzieren.
 \end_layout
 
+\begin_layout Standard
+Die Werkzeuge des Simulationstools sehen dann effektiv so aus wie in den
+ folgenden Abbildungen.
+ Es sind nicht alle Kombinationen von Verbindungen gezeigt, grundsätzlich
+ sind Parameterverbindungen zu allen anderen Objekten möglich.
+ Flüsse sind nur zwischen (Density)Containern möglich.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/parts/Meso-Kompartment.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Meso-Kompartments, hier klar zu erkennen das Fragezeichen, welches einen
+ Fehler signalisiert.
+ Die Farbe kennzeichnet das darunterliegende Flussmodell.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/parts/Parameter.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Parameter, können Berechnung und Konstanten enthalten.
+ Fehler werden durch Fragezeichen gekennzeichnet, mithilfe des blauen Pfeils
+ können Verbindungen erstellt werden
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/parts/Parameter verbunden.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Zwei verbundene Parameter: «var1» kann und muss den Wert von «var2» verwenden.
+ Wird der Wert nicht verwendet erscheint ein Fehler (Fragezeichen) wird
+ der Wert nicht verbunden und trotzdem verwendet erscheint ebenfalls ein
+ Fehler.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/parts/Global.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Global, funktioniert gleich wie der Parameter, ist jedoch überall Global
+ verfügbar, auch ohne Verbindung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/parts/Globale_Abhaengigkeit1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/parts/Globale_Abhaengigkeit2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Die Verbindung von und zu Globalen wird mit Schatten dargestellt, somit
+ ist sichtbar wo die globalen Verwendet werden, bzw.
+ ob ein Objekt eine Globale verwendet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/parts/Container.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Container: enthalten eine Formel für den Initialwert, und können Ein- /
+ Ausflüsse enthalten.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/parts/Fluss.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Flüsse: Sind nur möglich zwischen Containern und ins leere
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Werkzeuge und Hilfsmittel
-\end_layout
-
-\begin_layout Standard
-Wie ist Lösung und warum diese Lösung?
-\end_layout
-
-\begin_layout Standard
-Problem beschreiben: herausfinden was Problem ist / wo Problem ist und Lösungen
- finden
 \end_layout
 
 \begin_layout Subsubsection
@@ -2244,20 +2533,15 @@ Die Vorgabe bestand unter anderem in einem GUI, welches plattformunabhängig
  funktionieren sollte.
  Daher haben wir uns für Java entschieden.
  Java ist dank der Java Virtual Machine komplett plattformunabhängig, und
- bietet mit Swing ein komplettes Framework für GUI Applikationen.
-\end_layout
-
-\begin_layout Standard
-
-\color red
-TODO!!!!! Nachfolgender Absatz umformulieren
+ bietet mit Swing ein Framework für GUI Applikationen.
 \end_layout
 
 \begin_layout Standard
 Die eigentliche Simulation wird mit Plugins realisiert, daher beschränkt
- sich die Auswahl der Programmiersprache nur auf den Editor, das Plugin
- kann in einer beliebigen Sprache geschrieben werden, es muss lediglich
- eine Java Klasse geschrieben werden, die dieses Plugin lädt, dies ist z.B.
+ sich die Auswahl der Programmiersprache nur auf den Editor.
+ Ein Plugin kann in einer beliebigen Sprache geschrieben werden, es muss
+ lediglich eine Java Klasse geschrieben werden, die dieses Plugin lädt.
+ Das laden einer Library aus Java ist z.B.
  mit JNI (Java Native Interface) möglich.
  Die Argumente für / gegen eine Sprache gelten aber grundsätzlich auch für
  die Simulation, abgesehen vom GUI Framework, das für die Simulation nicht
@@ -2265,7 +2549,7 @@ Die eigentliche Simulation wird mit Plugins realisiert, daher beschränkt
 \end_layout
 
 \begin_layout Standard
-Alternative plattformunabhängige Programmiersprachen mit Vor- und Nachteilen:
+Alternative plattformunabhängigen Programmiersprachen mit Vor- und Nachteilen:
 \end_layout
 
 \begin_layout Itemize
@@ -2404,28 +2688,20 @@ Java ist für den Benutzer die einfachste Lösung, da er nur die JVM installiert
 \end_layout
 
 \begin_layout Standard
-
-\color red
-TODO: Nachfolgenden Satz umformulieren
-\end_layout
-
-\begin_layout Standard
-Java wird zudem beim Start automatisch auf die vorhandene Hardware optimiert,
- was im allgemeinen eine bessere Performance zur Folge hat als wenn mit
- C++ versucht wird zu optimieren, da der kaum für alle möglichen Architekturen
- optimiert wird, sondern nur für eine Spezifische Architektur.
- Als grosser Nachteil von Java ist dafür der langsame Start zu nennen, wären
- dieser Zeit werden dann unter anderem die Optimierungen vorgenommen.
- Zudem brauchen Java Applikationen aufgrund des Overhead der VM mehr Arbeitspeic
-her.
- Dafür kriegt man bei Java bei jedem Absturz / Fehler einen Stacktracke,
- während man sich bei C++ aufgrund eines fehlenden Speicherschutzes unter
- Umständen sogar den Stack zerstören kann, was eine sehr schwirige Fehlesuche
- zur Folge hat, da der Fehler grundsätzlich nach dem Absturz nicht lokalisiert
- werden kann, und daher mühsam Stückweise getestet / Analysiert werden muss.
- Festplattenspeicher wird nicht berücksichtigt, da in den heutigen Zeiten
- dieser sowieso im Überfluss vorhanden ist, und ein Vergleich schwierig
- ist, da Libraries / Runtime auch mit eingerechnet werden müssten.
+Java optimiert beim starten der Applikation automatisch auf die vorhandene
+ Hardware, dies hat zwar einen langsameren Start zur Folge, optimiert aber
+ im allgemeinen besser als dies ein Programmierer machen würde.
+ Wenn in einer Sprache wie z.B.
+ in C++ manuell optimiert wird, wird immer auf eine bestimmte Hardware optimiert
+, z.B.
+ Intel x86 32 bit Prozessoren.
+ Wird der gleiche, optimierte Code auf 64 bit Prozessoren ausgeführt so
+ ist dieser nicht mehr optimal.
+ Noch schlimmer wird es wenn dieser Code nun für einen ARM Prozessor kompiliert
+ wird, so wird die manuelle optimierung sich warscheinlich sogar negativ
+ auswirken..
+ ARM Prozessoren werden immer häufiger verbaut, unter anderem auch in Subnoteboo
+ks.
 \end_layout
 
 \begin_layout Standard
@@ -2435,31 +2711,21 @@ Als Entwicklungsumgebung kamen sowohl Eclipse als auch IntelyJ zum Einsatz,
  verbreitet, und würde der Applikationen keine Vorteil bringen.
 \end_layout
 
-\begin_layout Standard
-
-\color red
-TODO Versionen von Plugins etc.
-\end_layout
-
 \begin_layout Subsubsection
 Markup Language
 \end_layout
 
 \begin_layout Standard
-
-\color red
-Was ist eine Markup Language?
-\end_layout
-
-\begin_layout Standard
-
-\color red
-Warum dieser Weg?
-\end_layout
-
-\begin_layout Standard
 Als Markup Language für die Simulation kam der Matlab Syntax zum Einsatz,
  der ebenfalls vom Open Source Tool «octave» verarbeitet werden kann.
+ Somit ist es möglich die Simulation ausserhalb der Applikation laufen zu
+ lassen, in einer Umgebung, die mathematische Funktionionen anbietet die
+ uns intern nicht zur Verfügung stehen, bzw.
+ die wir selbst hätten schreiben müssen.
+\end_layout
+
+\begin_layout Standard
+Zudem ist es möglich das der generierte Code noch angepasst werden kann.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2617,10 +2883,9 @@ Die Nächste Version von Berkeley Madonna, Version 9, verwendet nun aber
 \end_layout
 
 \begin_layout Standard
-
-\color red
-TODO => http://docs.oracle.com/javase/6/docs/platform/serialization/spec/protocol.h
-tml
+Wie das binäre Serialisierungsprotokoll von Java aufgebaut ist kann unter
+ http://docs.oracle.com/javase/6/docs/platform/serialization/spec/protocol.html
+ nachgelesen werden.
 \end_layout
 
 \begin_layout Paragraph*
@@ -3247,13 +3512,15 @@ Sysintegration:
 \begin_deeper
 \begin_layout Enumerate
 Alle Icons (bei der aktuellen Implementation wird jedoch nicht nach Plattform
- unterschieden)
-\end_layout
+ unterschieden).
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einfügen-neuer-Icons"
 
-\begin_layout Enumerate
+\end_inset
 
-\color red
-TODO: SVG konvertiert etc.
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3409,6 +3676,7 @@ Der Editor ist einer der komplexeren Elemente dieser Applikation.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -3978,6 +4246,7 @@ Zu Beginn wird die Dichtefunktion im XY-Modell auf eine Greenschen Funktion
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -3999,7 +4268,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
+TODO
 \end_layout
 
 \end_inset
@@ -4100,14 +4369,8 @@ Zudem ist die Plattformunabhängigkeit nicht gewährleistet, denn es muss
 \end_layout
 
 \begin_layout Standard
-
-\color red
-NICHT DER FALSCHE WEG aber schwierig
-\end_layout
-
-\begin_layout Standard
-Aufgrund aller dieser Tatsachen haben wir entschieden, dass der Weg mit
- einer Markup Language der falsche war:
+Wir haben nun festgestellt das der Weg mit einer Markup Language, insbesondere
+ Matlab / Octave schwierig ist:
 \end_layout
 
 \begin_layout Itemize
@@ -4119,12 +4382,16 @@ Plattformunabhängigkeit funktioniert nur bedingt
 \end_layout
 
 \begin_layout Itemize
-Keine Programmiertechnischen Vorteile
+Keine Programmiertechnischen Vorteile (zumindest nicht mit Matlab / Octave)
 \end_layout
 
 \begin_layout Itemize
-Geschwindigkeitseinbussen (bei kleinen Simulationen fällt insbesondere der
- Start einer externen Applikation stark ins Gewicht)
+Geschwindigkeitseinbussen: bei kleinen Simulationen fällt insbesondere der
+ Start einer externen Applikation stark ins Gewicht.
+ Octave ist zudem generell langsamer als Matlab.
+ Ein analysierter Fall hat ergeben das eine Simulation die in Matlab nur
+ wenige Minuten gedauert hat mit Octave hochgerechnet 16 Stunden dauern
+ würde.
 \end_layout
 
 \begin_layout Standard
@@ -4172,7 +4439,15 @@ Parallelisierung: Heutzutage besitzt jeder moderne PC mehr als einen Rechenkern.
  (Voraussetzung: mehr als ein Core, und das Modell muss entsprechend unabhängige
  Teile aufweisen, ein Aufteilen eines einzelnen Integrals ist theoretisch
  zwar möglich, praktisch ist es jedoch langsamer als die Simulation auf
- einem CPU, da die Synchronisation sehr viel Leistung benötigt) => MPC
+ einem CPU, da die Synchronisation sehr viel Leistung benötigt)
+\end_layout
+
+\begin_layout Standard
+Um die Vorteile einer Markuplanguage wirklich auszunutzen müssten Tools
+ zum Einsatz kommen die aufgrund der Lizenzkosten nicht generell zur Verfügung
+ stehen.
+ Ob diese bezüglich den oben gennanten Punkten besser zu handhaben sind
+ wurde nicht geprüft.
 \end_layout
 
 \begin_layout Subsection*
@@ -4185,11 +4460,6 @@ Was Fehlt noch, was muss noch gemacht werden? Interpretation und Validierung
  nicht erreicht Legt dar, wie an die Resultate (konkret vom Industriepartner
  oder weiteren Forschungsarbeiten; allgemein) angeschlossen werden kann;
  legt dar, welche Chancen die Resultate bieten 18.
-\end_layout
-
-\begin_layout Standard
-Container können nur positiv und negativ werden, nicht nur positiv, zumindest
- nicht im Matlab Plugin.
 \end_layout
 
 \begin_layout Standard
@@ -4296,6 +4566,49 @@ PSPad: 4.5.6 (als Editor für NSIS Skripts, siehe: http://nsis.sourceforge.net/P
 Launch4J: 3.0.2 (02.01.2011)
 \end_layout
 
+\begin_layout Itemize
+Inkscape: 0.48.1
+\end_layout
+
+\begin_layout Itemize
+JFreechart: 1.0.14 (incl.
+ JCommon: 1.0.17)
+\end_layout
+
+\begin_layout Itemize
+JXLayer: 3.0.4
+\end_layout
+
+\begin_layout Itemize
+SwingX: 1.6
+\end_layout
+
+\begin_layout Itemize
+Freeheap: 2.1.1
+\end_layout
+
+\begin_layout Itemize
+Dokumentation:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+LibreOffice: 3.5.4.2
+\end_layout
+
+\begin_layout Itemize
+Lyx: 2.0.0
+\end_layout
+
+\begin_layout Itemize
+pdfTeX: 3.1415926-1.40.10-2.2
+\end_layout
+
+\begin_layout Itemize
+GIMP: 2.6.11 
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Erstellen eines neuen Simulationsplugins
 \end_layout
@@ -4308,6 +4621,7 @@ Es wird ein neues Javaprojekt erstellt, mit den Name «SimulationPlugin.Sinnlos�
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -4423,7 +4737,7 @@ public boolean load() throws Exception: Die Initialisierung des Plugins
 public void unload(): Diese Methode wird vor dem Beenden der Applikation
  aufgerufen.
  Grundsätzlich ist es möglich Plugins wärend der Laufzeit zu entladen /
- neu zu laden, wird jedoch hier von der Applikation nicht unterstütz.
+ neu zu laden, wird jedoch hier von der Applikation nicht unterstützt.
 \end_layout
 
 \begin_layout Itemize
@@ -5158,6 +5472,7 @@ Um das Plugin nun zu kompilieren muss noch ein Antfile erstellt werden,
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5201,6 +5516,7 @@ Danach wird die Applikation gestartet, dies geschieht durch ausführen der
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5245,6 +5561,7 @@ nlos» in den Referenzierten Projekte (Java Build Path) hinzugefügt wird.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5284,6 +5601,7 @@ Danach sollte das Plugin korrekt funktionieren, es muss noch in der Sidebar
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5326,6 +5644,7 @@ Das Testen / Weiterentwickeln ist jetzt dem Leser überlassen!
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5363,9 +5682,862 @@ Erstellen eines neuen GUI Elementes
 \end_layout
 
 \begin_layout Standard
+Hier wird erklärt wie ein neues Element eingefügt werden kann.
+ Diese Anleitung ist stark vereinfacht, als Referenz sollten bereits vorhandene
+ Implementationen verwendet werden, und nicht diese Anleitung.
+ (Das Beispiel basiert auf dem Meso-Kompartment, und hat auch einige Codestücke
+ von dort, die der einfachheitshalber übernommen wurden)
+\end_layout
 
-\color red
-TODO
+\begin_layout Enumerate
+Im Projekt Model wird eine neue Klasse eingefügt, dies ist der Model Teil
+ des «Blocks»
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=BlockData.java, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+package ch.zhaw.simulation.model.xy;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.element.AbstractNamedSimulationData;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BlockData extends AbstractNamedSimulationData {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	public BlockData(int x, int y) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		super(x, y);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public String getDefaultName() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		return "b";
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public int getWidth() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		return 30;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public int getHeight() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		return 30;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Im Projekt «Editor.XY» wird eine neue Package erstellt: «ch.zhaw.simulation.editor.xy.
+element.box»
+\end_layout
+
+\begin_layout Enumerate
+Es werden zwei Klassen erstellt «BlockImage» und «BlockView» dies ist der
+ UI Teil der Applikation.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=BlockImage.java, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+package ch.zhaw.simulation.editor.xy.element.box;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.awt.Color;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.awt.Graphics2D;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import butti.javalibs.util.DrawHelper;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.editor.elements.GuiImage;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.sysintegration.GuiConfig;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BlockImage extends GuiImage {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	public BlockImage(int size, GuiConfig config) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		super(size, size, config, false);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void drawImage(Graphics2D g, boolean selected) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		DrawHelper.antialisingOn(g);
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.setPaint(Color.PINK);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.fillRect(0, 0, getWidth(), getHeight());
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.setPaint(config.getObjectBorder(selected));
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.drawRect(0, 0, getWidth(), getHeight());
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=BlockView.java, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+package ch.zhaw.simulation.editor.xy.element.box;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.editor.elements.GuiImage;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.editor.view.GuiDataTextElement;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.editor.xy.XYEditorControl;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.xy.BlockData;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.sysintegration.GuiConfig;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BlockView extends GuiDataTextElement<BlockData> {
+\end_layout
+
+\begin_layout Plain Layout
+
+	private static final long serialVersionUID = 1L;
+\end_layout
+
+\begin_layout Plain Layout
+
+	private BlockImage image;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	public BlockView(XYEditorControl control, BlockData data) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		super(data, control);
+\end_layout
+
+\begin_layout Plain Layout
+
+		GuiConfig guiconf = control.getSysintegration().getGuiConfig();
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.image = new BlockImage(guiconf.getMesoSize(), guiconf);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		dataChanged();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.textY = 20;
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.questionmarkY = 30;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	protected GuiImage getImage() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		return image;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Nun muss ein Button eingefügt werden um den Block hinzuzufügen.
+ Dies geschieht in ch.zhaw.simulation.toolbar.xy.XYToolbar, hier wird vor 
+\begin_inset Quotes eld
+\end_inset
+
+addGlobalIcon();
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=Ausschnitt, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+		toolbar.add(new ToolbarAction("Block", addShadow(GuiImage.drawToImage(new
+ BlockImage(24, config)))) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+			public void actionPerformed(ActionEvent e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+				fireMenuActionPerformed(new MenuToolbarAction(MenuToolbarActionType.XY_ADD_BL
+OCK));
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+		});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+eingefügt.
+ Dies ergibt einen Compiler Fehler, da MenuToolbarActionType.XY_ADD_BLOCK
+ nicht erfasst ist, also erfassen wir es doch.
+ Bei Eclipse geht das mit CTRL+1
+\end_layout
+
+\begin_layout Enumerate
+Nun fügen wir in der Datei ch.zhaw.simulation.editor.xy.XYEditorControl vor 
+\begin_inset Quotes eld
+\end_inset
+
+case XY_ADD_MESO:
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=Ausschnitt, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+		case XY_ADD_BLOCK:
+\end_layout
+
+\begin_layout Plain Layout
+
+			addBlock();
+\end_layout
+
+\begin_layout Plain Layout
+
+			return true;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Nach ende der Methode menuActionPerformedOverwrite einfügen!
+\end_layout
+
+\begin_layout Plain Layout
+
+	private void addBlock() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		cancelAllActions();
+\end_layout
+
+\begin_layout Plain Layout
+
+		BlockData block = new BlockData(0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+		addComponent(block, "Block");
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Nun wird ein Block element erstellt wenn wir auf den Button drücken.
+ Wir sind noch nicht fertig, aber wir starten nun die Applikation (SimulationMai
+n) und drücken auf den Button: Es erscheint eine Exception, welche uns auch
+ sagt wo wir noch arbeiten müssen: 
+\begin_inset Quotes eld
+\end_inset
+
+Unknown SimulationObject: ch.zhaw.simulation.model.xy.BlockData at ch.zhaw.simulation.ed
+itor.view.AbstractEditorView.dataAdded(AbstractEditorView.java:495)
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Die Exception tritt im AbstraktenEditor auf, wir wollen aber eine Implementation
+ alleine für den XYEditor.
+ Daher müssen wir in der Klasse «XYEditorView» ein Stuck Code einfügen.
+ In der Methode «dataAddedImpl» vor 
+\begin_inset Quotes eld
+\end_inset
+
+return false;
+\begin_inset Quotes erd
+\end_inset
+
+ wird dieser Code eingefügt:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=Ausschnitt, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (o instanceof BlockData) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			add(new BlockView(control, (BlockData) o));
+\end_layout
+
+\begin_layout Plain Layout
+
+			return true;
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Danach versuchen fügen wir nochmals so ein Block ein, und siehe da, es funktioni
+ert!
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/new_element/BlockView.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Block
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Was jetzt noch fehlt ist das laden / speichern des Blocks.
+ Dies muss in «XmlModelLoader» und «XmlContentsSaver» implementiert werden.
+ Beim speichern muss eine Implementation für «visitSimulationData» erstellt
+ werden, und beim laden in der Methode «parseNode» dies erfolgt analog des
+ vorhandenen Codes für andere Elemente, und wir hier nicht mehr im Detail
+ erläutert.
+\end_layout
+
+\begin_layout Subsection
+Einfügen neuer Icons
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Einfügen-neuer-Icons"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Als Icons wurden hauptsächlich SVG Icons verwendet, dies bedeutet das die
+ Icons auf eine beliebige Grösse Skaliert werden könne, und trotzdem nicht
+ an Qualität verlieren.
+ Die Icons stammen von:
+\end_layout
+
+\begin_layout Itemize
+Faenza: http://tiheum.deviantart.com/art/Faenza-Icons-173323228
+\end_layout
+
+\begin_layout Itemize
+Humanity (Ubuntu / Canonical): https://launchpad.net/humanity
+\end_layout
+
+\begin_layout Standard
+Die Icons wurden Teilweise angepasst, dies wurde mit Inkscape vorgenommen.
+\end_layout
+
+\begin_layout Standard
+Anfangs wollten wird die Icons mit einem Java SVG Parser öffnen und darstellen,
+ dies ist jedoch relativ langsam, zudem waren die SVG Libraries extrem langsam,
+ verglichem mit dem laden eines .png.
+ Daher haben wir uns entschieden das wir zwar immer noch bei den SVG bleiben,
+ es wird jedoch bei der ersten Verwendung durch Inkscape in ein PNG der
+ richtigen Grösse konvertiert.
+ Dadurch ist die Grafik immer noch beliebig skalierbar, aber auch schnell
+ im laden.
+ Die Klasse «IconLoader» konvertiert die Bilder automatisch, sofern:
+\end_layout
+
+\begin_layout Itemize
+Die Applikation nicht aus einem .jar gestartet wird
+\end_layout
+
+\begin_layout Itemize
+Der Ordner in der die Applikation liegt auf 
+\begin_inset Quotes eld
+\end_inset
+
+/bin
+\begin_inset Quotes erd
+\end_inset
+
+ endet (default von Eclipse)
+\end_layout
+
+\begin_layout Itemize
+Inkscape im Path ist.
+\end_layout
+
+\begin_layout Standard
+Ein neues Icon wird im Projekt «Sysintegration» eingefügt, in der Package:
+ «ch.zhaw.simulation.icon.svg».
+\end_layout
+
+\begin_layout Standard
+Danach wird die Applikation gestartet, das Icon wird geladen mit: 
+\begin_inset Quotes eld
+\end_inset
+
+IconLoader.getIcon("<name ohne extension>", <Grösse in px>)
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Das Bild wird automatisch konvertiert und geladen, wenn es nicht klappt
+ wird auf «stderr» ein Fehler ausgegeben, und stattdessen ein komplett rotes
+ Bild angezeigt.
 \end_layout
 
 \begin_layout Subsection
@@ -5375,7 +6547,7 @@ Ant Buildsystem
 \begin_layout Standard
 Um das Projekt zu builden wird Ant verwendet.
  Ant ist zu finden auf http://ant.apache.org/, und wird hier nicht weiter
- erleutert, es wird stattdessen auf das Handbuch und auf die Onlinedokumentation
+ erläutert, es wird stattdessen auf das Handbuch und auf die Onlinedokumentation
  verwiesen.
 \end_layout
 
@@ -5386,9 +6558,6 @@ Das Projekt indem gebuildet wird ist «SimulationBuild», dieses enthält ein
  in den Ordner build/distrib bzw.
  build/tmp.
  Diese Skripts funktionieren grundsätzlich Systemunabhängig.
- 
-\color red
-TODO: SETUP
 \end_layout
 
 \begin_layout Subsubsection
@@ -5399,8 +6568,10 @@ Setup
 Der Setup wird ebenfalls vom Ant Buildsystem erstellt.
  Es hat separate Skripts für jedes Betriebssystem, welche nicht unter allen
  Betriebssystem ausgeführt werden könne, aufgrund von technischen Beschränkungen.
- Einstellungen wie Dateitypen, Icons, Executable, Setup werden von verschiedenen
- Betriebssystem verschieden gehandhabt.
+ Verschiedene Betriebssysteme handhaben Einstellungen wie Dateitypen, Icons,
+ Executable, Setup etc.
+ verschieden.
+ Hier eine kurze Übersicht:
 \end_layout
 
 \begin_layout Itemize
@@ -5409,7 +6580,7 @@ Linux (Unix, Posix)
 
 \begin_deeper
 \begin_layout Itemize
-Applikationen werden normalerweise als Packages (.deb, .rpm..., meist zip oder
+Applikationen werden normalerweise als Packages (.deb, .rpm..., technisch meist
  tar.gz Archive) installiert, welche nicht manuell heruntergeladen werden,
  sondern über Repositories bereitgestellt werden.
 \end_layout
@@ -5475,7 +6646,7 @@ Package
 \begin_inset Quotes erd
 \end_inset
 
-, nicht zu verwechseln mit der 
+ (nicht zu verwechseln mit der 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5483,7 +6654,7 @@ Package
 \begin_inset Quotes erd
 \end_inset
 
- bei Linux.
+ bei Linux).
  Diese 
 \begin_inset Quotes eld
 \end_inset
@@ -5492,7 +6663,7 @@ Package
 \begin_inset Quotes erd
 \end_inset
 
- enthält auch die Information welche Dateitypen von der Applikation unterstütz
+ enthält auch die Information welche Dateitypen von der Applikation unterstützt
  werden.
 \end_layout
 
@@ -5514,7 +6685,7 @@ Windows (Microsoft Windows)
 \begin_deeper
 \begin_layout Itemize
 Applikationen werden im Normalfall von Hand installiert, und können über
- einen Setup.exe oder über ein .mis Paket installiert werden.
+ einen Setup.exe oder über ein .msi Paket installiert werden.
 \end_layout
 
 \begin_layout Itemize
@@ -5525,8 +6696,7 @@ Updates werden von Hand installiert, sofern die Applikation keinen Mechanismus
 \begin_layout Itemize
 Die Zuordnungen der Dateien liegt in der Registrierung, und muss entweder
  vom Setup oder von Programm selbst beim Starten angelegt werden.
- Zu beachten ist das diese auch wieder entfernt werden muss bei der Deinstallati
-on!
+ Dieser muss bei der Deinstallation auch wider entfernt werden.
 \end_layout
 
 \begin_layout Itemize
@@ -5540,8 +6710,8 @@ Ausführbare Dateien (.exe) können Ressourcen enthalten, z.B.
 \begin_layout Itemize
 Libraries müssen vom Setup irgendwo abgelegt werden, dies kann das Programmverze
 ichnis oder auch das System32 Verzeichnis sein.
- Es muss jedoch beachtet werden das wenn zweimal die gleiche Library, ggf.
- noch in verschiedenen Versionen, installiert ist Probleme auftreten können.
+ Werden verschiedene Versionen der gleichen Library installiert, so kann
+ dies zu Probleme kommen, es gibt keine Verwaltung oder ähnliches.
 \end_layout
 
 \end_deeper
@@ -5550,8 +6720,8 @@ Unser Setup wird infolge auf drei verschiedene Arten erstellt.
  Für Linux wird keine Package sondern nur eine .zip Datei mit allen zur Laufzeit
  erforderlichen Daten bereitgestellt.
  Da es sich um eine Open Source Applikation handelt ist anzustreben das
- diese in die offiziellen Repsotories gebracht wird und somit Updates etc.
- automatisch installiert werden.
+ diese in die offiziellen Repositories gebracht wird und somit Updates und
+ Abhängigkeiten automatisch installiert werden können.
 \end_layout
 
 \begin_layout Standard
@@ -5559,9 +6729,9 @@ Für Mac OS X wird eine Package erstellt, welche einfach per Drag & Drop
  installiert werden kann.
  Dies wird mit «build.xml» aus dem Unterordner «mac» vorgenommen.
  Um den Setup zu erstellen muss php-cli installiert sein, es wird ein PHP
- File verwendet um das info.plist file zu erstellen.
- (es handelt sich um ein sehr kleines Skript, welches problemlos auf eine
- andere Skriptsprache portiert werden könnte).
+ File verwendet um das info.plist File zu erstellen (es handelt sich um ein
+ sehr kleines Skript, welches problemlos auf eine andere Skriptsprache portiert
+ werden könnte).
  Zu beachten ist das die Erstellung des Mac OS X Setup auf Windows nicht
  funktioniert, da unter Windows die Executable Flags im Filesystem nicht
  vorhanden sind.
@@ -5591,7 +6761,7 @@ Für Linux ist nur ein Shellscript vorhanden, dies wird beim Build automatisch
  erstellt.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Vorhandene Fehler / Fehlende Funktionalität
 \end_layout
 
@@ -5704,6 +6874,18 @@ Es sollte möglich sein in einem Flussdiagramm, das sich innerhalb eines
  die globalen des XY-Diagramms zuzugreifen, dies ist momentan nicht möglich.
 \end_layout
 
+\begin_layout Itemize
+Es ist nicht möglich das Meso-Kompartments verschmelzen / sich teilen, dies
+ sollte noch nachgeführt werden
+\end_layout
+
+\begin_layout Itemize
+Die Applikation ist komplett auf Deutsch, es wurde kein Internationalisierungsys
+tem verwendet.
+ Dies sollte noch nachgeholt werden (z.B.
+ Java Ressourcen oder gettext).
+\end_layout
+
 \end_deeper
 \begin_layout Section
 Benutzerhandbuch
@@ -5722,9 +6904,578 @@ Installation
 \end_layout
 
 \begin_layout Standard
+Eine Javainstallation ist Voraussetzung, und es wird davon ausgegangen,
+ dass diese auch vorhanden ist.
+\end_layout
 
-\color red
-TODO
+\begin_layout Subsubsection
+Linux
+\end_layout
+
+\begin_layout Standard
+Unter Linux wird das File «Simulation.tar.gz» z.B.
+ auf den Desktop kopiert
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_44_45.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Der Setup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_45_44.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Das Zipfile wird entpackt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_46_02.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Der neue Ordner wird geöffnet und «Simulation.sh» gestartet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_46_57.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Es wird «Ausführen» gewählt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_49_03.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Die Simulationsapplikation unter Linux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Mac
+\end_layout
+
+\begin_layout Standard
+Das Zipfile «Simulation.zip» wird per Drag & Drop z.B.
+ auf den Desktop kopiert
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/mac/Bildschirmfoto 2012-06-06 um 12.29.04.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Der Setup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/mac/Bildschirmfoto 2012-06-06 um 12.29.15.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Das Zipfile wird durch doppelklicken entpackt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/mac/Bildschirmfoto 2012-06-06 um 12.29.23.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Die entpackte Applikation wird per Drag & Drop in den «Programme» Ordner
+ kopiert
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wenn gewünscht kann noch eine Verknüpfung ins Dock erstellt werden, ansonsten
+ kann die Applikation auch einfach aus dem Programme Ordner gestartet werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/mac/Bildschirmfoto 2012-06-06 um 12.30.44.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Die Simulationsapplikation unter Mac OS X
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Windows
+\end_layout
+
+\begin_layout Standard
+Der Setup «Setup_Simulation.exe» wird gestartet
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/win/Setup.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Der Setup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/win/Setup1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Lizenzbedingungen akzeptieren (GPL)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/win/Setup2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ordner für die Installation wählen, normalerweise kann diese auf dem Standard
+ belassen werden.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wurde die Installation an einem falschen Ort durchgeführt so muss die Applikatio
+n deinstalliert und erneut installiert werden, wird die Applikation einfach
+ verschoben, so stimmen die Pfade die in die vom Setup in die Registrierung
+ geschrieben wurden nicht mehr, und die Applikation lässt sich unter Umständen
+ nicht einmal mehr deinstallieren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/win/Setup3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installation erfolgreich
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Vorhandene Fehler / Fehlende Funktionalität
+\end_inset
+\end_layout
+
+\begin_layout Standard
+Die Applikation wird mit drücken auf «Fertig stellen» gestartet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/win/Setup4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Die Simulationsapplikation unter Windows
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup/win/Startmenü.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Der Startmenüeintrag über den sich die Applikation starten lässt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -5750,12 +7501,6 @@ Unter Windows wird die Applikation gestartet indem Simulation.exe gestartet
  wird.
 \end_layout
 
-\begin_layout Standard
-
-\color red
-TODO Screenshots!
-\end_layout
-
 \begin_layout Subsection
 Übersicht / Begriffsdefinitionen
 \end_layout
@@ -5763,7 +7508,7 @@ TODO Screenshots!
 \begin_layout Standard
 Das Bedienkonzept der Applikation ist relativ einfach.
  Auf den Einsatz eines Kontextmenüs wurde verzichtet.
- (Je nach Betriebsystem kann ein Kontextmenü angeboten werden, alle diese
+ (Je nach Betriebssystem kann ein Kontextmenü angeboten werden, alle diese
  Aktionen sind jedoch auch mit Tastenkombinationen oder im Menü / der Toolbar
  zu finden).
 \end_layout
@@ -5801,6 +7546,7 @@ Sind Sie sicher...
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5911,16 +7657,117 @@ Es wird ein Container erstellt: Entweder wird auf den grauen Zylinder in
 \end_layout
 
 \begin_layout Enumerate
-Wenn auf den Container gecklickt wird wird er orange, er ist nun selektiert.
+Wenn auf den Container geklickt wird wird er orange, er ist nun selektiert.
  Zudem wird oben rechts vom Container ein kleiner blauer Pfeil dargestellt,
  mit diesem Pfeil können direkt Verbindungen vorgenommen werden.
- Verbindungen können aber auch über die Toolbar erstellt werden.
+ Verbindungen können aber auch über die Toolbar erstellt werden (der blaue,
+ dicke Pfeil).
 \end_layout
 
 \begin_layout Enumerate
+Die Verbindung wird ins Nichts, also auf eine freie Stelle im Hintergrund
+ verbunden.
+\begin_inset Newline newline
+\end_inset
 
-\color red
-TODO
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Bildschirmfoto-7.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ergebnis von Punkt 1 - 4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Es wird auf «con0» doppelgeklickt, dann wird der Wert 100 eingetragen und
+ das Fenster wider geschlossen.
+ Das Fragezeichen müsste nun verschwunden sein.
+\end_layout
+
+\begin_layout Enumerate
+Es wird auf «fluss0» doppelgeklickt, dann wird der Wert 1 eingetragen und
+ das Fenster wieder geschlossen.
+ Auch hier müsste nun das Fragezeichen weg sein.
+\end_layout
+
+\begin_layout Enumerate
+In der Sidebar wird «Interne Simulation» gewählt, als «Startzeit» wird 0,
+ als «Endzeit» 150 und als «dt» 0.1 gewählt.
+ Als Simulationstype kann «Euler» belassen werden.
+\end_layout
+
+\begin_layout Enumerate
+Es wird auf «Simulieren» geklickt, oder «F9» gedrückt.
+ Die Simulation läuft ab und zeigt folgendes Diagramm an: 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Bildschirmfoto-8.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagramm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Interpretation des Diagramms: Der Container (rote Linie) enthält anfangs
+ 100, wird dann mit 1/Zeiteinheit entleert und erhält dann logischerweise
+ beim Zeitpunkt 100 nur noch 0.
+ Danach wird der Inhalt des Countainers negativ.
 \end_layout
 
 \begin_layout Subsection
@@ -6266,7 +8113,7 @@ m
 \begin_inset Text
 
 \begin_layout Plain Layout
-Meso Kompartment (Nur XY)
+Meso-Kompartment (Nur XY)
 \end_layout
 
 \end_inset
@@ -6297,6 +8144,41 @@ Simulation Starten
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Inhalt der CD
+\end_layout
+
+\begin_layout Itemize
+/setup: Die Setups für die verschiedenen Betriebssysteme
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+/linux
+\end_layout
+
+\begin_layout Itemize
+/mac
+\end_layout
+
+\begin_layout Itemize
+/windows
+\end_layout
+
+\begin_layout Itemize
+/portable
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+/doku: Die Dokumentation, als Source und PDF
+\end_layout
+
+\begin_layout Itemize
+/src: Der Quellcode der gesamten Applikation, incl.
+ Libraries
 \end_layout
 
 \end_body
