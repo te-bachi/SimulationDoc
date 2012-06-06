@@ -236,6 +236,10 @@ g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
 
 \end_layout
 
+\begin_layout Part
+Hauptteil
+\end_layout
+
 \begin_layout Section
 Einleitung
 \end_layout
@@ -1941,6 +1945,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/model-uebersicht.eps
 	width 12cm
@@ -1951,6 +1956,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/model-uebersicht-legende.eps
 	width 8cm
@@ -1999,6 +2005,7 @@ Die Werkzeuge des Simulationstools sehen dann effektiv so aus wie in den
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -2007,6 +2014,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/parts/Meso-Kompartment.png
+	scale 50
 
 \end_inset
 
@@ -2034,6 +2042,7 @@ Meso-Kompartments, hier klar zu erkennen das Fragezeichen, welches einen
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -2042,6 +2051,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/parts/Parameter.png
+	scale 50
 
 \end_inset
 
@@ -2069,6 +2079,7 @@ Parameter, können Berechnung und Konstanten enthalten.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -2077,6 +2088,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/parts/Parameter verbunden.png
+	scale 50
 
 \end_inset
 
@@ -2105,6 +2117,7 @@ Zwei verbundene Parameter: «var1» kann und muss den Wert von «var2» verwende
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -2113,6 +2126,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/parts/Global.png
+	scale 50
 
 \end_inset
 
@@ -2139,6 +2153,7 @@ Global, funktioniert gleich wie der Parameter, ist jedoch überall Global
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -2147,6 +2162,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/parts/Globale_Abhaengigkeit1.png
+	scale 50
 
 \end_inset
 
@@ -2157,6 +2173,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/parts/Globale_Abhaengigkeit2.png
+	scale 50
 
 \end_inset
 
@@ -2184,6 +2201,7 @@ Die Verbindung von und zu Globalen wird mit Schatten dargestellt, somit
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -2192,6 +2210,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/parts/Container.png
+	scale 50
 
 \end_inset
 
@@ -2202,8 +2221,8 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Container: enthalten eine Formel für den Initalwert, und können Ein- / Ausflüsse
- enthalten.
+Container: enthalten eine Formel für den Initialwert, und können Ein- /
+ Ausflüsse enthalten.
 \end_layout
 
 \end_inset
@@ -2218,6 +2237,7 @@ Container: enthalten eine Formel für den Initalwert, und können Ein- / Ausflü
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -2226,6 +2246,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/parts/Fluss.png
+	scale 50
 
 \end_inset
 
@@ -2445,20 +2466,16 @@ Markup Language
 \end_layout
 
 \begin_layout Standard
-
-\color red
-Was ist eine Markup Language?
-\end_layout
-
-\begin_layout Standard
-
-\color red
-Warum dieser Weg?
-\end_layout
-
-\begin_layout Standard
 Als Markup Language für die Simulation kam der Matlab Syntax zum Einsatz,
  der ebenfalls vom Open Source Tool «octave» verarbeitet werden kann.
+ Somit ist es möglich die Simulation ausserhalb der Applikation laufen zu
+ lassen, in einer Umgebung, die mathematische Funktionionen anbietet die
+ uns intern nicht zur Verfügung stehen, bzw.
+ die wir selbst hätten schreiben müssen.
+\end_layout
+
+\begin_layout Standard
+Zudem ist es möglich das der generierte Code noch angepasst werden kann.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3409,6 +3426,7 @@ Der Editor ist einer der komplexeren Elemente dieser Applikation.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -3978,6 +3996,7 @@ Zu Beginn wird die Dichtefunktion im XY-Modell auf eine Greenschen Funktion
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -3999,7 +4018,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
+TODO
 \end_layout
 
 \end_inset
@@ -4294,9 +4313,20 @@ Inkscape: 0.48.1
 \end_layout
 
 \begin_layout Itemize
+JFreechart: 1.0.14 (incl.
+ JCommon: 1.0.17)
+\end_layout
 
-\color red
-TODO!
+\begin_layout Itemize
+JXLayer: 3.0.4
+\end_layout
+
+\begin_layout Itemize
+SwingX: 1.6
+\end_layout
+
+\begin_layout Itemize
+Freeheap: 2.1.1
 \end_layout
 
 \begin_layout Itemize
@@ -4333,6 +4363,7 @@ Es wird ein neues Javaprojekt erstellt, mit den Name «SimulationPlugin.Sinnlos�
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5183,6 +5214,7 @@ Um das Plugin nun zu kompilieren muss noch ein Antfile erstellt werden,
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5226,6 +5258,7 @@ Danach wird die Applikation gestartet, dies geschieht durch ausführen der
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5270,6 +5303,7 @@ nlos» in den Referenzierten Projekte (Java Build Path) hinzugefügt wird.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5309,6 +5343,7 @@ Danach sollte das Plugin korrekt funktionieren, es muss noch in der Sidebar
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5351,6 +5386,7 @@ Das Testen / Weiterentwickeln ist jetzt dem Leser überlassen!
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5807,6 +5843,7 @@ Unter Linux wird das File «Simulation.tar.gz» z.B.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5815,6 +5852,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_44_45.png
+	scale 50
 
 \end_inset
 
@@ -5840,6 +5878,7 @@ Der Setup
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5848,6 +5887,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_45_44.png
+	scale 50
 
 \end_inset
 
@@ -5873,6 +5913,7 @@ Das Zipfile wird entpackt
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5881,6 +5922,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_46_02.png
+	scale 50
 
 \end_inset
 
@@ -5906,6 +5948,7 @@ Der neue Ordner wird geöffnet und «Simulation.sh» gestartet.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5914,6 +5957,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_46_57.png
+	scale 50
 
 \end_inset
 
@@ -5939,6 +5983,7 @@ Es wird «Ausführen» gewählt
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5947,6 +5992,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/linux/Bildschirmfoto am 2012-06-06 12_49_03.png
+	scale 30
 
 \end_inset
 
@@ -5981,6 +6027,7 @@ Das Zipfile «Simulation.zip» wird per Drag & Drop z.B.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5989,6 +6036,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/mac/Bildschirmfoto 2012-06-06 um 12.29.04.png
+	scale 50
 
 \end_inset
 
@@ -6014,6 +6062,7 @@ Der Setup
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6022,6 +6071,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/mac/Bildschirmfoto 2012-06-06 um 12.29.15.png
+	scale 50
 
 \end_inset
 
@@ -6032,7 +6082,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Das Zipfile wird durch doppeklicken entpackt
+Das Zipfile wird durch doppelklicken entpackt
 \end_layout
 
 \end_inset
@@ -6047,6 +6097,7 @@ Das Zipfile wird durch doppeklicken entpackt
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6055,6 +6106,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/mac/Bildschirmfoto 2012-06-06 um 12.29.23.png
+	scale 50
 
 \end_inset
 
@@ -6086,6 +6138,7 @@ Wenn gewünscht kann noch eine Verknüpfung ins Dock erstellt werden, ansonsten
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6094,6 +6147,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/mac/Bildschirmfoto 2012-06-06 um 12.30.44.png
+	scale 30
 
 \end_inset
 
@@ -6127,6 +6181,7 @@ Der Setup «Setup_Simulation.exe» wird gestartet
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6135,6 +6190,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/win/Setup.png
+	scale 50
 
 \end_inset
 
@@ -6160,6 +6216,7 @@ Der Setup
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6168,6 +6225,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/win/Setup1.png
+	scale 50
 
 \end_inset
 
@@ -6193,6 +6251,7 @@ Lizenzbedingungen akzeptieren (GPL)
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6201,6 +6260,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/win/Setup2.png
+	scale 50
 
 \end_inset
 
@@ -6235,6 +6295,7 @@ n deinstalliert und erneut installiert werden, wird die Applikation einfach
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6243,6 +6304,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/win/Setup3.png
+	scale 50
 
 \end_inset
 
@@ -6272,6 +6334,7 @@ Die Applikation wird mit drücken auf «Fertig stellen» gestartet.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6280,6 +6343,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/win/Setup4.png
+	scale 50
 
 \end_inset
 
@@ -6305,6 +6369,7 @@ Die Simulationsapplikation unter Windows
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6313,6 +6378,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/setup/win/Startmenü.png
+	scale 50
 
 \end_inset
 
@@ -6410,6 +6476,7 @@ Sind Sie sicher...
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6530,20 +6597,20 @@ Wenn auf den Container geklickt wird wird er orange, er ist nun selektiert.
 \begin_layout Enumerate
 Die Verbindung wird ins Nichts, also auf eine freie Stelle im Hintergrund
  verbunden.
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Enumerate
-\begin_inset Wrap figure
-lines 0
-placement o
-overhang 0col%
-width "50col%"
+
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename images/handbuch/Bildschirmfoto-7.png
+	scale 50
 
 \end_inset
 
@@ -6559,10 +6626,6 @@ Ergebnis von Punkt 1 - 4
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -6593,6 +6656,7 @@ In der Sidebar wird «Interne Simulation» gewählt, als «Startzeit» wird 0,
 Es wird auf «Simulieren» geklickt, oder «F9» gedrückt.
  Die Simulation läuft ab und zeigt folgendes Diagramm an: 
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -6601,6 +6665,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/handbuch/Bildschirmfoto-8.png
+	scale 50
 
 \end_inset
 
