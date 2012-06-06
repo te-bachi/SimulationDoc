@@ -346,20 +346,21 @@ Problemstellung (oder Motivation)
 \begin_layout Standard
 
 \color red
-Motivation durch Problemstellung!
-\end_layout
-
-\begin_layout Standard
-
-\color red
-signalig chains (SimuLink), Biologie.
+Motivation durch Problemstellung! signalig chains (SimuLink), Biologie.
  Motivation->Problem->Insiliko
 \end_layout
 
 \begin_layout Standard
-Mit unserer Simulation ist es zusätzlich möglich in einem XY Modell mehrere
- Meso Kompartmente abzubilden, ein Meso Kompartment ist das vorhin genannte
- Flussmodel.
+Statt: unsere Simulation, Andreas, oder so andere Formen wählen
+\end_layout
+
+\begin_layout Standard
+
+\color magenta
+Mit unserer Simulation
+\color inherit
+ ist es zusätzlich möglich in einem XY Modell mehrere Meso Kompartmente
+ abzubilden, ein Meso Kompartment ist das vorhin genannte Flussmodel.
  Diese Meso Kompartmente können sich wären der Simulation im XY-Raum bewegen.
  Es können Dichten angegeben werden, die über den XY Raum verteilt sind,
  und die Meso Kompartmente können an Ihrer aktuellen Position von der dichte
@@ -395,15 +396,13 @@ n berechnet.
 
 .
  Dabei werden oftmals Differentialgleichung (DGL) verwendet.
- Im Falle von Bakterien kann von einem exponentiellen Wachstum ausgegangen
- werden.
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{dN}{dt} & = & Geburtenrate-Sterberate\\
-\frac{dN}{dt} & = & \alpha N-\beta N,\quad N\geq0\nonumber 
+\frac{dN}{dt} & = & Geburtenrate-Sterberate
 \end{eqnarray}
 
 \end_inset
@@ -412,7 +411,23 @@ n berechnet.
 \end_layout
 
 \begin_layout Standard
-Doch das Wachstum ist Beschränk auf das Nährmedium in der Petrischale.
+Im Falle von Bakterien kann von einem exponentiellen Wachstum ausgegangen
+ werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dN}{dt} & = & \alpha N-\beta N^{2},\quad N\geq0
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Wachstum kann Beschränk werden auf ein Nährmedium in der Petrischale.
  Das Bakterienvolk kann sich nicht mehr Fortpflanzen, wenn keine Nahrung
  mehr zur Verfügung steht.
  Eine Nährstoffkonzentration 
@@ -420,7 +435,21 @@ Doch das Wachstum ist Beschränk auf das Nährmedium in der Petrischale.
 \end_inset
 
  wird eingeführt.
- Je mehr Bakterien entstehen, desto schneller fällt die Konzentration.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dc}{dt} & = & Zuflüsse-Abflüsse
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Je mehr Bakterien entstehen, desto schneller fällt die Konzentration.
  Die fallende Konzentration 
 \begin_inset Formula $c\left(t\right)$
 \end_inset
@@ -487,9 +516,8 @@ key "scst_bio"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{dc}{dt} & = & Zuflüsse-Abflüsse\label{eq:konz_wachs}\\
-\frac{dc}{dt} & = & -\gamma N,\quad c\geq0\nonumber \\
-\frac{dN}{dt} & = & c\left(t\right)\cdot\alpha N-\beta N,\quad N\geq0\nonumber 
+\frac{dc}{dt} & = & -\gamma N,\quad c\geq0\label{eq:konz_wachs}\\
+\frac{dN}{dt} & = & c\left(t\right)\cdot\alpha N-\beta N^{2},\quad N\geq0\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -536,35 +564,24 @@ Da sich diese Dokumentation an die Physik oder Biologie und nicht an die
 \end_layout
 
 \begin_layout Subsection
-Unterschied analytischer zu numerischer Verfahren
+Numerische Lösungsverfahren
 \end_layout
 
 \begin_layout Standard
-In diesem Abschnitt wird der Nutzen aber auch die Grenzen des analytischen
- Verfahrens aufgezeigt.
- Auch wenn das numerische Verfahren schon früh bekannt war, wurden komplexe
- Modelle erst seit dem Siegeszug des Computers numerisch gerechnet.
- Zuvor war der numerische Weg zu Zeitaufwändig, da er von Hand berechnet
- werden musste.
- Komplizierte Geometrien wurden soweit vereinfacht, das sie analytisch oder
- gar nicht gelöst werden konnten.
- 
+Auch wenn das numerische Verfahren schon früh bekannt war, wurden komplexe
+ Modelle erst seit der Entwicklung elektronischer Hilfsmittel numerisch
+ gerechnet.
+ Zuvor war der numerische Weg zu zeitaufwändig.
+ Alle Rechnungen mussten von Hand durchgeführt werden.
+ Komplizierte Geometrien wurden soweit vereinfacht, das sie analytisch gelöst
+ werden konnten, wobei dies nicht immer möglich war.
 \end_layout
 
 \begin_layout Standard
-In der allgemeinen Verwendung unterscheidet sich das numerische vom analytischen
- Verfahren mit der diskretisierung der Werte.
- Analytisch bleibt das Verfahren im Kontinuum.
- Es gibt keine Lücken zwischen zwei Werten.
- Bei der Numerik aber kann eine Zahl nur als Folge von Bits dargestellt
- werden.
+Bei der Numerik kann eine Zahl nur als Folge von Bits dargestellt werden.
  Wenn ein Bit ändert, ändert sich die Zahl und zwischendrin gibt es eine
  Lücke.
-\end_layout
-
-\begin_layout Standard
-Falls das analytische Verfahren löstbar ist, ist das Resultat exakt.
- Jedoch können nur einfache Geometrien berechnet werden.
+ Das heisst, die Numerik rechnet nur eine Näherungslösung.
  Komplexe Geometrien, wie nicht lineare Differentialgleichungen, können
  nur in Ausnahmefällen analytisch gelöst werden, worauf in heutiger Zeit
  fast ausschliesslich ein numerisches Verfahren verwendung findet.
@@ -578,16 +595,12 @@ key "springer_kost"
 
 \end_layout
 
-\begin_layout Subsection
-Analytische Lösungsverfahren
-\end_layout
-
 \begin_layout Subsubsection
 Gewöhnliche Differentialgleichungen
 \end_layout
 
 \begin_layout Standard
-Eine Gewöhnliche Differentialgleichung (engl.
+Eine gewöhnliche Differentialgleichung (engl.
  Ordinary Differential Equation ODE) ist eine mathematische Gleichung, die
  Ableitungen, die Funktion selbst sowie die unabhängige Variable enthalten
  kann.
@@ -636,7 +649,7 @@ on erfolgen.
 \begin_layout Standard
 Für die computerunterstützte Berechnung von Simulationen dieser Art können
  verschiedene Techniken angewandt werden.
- Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: analytisch/symbolische
+ Dabei gibt es grundsätzlich zwei verschiedene Vorgehen: analytisch/symbolische
  oder numerische.
  Unsere Simulation verwendet das numerische Verfahren, wie es auch Berkeley
  Madonna tut.
@@ -644,7 +657,10 @@ Für die computerunterstützte Berechnung von Simulationen dieser Art können
  Differentialgleichungen.
  Diese Art kann nur Differentialgleichung 1.
  Ordnung berechnen.
- Eine Differentialgleichungen 2.
+\end_layout
+
+\begin_layout Standard
+Eine Differentialgleichungen 2.
  Ordnung ist in Gleichung 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -725,11 +741,11 @@ Eine Partielle Differentialgleichung (engl.
 \end_inset
 
  mit einer Funktion 
-\begin_inset Formula $f\left(x\; y,\; t\right).$
+\begin_inset Formula $f\left(x,\; y,\; t\right).$
 \end_inset
 
  Ein Bakterienvolk 
-\begin_inset Formula $N\left(t\right)$
+\begin_inset Formula $N\left(x,\; y,\; t\right)$
 \end_inset
 
  verändert diese Dichte über die Zeit 
@@ -745,8 +761,7 @@ Eine Partielle Differentialgleichung (engl.
  führen.
  Generell können nur Lineare Partielle Differentialgleichung analytisch
  gelöst werden.
- Hier hilft die Numerik weiter, die zwar nur näherungsweise Lösungen ausgibt,
- doch besser eine Näherung als keine Lösung.
+ Hier hilft die Numerik weiter, die näherungsweise Lösungen ausgibt.
  Zwei wichtige numerische Verfahren sind die Finite-Differenzen-Methode
  (FDM) und die Finite-Elemente-Methode (FEM).
  
@@ -764,10 +779,6 @@ Die Finite-Differenzen-Methode die für die Simulation benötigt werden sind
  implementiert worden das Gradienten-Verfahren und die Diffusiongleichung,
  die später erläutert werden.
  
-\end_layout
-
-\begin_layout Subsection
-Numerische Lösungsverfahren
 \end_layout
 
 \begin_layout Subsubsection
@@ -901,7 +912,7 @@ name "fig:Diskrete-DGL"
 \end_layout
 
 \begin_layout Subsubsection*
-Euler
+Euler-Verfahren
 \end_layout
 
 \begin_layout Standard
@@ -987,12 +998,15 @@ Butcher Tableau
 \end_layout
 
 \begin_layout Standard
-Um weitere Verfahren besser zu Verstehen, wird zuerst eine Tabelle eingeführt.
+Um weitere Verfahren besser zu Verstehen wird zuerst eine Tabelle eingeführt,
+ die nur als Hilfsmittel zu verwenden ist.
+ Als das klassische Runge-Kutta-Verfahren entworfen wurde, kannte man diese
+ Tabelle noch nicht.
  Die Tabelle wurde in den 1960er Jahren von 
 \series bold
 John Charles Butcher
 \series default
- entwickelt für den besseren Umgang mit dem nachfolgenden Runge-Kutta-Verfahren
+ entwickelt für den besseren Umgang mit den nachfolgenden Runge-Kutta-Verfahren
  und nennt sich 
 \shape italic
 Butcher tableau
@@ -1005,7 +1019,62 @@ reference "eq:butcher"
 \end_inset
 
 .
- Die Tabelle beinhaltet einen Variations-Vektor 
+\end_layout
+
+\begin_layout Standard
+Wie beim Euler-Verfahren in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:euler"
+
+\end_inset
+
+ ergibt sich ein neuer Wert 
+\begin_inset Formula $y_{n+1}$
+\end_inset
+
+ aus dem alten Wert 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ addiert mit einer festen Schrittweite 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ multiplitiert mit der Ableitung.
+ Doch beim Runge-Kutta-Verfahren werden statt einer Ableitung verschieden
+ gewichtete Ableitungen 
+\begin_inset Formula $b_{i}k_{i}$
+\end_inset
+
+ aufsummiert, wobei das Gewicht 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ und die Ableitung 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{n+1}=y_{n}+\Delta t\cdot\sum_{i=1}^{s}b_{i}k_{i}\label{eq:butcher_ode}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das 
+\shape italic
+Butcher tableau
+\shape default
+ beinhaltet einen Variations-Vektor 
 \begin_inset Formula $c$
 \end_inset
 
@@ -1068,54 +1137,6 @@ c_{s} & a_{s1} & \dots & a_{s\left(s-1\right)}\\
 \end_layout
 
 \begin_layout Standard
-Wie beim Euler-Verfahren in Gleichung 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:euler"
-
-\end_inset
-
- ergibt sich ein neuer Wert 
-\begin_inset Formula $y_{n+1}$
-\end_inset
-
- aus dem alten Wert 
-\begin_inset Formula $y_{n}$
-\end_inset
-
- addiert mit einer festen Schrittweite 
-\begin_inset Formula $\Delta t$
-\end_inset
-
- multiplitiert mit der Ableitung.
- Doch beim Runge-Kutta-Verfahren werden statt einer Ableitung verschieden
- gewichtete Ableitungen 
-\begin_inset Formula $b_{i}k_{i}$
-\end_inset
-
- aufsummiert, wobei das Gewicht 
-\begin_inset Formula $b_{i}$
-\end_inset
-
- und die Ableitung 
-\begin_inset Formula $k_{i}$
-\end_inset
-
- ist.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-y_{n+1}=y_{n}+\Delta t\cdot\sum_{i=1}^{s}b_{i}k_{i}\label{eq:butcher_ode}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Alle Gewichte 
 \begin_inset Formula $b_{i}$
 \end_inset
@@ -1125,6 +1146,7 @@ Alle Gewichte
 \end_inset
 
  ergeben, sonst würde das Verfahren einen Teil der Ausgangswerte verlieren.
+ Die Summe aller Gewichte ist also normiert.
 \end_layout
 
 \begin_layout Standard
@@ -1271,7 +1293,7 @@ p\leq s
 \end_layout
 
 \begin_layout Subsubsection*
-Klassisches Runge-Kutta
+Klassisches Runge-Kutta-Verfahren
 \end_layout
 
 \begin_layout Standard
@@ -1498,7 +1520,7 @@ t_{n+1} & = & t_{n}+\Delta t\nonumber
 \end_layout
 
 \begin_layout Paragraph
-Dormand-Prince
+Dormand-Prince-Verfahren
 \end_layout
 
 \begin_layout Standard
@@ -1512,9 +1534,10 @@ John R.
 Peter J.
  Prince
 \series default
- entwickelt, die eine höhere Ordnung aufweise wie das Klassische.
+ entwickelt, die eine höhere Ordnung aufweise wie das Klassische Runge-Kutta
+ Verfahren.
  Diese Methode gehört zu den eingebetteten Verfahren.
- Eingebetted darum, weil es noch einen zweiten Gewichts-Vektor 
+ Eingebettet darum, weil es noch einen zweiten Gewichts-Vektor 
 \begin_inset Formula $b_{2}$
 \end_inset
 
@@ -1544,13 +1567,13 @@ reference "eq:dorm_tableau"
 \end{array} & = & \begin{array}{c|rrrrrrr}
 0\\
 \frac{1}{5} & \frac{1}{5}\\
-\frac{3}{10} & \frac{3}{40} & \frac{4}{5}\\
-\frac{4}{5} & \frac{44}{45} & -\frac{4}{5} & \frac{4}{5}\\
-\frac{8}{9} & \frac{19372}{6561} & -\frac{4}{5} & \frac{4}{5} & \frac{4}{5}\\
-1 & \frac{9017}{3168} & -\frac{4}{5} & \frac{4}{5} & \frac{4}{5} & -\frac{4}{5}\\
-1 & \frac{35}{384} & \frac{4}{5} & \frac{4}{5} & \frac{4}{5} & -\frac{4}{5} & \frac{4}{5}\\
-\hline p=4 & \frac{35}{384} & 0 & \frac{35}{384} & \frac{35}{384} & -\frac{35}{384} & \frac{35}{384} & \frac{35}{384}\\
-p=5 & \frac{35}{384} & 0 & \frac{35}{384} & \frac{35}{384} & -\frac{35}{384} & \frac{35}{384} & 0
+\frac{3}{10} & \frac{3}{40} & \frac{9}{40}\\
+\frac{4}{5} & \frac{44}{45} & -\frac{56}{15} & \frac{32}{9}\\
+\frac{8}{9} & \frac{19372}{6561} & -\frac{25360}{2187} & \frac{64448}{6561} & -\frac{212}{729}\\
+1 & \frac{9017}{3168} & -\frac{355}{33} & \frac{46732}{5247} & \frac{49}{176} & -\frac{5103}{18656}\\
+1 & \frac{35}{384} & 0 & \frac{500}{5} & \frac{125}{192} & -\frac{2187}{6784} & \frac{11}{84}\\
+\hline p=4 & \frac{5179}{57600} & 0 & \frac{7571}{16695} & \frac{393}{640} & -\frac{92097}{339200} & \frac{187}{2100} & \frac{1}{40}\\
+p=5 & \frac{35}{384} & 0 & \frac{500}{1113} & \frac{125}{192} & -\frac{2187}{6784} & \frac{11}{84} & 0
 \end{array}\label{eq:dorm_tableau}
 \end{eqnarray}
 
@@ -1560,7 +1583,7 @@ p=5 & \frac{35}{384} & 0 & \frac{35}{384} & \frac{35}{384} & -\frac{35}{384} & \
 \end_layout
 
 \begin_layout Standard
-Zuerst rechnet man wie beim klassischen Runge-Kutta 
+Zuerst rechnet man wie beim klassischen Runge-Kutta-Verfahren 
 \begin_inset Formula $k_{i}$
 \end_inset
 
@@ -1729,7 +1752,7 @@ key "teubner_hanke,dankert_ode"
 \begin_layout Standard
 Die (AB)² Simulation besitzt zwar im Flow-Modell-Editor eine Möglichkeit
  die Simulation mit der Dormand-Prince-Methode auszuführen, ist aber noch
- nicht ausreichen getestet worden und darum noch im Alpha-Stadium.
+ nicht ausreichen getestet worden.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1737,7 +1760,151 @@ Diffusionsgleichung
 \end_layout
 
 \begin_layout Standard
-s
+Ein Beispiel aus der Natur soll eines von vielen Anwendungsgebieten aufzeigen.
+ Eine Zelle ist von einer Zellmembran umschlossen, die die Zelle schützt.
+ Die Zelle kann aber durch ihre teildurchlässige Membran Nährstoffe aufnehmen
+ oder abstossen.
+ Der Stoffaustausch ist ein Diffusionsprozess.
+ Ein Diffusionsprozess versucht Konzentrationsunterschiede auszugleichen
+ bis ein Gleichgewicht hergestellt ist.
+\end_layout
+
+\begin_layout Standard
+Die Diffusionsgleichung umschreibt eine einfache Diffusion und ist in Gleichung
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:diffusion"
+
+\end_inset
+
+ in analytischer Form zu sehen, wobei 
+\begin_inset Formula $D$
+\end_inset
+
+ der Diffusionskoeffizient, 
+\begin_inset Formula $\Delta f$
+\end_inset
+
+ der Laplace-Operator über die Funktion 
+\begin_inset Formula $f$
+\end_inset
+
+ und 
+\begin_inset Formula $d$
+\end_inset
+
+ die Dimension ist.
+ In der Fläche wird eine Dimension 
+\begin_inset Formula $d=2$
+\end_inset
+
+ verwendet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta & = & \sum_{i=1}^{d}\frac{\partial^{2}}{\partial r_{i}^{2}}\label{eq:diffusion}\\
+\frac{\partial}{\partial t}f\left(\vec{r},\; t\right) & = & D\cdot\Delta f\left(\vec{r},\; t\right)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für die (AB)² Simulation diskretisiert sich die Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:diffusion"
+
+\end_inset
+
+ in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:diffusion_num"
+
+\end_inset
+
+.
+ Dabei bedient man sich der Finite-Differenzen-Methode (FDM).
+ In Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diskrete-Faltung"
+
+\end_inset
+
+ und 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Maske-Diffusion"
+
+\end_inset
+
+ kann die Gleichung nochmals nachverfolgt werden, wobei das Ursprungsbild
+ 
+\begin_inset Formula $u_{n}$
+\end_inset
+
+ und das Zielbild 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+ ist.
+ Das Symbol 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\Delta$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang german-ch
+ wird hier als Different verstanden.
+ Der Punkt 
+\begin_inset Formula $\left(x,\; y\right)$
+\end_inset
+
+ liegt in der Mitte der Maske.
+ Die Maske geht über das ganze Bild.
+ In der Simulation wird die Diffusion in einer Matrize gelöst.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta u & = & f\left(x,\; y+1\right)+f\left(x,\; y-1\right)+f\left(x+1,\; y\right)+f\left(x-1,\; y\right)-4\cdot f\left(x,\; y\right)\label{eq:diffusion_num}\\
+u_{n+1} & = & u_{n}+\Delta t\cdot D\cdot\Delta u\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1763,7 +1930,9 @@ status open
 
 \begin_layout Plain Layout
 Diskrete Faltung
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diskrete-Faltung"
 
 \end_inset
 
@@ -1775,23 +1944,9 @@ Diskrete Faltung
 
 \end_layout
 
-\begin_layout Standard
-g
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-y_{n+1} & = & y_{n}+dt\cdot D\cdot\left[f\left(y+1,\; x\right)+f\left(y-1,\; x\right)+f\left(y,\; x+1\right)+f\left(y,\; x-1\right)-4\cdot f\left(y,\; x\right)\right]
-\end{eqnarray}
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-d
 \end_layout
 
 \begin_layout Standard
@@ -1804,6 +1959,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Maske Diffusion.pdf
+	scale 75
 	BoundingBox 40bp 400bp 200bp 570bp
 	clip
 
@@ -1814,6 +1970,13 @@ status open
 
 \begin_layout Plain Layout
 Maske für eine diskrete Diffusion
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Maske-Diffusion"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1835,14 +1998,36 @@ Gradienten-Verfahren
 \end_layout
 
 \begin_layout Standard
-gla
+Eine Zelle braucht Nahrung um zu überleben.
+ Sie fühlt sich am sichersten, wenn Nahrung im Überfluss vorhanden ist.
+ Wenn um sie herum mehr Nahrung auf einen potentiellen Konsumenten wartet
+ als die Position, in der die Zelle sich momentan befinden, versucht sie
+ ihre Position zu ändern.
+\end_layout
+
+\begin_layout Standard
+Ein einfaches Verfahren in der Numerik um ein lokales Maximum eines Skalarfeldes
+ zu finden, ist das Gradienten-Verfahren.
+ Dabei befindet man sich an einer Position 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+ im Skalarfeld.
+ Mit dem Nabla-Operator 
+\begin_inset Formula $\nabla$
+\end_inset
+
+ wird eine Gradient-Operation auf das Skalarfeld angewendet, dass ein Vektorfeld
+ als Resultat hat.
+ Im Vektorfeld, an der gleichen Position wie im Skalarfeld, befindet sich
+ ein Verschiebungs-Vektor, der anzeigt, in welcher Richtung das lokale Maximum
+ ist.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{df}{dx}\left(x\; y\right) & = & f\left(x+1,\; y\right)-f\left(x,\; y\right)\\
-\frac{df}{dy}\left(x\; y\right) & = & f\left(x,\; y+1\right)-f\left(x,\; y\right)
+\vec{r}_{n+1} & = & \vec{r}_{n}+\Delta t\cdot\nabla f\left(\vec{r}_{n}\right)
 \end{eqnarray}
 
 \end_inset
@@ -1851,7 +2036,64 @@ gla
 \end_layout
 
 \begin_layout Standard
-f
+In der (AB)² Simulation ist der Raum nur eine Fläche.
+ Das hier implementierte Gradienten-Verfahren ist eine Finite-Differenzen-Method
+e (FDM).
+ Um die neue Position 
+\begin_inset Formula $\left(x_{n+1},\; y_{n+1}\right)$
+\end_inset
+
+zu bestimmen, braucht es die aktuelle Position 
+\begin_inset Formula $\left(x_{n},\; y_{n}\right)$
+\end_inset
+
+, die Differenzen 
+\begin_inset Formula $\left(\Delta x,\;\Delta y\right)$
+\end_inset
+
+ und den Zeitschritt 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+.
+ Zur Berechnung der Differenzen kann eine diskrete Faltung in Abbildung
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diskrete-Faltung"
+
+\end_inset
+
+ mit einer Maske in 
+\begin_inset Formula $x$
+\end_inset
+
+-Richtung und in 
+\begin_inset Formula $y$
+\end_inset
+
+-Richtung wie in Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Maske-Gradient"
+
+\end_inset
+
+ benutzt werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta x & = & f\left(x+1,\; y\right)-f\left(x,\; y\right)\\
+\Delta y & = & f\left(x,\; y+1\right)-f\left(x,\; y\right)\\
+x_{n+1} & = & x_{n}+\Delta t\cdot\Delta x\\
+y_{n+1} & = & y_{n}+\Delta t\cdot\Delta y
+\end{eqnarray}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1864,6 +2106,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Maske Gradient.pdf
+	scale 75
 	BoundingBox 70bp 400bp 330bp 550bp
 	clip
 
@@ -1876,7 +2119,14 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Maske für eine diskrete Differenz
+Maske für einen diskreten Gradienten
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Maske-Gradient"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3933,7 +4183,7 @@ Die (AB)² Simulation arbeitet im XY-Modell nur in Dimension
 \end_inset
 
 .
- Die Fläche besitzt zwischen 
+ Die Fläche besitzt normalerweise zwischen 
 \begin_inset Formula $10^{2}$
 \end_inset
 
@@ -4023,13 +4273,17 @@ TODO
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Gradienten-Verfahren
+\end_layout
+
+\begin_layout Standard
+Das Verfahren kann überschiessen.
 \end_layout
 
 \begin_layout Section
@@ -4291,6 +4545,10 @@ Java Version: 1.6 / 6 (Java 1.6 ist die interne Versionsnummer, Java 6 ist
 
 \begin_layout Itemize
 Eclipse: 3.7.1
+\end_layout
+
+\begin_layout Itemize
+IntelliJ: 11.1.1
 \end_layout
 
 \begin_layout Itemize
@@ -7136,9 +7394,9 @@ Installation erfolgreich
 
 \end_layout
 
+\begin_layout Subsubsection
+Vorhandene Fehler / Fehlende Funktionalität
 \end_inset
-
-
 \end_layout
 
 \begin_layout Standard
