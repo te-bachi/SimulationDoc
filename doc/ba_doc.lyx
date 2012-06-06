@@ -342,20 +342,21 @@ Problemstellung (oder Motivation)
 \begin_layout Standard
 
 \color red
-Motivation durch Problemstellung!
-\end_layout
-
-\begin_layout Standard
-
-\color red
-signalig chains (SimuLink), Biologie.
+Motivation durch Problemstellung! signalig chains (SimuLink), Biologie.
  Motivation->Problem->Insiliko
 \end_layout
 
 \begin_layout Standard
-Mit unserer Simulation ist es zusätzlich möglich in einem XY Modell mehrere
- Meso Kompartmente abzubilden, ein Meso Kompartment ist das vorhin genannte
- Flussmodel.
+Statt: unsere Simulation, Andreas, oder so andere Formen wählen
+\end_layout
+
+\begin_layout Standard
+
+\color magenta
+Mit unserer Simulation
+\color inherit
+ ist es zusätzlich möglich in einem XY Modell mehrere Meso Kompartmente
+ abzubilden, ein Meso Kompartment ist das vorhin genannte Flussmodel.
  Diese Meso Kompartmente können sich wären der Simulation im XY-Raum bewegen.
  Es können Dichten angegeben werden, die über den XY Raum verteilt sind,
  und die Meso Kompartmente können an Ihrer aktuellen Position von der dichte
@@ -391,15 +392,13 @@ n berechnet.
 
 .
  Dabei werden oftmals Differentialgleichung (DGL) verwendet.
- Im Falle von Bakterien kann von einem exponentiellen Wachstum ausgegangen
- werden.
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{dN}{dt} & = & Geburtenrate-Sterberate\\
-\frac{dN}{dt} & = & \alpha N-\beta N,\quad N\geq0\nonumber 
+\frac{dN}{dt} & = & Geburtenrate-Sterberate
 \end{eqnarray}
 
 \end_inset
@@ -408,7 +407,23 @@ n berechnet.
 \end_layout
 
 \begin_layout Standard
-Doch das Wachstum ist Beschränk auf das Nährmedium in der Petrischale.
+Im Falle von Bakterien kann von einem exponentiellen Wachstum ausgegangen
+ werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dN}{dt} & = & \alpha N-\beta N^{2},\quad N\geq0
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Wachstum kann Beschränk werden auf ein Nährmedium in der Petrischale.
  Das Bakterienvolk kann sich nicht mehr Fortpflanzen, wenn keine Nahrung
  mehr zur Verfügung steht.
  Eine Nährstoffkonzentration 
@@ -416,7 +431,21 @@ Doch das Wachstum ist Beschränk auf das Nährmedium in der Petrischale.
 \end_inset
 
  wird eingeführt.
- Je mehr Bakterien entstehen, desto schneller fällt die Konzentration.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dc}{dt} & = & Zuflüsse-Abflüsse
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Je mehr Bakterien entstehen, desto schneller fällt die Konzentration.
  Die fallende Konzentration 
 \begin_inset Formula $c\left(t\right)$
 \end_inset
@@ -483,9 +512,8 @@ key "scst_bio"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{dc}{dt} & = & Zuflüsse-Abflüsse\label{eq:konz_wachs}\\
-\frac{dc}{dt} & = & -\gamma N,\quad c\geq0\nonumber \\
-\frac{dN}{dt} & = & c\left(t\right)\cdot\alpha N-\beta N,\quad N\geq0\nonumber 
+\frac{dc}{dt} & = & -\gamma N,\quad c\geq0\label{eq:konz_wachs}\\
+\frac{dN}{dt} & = & c\left(t\right)\cdot\alpha N-\beta N^{2},\quad N\geq0\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -532,35 +560,24 @@ Da sich diese Dokumentation an die Physik oder Biologie und nicht an die
 \end_layout
 
 \begin_layout Subsection
-Unterschied analytischer zu numerischer Verfahren
+Numerische Lösungsverfahren
 \end_layout
 
 \begin_layout Standard
-In diesem Abschnitt wird der Nutzen aber auch die Grenzen des analytischen
- Verfahrens aufgezeigt.
- Auch wenn das numerische Verfahren schon früh bekannt war, wurden komplexe
- Modelle erst seit dem Siegeszug des Computers numerisch gerechnet.
- Zuvor war der numerische Weg zu Zeitaufwändig, da er von Hand berechnet
- werden musste.
- Komplizierte Geometrien wurden soweit vereinfacht, das sie analytisch oder
- gar nicht gelöst werden konnten.
- 
+Auch wenn das numerische Verfahren schon früh bekannt war, wurden komplexe
+ Modelle erst seit der Entwicklung elektronischer Hilfsmittel numerisch
+ gerechnet.
+ Zuvor war der numerische Weg zu zeitaufwändig.
+ Alle Rechnungen mussten von Hand durchgeführt werden.
+ Komplizierte Geometrien wurden soweit vereinfacht, das sie analytisch gelöst
+ werden konnten, wobei dies nicht immer möglich war.
 \end_layout
 
 \begin_layout Standard
-In der allgemeinen Verwendung unterscheidet sich das numerische vom analytischen
- Verfahren mit der diskretisierung der Werte.
- Analytisch bleibt das Verfahren im Kontinuum.
- Es gibt keine Lücken zwischen zwei Werten.
- Bei der Numerik aber kann eine Zahl nur als Folge von Bits dargestellt
- werden.
+Bei der Numerik kann eine Zahl nur als Folge von Bits dargestellt werden.
  Wenn ein Bit ändert, ändert sich die Zahl und zwischendrin gibt es eine
  Lücke.
-\end_layout
-
-\begin_layout Standard
-Falls das analytische Verfahren löstbar ist, ist das Resultat exakt.
- Jedoch können nur einfache Geometrien berechnet werden.
+ Das heisst, die Numerik rechnet nur eine Näherungslösung.
  Komplexe Geometrien, wie nicht lineare Differentialgleichungen, können
  nur in Ausnahmefällen analytisch gelöst werden, worauf in heutiger Zeit
  fast ausschliesslich ein numerisches Verfahren verwendung findet.
@@ -574,16 +591,12 @@ key "springer_kost"
 
 \end_layout
 
-\begin_layout Subsection
-Analytische Lösungsverfahren
-\end_layout
-
 \begin_layout Subsubsection
 Gewöhnliche Differentialgleichungen
 \end_layout
 
 \begin_layout Standard
-Eine Gewöhnliche Differentialgleichung (engl.
+Eine gewöhnliche Differentialgleichung (engl.
  Ordinary Differential Equation ODE) ist eine mathematische Gleichung, die
  Ableitungen, die Funktion selbst sowie die unabhängige Variable enthalten
  kann.
@@ -632,7 +645,7 @@ on erfolgen.
 \begin_layout Standard
 Für die computerunterstützte Berechnung von Simulationen dieser Art können
  verschiedene Techniken angewandt werden.
- Dabei gibt es Grundsätzlich zwei verschiedene Vorgehen: analytisch/symbolische
+ Dabei gibt es grundsätzlich zwei verschiedene Vorgehen: analytisch/symbolische
  oder numerische.
  Unsere Simulation verwendet das numerische Verfahren, wie es auch Berkeley
  Madonna tut.
@@ -640,7 +653,10 @@ Für die computerunterstützte Berechnung von Simulationen dieser Art können
  Differentialgleichungen.
  Diese Art kann nur Differentialgleichung 1.
  Ordnung berechnen.
- Eine Differentialgleichungen 2.
+\end_layout
+
+\begin_layout Standard
+Eine Differentialgleichungen 2.
  Ordnung ist in Gleichung 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -721,11 +737,11 @@ Eine Partielle Differentialgleichung (engl.
 \end_inset
 
  mit einer Funktion 
-\begin_inset Formula $f\left(x\; y,\; t\right).$
+\begin_inset Formula $f\left(x,\; y,\; t\right).$
 \end_inset
 
  Ein Bakterienvolk 
-\begin_inset Formula $N\left(t\right)$
+\begin_inset Formula $N\left(x,\; y,\; t\right)$
 \end_inset
 
  verändert diese Dichte über die Zeit 
@@ -741,8 +757,7 @@ Eine Partielle Differentialgleichung (engl.
  führen.
  Generell können nur Lineare Partielle Differentialgleichung analytisch
  gelöst werden.
- Hier hilft die Numerik weiter, die zwar nur näherungsweise Lösungen ausgibt,
- doch besser eine Näherung als keine Lösung.
+ Hier hilft die Numerik weiter, die näherungsweise Lösungen ausgibt.
  Zwei wichtige numerische Verfahren sind die Finite-Differenzen-Methode
  (FDM) und die Finite-Elemente-Methode (FEM).
  
@@ -760,10 +775,6 @@ Die Finite-Differenzen-Methode die für die Simulation benötigt werden sind
  implementiert worden das Gradienten-Verfahren und die Diffusiongleichung,
  die später erläutert werden.
  
-\end_layout
-
-\begin_layout Subsection
-Numerische Lösungsverfahren
 \end_layout
 
 \begin_layout Subsubsection
@@ -897,7 +908,7 @@ name "fig:Diskrete-DGL"
 \end_layout
 
 \begin_layout Subsubsection*
-Euler
+Euler-Verfahren
 \end_layout
 
 \begin_layout Standard
@@ -983,12 +994,15 @@ Butcher Tableau
 \end_layout
 
 \begin_layout Standard
-Um weitere Verfahren besser zu Verstehen, wird zuerst eine Tabelle eingeführt.
+Um weitere Verfahren besser zu Verstehen wird zuerst eine Tabelle eingeführt,
+ die nur als Hilfsmittel zu verwenden ist.
+ Als das klassische Runge-Kutta-Verfahren entworfen wurde, kannte man diese
+ Tabelle noch nicht.
  Die Tabelle wurde in den 1960er Jahren von 
 \series bold
 John Charles Butcher
 \series default
- entwickelt für den besseren Umgang mit dem nachfolgenden Runge-Kutta-Verfahren
+ entwickelt für den besseren Umgang mit den nachfolgenden Runge-Kutta-Verfahren
  und nennt sich 
 \shape italic
 Butcher tableau
@@ -1001,7 +1015,62 @@ reference "eq:butcher"
 \end_inset
 
 .
- Die Tabelle beinhaltet einen Variations-Vektor 
+\end_layout
+
+\begin_layout Standard
+Wie beim Euler-Verfahren in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:euler"
+
+\end_inset
+
+ ergibt sich ein neuer Wert 
+\begin_inset Formula $y_{n+1}$
+\end_inset
+
+ aus dem alten Wert 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ addiert mit einer festen Schrittweite 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ multiplitiert mit der Ableitung.
+ Doch beim Runge-Kutta-Verfahren werden statt einer Ableitung verschieden
+ gewichtete Ableitungen 
+\begin_inset Formula $b_{i}k_{i}$
+\end_inset
+
+ aufsummiert, wobei das Gewicht 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ und die Ableitung 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{n+1}=y_{n}+\Delta t\cdot\sum_{i=1}^{s}b_{i}k_{i}\label{eq:butcher_ode}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das 
+\shape italic
+Butcher tableau
+\shape default
+ beinhaltet einen Variations-Vektor 
 \begin_inset Formula $c$
 \end_inset
 
@@ -1064,54 +1133,6 @@ c_{s} & a_{s1} & \dots & a_{s\left(s-1\right)}\\
 \end_layout
 
 \begin_layout Standard
-Wie beim Euler-Verfahren in Gleichung 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:euler"
-
-\end_inset
-
- ergibt sich ein neuer Wert 
-\begin_inset Formula $y_{n+1}$
-\end_inset
-
- aus dem alten Wert 
-\begin_inset Formula $y_{n}$
-\end_inset
-
- addiert mit einer festen Schrittweite 
-\begin_inset Formula $\Delta t$
-\end_inset
-
- multiplitiert mit der Ableitung.
- Doch beim Runge-Kutta-Verfahren werden statt einer Ableitung verschieden
- gewichtete Ableitungen 
-\begin_inset Formula $b_{i}k_{i}$
-\end_inset
-
- aufsummiert, wobei das Gewicht 
-\begin_inset Formula $b_{i}$
-\end_inset
-
- und die Ableitung 
-\begin_inset Formula $k_{i}$
-\end_inset
-
- ist.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-y_{n+1}=y_{n}+\Delta t\cdot\sum_{i=1}^{s}b_{i}k_{i}\label{eq:butcher_ode}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Alle Gewichte 
 \begin_inset Formula $b_{i}$
 \end_inset
@@ -1121,6 +1142,7 @@ Alle Gewichte
 \end_inset
 
  ergeben, sonst würde das Verfahren einen Teil der Ausgangswerte verlieren.
+ Die Summe aller Gewichte ist also normiert.
 \end_layout
 
 \begin_layout Standard
@@ -1267,7 +1289,7 @@ p\leq s
 \end_layout
 
 \begin_layout Subsubsection*
-Klassisches Runge-Kutta
+Klassisches Runge-Kutta-Verfahren
 \end_layout
 
 \begin_layout Standard
@@ -1494,7 +1516,7 @@ t_{n+1} & = & t_{n}+\Delta t\nonumber
 \end_layout
 
 \begin_layout Paragraph
-Dormand-Prince
+Dormand-Prince-Verfahren
 \end_layout
 
 \begin_layout Standard
@@ -1541,13 +1563,13 @@ reference "eq:dorm_tableau"
 \end{array} & = & \begin{array}{c|rrrrrrr}
 0\\
 \frac{1}{5} & \frac{1}{5}\\
-\frac{3}{10} & \frac{3}{40} & \frac{4}{5}\\
-\frac{4}{5} & \frac{44}{45} & -\frac{4}{5} & \frac{4}{5}\\
-\frac{8}{9} & \frac{19372}{6561} & -\frac{4}{5} & \frac{4}{5} & \frac{4}{5}\\
-1 & \frac{9017}{3168} & -\frac{4}{5} & \frac{4}{5} & \frac{4}{5} & -\frac{4}{5}\\
-1 & \frac{35}{384} & \frac{4}{5} & \frac{4}{5} & \frac{4}{5} & -\frac{4}{5} & \frac{4}{5}\\
-\hline p=4 & \frac{35}{384} & 0 & \frac{35}{384} & \frac{35}{384} & -\frac{35}{384} & \frac{35}{384} & \frac{35}{384}\\
-p=5 & \frac{35}{384} & 0 & \frac{35}{384} & \frac{35}{384} & -\frac{35}{384} & \frac{35}{384} & 0
+\frac{3}{10} & \frac{3}{40} & \frac{9}{40}\\
+\frac{4}{5} & \frac{44}{45} & -\frac{56}{15} & \frac{32}{9}\\
+\frac{8}{9} & \frac{19372}{6561} & -\frac{25360}{2187} & \frac{64448}{6561} & -\frac{212}{729}\\
+1 & \frac{9017}{3168} & -\frac{355}{33} & \frac{46732}{5247} & \frac{49}{176} & -\frac{5103}{18656}\\
+1 & \frac{35}{384} & 0 & \frac{500}{5} & \frac{125}{192} & -\frac{2187}{6784} & \frac{11}{84}\\
+\hline p=4 & \frac{5179}{57600} & 0 & \frac{7571}{16695} & \frac{393}{640} & -\frac{92097}{339200} & \frac{187}{2100} & \frac{1}{40}\\
+p=5 & \frac{35}{384} & 0 & \frac{500}{1113} & \frac{125}{192} & -\frac{2187}{6784} & \frac{11}{84} & 0
 \end{array}\label{eq:dorm_tableau}
 \end{eqnarray}
 
@@ -1557,7 +1579,7 @@ p=5 & \frac{35}{384} & 0 & \frac{35}{384} & \frac{35}{384} & -\frac{35}{384} & \
 \end_layout
 
 \begin_layout Standard
-Zuerst rechnet man wie beim klassischen Runge-Kutta 
+Zuerst rechnet man wie beim klassischen Runge-Kutta-Verfahren 
 \begin_inset Formula $k_{i}$
 \end_inset
 
