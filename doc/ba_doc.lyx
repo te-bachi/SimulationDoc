@@ -5424,9 +5424,780 @@ Erstellen eines neuen GUI Elementes
 \end_layout
 
 \begin_layout Standard
+Hier wird erklärt wie ein neues Element eingefügt werden kann.
+ Diese Anleitung ist stark vereinfacht, als Referenz sollten bereits vorhandene
+ Implementationen verwendet werden, und nicht diese Anleitung.
+ (Das Beispiel basiert auf dem Meso-Kompartment, und hat auch einige Codestücke
+ von dort, die der einfachheitshalber übernommen wurden)
+\end_layout
 
-\color red
-TODO
+\begin_layout Enumerate
+Im Projekt Model wird eine neue Klasse eingefügt, dies ist der Model Teil
+ des «Blocks»
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=BlockData.java, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+package ch.zhaw.simulation.model.xy;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.element.AbstractNamedSimulationData;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BlockData extends AbstractNamedSimulationData {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	public BlockData(int x, int y) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		super(x, y);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public String getDefaultName() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		return "b";
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public int getWidth() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		return 30;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public int getHeight() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		return 30;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Im Projekt «Editor.XY» wird eine neue Package erstellt: «ch.zhaw.simulation.editor.xy.
+element.box»
+\end_layout
+
+\begin_layout Enumerate
+Es werden zwei Klassen erstellt «BlockImage» und «BlockView» dies ist der
+ UI Teil der Applikation.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=BlockImage.java, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+package ch.zhaw.simulation.editor.xy.element.box;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.awt.Color;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.awt.Graphics2D;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import butti.javalibs.util.DrawHelper;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.editor.elements.GuiImage;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.sysintegration.GuiConfig;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BlockImage extends GuiImage {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	public BlockImage(int size, GuiConfig config) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		super(size, size, config, false);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void drawImage(Graphics2D g, boolean selected) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		DrawHelper.antialisingOn(g);
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.setPaint(Color.PINK);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.fillRect(0, 0, getWidth(), getHeight());
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.setPaint(config.getObjectBorder(selected));
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.drawRect(0, 0, getWidth(), getHeight());
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=BlockView.java, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+package ch.zhaw.simulation.editor.xy.element.box;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.editor.elements.GuiImage;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.editor.view.GuiDataTextElement;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.editor.xy.XYEditorControl;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.model.xy.BlockData;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ch.zhaw.simulation.sysintegration.GuiConfig;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BlockView extends GuiDataTextElement<BlockData> {
+\end_layout
+
+\begin_layout Plain Layout
+
+	private static final long serialVersionUID = 1L;
+\end_layout
+
+\begin_layout Plain Layout
+
+	private BlockImage image;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	public BlockView(XYEditorControl control, BlockData data) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		super(data, control);
+\end_layout
+
+\begin_layout Plain Layout
+
+		GuiConfig guiconf = control.getSysintegration().getGuiConfig();
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.image = new BlockImage(guiconf.getMesoSize(), guiconf);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		dataChanged();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.textY = 20;
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.questionmarkY = 30;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	protected GuiImage getImage() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		return image;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Nun muss ein Button eingefügt werden um den Block hinzuzufügen.
+ Dies geschieht in ch.zhaw.simulation.toolbar.xy.XYToolbar, hier wird vor 
+\begin_inset Quotes eld
+\end_inset
+
+addGlobalIcon();
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=Ausschnitt, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+		toolbar.add(new ToolbarAction("Block", addShadow(GuiImage.drawToImage(new
+ BlockImage(24, config)))) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+			public void actionPerformed(ActionEvent e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+				fireMenuActionPerformed(new MenuToolbarAction(MenuToolbarActionType.XY_ADD_BL
+OCK));
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+		});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+eingefügt.
+ Dies ergibt einen Compiler Fehler, da MenuToolbarActionType.XY_ADD_BLOCK
+ nicht erfasst ist, also erfassen wir es doch.
+ Bei Eclipse geht das mit CTRL+1
+\end_layout
+
+\begin_layout Enumerate
+Nun fügen wir in der Datei ch.zhaw.simulation.editor.xy.XYEditorControl vor 
+\begin_inset Quotes eld
+\end_inset
+
+case XY_ADD_MESO:
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=Ausschnitt, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+		case XY_ADD_BLOCK:
+\end_layout
+
+\begin_layout Plain Layout
+
+			addBlock();
+\end_layout
+
+\begin_layout Plain Layout
+
+			return true;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Nach ende der Methode menuActionPerformedOverwrite einfügen!
+\end_layout
+
+\begin_layout Plain Layout
+
+	private void addBlock() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		cancelAllActions();
+\end_layout
+
+\begin_layout Plain Layout
+
+		BlockData block = new BlockData(0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+		addComponent(block, "Block");
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Nun wird ein Block element erstellt wenn wir auf den Button drücken.
+ Wir sind noch nicht fertig, aber wir starten nun die Applikation (SimulationMai
+n) und drücken auf den Button: Es erscheint eine Exception, welche uns auch
+ sagt wo wir noch arbeiten müssen: 
+\begin_inset Quotes eld
+\end_inset
+
+Unknown SimulationObject: ch.zhaw.simulation.model.xy.BlockData at ch.zhaw.simulation.ed
+itor.view.AbstractEditorView.dataAdded(AbstractEditorView.java:495)
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Die Exception tritt im AbstraktenEditor auf, wir wollen aber eine Implementation
+ alleine für den XYEditor.
+ Daher müssen wir in der Klasse «XYEditorView» ein Stuck Code einfügen.
+ In der Methode «dataAddedImpl» vor 
+\begin_inset Quotes eld
+\end_inset
+
+return false;
+\begin_inset Quotes erd
+\end_inset
+
+ wird dieser Code eingefügt:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[label=Block Beispiel,caption=Ausschnitt, language=Java]
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (o instanceof BlockData) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			add(new BlockView(control, (BlockData) o));
+\end_layout
+
+\begin_layout Plain Layout
+
+			return true;
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Danach versuchen fügen wir nochmals so ein Block ein, und siehe da, es funktioni
+ert!
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/new_element/BlockView.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Block
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Was jetzt noch fehlt ist das laden / speichern des Blocks.
+ Dies muss in «XmlModelLoader» und «XmlContentsSaver» implementiert werden.
+ Beim speichern muss eine Implementation für «visitSimulationData» erstellt
+ werden, und beim laden in der Methode «parseNode» dies erfolgt analog des
+ vorhandenen Codes für andere Elemente, und wir hier nicht mehr im Detail
+ erläutert.
 \end_layout
 
 \begin_layout Subsection
@@ -6472,12 +7243,6 @@ Unter Windows wird die Applikation gestartet indem Simulation.exe gestartet
  wird.
 \end_layout
 
-\begin_layout Standard
-
-\color red
-TODO Screenshots!
-\end_layout
-
 \begin_layout Subsection
 Übersicht / Begriffsdefinitionen
 \end_layout
@@ -6485,7 +7250,7 @@ TODO Screenshots!
 \begin_layout Standard
 Das Bedienkonzept der Applikation ist relativ einfach.
  Auf den Einsatz eines Kontextmenüs wurde verzichtet.
- (Je nach Betriebsystem kann ein Kontextmenü angeboten werden, alle diese
+ (Je nach Betriebssystem kann ein Kontextmenü angeboten werden, alle diese
  Aktionen sind jedoch auch mit Tastenkombinationen oder im Menü / der Toolbar
  zu finden).
 \end_layout
