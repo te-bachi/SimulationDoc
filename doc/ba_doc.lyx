@@ -1092,7 +1092,7 @@ Butcher Tableau
 \begin_inset Formula $A$
 \end_inset
 
-, nähmlich ein Dreieck von 
+, nämlich ein Dreieck von 
 \begin_inset Formula $a_{21}$
 \end_inset
 
@@ -1300,7 +1300,7 @@ Martin Wilhelm Kutta
 \series default
  1900, 60 Jahre vor der Präsentation des 
 \shape italic
-Buchter Tableaus
+Butcher Tableaus
 \shape default
 , ein leistungsfähigeres Verfahren als Euler in Gleichung 
 \begin_inset CommandInset ref
@@ -1313,7 +1313,7 @@ reference "eq:euler"
  Das heisst, sie kannten die Möglichkeit einer Tabelle noch nicht.
  Nachfolgen soll jedoch der Ansatz des 
 \shape italic
-Buchter Tableau
+Butcher Tableau
 \shape default
  verwendet werden.
  Dabei rechnet das Klassische vier Zwischenschritte oder Stützstellen, arbeitet
@@ -1428,7 +1428,7 @@ reference "eq:intermstep"
 \noun default
 \color inherit
 \lang german-ch
- variert werden.
+ variiert werden.
  Dabei beschränkt sich die Matrix 
 \begin_inset Formula $A=\left(a_{ij}\right)$
 \end_inset
@@ -1769,9 +1769,9 @@ reference "eq:konz_wachs"
  Die Nährstoffkonzentration ist jetzt nicht mehr homogen über die Petrischale
  verteilt, sondern kann Konzentrationsunterschiede aufweisen.
  An einer Position in der Petrischale, die noch nicht von Bakterien befallen
- ist, beibt die Konzentration bestehen.
- Wenn ein Bakterium an einer Position Nährstoffe aufnimmt, steht sie für
- andere Bakterien nicht mehr zur Verfügung.
+ ist, bleibt die Konzentration bestehen.
+ Wenn ein Bakterium an einer Position Nährstoffe aufnimmt, stehen diese
+ für andere Bakterien nicht mehr zur Verfügung.
  Von der Umgebung kann aber Nährsubstanz nachdiffundieren.
  Die Nährstoffkonzentration wird zu einer Funktion der Zeit und der Position:
 \begin_inset Formula $c\left(\vec{r}_{c},\; t\right)$
@@ -1899,14 +1899,14 @@ reference "fig:Maske-Diffusion"
 \noun default
 \color inherit
 \lang german-ch
- wird hier als Different verstanden.
+ wird hier als Differenz verstanden.
  Der Punkt 
 \begin_inset Formula $\left(x,\; y\right)$
 \end_inset
 
  liegt in der Mitte der Maske.
  Die Maske geht über das ganze Bild.
- In der Simulation wird die Diffusion in einer Matrize gelöst.
+ In der Simulation wird die Diffusion in einer Matrix gelöst.
 \end_layout
 
 \begin_layout Standard
@@ -2014,9 +2014,9 @@ Gradienten-Verfahren
 \begin_layout Standard
 Eine Zelle braucht Nahrung um zu überleben.
  Sie fühlt sich am sichersten, wenn Nahrung im Überfluss vorhanden ist.
- Wenn um sie herum mehr Nahrung auf einen potentiellen Konsumenten wartet
- als die Position, in der die Zelle sich momentan befinden, versucht sie
- ihre Position zu ändern.
+ Wenn um die Zelle herum mehr Nahrung auf einen potentiellen Konsumenten
+ wartet, als an der Position an der sich die Zelle momentan befinden, versucht
+ sie ihre Position zu ändern.
 \end_layout
 
 \begin_layout Standard
@@ -2195,9 +2195,9 @@ Vorliebe
 /Dichte zu den Maximas oder zu den Minimas.
  Die Dichte diffundiert während der Simulation, um wieder die Analogie mit
  dem Bild herzustellen bedeutet das in etwa das gleich, wie wenn auf ein
- Bild ein Grauscher Weichzeichner angewendet wird.
+ Bild ein Graussscher Weichzeichner angewendet wird.
  Dies bedeutet, dass wenn die Simulation unendlich laufen würde, und keine
- Meso-Kompartments vorhanden sind, die etwas verändern, so wird die Dichte
+ Meso-Kompartiments vorhanden sind, die etwas verändern, so wird die Dichte
  irgendwann überall gleich hoch sein.
 \end_layout
 
@@ -2691,7 +2691,7 @@ Java ist für den Benutzer die einfachste Lösung, da er nur die JVM installiert
 \end_layout
 
 \begin_layout Standard
-Java optimiert beim starten der Applikation automatisch auf die vorhandene
+Java optimiert beim Starten der Applikation automatisch auf die vorhandene
  Hardware, dies hat zwar einen langsameren Start zur Folge, optimiert aber
  im allgemeinen besser als dies ein Programmierer machen würde.
  Wenn in einer Sprache wie z.B.
@@ -2720,9 +2720,9 @@ Markup Language
 \begin_layout Standard
 Als Markup Language für die Simulation kam der Matlab Syntax zum Einsatz,
  der ebenfalls vom Open Source Tool «octave» verarbeitet werden kann.
- Somit ist es möglich die Simulation ausserhalb der Applikation laufen zu
- lassen, in einer Umgebung, die mathematische Funktionen anbietet, die uns
- intern nicht zur Verfügung stehen, bzw.
+ Der Vorteil einer Markup Language ist, dass die Simulation ausserhalb der
+ Applikation läuft, in einer Umgebung, die mathematische Funktionen anbietet,
+ die uns intern nicht zur Verfügung stehen, bzw.
  die wir selbst hätten schreiben müssen.
  Zudem ist es möglich, dass der generierte Code noch angepasst werden kann
  vor der Simulation.
@@ -2747,7 +2747,7 @@ Andockstelle
 \begin_inset Quotes erd
 \end_inset
 
- für die Extensions, es können (grunsätzlich) beliebig viele Plugins 
+ für die Extensions, es können (grundsätzlich) beliebig viele Plugins 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2756,7 +2756,7 @@ andocken
 \end_inset
 
 .
- Die komplette Applikation wird dann als Plugin aufgebaut, Abhängigkeiten
+ Die komplette Applikation wird dann aus Plugins aufgebaut, Abhängigkeiten
  können spezifiziert werden und Seiteneffekte können vermieden werden durch
  die Abschottung einzelner Plugins gegeneinander.
  Sogar das mehrfache Laden einer Library in verschiedenen Versionen ist
@@ -2796,19 +2796,20 @@ Die Klasse, die geladen werden soll beim Start des Plugins
 \end_deeper
 \begin_layout Enumerate
 Der Javacode und das XML File werden in ein .jar gepackt und in einem vordefinier
-ten Ordner abgelegt (meist konfigurierbar in «config.properties»)
+ten Ordner abgelegt (meist konfigurierbar in «config.properties»).
 \end_layout
 
 \begin_layout Enumerate
 Die Applikation durchsucht beim Start diesen Ordner, öffnet alle .jar Dateien
  und lädt das plugin.xml File.
  Hat dies alles geklappt, wird das Jarfile in den aktuellen Kontext geladen
- und die Klasse ausgeführt
+ und die Klasse ausgeführt.
 \end_layout
 
 \begin_layout Enumerate
-Es gibt keine Querabhängigkeiten, das Plugin wird direkt in den Applikationkonte
-xt geladen, und hat vollen Zugriff auf die Applikation
+Es gibt keine Querabhängigkeiten und das Plugin wird direkt in den Applikationko
+ntext geladen.
+ Das Plugin hat vollen Zugriff auf die Applikation.
 \end_layout
 
 \begin_layout Standard
@@ -2917,7 +2918,7 @@ Dateiformat
 \begin_layout Standard
 Als Dateiformat wird ein eigens entwickeltes, auf XML basierendes Dateiformat
  verwendet.
- Dieses Dateiformat spiegelt die Internen Strukturen ziemlich genau ab.
+ Dieses Dateiformat spiegelt die internen Strukturen ziemlich genau ab.
  Zudem gibt es Plugin Schnittstelle um Fremdformate zu importieren, es ist
  somit möglich, beliebige Fremdformate zu importieren.
  Es muss dafür lediglich ein Plugin erstellt und im richtigen Verzeichnis
@@ -2938,8 +2939,8 @@ name "par:Fremdformat-importe"
 \begin_layout Standard
 Es wurden zwei Importplugins erstellt, eins für Berkeley Madonna, und eins
  für Dynasys.
- Um einen sinnvollen Test der Pluginschnittstelle vorzunehmen waren zwei
- Plugins notwendig.
+ Um einen sinnvollen Test der Pluginschnittstelle vorzunehmen waren mindestens
+ zwei Plugins notwendig.
 \end_layout
 
 \begin_layout Standard
@@ -2949,8 +2950,8 @@ Dynasys ist seit 2009 unter der GPL freigegeben, somit war ein Einblick
  noch um eine 16bit Applikation handelt, konnte der Code nicht kompiliert
  werden zur Analyse (keine entsprechender Compiler vorhanden).
  Daher werden nicht alle Daten korrekt eingelesen.
- Trotz Einschränkungen ist es somit möglich, kleinere Dateien komplett und
- grössere Dateien teilweise einzulesen.
+ Trotz Einschränkungen ist es möglich, kleinere Dateien komplett und grössere
+ Dateien teilweise einzulesen.
 \end_layout
 
 \begin_layout Standard
@@ -2966,7 +2967,7 @@ lesung vorhandenen Dateien korrekt importiert werden.
 \end_layout
 
 \begin_layout Standard
-Die Nächste Version von Berkeley Madonna, Version 9, verwendet nun aber
+Die nächste Version von Berkeley Madonna, Version 9, verwendet nun aber
  ein neues, XML basierendes Format, welches nicht implementiert wurde.
  Es könnte jedoch auch dieses Format mit einem zusätzlichen Plugin eingelesen
  werden.
@@ -2984,7 +2985,7 @@ Internes Dateiformat
 
 \begin_layout Standard
 Die von (AB)² Simulation erstellen Dateien enden auf .simz, es handelt sich
- dabei um ein standard ZIP-File, welches 4 Files enthält:
+ dabei um ein Standard-ZIP-File, welches 4 Files enthält:
 \end_layout
 
 \begin_layout Itemize
@@ -3376,7 +3377,7 @@ BJavalibs:
 Editor:
 \series default
  Abstrakter Editor für XY- und Flow Modelle.
- Beinhaltet alle basis Klassen, Globale Parameter, Clipboard, Undo/Redo,
+ Beinhaltet alle Basis Klassen, Globale Parameter, Clipboard, Undo/Redo,
  Toolbar/Menubar und den Formeleditor
 \end_layout
 
@@ -3471,8 +3472,8 @@ Model:
 NetbeansDirchooser:
 \series default
  Dieser Code entstammt dem Netbeans Projekt, es ermöglicht die komfortable
- auswahl eines Ordners, die mit Swing Boardmittel wesentlich weniger konfortabel
- wäre: Es können die Ordner wie gewohnt als Baum ausgeklappt werden.
+ Auswahl eines Ordners, die mit Swing Boardmittel wesentlich weniger komfortabel
+ wäre: Es können die Ordner wie gewohnt als Baum aufgeklappt werden.
 \end_layout
 
 \begin_layout Enumerate
@@ -3616,7 +3617,7 @@ Bookmark Implementationen (z.B.
 
 \begin_layout Enumerate
 Toolbar Implementation: Die von Swing bereitgestellte Toolbar sieht auf
- Mac OS X komisch aus, daher hier eine angepasste Version.
+ Mac OS X nicht nativ aus, daher hier eine angepasste Version.
  Zudem enthält diese Implementation einige für die Simulation zugeschnittene
  Anpassungen.
 \end_layout
@@ -3639,7 +3640,7 @@ XYResultViewer:
 \series default
  Bei diesem Projekt handelt es sich um das «Diagramm» von XY-Simulationen.
  Es kann die Bewegungen und die Dichten darstellen.
- Im Gegensatz zur Darstellung von Flow-Simulationen müssen hier 3 Dimensionale
+ Im Gegensatz zur Darstellung von Flow-Simulationen müssen hier Dreidimensionale
  Daten dargestellt werden.
  Die dritte Dimension ist hier die Zeit und wird durch einen Slider dargestellt.
 \end_layout
@@ -3674,14 +3675,14 @@ Die Applikation wurde nach MVC (Model View Control) bzw.
 \begin_layout Standard
 Das (Domänen)Modell befindet sich im Projekt «Model» und ist entsprechend
  von allem anderen entkoppelt.
- Die Simulation ist nur vom Model abhängig, und es besteht keine direkte
+ Die Simulation ist nur vom Modell abhängig, und es besteht keine direkte
  Verbindung zur GUI.
  Die GUI selbst ist ein relativ grosser Teil der Applikation und ist auch
  nicht überall klar abgegrenzt.
 \end_layout
 
 \begin_layout Standard
-Komponeten wie Undo/Redo sind bei uns komplett in der GUI untergebracht,
+Komponenten wie Undo/Redo sind bei uns komplett in der GUI untergebracht,
  da diese auch komplett von dieser abhängig sind.
  Designtechnisch ist die Einordnung solcher Komponenten nicht eindeutig,
  denn z.B.
@@ -3706,7 +3707,7 @@ Model
 Das Datenmodell ist folgendermassen aufgebaut: Der Einsprungpunkt ist das
  «SimulationDocument», welches entweder ein «SimulationFlowModel» oder ein
  «SimulationXYModel» beinhaltet.
- Sowohl das Flow als auch das XY Modell erben von , «AbstractSimulationModel»,
+ Sowohl das Flow als auch das XY Modell erben von, «AbstractSimulationModel»,
  dieses beinhaltet «AbstractSimulationData», welches ebenfalls eine Abstrakte
  Klasse für alle Simulationskomponenten darstellt, wie
 \end_layout
@@ -3724,7 +3725,7 @@ Global
 \end_layout
 
 \begin_layout Itemize
-Meso Kompartment.
+Meso-Kompartiment.
 \end_layout
 
 \begin_layout Standard
@@ -4044,7 +4045,7 @@ false
 \begin_inset Quotes erd
 \end_inset
 
-, werden alle Einstellungen im betriebsystemspezifischen Ordner abgelegt
+, werden alle Einstellungen im betriebssystemspezifischen Ordner abgelegt
  (es gibt keine Registry Einträge unter Windows)
 \end_layout
 
@@ -4068,7 +4069,7 @@ Users
 \begin_inset Quotes erd
 \end_inset
 
- or 
+ oder 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4078,18 +4079,29 @@ Document and Settings
 \begin_inset Quotes erd
 \end_inset
 
+ (bzw.
+ lokalisierte Varianten wie 
+\begin_inset Quotes eld
+\end_inset
 
+C:
+\backslash
+Dokumente und Einstellungen
+\begin_inset Quotes erd
+\end_inset
+
+)
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
 errorlogPath=errorlog/: Der Pfad wo Fehlermeldungen abgelegt werden (ggf.
- relativ zur, je nach «portable»)
+ relativ zur App, je nach «portable»)
 \end_layout
 
 \begin_layout Itemize
 settingsPath=config/: Der Pfad für die Einstellungen (ggf.
- relativ zur, je nach «portable»)
+ relativ zur App, je nach «portable»)
 \end_layout
 
 \begin_layout Itemize
@@ -4104,7 +4116,7 @@ simulationPluginFolder=plugin/simulation/: Siehe oben; Hier die Plugins
 \end_layout
 
 \begin_layout Itemize
-predefinedDash: Die Liniendefinitionen für das Diagram.
+predefinedDash: Die Liniendefinitionen für das Diagramm.
  Getrennt mit Semikolon (;).
  Durchgezogene Linie: 
 \begin_inset Quotes eld
@@ -4370,9 +4382,7 @@ Ergebnisse
 \end_layout
 
 \begin_layout Standard
-
-\color red
-Beschreibung, Screenshots, Beispielsimulationen mit Ergebniss-Diagramm
+Beschreibung, Screenshots, Beispielsimulationen mit Ergebnis-Diagramm
 \end_layout
 
 \begin_layout Subsection
@@ -4390,7 +4400,7 @@ Diffusionsgleichung
 \begin_layout Standard
 Um die Implementierung der numerischen Diffusionsgleichung zu testen, soll
  eine Funktion gefunden werden, die am Anfang und am Ende der Diffusion
- mit anderen Methoden nachgeprüft werden kann.
+ mit anderen Methoden nach geprüft werden kann.
  Die Dichtefunktion als der Wahrscheinlichkeitstheorie erfüllt diese Voraussetzu
 ngen.
  Die Lösung der Dichtefunktion erhält die Grössen, die eine weitere Voraussetzun
@@ -5010,7 +5020,7 @@ Glossar
 \end_layout
 
 \begin_layout Standard
-Meso-Kompartment: Ein Teil des XY-Simulationsmodells
+Meso-Kompartiment: Ein Teil des XY-Simulationsmodells
 \end_layout
 
 \begin_layout Standard
@@ -5174,9 +5184,9 @@ Der Projekt SimulationJepLib-2.4.1 enthält den von uns verwendeten Parser,
 lt.
  Es gibt nun eine kommerzielle Lösung, die etwas mehr Funktionsumfang hat
  und laut der Herstellerfirma Faktor 2 schneller ist.
- Die Komerzielle Lösung kommt für unser Projekt nicht in Frage, wir haben
- den Parser komplett ins Projekt übernommen, und auch Anpassungen vorgenommen,
- z.B.
+ Die kommerzielle Lösung kommt für unser Projekt nicht in Frage, daher haben
+ wir den Open Source Parser komplett ins Projekt übernommen, und auch Anpassunge
+n vorgenommen, z.B.
  um Warnungen mit Java 1.6 zu vermeiden und um kleine Fehler zu beheben.
 \end_layout
 
@@ -5193,7 +5203,7 @@ Fork
  es sind keine externen Updates zu erwarten.
  Der Parser hat jedoch ein weitaus höheren Umfang als bei der Simulation
  benötigt wird, und es sind Unittests für den Parser vorhanden.
- Daher sollte dies kein Problem darstellen, da warscheinlich keine Fehler
+ Daher sollte dies kein Problem darstellen, da wahrscheinlich keine Fehler
  mehr im Parser vorhanden sind, welche die Simulation beeinträchtigen könnten.
 \end_layout
 
@@ -5289,7 +5299,7 @@ Model: Das Model wird benötigt, da es alle Daten enthält
 \end_layout
 
 \begin_layout Itemize
-Plugin: Die generelle definition des Plugins wird benötigt, weil wir ein
+Plugin: Die generelle Definition des Plugins wird benötigt, weil wir ein
  Plugin implementieren
 \end_layout
 
@@ -5300,7 +5310,7 @@ SimulationJepLib-2.4.1: Wird benötigt aufgrund von «SimulationModelException»
 \end_layout
 
 \begin_layout Itemize
-SimulationPlugin: Die definition des Simulationplugins
+SimulationPlugin: Die Definition des Simulationplugins
 \end_layout
 
 \begin_layout Standard
@@ -6141,7 +6151,7 @@ Fehler beim laden des Plugins
 \begin_layout Standard
 Nun erscheint ein Fehler, dass das Plugin nicht geladen werden konnte.
  Der Fehler wird geloggt, jedoch wird die Exception incl.
- allen Texten (in diesem Fall sind keine Zusatzlichen Texte vorhanden) auf
+ allen Texten (in diesem Fall sind keine zusätzlichen Texte vorhanden) auf
  der Konsole ausgegeben.
  In diesem Fall konnte die Klasse nicht geladen werden.
  Dies kann einfach gelöst werden, indem beim Projekt «Simulation» das Projekt
@@ -6277,7 +6287,7 @@ Hier wird erklärt, wie ein neues Element eingefügt werden kann.
  Als Referenz sollten bereits vorhandene Implementationen verwendet werden
  und nicht diese Anleitung.
  (Das Beispiel basiert auf dem Meso-Kompartment und hat auch einige Codestücke
- von dort, die der einfachheitshalber übernommen wurden)
+ von dort, die einfachheitshalber übernommen wurden)
 \end_layout
 
 \begin_layout Enumerate
@@ -6822,7 +6832,7 @@ end{lstlisting}
 
 eingefügt.
  Dies ergibt einen Compiler Fehler, da «MenuToolbarActionType.XY_ADD_BLOCK»
- nicht erfasst ist, also erfassen wir es doch.
+ nicht erfasst ist, also erfassen wir es.
  Bei Eclipse geht das mit CTRL+1
 \end_layout
 
@@ -6934,7 +6944,7 @@ itor.view.AbstractEditorView.dataAdded(AbstractEditorView.java:495)
 \begin_layout Enumerate
 Die Exception tritt im AbstraktenEditor auf, wir wollen aber eine Implementation
  alleine für den XYEditor.
- Daher müssen wir in der Klasse «XYEditorView» ein Stuck Code einfügen.
+ Daher müssen wir in der Klasse «XYEditorView» ein Stück Code einfügen.
  In der Methode «dataAddedImpl» vor 
 \begin_inset Quotes eld
 \end_inset
@@ -7081,8 +7091,8 @@ Die Icons wurden teilweise angepasst.
 
 \begin_layout Standard
 Anfangs wollten wird die Icons mit einem Java SVG Parser öffnen und darstellen.
- Dies ist jedoch relativ langsam, zudem waren die SVG Libraries extrem langsam,
- verglichem mit dem Laden eines .png.
+ Die Java SVG Libraries waren jedoch extrem langsam, verglichen mit dem
+ Laden eines .png.
  Daher haben wir uns entschieden, dass wir zwar immer noch bei den SVG bleiben,
  es wird jedoch bei der ersten Verwendung durch Inkscape in ein PNG der
  richtigen Grösse konvertiert.
@@ -7417,7 +7427,7 @@ Darstellungsunschönheiten
 Die Mac OS X Toolbar Implementation funktioniert nicht überall korrekt und
  musste daher teilweise abgeschaltet werden.
  Dies hat zur Folge, dass Buttons angezeigt werden, welche bei Mac OS X
- unüblich sind.
+ so eher unüblich sind.
 \end_layout
 
 \begin_layout Itemize
