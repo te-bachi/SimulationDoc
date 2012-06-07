@@ -2824,12 +2824,24 @@ reference "par:Fremdformat-importe"
 
 \begin_layout Enumerate
 Simulation: Plugins für Interne Simulation und Matlab Codegeneration: 
-\color red
-TODO Querverweis
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Vorhandene-Simulationplugins"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 Vorhandene Simulationplugins
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Vorhandene-Simulationplugins"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6921,7 +6933,7 @@ Die Applikation ist noch nicht fertig, es gibt noch Fehler in der Applikation
 \end_layout
 
 \begin_layout Itemize
-Bugs, Fehler: Fehler die Behoben werden müssen um die korrekte Funktionalität
+Bugs, Fehler: Fehler die behoben werden müssen um die korrekte Funktionalität
  zu gewährleisten
 \end_layout
 
