@@ -249,18 +249,6 @@ Einleitung
 \end_layout
 
 \begin_layout Standard
-
-\color red
-fusion->trennen von Meso (nicht implementiert)
-\end_layout
-
-\begin_layout Standard
-
-\color red
-FSM->nicht invivo ==============> Ist so nun OK? A.B.
-\end_layout
-
-\begin_layout Standard
 Es gibt bereits viele Simulationstools, wie z.B.
  Berekely Madonna, um nur ein bekanntes Beispiel zu nennen.
  Diese Tools unterstützten die Modelierung von Differentialgleichungen als
@@ -2112,9 +2100,9 @@ reference "fig:Maske-Gradient"
 \begin_inset Formula 
 \begin{eqnarray}
 \Delta x & = & f\left(x+1,\; y\right)-f\left(x,\; y\right)\\
-\Delta y & = & f\left(x,\; y+1\right)-f\left(x,\; y\right)\\
-x_{n+1} & = & x_{n}+\Delta t\cdot\Delta x\\
-y_{n+1} & = & y_{n}+\Delta t\cdot\Delta y
+\Delta y & = & f\left(x,\; y+1\right)-f\left(x,\; y\right)\nonumber \\
+x_{n+1} & = & x_{n}+\Delta t\cdot\Delta x\nonumber \\
+y_{n+1} & = & y_{n}+\Delta t\cdot\Delta y\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -4240,45 +4228,6 @@ Zur kompakten Berechnung und für die Übergabe als Argument wird ein Vektor
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Flow Modell Algorithmus.pdf
-	BoundingBox 30bp 130bp 280bp 560bp
-	clip
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Folgenden Dateien werden pro Simulationsverfahren generiert:
 \end_layout
 
@@ -4326,24 +4275,112 @@ _dy.m
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Flow Modell Algorithmus.pdf
+	BoundingBox 30bp 130bp 280bp 560bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Flow Model Algorithmus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename XY Modell Algorithmus.pdf
+	BoundingBox 30bp 20bp 330bp 570bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+XY Model Algorithmus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Resultate
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Test der Matheengine, Vergleich mit Berkeley-Madonna
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Ergebnisse
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Beschreibung, Screenshots, Beispielsimulationen mit Ergebniss-Diagramm
 \end_layout
 
 \begin_layout Subsection
 Numerische Lösungsverfahren
+\end_layout
+
+\begin_layout Subsubsection
+Einschrittverfahren
 \end_layout
 
 \begin_layout Subsubsection
@@ -4452,12 +4489,65 @@ Zu Beginn wird die Matrix im XY-Modell auf eine Dichtefunktion initialisiert,
 \begin_inset Formula $t=50$
 \end_inset
 
+, eine Schrittweite 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\Delta t=0.1$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang german-ch
  und ein Diffusionskoeffizient 
 \begin_inset Formula $D=0.3$
 \end_inset
 
  gewählt.
- Die normiert Funktion 
+ Die ursprünglich normiert Funktion wird bis 
+\begin_inset Formula $t=100$
+\end_inset
+
+ in jedem Schritt diffundiert.
+ Am Ende der Simulation wird die Matrix mit der Dichtefunktion bei 
+\begin_inset Formula $t=100$
+\end_inset
+
+ verglichen.
+ Die Differenz zwischen dem aktuellen Matrix-Feld und der nachträglich ausgerech
+neten Dichtefeld ist nicht grösser als 
+\begin_inset Formula $\Delta d=0.02$
+\end_inset
+
+.
+ Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultat-einer-Dichtefunktion"
+
+\end_inset
+
+ zeigt die Resultate nochmals grafisch.
 \end_layout
 
 \begin_layout Standard
@@ -4484,7 +4574,14 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-TODO
+Resultat einer Dichtefunktion der Wahrscheinlichkeitstheorie
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Resultat-einer-Dichtefunktion"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4502,7 +4599,187 @@ Gradienten-Verfahren
 \end_layout
 
 \begin_layout Standard
-Das Verfahren kann überschiessen.
+Das implementierte Gradienten-Verfahren funktioniert hervorragend.
+ In Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Bewegung-eines-Meso-Kompartiment"
+
+\end_inset
+
+ bewegt sich ein Meso-Kompartiment mit dem Gradienten-Verfahren von einem
+ lokalen Minimum in ein lokales Maximum.
+\end_layout
+
+\begin_layout Standard
+Ein Nachteil hat das Verfahren dennoch.
+ Das Verfahren kann überschiessen.
+ Wenn die Differenz zwischen zwei benachbarten Matrix-Feldern zu gross ist,
+ wird der Gradient dementsprechend hoch.
+ Bei der Fortbewegung eines Meso-Kompartimentes mit grossem Gradienten kann
+ im darauffolgenden Schritt das Meso-Kompartimentes an den Rand des XY Modells
+ gedrückt werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "15col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/grad/grad1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "15col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/grad/grad2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "15col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/grad/grad3.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "15col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/grad/grad4.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "15col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/grad/grad5.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Bewegung eines Meso-Kompartimentes mit dem Gradienten-Verfahren
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Bewegung-eines-Meso-Kompartiment"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
