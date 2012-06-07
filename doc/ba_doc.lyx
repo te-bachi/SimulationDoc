@@ -229,7 +229,11 @@ ren.
 g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
  Simulationen von Biologischen Abläufen, wie das innere einer Zelle, darstellen
  soll.
- TODO: Danksagung
+ 
+\color red
+TODO: Danksagung
+\color inherit
+
 \begin_inset Newpage newpage
 \end_inset
 
@@ -253,7 +257,7 @@ fusion->trennen von Meso (nicht implementiert)
 \begin_layout Standard
 
 \color red
-FSM->nicht invivo
+FSM->nicht invivo ==============> Ist so nun OK? A.B.
 \end_layout
 
 \begin_layout Standard
@@ -261,24 +265,22 @@ Es gibt bereits viele Simulationstools, wie z.B.
  Berekely Madonna um nur ein bekanntes Beispiel zu nennen.
  Diese Tools unterstützten die Modelierung von Differentialgleichungen als
  Modell, mit Containern und Flüssen.
-\end_layout
-
-\begin_layout Standard
-Das gleiche Prinzip wird auch von Symlink verwendet, dieses verwendet als
- Symbole jedoch konsequent die Elektrotechnischen Abbildungen, es gibt Verbindun
-g, Verstärker, Verzögerungen (x[t-1]) etc.
- Obwohl das Modell damit etwas anders aussieht ist die mathematische Abbildung
- schlussendlich die gleiche.
+ Dann gibt es Tools wie SimuLink, dies Simuliert keine Flüsse sondern elektronis
+che Komponenten wie Verstärker und Kondensatoren.
+ Mathematisch laufen beide Ansätze auf ähnliche Lösungen heraus.
+ Was aber bei beiden Tools nicht möglich ist, die Simulation kompartimentaler
+ Systeme wie Sie in der Biologie vorkommen.
+ Wenn eine Zelle simuliert werden soll müssen die einzelnen Bestandteile
+ (Meso-Kompartimente) sich in einem Bereich frei bewegen könne und mit den
+ anderen Bestandteilen interagieren über die Umgebung.
+ Dies ist mit bisherigen Lösungen nicht möglich, und wurde nun von uns realisier
+t.
 \end_layout
 
 \begin_layout Standard
 Da unsere Simulation keine Elektrotechnischen Hintergrund hat haben wir
  für die Darstellungen unserer Flussmodelle ebenfalls Container mit Flüssen
  (Integral) verwendet.
-\end_layout
-
-\begin_layout Subsection
-Bereits existierende Tools
 \end_layout
 
 \begin_layout Subsection
@@ -3612,7 +3614,7 @@ Komponeten wie Undo/Redo sind bei uns komplett in der GUI untergebracht,
 Technische Beschreibung Softwarekomponenten
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Model
 \end_layout
 
@@ -3666,7 +3668,7 @@ Die Modelle enthalten jede Menge an Methoden zur Manipulation der Daten,
  oder dem Code entnommen werden.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Editor
 \end_layout
 
@@ -3794,7 +3796,7 @@ Undo/Redo war und ist einer der umständlichen teile der Implementation,
  Handler erstellt wird, und der Dialog daher nicht mehr funktioniert.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Errorhandling/Logging
 \end_layout
 
@@ -3843,7 +3845,7 @@ e Beschreibung>);» dargestellt und automatisch geloggt werden.
  Der Pfad für das Logging wird in der Konfigurationsdatei festgelegt.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 GUI Konsistenz
 \end_layout
 
@@ -3934,7 +3936,7 @@ Fehler bei der Datenvalidierung werden grafisch hervorgehoben, oder es ist
  erst gar nicht möglich ungültige Werte einzugeben.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Konfiguration/Einstellungen (Backend)
 \end_layout
 
@@ -6511,7 +6513,7 @@ Der Ordner in der die Applikation liegt auf
 \end_layout
 
 \begin_layout Itemize
-Inkscape im Path ist.
+Inkscape im PATH ist.
 \end_layout
 
 \begin_layout Standard
