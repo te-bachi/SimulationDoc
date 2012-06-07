@@ -429,8 +429,8 @@ Im Falle von Bakterien kann von einem exponentiellen Wachstum ausgegangen
 \end_layout
 
 \begin_layout Standard
-Das Wachstum kann Beschränkt werden auf ein Nährmedium in der Petrischale.
- Das Bakterienvolk kann sich nicht mehr Fortpflanzen, wenn keine Nahrung
+Das Wachstum kann beschränkt werden auf ein Nährmedium in der Petrischale.
+ Das Bakterienvolk kann sich nicht mehr fortpflanzen, wenn keine Nahrung
  mehr zur Verfügung steht.
  Eine Nährstoffkonzentration 
 \begin_inset Formula $c\left(t\right)$
@@ -497,7 +497,23 @@ Je mehr Bakterien entstehen, desto schneller fällt die Konzentration.
  Ihren Höhepunkt erreicht sie am Wendepunkt, wenn die Änderung der Population
  am grössten ist.
  Nach endlicher Zeit tritt eine Sättigung ein.
- Die Herausforderung ist aber, welche Werte 
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dc}{dt} & = & -\gamma N,\quad c\geq0\label{eq:konz_wachs}\\
+\frac{dN}{dt} & = & c\left(t\right)\cdot\alpha N-\beta N^{2},\quad N\geq0\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Herausforderung ist aber, welche Werte 
 \begin_inset Formula $N_{0},\; c_{0}$
 \end_inset
 
@@ -509,18 +525,6 @@ Je mehr Bakterien entstehen, desto schneller fällt die Konzentration.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "scst_bio"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\frac{dc}{dt} & = & -\gamma N,\quad c\geq0\label{eq:konz_wachs}\\
-\frac{dN}{dt} & = & c\left(t\right)\cdot\alpha N-\beta N^{2},\quad N\geq0\nonumber 
-\end{eqnarray}
 
 \end_inset
 
@@ -1761,19 +1765,32 @@ Diffusionsgleichung
 \end_layout
 
 \begin_layout Standard
+Weiten wir das Beispiel in der Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:konz_wachs"
 
-\color red
-Weiten wir das Beispiel in der Gleichung ...
+\end_inset
+
  aus.
- 
-\end_layout
+ Jedes Bakterium hat nun eine bestimmte Position 
+\begin_inset Formula $\vec{r}_{B}$
+\end_inset
 
-\begin_layout Standard
-Ein Beispiel aus der Natur soll eines von vielen Anwendungsgebieten aufzeigen.
- Eine Zelle ist von einer Zellmembran umschlossen, die die Zelle schützt.
- Die Zelle kann aber durch ihre teildurchlässige Membran Nährstoffe aufnehmen
- oder abstossen.
- Der Stoffaustausch ist ein Diffusionsprozess.
+.
+ Die Nährstoffkonzentration ist jetzt nicht mehr homogen über die Petrischale
+ verteilt, sondern kann Konzentrationsunterschiede aufweisen.
+ An einer Position in der Petrischale, die noch nicht von Bakterien befallen
+ ist, beibt die Konzentration bestehen.
+ Wenn ein Bakterium an einer Position Nährstoffe aufnimmt, steht sie für
+ andere Bakterien nicht mehr zur Verfügung.
+ Von der Umgebung kann aber Nährsubstanz nachdiffundieren.
+ Die Nährstoffkonzentration wird zu einer Funktion der Zeit und der Position:
+\begin_inset Formula $c\left(\vec{r}_{c},\; t\right)$
+\end_inset
+
+.
+ Diese Nährstoffkonzentration ist ein Diffusionsprozess.
  Ein Diffusionsprozess versucht Konzentrationsunterschiede auszugleichen,
  bis ein Gleichgewicht hergestellt ist.
 \end_layout
