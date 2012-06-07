@@ -216,16 +216,16 @@ Vorwort
 In der Forschung aber auch zu Unterrichtszwecken werden viele Theorien vermittel
 t und Simuliert.
  Solche Simulationen basieren meistens auf einem strikt mathematischen Hintergru
-nd, meinst Integrale erster Ordnung.
+nd, meist Integrale erster Ordnung.
  Forschende Personen im Bereich Physik/Biologie verwenden dabei bevorzugt
- eine Modellierungssoftware, da es nicht ihr Fachgebiet ist selbst zu programmie
-ren.
+ eine Modellierungssoftware, da es nicht ihr Fachgebiet ist, selbst zu programmi
+eren.
  Andreas Butti hat sich bei der Verwendung von Simulationstools über deren
  Plattformunabhängigkeit und Benutzerunfreundlichkeit gestört.
- Als Informatiker kommt man da schnell in Versuchung selbst etwas besserer
+ Als Informatiker kommt man da schnell in Versuchung, selbst etwas besserer
  zu schreiben.
  Nach einem Gespräch mit dem Physikdozenten, Herr Scheidegger, wurde daraus
- dann diese BA, die jedoch nicht nur ein Benutzerfreundliches Simulationswertzeu
+ dann diese BA, die jedoch nicht nur ein benutzerfreundliches Simulationswertzeu
 g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
  Simulationen von Biologischen Abläufen, wie das innere einer Zelle, darstellen
  soll.
@@ -262,7 +262,7 @@ FSM->nicht invivo ==============> Ist so nun OK? A.B.
 
 \begin_layout Standard
 Es gibt bereits viele Simulationstools, wie z.B.
- Berekely Madonna um nur ein bekanntes Beispiel zu nennen.
+ Berekely Madonna, um nur ein bekanntes Beispiel zu nennen.
  Diese Tools unterstützten die Modelierung von Differentialgleichungen als
  Modell, mit Containern und Flüssen.
  Dann gibt es Tools wie SimuLink, dies Simuliert keine Flüsse sondern elektronis
@@ -278,7 +278,7 @@ t.
 \end_layout
 
 \begin_layout Standard
-Da unsere Simulation keine Elektrotechnischen Hintergrund hat haben wir
+Da unsere Simulation keinen elektrotechnischen Hintergrund hat, haben wir
  für die Darstellungen unserer Flussmodelle ebenfalls Container mit Flüssen
  (Integral) verwendet.
 \end_layout
@@ -365,11 +365,11 @@ Mit unserer Simulation
  abzubilden, ein Meso-Kompartment ist das vorhin genannte Flussmodel.
  Diese Meso-Kompartimente können sich wären der Simulation im XY-Raum bewegen.
  Es können Dichten angegeben werden, die über den XY Raum verteilt sind,
- und die Meso-Kompartimente können an Ihrer aktuellen Position von der dichte
- Konsumieren oder dichte Produzieren, somit kann die Umgebung beeinflusst
+ und die Meso-Kompartimente können an Ihrer aktuellen Position von der Dichte
+ konsumieren oder Dichte produzieren, somit kann die Umgebung beeinflusst
  werden.
- Mit diesen Fähigkeiten ist es möglich das innenleben einer Zelle oder andere
- Biologische Prozesse einfach, grafisch abzubilden.
+ Mit diesen Fähigkeiten ist es möglich, das Innenleben einer Zelle oder
+ andere biologische Prozesse einfach, grafisch abzubilden.
  Die Idee und Vorgabe dieser Simulationsmethode stammt von Herr Scheidegger,
  und wurde zusammen mit Herr Füchslin und uns ausgearbeitet.
 \end_layout
@@ -379,15 +379,15 @@ Theorie
 \end_layout
 
 \begin_layout Standard
-Um Biologische Prozesse zu verstehen und nachzubilden werden mathematische
+Um biologische Prozesse zu verstehen und nachzubilden, werden mathematische
  Systeme modelliert und danach mit rechnerunterstützten Solvern Näherungslösunge
 n berechnet.
  Als Beispiel kann sich die Population 
 \begin_inset Formula $N\left(t\right)$
 \end_inset
 
- eines Bakterienvolkes in einer Petrischale mit der Zeit ändern, je nach
- dem welche äussere Einflüsse auf die Bakterien einwirken.
+ eines Bakterienvolkes in einer Petrischale mit der Zeit ändern, je nachdem,
+ welche äusseren Einflüsse auf die Bakterien einwirken.
  Die Geburten- und Sterberate bilden die Änderung 
 \begin_inset Formula $\frac{dN}{dt}$
 \end_inset
@@ -775,9 +775,9 @@ key "scst_bio"
 \end_layout
 
 \begin_layout Standard
-Die Finite-Differenzen-Methode die für die Simulation benötigt werden sind
- implementiert worden das Gradienten-Verfahren und die Diffusiongleichung,
- die später erläutert werden.
+Die Finite-Differenzen-Methode, die für die Simulation benötigt werden,
+ sind implementiert worden in das Gradienten-Verfahren und die Diffusiongleichun
+g, die später erläutert werden.
  
 \end_layout
 
@@ -848,12 +848,12 @@ Stufen
 \begin_inset Formula $s$
 \end_inset
 
- Funktionswerte-Berechnungen ausführt um einen Näherungswert 
+ Funktionswerte-Berechnungen ausführt, um einen Näherungswert 
 \begin_inset Formula $y_{n+1}$
 \end_inset
 
  zu erhalten.
- Wie genau ein Verfahren rechnet kann mit der 
+ Wie genau ein Verfahren rechnet, kann mit der 
 \series bold
 Ordnung
 \series default
@@ -865,7 +865,8 @@ Ordnung
  Genauer heisst hier mit weniger Abweichung vom exakten Wert (Fehler) pro
  Schritt, die sich über die Zeit kumulieren.
  Je genauer ein Verfahren rechnet, also je grösser die Ordnung ist, desto
- mehr Aufwand muss betrieben werden um einen besseren Näherungswert zu erhalten.
+ mehr Aufwand muss betrieben werden, um einen besseren Näherungswert zu
+ erhalten.
 \end_layout
 
 \begin_layout Standard
@@ -998,7 +999,7 @@ Butcher Tableau
 \end_layout
 
 \begin_layout Standard
-Um weitere Verfahren besser zu Verstehen wird zuerst eine Tabelle eingeführt,
+Um weitere Verfahren besser zu verstehen, wird zuerst eine Tabelle eingeführt,
  die nur als Hilfsmittel zu verwenden ist.
  Als das klassische Runge-Kutta-Verfahren entworfen wurde, kannte man diese
  Tabelle noch nicht.
@@ -1497,7 +1498,7 @@ reference "eq:euler"
 \end_inset
 
  übernimmt.
- Welche Gewichte genommen werden wird in Gleichung 
+ Welche Gewichte genommen werden, wird in Gleichung 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:butcher_ode"
@@ -1604,7 +1605,7 @@ reference "eq:intermstep"
 \end_inset
 
  eines Schrittes ist gleichzeitig die erste Stufe des nächsten Schrittes.
- Das berechnen der Näherungswert ist in Gleichung 
+ Das Berechnen der Näherungswert ist in Gleichung 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:dopri_value"
@@ -1750,7 +1751,7 @@ key "teubner_hanke,dankert_ode"
 \end_layout
 
 \begin_layout Standard
-Die (AB)² Simulation besitzt zwar im Flow-Modell-Editor eine Möglichkeit
+Die (AB)² Simulation besitzt zwar im Flow-Modell-Editor eine Möglichkeit,
  die Simulation mit der Dormand-Prince-Methode auszuführen, ist aber noch
  nicht ausreichen getestet worden.
 \end_layout
@@ -1760,6 +1761,8 @@ Diffusionsgleichung
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Weiten wir das Beispiel in der Gleichung ...
  aus.
  
@@ -1771,7 +1774,7 @@ Ein Beispiel aus der Natur soll eines von vielen Anwendungsgebieten aufzeigen.
  Die Zelle kann aber durch ihre teildurchlässige Membran Nährstoffe aufnehmen
  oder abstossen.
  Der Stoffaustausch ist ein Diffusionsprozess.
- Ein Diffusionsprozess versucht Konzentrationsunterschiede auszugleichen
+ Ein Diffusionsprozess versucht Konzentrationsunterschiede auszugleichen,
  bis ein Gleichgewicht hergestellt ist.
 \end_layout
 
@@ -2166,7 +2169,7 @@ Die Modelle werden mit einem graphischen Editor abgebildet.
  Eine Dichte verhält sich in unserer Simulation wie ein digitalisiertes
  Bild, jeder Pixel ist ein Topf, der eine bestimmte Menge Stoff enthält.
  Dieser Stoff kann von den Meso-Kompartimente konsumiert bzw.
- produziert werden, wodurch sich das das 
+ produziert werden, wodurch sich das 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2189,7 +2192,7 @@ Vorliebe
  dem Bild herzustellen bedeutet das in etwa das gleich, wie wenn auf ein
  Bild ein Grauscher Weichzeichner angewendet wird.
  Dies bedeutet, dass wenn die Simulation unendlich laufen würde, und keine
- Meso-Kompartments vorhanden sind die etwas verändern, so wird die Dichte
+ Meso-Kompartments vorhanden sind, die etwas verändern, so wird die Dichte
  irgendwann überall gleich hoch sein.
 \end_layout
 
@@ -2306,7 +2309,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Parameter, können Berechnung und Konstanten enthalten.
+Parameter, können Berechnungen und Konstanten enthalten.
  Fehler werden durch Fragezeichen gekennzeichnet, mithilfe des blauen Pfeils
  können Verbindungen erstellt werden
 \end_layout
@@ -2429,7 +2432,7 @@ status open
 
 \begin_layout Plain Layout
 Die Verbindung von und zu Globalen wird mit Schatten dargestellt, somit
- ist sichtbar wo die globalen Verwendet werden, bzw.
+ ist sichtbar, wo die Globalen verwendet werden, bzw.
  ob ein Objekt eine Globale verwendet.
  Der Schatten wird angezeigt sobald ein Element selektiert ist.
 \end_layout
@@ -2466,7 +2469,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Container: enthalten eine Formel für den Initialwert, und können Ein-/Ausflüsse
+Container: enthalten eine Formel für den Initialwert und können Ein-/Ausflüsse
  enthalten.
 \end_layout
 
@@ -2502,7 +2505,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Flüsse: Sind nur möglich zwischen Containern und ins unendliche
+Flüsse: Sind nur möglich zwischen Containern und ins Unendliche
 \end_layout
 
 \end_inset
@@ -2558,7 +2561,7 @@ Positiv
 
 \begin_deeper
 \begin_layout Itemize
-Da C++ eine hardwarenahe Sprache ist könnten Hardwarebeschleunigungen wie
+Da C++ eine hardwarenahe Sprache ist, könnten Hardwarebeschleunigungen wie
  z.B.
  MMX bei Intel Prozessoren genutzt werden.
  Dies muss jedoch von Hand vorgenommen werden, und es ist zu beachten, dass
@@ -2716,10 +2719,7 @@ Als Markup Language für die Simulation kam der Matlab Syntax zum Einsatz,
  lassen, in einer Umgebung, die mathematische Funktionen anbietet, die uns
  intern nicht zur Verfügung stehen, bzw.
  die wir selbst hätten schreiben müssen.
-\end_layout
-
-\begin_layout Standard
-Zudem ist es möglich, dass der generierte Code noch angepasst werden kann
+ Zudem ist es möglich, dass der generierte Code noch angepasst werden kann
  vor der Simulation.
 \end_layout
 
@@ -2730,9 +2730,9 @@ Plugin Handling
 \begin_layout Standard
 Die Applikation hat einige Punkte, die sinnvollerweise durch Plugins erweitert
  werden können.
- Es gibt bereits fertige Frameworks die Pluginhandlings ermöglichen, eines
+ Es gibt bereits fertige Frameworks, die Pluginhandlings ermöglichen, eines
  der bekannten ist Eclipse mit dem OSGi.
- Dieses basiert auf Extension Points und Extensions, welche wider Extensio
+ Dieses basiert auf Extension Points und Extensions, welche wieder Extension
  Pointes bereitstellen können.
  Ein Extension Point ist eine 
 \begin_inset Quotes eld
@@ -2785,7 +2785,7 @@ Der Autor
 \end_layout
 
 \begin_layout Enumerate
-Die Klasse die geladen werden soll beim Start des Plugins
+Die Klasse, die geladen werden soll beim Start des Plugins
 \end_layout
 
 \end_deeper
@@ -2797,7 +2797,7 @@ ten Ordner abgelegt (meist konfigurierbar in «config.properties»)
 \begin_layout Enumerate
 Die Applikation durchsucht beim Start diesen Ordner, öffnet alle .jar Dateien
  und lädt das plugin.xml File.
- Hat dies alles geklappt wird das Jarfile in den aktuellen Kontext geladen
+ Hat dies alles geklappt, wird das Jarfile in den aktuellen Kontext geladen
  und die Klasse ausgeführt
 \end_layout
 
@@ -2871,7 +2871,7 @@ Simulationsverfahren:
 \begin_deeper
 \begin_layout Itemize
 Für Flow-Modell: Euler, Runge-Kutta 4.
- Nicht ausführliche getestet: Fehlberg, Cash-Karp, Dormand-Prince
+ Nicht ausführlich getestet: Fehlberg, Cash-Karp, Dormand-Prince
 \end_layout
 
 \begin_layout Itemize
@@ -2903,7 +2903,7 @@ Als Dateiformat wird ein eigens entwickeltes, auf XML basierendes Dateiformat
  Dieses Dateiformat spiegelt die Internen Strukturen ziemlich genau ab.
  Zudem gibt es Plugin Schnittstelle um Fremdformate zu importieren, es ist
  somit möglich, beliebige Fremdformate zu importieren.
- Es muss dafür lediglich ein Plugin erstellt werden und im richtigen Verzeichnis
+ Es muss dafür lediglich ein Plugin erstellt und im richtigen Verzeichnis
  abgelegt werden.
 \end_layout
 
@@ -2919,7 +2919,7 @@ name "par:Fremdformat-importe"
 \end_layout
 
 \begin_layout Standard
-Es wurden zwei Importplugins erstellt, eins für Berkeley Madonna, uns eins
+Es wurden zwei Importplugins erstellt, eins für Berkeley Madonna, und eins
  für Dynasys.
  Um einen sinnvollen Test der Pluginschnittstelle vorzunehmen waren zwei
  Plugins notwendig.
@@ -2929,10 +2929,10 @@ Es wurden zwei Importplugins erstellt, eins für Berkeley Madonna, uns eins
 Dynasys ist seit 2009 unter der GPL freigegeben, somit war ein Einblick
  in den Pascal Code möglich.
  Die Pascal Objekte wurden binär serialisiert, und da es sich bei Dynasys
- noch um eine 16bit Applikation handelt konnte der Code nicht kompiliert
+ noch um eine 16bit Applikation handelt, konnte der Code nicht kompiliert
  werden zur Analyse (keine entsprechender Compiler vorhanden).
  Daher werden nicht alle Daten korrekt eingelesen.
- Trotz Einschränkungen ist es somit möglich kleinere Dateien komplett, und
+ Trotz Einschränkungen ist es somit möglich, kleinere Dateien komplett und
  grössere Dateien teilweise einzulesen.
 \end_layout
 
@@ -2941,9 +2941,9 @@ Bei Berkeley Madonna war kein Quellcode verfügbar, jedoch basiert der grafische
  Modellierungsteil von Berkeley Madonna auf Java.
  Die Datei an sich ist binär, enthält jedoch die Magic Bytes 0xACED, welches
  von Java als Start für eine Object Stream verwendet werden.
- Der Stream enthält nur primitive Datentypen, und Objekte aus der Java Runtime,
+ Der Stream enthält nur primitive Datentypen und Objekte aus der Java Runtime,
  es müssen also keine spezifischen Klassen vorhanden sein.
- Mit Beispieldateien war es möglich das Format zu reverse engeneeren.
+ Mit Beispieldateien war es möglich, das Format zu reverse engineeren.
  Es wird nicht alles korrekt importiert, es konnten jedoch die aus der Physikvor
 lesung vorhandenen Dateien korrekt importiert werden.
 \end_layout
@@ -2956,7 +2956,7 @@ Die Nächste Version von Berkeley Madonna, Version 9, verwendet nun aber
 \end_layout
 
 \begin_layout Standard
-Wie das binäre Serialisierungsprotokoll von Java aufgebaut ist kann unter
+Wie das binäre Serialisierungsprotokoll von Java aufgebaut ist, kann unter
  http://docs.oracle.com/javase/6/docs/platform/serialization/spec/protocol.html
  nachgelesen werden.
 \end_layout
@@ -3001,7 +3001,7 @@ compatible=1
 \begin_layout Standard
 «version» ist ein Ganzzahlwert, die Version die Datei, «compatible» ist
  ebenfalls eine Ganzzahl, die angibt mit welcher Version die Datei immer
- noch eingelesen werden kann, ohne das Probleme auftreten.
+ noch eingelesen werden kann, ohne dass Probleme auftreten.
  Kleinere Unstimmigkeiten werden in Kauf genommen, aber das Modell kann
  immer noch eingelesen werden, somit ist die Rückwärtskompatibilität genau
  geregelt.
@@ -3016,8 +3016,8 @@ Wird eine Inkompatible Änderung am Dateiformat vorgenommen, so müssen beide
 \begin_layout Standard
 «mimetype» ist ein Textfile mit einem einzigen String, «application/zhaw.simulati
 on.project».
- Diese Datei wird oft verwendet um den Typ eines auf Zipbasierenden Dateiformats
- zu erkennen.
+ Diese Datei wird oft verwendet, um den Typ eines auf ZIP-basierenden Dateiforma
+ts zu erkennen.
  Zum Beispiel verwendet .odt als mimetype «application/vnd.oasis.opendocument.text»,
  dank solchen Kennungen kann Zipfile eindeutig als gültiges Simulationsfile
  erkennen.
@@ -3086,7 +3086,7 @@ Diese Einstellungen können von den Plugins beliebig festgelegt werden, hier
 \end_layout
 
 \begin_layout Standard
-simulation.xml Enthält das Modell, oder bei einem XY-Model auch mehrere Modelle.
+simulation.xml enthält das Modell, oder bei einem XY-Model auch mehrere Modelle.
  Diese Datei sieht folgendermassen aus (gekürzt, kommentiert):
 \end_layout
 
@@ -3304,9 +3304,9 @@ end{lstlisting}
 
 \begin_layout Standard
 Das Dateiformat ist weitgehend selbsterklärend.
- Es wurde erstellt um das Modell unserer Applikation möglichst genau abzubilden.
- Es wurde nicht angestrebt einen Standard zu erschaffen/mit anderen Applikatione
-n über dieses Format zu interagieren.
+ Es wurde erstellt, um das Modell unserer Applikation möglichst genau abzubilden.
+ Es wurde nicht angestrebt, einen Standard zu erschaffen/mit anderen Applikation
+en über dieses Format zu interagieren.
 \end_layout
 
 \begin_layout Standard
@@ -3344,7 +3344,7 @@ Die Applikation besteht aus mehreren Javaprojekten, die hier in einer Übersicht
 AppDefinition:
 \series default
  Dieses Projekt beinhaltet Interfaces der Applikation, die nicht im Projekt
- «Simulation» untergebracht werden konnten, da ansonsten eine Zyklische
+ «Simulation» untergebracht werden konnten, da ansonsten eine zyklische
  Abhängigkeit entstanden wäre
 \end_layout
 
@@ -3448,7 +3448,7 @@ ImportFilter.Madonna:
 \series bold
 Model:
 \series default
- Das «Domänenmodell», dies ist die interne Abbildung aller Daten die modelliert
+ Das «Domänenmodell», dies ist die interne Abbildung aller Daten, die modelliert
  werden können.
 \end_layout
 
@@ -3509,7 +3509,7 @@ Speichern/Laden
 \series bold
 SimulationBuild:
 \series default
- Dies ist ein Pseudoprojekt das nur für den Build der Applikation benötigt
+ Dies ist ein Pseudoprojekt, das nur für den Build der Applikation benötigt
  wird, es enthält kein Code
 \end_layout
 
@@ -3531,8 +3531,8 @@ SimulationJepLib-2.4.1:
 \series default
  JEP ist ein Open Source Parser, welcher für die Interne Simulation und
  das Prüfen von Formeln eingesetzt wird.
- Da das Projekt offiziell nicht mehr supported wird wurde der Sourcecode
- komplett kopiert um kleine Fehlerkorrekturen vorzunehmen.
+ Da das Projekt offiziell nicht mehr supported wird, wurde der Sourcecode
+ komplett kopiert, um kleine Fehlerkorrekturen vorzunehmen.
 \end_layout
 
 \begin_layout Enumerate
@@ -3569,8 +3569,8 @@ SimulationPlugin.MatlabOctave:
 SimulationSidebar:
 \series default
  Hier befinden sich Definitionen für die Sidebar der Applikation, diese
- mussten in ein eigenes Projekt ausgelagert werden um keine Zyklischen Abhängigk
-eiten zu Produzieren, gehören jedoch eigentlich zum Editor.
+ mussten in ein eigenes Projekt ausgelagert werden, um keine zyklischen
+ Abhängigkeiten zu produzieren, gehören jedoch eigentlich zum Editor.
 \end_layout
 
 \begin_layout Enumerate
@@ -3628,16 +3628,16 @@ XYResultViewer:
  Es kann die Bewegungen und die Dichten darstellen.
  Im Gegensatz zur Darstellung von Flow-Simulationen müssen hier 3 Dimensionale
  Daten dargestellt werden.
- Die dritte Dimension ist hier die Zeit, und wird durch einen Slider dargestellt.
+ Die dritte Dimension ist hier die Zeit und wird durch einen Slider dargestellt.
 \end_layout
 
 \begin_layout Standard
 Die Aufteilung in 25 Projekte erscheint auf den ersten Blick etwas unübersichtli
 ch, auf den zweiten Blick entsprechen die meisten Projekte aber einzelnen
- Komponenten der Applikation die auch in der Applikation entsprechend aufgeteilt
- sind, und machen daher Sinn.
+ Komponenten der Applikation, die auch in der Applikation entsprechend aufgeteil
+t sind und machen daher Sinn.
  Lediglich 2 Projekte wurden aus technischen Gründen (zyklische Abhängigkeiten)
- erstellt, und entsprechen keinen eigenen Komponenten.
+ erstellt und entsprechen keinen eigenen Komponenten.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3647,15 +3647,15 @@ Design Pattern
 \begin_layout Standard
 Die Applikation wurde nach MVC (Model View Control) bzw.
  Domänenmodell aufgebaut.
- Das Bedeutet das die Daten, die Logik und der View nur lose gekoppelt sind,
- und somit auch der View ersetzt werden könnte, ohne das der Rest angepasst
- werden müsste.
+ Das bedeutet, dass die Daten, die Logik und der View nur lose gekoppelt
+ sind, und somit auch der View ersetzt werden könnte, ohne das der Rest
+ angepasst werden müsste.
  Diese beiden Design Pattern beschreiben ein ziemlich ähnliches vorgehen,
  wobei MVC sich hauptsächlich auf einen GUI Komponenten beziehen lässt,
  wie z.B.
  ein TreeView, während das Domänenmodell sich auf eine komplette Applikation
  anwenden lässt.
- Beides sind Vorgehensmuster, und keine exakten Vorgaben.
+ Beides sind Vorgehensmuster und keine exakten Vorgaben.
 \end_layout
 
 \begin_layout Standard
@@ -3663,7 +3663,7 @@ Das (Domänen)Modell befindet sich im Projekt «Model» und ist entsprechend
  von allem anderen entkoppelt.
  Die Simulation ist nur vom Model abhängig, und es besteht keine direkte
  Verbindung zur GUI.
- Die GUI selbst ist ein relativ grosser Teil der Applikation, und ist auch
+ Die GUI selbst ist ein relativ grosser Teil der Applikation und ist auch
  nicht überall klar abgegrenzt.
 \end_layout
 
@@ -3675,10 +3675,10 @@ Komponeten wie Undo/Redo sind bei uns komplett in der GUI untergebracht,
  Undo/Redo enthält ein Modell, nämlich die letzten Änderungen.
  Es enthält zudem Logik, es kann Änderungen Rückgängig machen/Wiederherstellen.
  Es ist aber ein GUI Komponent, denn es ist 100% von der GUI abhängig.
- Wenn wir jedoch definieren das es sich bei den Undo/Redo Daten nicht um
- Business Daten, sondern um Metadaten handelt sollte es auch nach den Pattern
- kein Problem sein wenn wir es Innerhalb der GUI unterbringen.
- Zudem war dies die einzig technisch sinvolle Möglichkeit.
+ Wenn wir jedoch definieren, dass es sich bei den Undo/Redo Daten nicht
+ um Business Daten, sondern um Metadaten handelt sollte es auch nach den
+ Pattern kein Problem sein, wenn wir es innerhalb der GUI unterbringen.
+ Zudem war dies die einzige technisch sinnvolle Möglichkeit.
 \end_layout
 
 \begin_layout Subsection
@@ -3690,9 +3690,9 @@ Model
 \end_layout
 
 \begin_layout Standard
-Das Datenmodell ist wie folgendermassen aufgebaut: Der Einsprungpunkt ist
- das «SimulationDocument», welches entweder ein «SimulationFlowModel» oder
- ein «SimulationXYModel» beinhaltet.
+Das Datenmodell ist folgendermassen aufgebaut: Der Einsprungpunkt ist das
+ «SimulationDocument», welches entweder ein «SimulationFlowModel» oder ein
+ «SimulationXYModel» beinhaltet.
  Sowohl das Flow als auch das XY Modell erben von , «AbstractSimulationModel»,
  dieses beinhaltet «AbstractSimulationData», welches ebenfalls eine Abstrakte
  Klasse für alle Simulationskomponenten darstellt, wie
@@ -3788,43 +3788,43 @@ status open
 
 \begin_layout Standard
 Der Editor besteht aus mehreren Komponenten, grob aufgelistet in der Grafik.
- Der eigentliche Editor Component ist ein eine Ableitung von «AbstractEditorView
-», entweder «FlowEditorView» oder «XYEditorView».
+ Der eigentliche Editor Component ist eine Ableitung von «AbstractEditorView»,
+ entweder «FlowEditorView» oder «XYEditorView».
  Diese Komponenten haben ein paar Eigenheiten.
  Die Methode paint ist überschrieben, und beim Zeichen werden alle Aktionen
  selbst koordiniert.
- Dies ist notwendig um Pfeile, die selbst kein JComponent sind korrekt abzubilde
-n.
+ Dies ist notwendig, um Pfeile, die selbst kein JComponent sind, korrekt
+ abzubilden.
  Pfeile können nicht als JComponent abgebildet werden, da ein JComponent
  immer rechteckig ist, und unsere Pfeile dies im Normalfall nicht sind.
  Bei der Darstellung ist dies noch kein Problem, aber der Pfeil würde dann
  auf der gesamten Fläche auch alle Mouse-Events konsumieren, diese müssten
  dann weitergeleitet werden wenn nötig etc.
- Darum haben wir für die Pfeile eine Architektur gewählt die Swing Architektur
- bricht, da wir eine Darstellung gewählt haben die unüblich ist und daher
- von Swing so nicht unterstützt wird.
+ Darum haben wir für die Pfeile eine Architektur gewählt, die die Swing
+ Architektur bricht, da wir eine Darstellung gewählt haben, die unüblich
+ ist und daher von Swing so nicht unterstützt wird.
 \end_layout
 
 \begin_layout Standard
-Auch die Selektion wird nach dem Zeichen aller Komponenten einfach überzeichnet.
- Es gibt zudem die Möglichkeit das Komponenten einen Schatten zeichnen,
- dies wird angewendet um Abhängigkeiten von/zu Globalen darzustellen.
- Wir eine Globale angewählt werden alle abhängigen Elemente mit einem Schatten
- versehen.
+Auch die Selektion wird nach dem Zeichnen aller Komponenten einfach überzeichnet.
+ Es gibt zudem die Möglichkeit, dass Komponenten einen Schatten zeichnen.
+ Dies wird angewendet, um Abhängigkeiten von/zu Globalen darzustellen.
+ Wird eine Globale angewählt, werden alle abhängigen Elemente mit einem
+ Schatten versehen.
 \end_layout
 
 \begin_layout Standard
 Als Layoutmanager kommt «SimulationLayout» zum Einsatz, welches alle «AbstractDa
 taView<?>» korrekt platziert.
- Alle anderen Komponenten werden nicht umplatziert, dies bedeutet wenn etwas
- anderes angezeigt wird muss dieses manuell mit «setBounds» platziert werden,
- was auch verwendet wird z.B.
- beim blauen Verbindungspfeil, der erscheint wenn ein Objekt selektiert
- wird.
+ Alle anderen Komponenten werden nicht umplatziert.
+ Dies bedeutet, wenn etwas anderes angezeigt wird, muss dieses manuell mit
+ «setBounds» platziert werden, was auch verwendet wird z.B.
+ beim blauen Verbindungspfeil.
+ Dieser erscheint wenn ein Objekt selektiert wird.
 \end_layout
 
 \begin_layout Standard
-Die Clipboard Implementierung ist Architekturbedingt in mehrere Klassen
+Die Clipboard Implementierung ist architekturbedingt in mehrere Klassen
  aufgeteilt, unterstützt unter anderem das Kopieren als Rastergrafik.
  Das Exportieren als Vektorgrafik konnte nicht erfolgreich implementiert
  werden, da dies je nach Betriebssystem anders gehandhabt wird, und damit
@@ -3834,8 +3834,8 @@ Die Clipboard Implementierung ist Architekturbedingt in mehrere Klassen
  SVG direkt in die Zwischenablage kopiert wird.
  Alle Simulationsinternen Datenstrukturen werden in die Datenstruktur «TransferD
 ata» abgefüllt.
- Zudem werden alle Objekte mit IDs versehen, damit nach dem einfügen die
- Pfeile wider verbunden werden können.
+ Zudem werden alle Objekte mit IDs versehen, damit nach dem Einfügen die
+ Pfeile wieder verbunden werden können.
 \end_layout
 
 \begin_layout Standard
@@ -3845,15 +3845,15 @@ Der Bilderexport gestaltet sich relativ einfach, dank der verwendeten «freehep�
 \end_layout
 
 \begin_layout Standard
-Undo/Redo war und ist einer der umständlichen teile der Implementation,
- denn es muss für jede Aktion die der User vornimmt manuell eine Implementation
- vorgenommen werden, die diese Aktion auch wider Rückgängig machen kann.
- Dies ist auch beim erweitern der Applikation zu bedenken, denn wenn dies
- vergessen geht ist die Konsistenz nicht mehr gewährleistet, was zu Fehlern
+Undo/Redo war und ist einer der umständlichen Teile der Implementation,
+ denn es muss für jede Aktion, die der User vornimmt, manuell eine Implementatio
+n vorgenommen werden, die diese Aktion auch wieder Rückgängig machen kann.
+ Dies ist auch beim Erweitern der Applikation zu bedenken, denn wenn dies
+ vergessen geht, ist die Konsistenz nicht mehr gewährleistet, was zu Fehlern
  führt.
  Für das Debugging des Undo/Redo Mechanismus musste daher eine kleine Hilfe
  implementiert werden.
- Wir die Applikation mit dem Parameter 
+ Wird die Applikation mit dem Parameter 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3861,8 +3861,8 @@ Undo/Redo war und ist einer der umständlichen teile der Implementation,
 \begin_inset Quotes erd
 \end_inset
 
- aufgerufen erscheint ein Dialog der alle Aktionen des aktuellen Undo/Redo
- Handlers live auflistete, und je nach Status einfärbt.
+ aufgerufen erscheint ein Dialog, der alle Aktionen des aktuellen Undo/Redo
+ Handlers live auflistete und je nach Status einfärbt.
  Zu bedenken ist, dass nach dem erstellen einer neuen Datei ein neuer Undo/Redo
  Handler erstellt wird, und der Dialog daher nicht mehr funktioniert.
 \end_layout
@@ -3872,14 +3872,15 @@ Errorhandling/Logging
 \end_layout
 
 \begin_layout Standard
-Bei Serverapplikationen ist es üblich das alle Aktionen geloggt werden,
- bei GUI Applikationen ist es weniger üblich, daher haben wir uns entschieden
+Bei Serverapplikationen ist es üblich, dass alle Aktionen geloggt werden,
+ bei GUI Applikationen ist es weniger üblich, daher haben wir uns entschieden,
  nur die Fehler zu loggen.
  Andere Ausgaben werden direkt auf STDOUT geschrieben, und sind somit nur
- lesbar wenn dieser entweder umgeleitet oder (AB)² Simulation direkt auf
- einer Konsole gestartet wird.
- Dies ist jedoch nur bei der Entwicklung sinnvoll, alle Meldungen die für
- den Benutzer relevant sind werden als Popups ausgegeben.
+ lesbar wenn dieser entweder umgeleitet oder die (AB)² Simulation direkt
+ auf einer Konsole gestartet wird.
+ Dies ist jedoch nur bei der Entwicklung sinnvoll.
+ Alle Meldungen, die für den Benutzer relevant sind, werden als Popups ausgegebe
+n.
 \end_layout
 
 \begin_layout Standard
@@ -3894,15 +3895,15 @@ Errorhandler.registerAwtErrorHandler();
 \end_inset
 
  somit wird unserer eigener Errohandler als Eventloop errorhandler registriert,
- und kann somit alle Fehler die nicht gecatcht sind und im Eventloop auftreten
- abfange, dem User anzeigen und loggen.
+ und kann somit alle Fehler, die nicht gecatcht sind und im Eventloop auftreten,
+ abfangen, dem User anzeigen und loggen.
 \end_layout
 
 \begin_layout Standard
-Fehler die zu erwarten sind werden in unserer Applikation abgefangen, und
- dem Benutzer eine Entsprechende Meldung angezeigt.
+Fehler, die zu erwarten sind, werden in unserer Applikation abgefangen,
+ und dem Benutzer eine Entsprechende Meldung angezeigt.
  Zu erwartende Fehler sind z.B.
- Ungültige Benutzereingaben, nicht genügend Schreibrechte oder Fehler bei
+ ungültige Benutzereingaben, nicht genügend Schreibrechte oder Fehler bei
  Formeln wie log(-1).
  Unerwartete Fehler sind z.B.
  IOException aufgrund eines kaputten Datenträgers, manipulierte Simulationsdatei
@@ -3921,7 +3922,7 @@ GUI Konsistenz
 \end_layout
 
 \begin_layout Standard
-Es wurde viel Wert gelegt das die GUI konsistent erscheint.
+Es wurde viel Wert darauf gelegt, das die GUI konsistent erscheint.
  Dabei wurde das Benutzerhandling an Linux/OS X angelehnt.
 \end_layout
 
@@ -3975,16 +3976,16 @@ gezoomt
 \begin_inset Quotes erd
 \end_inset
 
- wenn der Editor vergrössert wird.
+, wenn der Editor vergrössert wird.
 \end_layout
 
 \begin_layout Itemize
 Es wird nur die nötige Konfiguration angeboten: Nur die Einstellungen die
- auf jedem System verschieden sind/Von externen Parametern abhängig sind
+ auf jedem System verschieden sind/Von externen Parametern abhängig sind,
  werden angeboten.
  Globale sind grün und Parameter gelb.
- Es macht keinen Sinn solche Dinge konfigurierbar zu machen, das verwirrt
- die Benutzer höchstens.
+ Es macht keinen Sinn, solche Dinge konfigurierbar zu machen.
+ Das verwirrt die Benutzer höchstens.
 \end_layout
 
 \begin_layout Itemize
@@ -3997,14 +3998,14 @@ Sind Sie sicher?
 \end_inset
 
  Meldungen angezeigt.
- Es können aber alle Aktionen die das Dokument verändern Rückgängig gemacht
- werden (solange der Editor offen bleibt) somit sind solche Nachfragen nicht
- nötig/sinnvoll.
+ Es können aber alle Aktionen, die das Dokument verändern, rückgängig gemacht
+ werden (solange der Editor offen bleibt).
+ Somit sind solche Nachfragen nicht nötig/sinnvoll.
 \end_layout
 
 \begin_layout Itemize
 Fehler bei der Datenvalidierung werden grafisch hervorgehoben, oder es ist
- erst gar nicht möglich ungültige Werte einzugeben.
+ erst gar nicht möglich, ungültige Werte einzugeben.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4012,9 +4013,9 @@ Konfiguration/Einstellungen (Backend)
 \end_layout
 
 \begin_layout Standard
-Beim Start der Applikation wird eine Datei ./config/config.properties eingelesen,
- diese Datei muss existieren, ansonsten werde Fehler auftreten.
- In dieser Datei sind alle Konfigurierbaren Einstellungen gespeichert, die
+Beim Start der Applikation wird eine Datei ./config/config.properties eingelesen.
+ Diese Datei muss existieren, ansonsten werde Fehler auftreten.
+ In dieser Datei sind alle konfigurierbaren Einstellungen gespeichert, die
  der Benutzer aber nicht umstellen soll/muss/kann.
  Diese sind:
 \end_layout
@@ -4022,8 +4023,16 @@ Beim Start der Applikation wird eine Datei ./config/config.properties eingelesen
 \begin_layout Itemize
 portable=[true | false]: Wenn portable = true ist die Applikation Portabel,
  es werden alle Einstellungen relativ zur Applikation gespeichert.
- Ist die Einstellung false werden alle Einstellungen im Betriebsystemspezifische
-n Ordner abgelegt (es gibt keine Registry Einträge unter Windows)
+ Ist die Einstellung 
+\begin_inset Quotes eld
+\end_inset
+
+false
+\begin_inset Quotes erd
+\end_inset
+
+, werden alle Einstellungen im betriebsystemspezifischen Ordner abgelegt
+ (es gibt keine Registry Einträge unter Windows)
 \end_layout
 
 \begin_deeper
@@ -4061,8 +4070,7 @@ Document and Settings
 
 \end_deeper
 \begin_layout Itemize
-errorlogPath=errorlog/: Der Pfad wo das Fehlermeldungen abgelegt werden
- (ggf.
+errorlogPath=errorlog/: Der Pfad wo Fehlermeldungen abgelegt werden (ggf.
  relativ zur, je nach «portable»)
 \end_layout
 
@@ -4106,18 +4114,18 @@ predefinedDash: Die Liniendefinitionen für das Diagram.
 \end_layout
 
 \begin_layout Itemize
-defaultsFonts: Die Fonts die verwendet werden für das Diagram, die erste
+defaultsFonts: Die Fonts, die verwendet werden für das Diagramm, die erste
  Schrift, die installiert ist, der mit Semikolon (;) separierter Liste wird
  verwendet
 \end_layout
 
 \begin_layout Itemize
-keyboard...: Definition des Sonderzeichen On-Screen-Keyboard, wird verwendet
+keyboard...: Definition des Sonderzeichen On-Screen-Keyboard wird verwendet,
  um bei den Diagrammen in den Namen Sonderzeichen einzugeben.
  Parameter definieren das Aussehen der Tastatur und werden hier nicht alle
- Im Detail erläutert.
- Die Zeichen die Angezeigt werden sind hier definiert, man beachte die Unicodesc
-hreibweise (wird z.B.
+ im Detail erläutert.
+ Die Zeichen, die angezeigt werden, sind hier definiert.
+ Man beachte die Unicodeschreibweise (wird z.B.
  von Eclipse automatisch escaped): keyboard.keys=
 \backslash
 u03B1;
@@ -4129,7 +4137,7 @@ u03B3;...
 
 \begin_layout Standard
 Im Settingsordner werden mehre Dateien abgelegt, alle Einstellungen die
- von der Applikation und den Plugins definiert werden sind in der Datei
+ von der Applikation und den Plugins definiert werden, sind in der Datei
  
 \begin_inset Quotes eld
 \end_inset
@@ -4139,8 +4147,8 @@ settings.ini
 \end_inset
 
  abgelegt.
- Es ist nicht vorgesehen das die Datei von Hand editiert wird.
- Sollte Probleme mit den Einstellungen auftreten kann die Datei einfach
+ Es ist nicht vorgesehen, dass die Datei von Hand editiert wird.
+ Sollten Probleme mit den Einstellungen auftreten, kann die Datei einfach
  gelöscht werden, es werden dann die Defaulteinstellungen verwendet.
 \end_layout
 
@@ -4153,12 +4161,12 @@ Die Dateien endend auf
 \begin_inset Quotes erd
 \end_inset
 
- Speichern die Position der Fenster, um nach dem nächsten Start der Applikation
- alle Fenster wider an der gleichen Position anzuzeigen.
+, speichern die Position der Fenster, um nach dem nächsten Start der Applikation
+ alle Fenster wieder an der gleichen Position anzuzeigen.
 \end_layout
 
 \begin_layout Standard
-Dies kann zu probleme führen, z.B.
+Dies kann zu Problemen führen, z.B.
  wenn die Bildschirmkonfiguration verändert wurde/Beamer an/abgesteckt wurde.
  Um solche Probleme zu lösen, können einfach alle Dateien endend auf 
 \begin_inset Quotes eld
@@ -4177,9 +4185,107 @@ Matlab Code Generator
 \end_layout
 
 \begin_layout Standard
+Eines der Simulations-Plugins ist das Matlab Plugin.
+ Dieses Plugin generiert ausführbaren Matlab-Code.
+ Dabei wird zwischen dem reinen Flow-Modell und dem XY-Modell mit integriertem
+ Flow-Modell pro Meso-Kompartiment unterschieden.
+ Beim Flow-Modell können verschiedene Simulationsverfahren ausgewählt werden.
+ Beim XY-Modell kann nur das Runge-Kutta-4-Verfahren gewählt werden.
+\end_layout
+
+\begin_layout Standard
+Zur kompakten Berechnung und für die Übergabe als Argument wird ein Vektor
+ verwendet, der alle aktuellen Container-Werte beinhaltet.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Flow Modell Algorithmus.pdf
+	BoundingBox 30bp 130bp 280bp 560bp
+	clip
+
+\end_inset
+
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Folgenden Dateien werden pro Simulationsverfahren generiert:
+\end_layout
+
+\begin_layout Itemize
+Flow-Modell:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Euler:
+\family typewriter
+ simulation_euler.m
+\end_layout
+
+\begin_layout Itemize
+Runge-Kutta 4: 
+\family typewriter
+simulation_rk_main.m, simulation_rk_ode.m
+\end_layout
+
+\begin_layout Itemize
+Fehlberg, Cash-Karp, Dormand-Prince: 
+\family typewriter
+simulation_adaptive.m, simulation_adaptive_ode.m
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+XY-Modell:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Runge-Kutta 4: 
+\family typewriter
+xy_main.m, sim_gradient.m, sim_diffusion.m, sim_density_out.m, xy_
+\shape italic
+densityN
+\shape default
+_function, xy_
+\shape italic
+modelN
+\shape default
+_dy.m
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Resultate
 \end_layout
@@ -4208,10 +4314,11 @@ Diffusionsgleichung
 Um die Implementierung der numerischen Diffusionsgleichung zu testen, soll
  eine Funktion gefunden werden, die am Anfang und am Ende der Diffusion
  mit anderen Methoden nachgeprüft werden kann.
- Die Greenschen Funktion erfüllt diese Voraussetzungen.
- Die Lösung der Greenschen Funktion erhält die Grössen, die eine weitere
- Voraussetzung für die Prüfung der Diffusionsgleichung ist.
- Allgemein ist die Greenschen Funktion normiert auf 
+ Die Dichtefunktion als der Wahrscheinlichkeitstheorie erfüllt diese Voraussetzu
+ngen.
+ Die Lösung der Dichtefunktion erhält die Grössen, die eine weitere Voraussetzun
+g für die Prüfung der Diffusionsgleichung ist.
+ Allgemein ist die Dichtefunktion normiert auf 
 \begin_inset Formula $\int G=1$
 \end_inset
 
@@ -4264,8 +4371,8 @@ Die (AB)² Simulation arbeitet im XY-Modell nur in Dimension
 \end_inset
 
  Punkte pro Richtung.
- Da die Greenschen Funktion normiert ist und über eine grosse Fläche führt,
- würde ein Wert einer Zelle sehr klein werden und für die Auswertung eventuell
+ Da die Dichtefunktion normiert ist und über eine grosse Fläche führt, würde
+ ein Wert einer Zelle sehr klein werden und für die Auswertung eventuell
  zu Problemen führen.
  Darum wird ein Faktor dazumultipliziert.
 \end_layout
@@ -4282,8 +4389,8 @@ G\left(x,\; y,\; t\right) & = & 1000\cdot\frac{1}{4\pi Dt}\cdot e^{-\left(\frac{
 \end_layout
 
 \begin_layout Standard
-Zu Beginn wird die Dichtefunktion im XY-Modell auf eine Greenschen Funktion
- initialisiert, wobei Diffusionskoeffizient 
+Zu Beginn wird die Matrix im XY-Modell auf eine Dichtefunktion initialisiert,
+ wobei Diffusionskoeffizient 
 \begin_inset Formula $D$
 \end_inset
 
@@ -4403,24 +4510,24 @@ grad
 \end_inset
 
 : Wird ein Gradienten im diskreten Raum berechnet, so tritt immer das Problem
- auf das die Zahlen in einem Gitter abgelegt werden müssen, was mathematisch
+ auf, dass die Zahlen in einem Gitter abgelegt werden müssen, was mathematisch
  natürlich falsch ist.
- Matlab versucht den Mathematischen Fehler gleichmässig auf alle Richtungen
- zu verteilen, dies bedeutet das wenn eine Spitze abgeleitet wird, so entsteht
- ein Plateu.
+ Matlab versucht den mathematischen Fehler gleichmässig auf alle Richtungen
+ zu verteilen.
+ Dies bedeutet, dass wenn eine Spitze abgeleitet wird, ein Plateu entsteht.
  Diese Plateus sind für unsere Simulation extrem ungünstig.
  Daher haben wir jetzt einen Gradienten implementiert der einfach um 0.5
  Einheiten im Raster verschoben ist.
  Dies bewirkt zwar ein Abdriften in eine Richtung, dies stört aber die Simulatio
 n weniger als ein Plateu.
- Ein Plateu kann bewirken das sich ein Meso-Kompartment, welches sich zur
- niedrigsten Konzentration bewegen soll, nicht mehr bewegt.
+ Ein Plateu kann bewirken, dass sich ein Meso-Kompartment, welches sich
+ zur niedrigsten Konzentration bewegen soll, nicht mehr bewegt.
 \end_layout
 
 \begin_layout Standard
 Wir erstellen nun den kompletten Matlab Code selbst, es werden keine Toolboxen
  verwendet.
- Nach dem erstellen eines Temporären Files wird ein neuer Matlab/Octave
+ Nach dem Erstellen eines temporären Files wird ein neuer Matlab/Octave
  Prozess erstellt, und dieser führt die Simulation aus.
 \end_layout
 
@@ -4438,7 +4545,7 @@ Zudem ist die Plattformunabhängigkeit nicht gewährleistet, denn es muss
 \end_layout
 
 \begin_layout Standard
-Wir haben nun festgestellt das der Weg mit einer Markup Language, insbesondere
+Wir haben nun festgestellt, dass der Weg mit einer Markup Language, insbesondere
  Matlab/Octave schwierig ist:
 \end_layout
 
@@ -4451,21 +4558,21 @@ Plattformunabhängigkeit funktioniert nur bedingt
 \end_layout
 
 \begin_layout Itemize
-Keine Programmiertechnischen Vorteile (zumindest nicht mit Matlab/Octave)
+Keine programmiertechnischen Vorteile (zumindest nicht mit Matlab/Octave)
 \end_layout
 
 \begin_layout Itemize
 Geschwindigkeitseinbussen: bei kleinen Simulationen fällt insbesondere der
  Start einer externen Applikation stark ins Gewicht.
  Octave ist zudem generell langsamer als Matlab.
- Ein analysierter Fall hat ergeben das eine Simulation die in Matlab nur
- wenige Minuten gedauert hat mit Octave hochgerechnet 16 Stunden dauern
+ Ein analysierter Fall hat ergeben, dass eine Simulation, die in Matlab
+ nur wenige Minuten gedauert hat, mit Octave hochgerechnet 16 Stunden dauern
  würde.
 \end_layout
 
 \begin_layout Standard
-Wir haben daher entschieden das eine zukünftige Entwicklung nicht auf dieser
- Basis, sondern der Code komplett intern ausgeführt wird.
+Wir haben daher entschieden, dass eine zukünftige Entwicklung nicht auf
+ dieser Basis, sondern der Code komplett intern ausgeführt wird.
  Daher haben wir auch keine Zeit mehr ins Fehlerhandling/Plattformunabhängigkeit
  etc.
  investiert.
@@ -4473,23 +4580,25 @@ Wir haben daher entschieden das eine zukünftige Entwicklung nicht auf dieser
 \end_layout
 
 \begin_layout Itemize
-Eine Formel, die bei der Eingabe vom Parser validiert wurde ist auch zu
- 100%ig sicher ausführbar, wenn eine Formel mit dem Internen Parser validiert
- wurde und dann als Matlab Code ausgegeben wird ist dies nicht sicher, denn
- die Parser unterscheiden sich in Details, die unter Umständen nicht alle
- korrekt gehändelt werden.
+Eine Formel, die bei der Eingabe vom Parser validiert wurde, ist auch zu
+ 100%ig sicher ausführbar.
+ Wenn eine Formel mit dem internen Parser validiert wurde und dann als Matlab
+ Code ausgegeben wird ist dies nicht sicher, denn die Parser unterscheiden
+ sich in Details, die unter Umständen nicht alle korrekt gehändelt werden.
  Zudem wird jede Formel beim internen Parser in einem separaten Kontext
- ausgeführt, was bei Matlab nicht der Fall ist, somit können unter ungünstigen
- Umständen Seiteneffekte auftreten, welche beim Internen Parser praktisch
- ausgeschlossen sind.
+ ausgeführt, was bei Matlab nicht der Fall ist.
+ Somit können unter ungünstigen Umständen Seiteneffekte auftreten, welche
+ beim internen Parser praktisch ausgeschlossen sind.
 \end_layout
 
 \begin_layout Itemize
-Fehler sind immer gehändelt, und können normalerweise Ihren Ursprungsobjekt
+Fehler sind immer gehändelt, und können normalerweise ihrem Ursprungsobjekt
  zugeordnet werden (z.B.
- einem Container), wenn im Matlab Code ein Fehler auftritt kann dieser nur
- einer Zeile zugeordnet werden, es ist jedoch für den Anwender nicht offensichtl
-ich wo der Ursprung des Fehlers liegt.
+ einem Container).
+ Wenn im Matlab Code ein Fehler auftritt, kann dieser nur einer Zeile zugeordnet
+ werden,.
+ Es ist jedoch für den Anwender nicht offensichtlich, wo der Ursprung des
+ Fehlers liegt.
 \end_layout
 
 \begin_layout Itemize
@@ -4501,21 +4610,22 @@ Die Simulation kann einfach abgebrochen werden: Wenn die externe Simulation
 
 \begin_layout Itemize
 Parallelisierung: Heutzutage besitzt jeder moderne PC mehr als einen Rechenkern.
- Mit Matlab/Octave ist es jedoch nicht möglich dies zu nutzen.
- Bei einer Internen Simulation wäre dies möglich, wenn auch aufwendig.
+ Mit Matlab/Octave ist es jedoch nicht möglich, dies zu nutzen.
+ Bei einer internen Simulation wäre dies möglich, wenn auch aufwendig.
  Somit könnte die Simulation grösserer Modelle um Faktoren beschleunigt
  werden.
  (Voraussetzung: mehr als ein Core, und das Modell muss entsprechend unabhängige
- Teile aufweisen, ein Aufteilen eines einzelnen Integrals ist theoretisch
- zwar möglich, praktisch ist es jedoch langsamer als die Simulation auf
- einem CPU, da die Synchronisation sehr viel Leistung benötigt)
+ Teile aufweisen.
+ Ein Aufteilen eines einzelnen Integrals ist theoretisch zwar möglich, praktisch
+ ist es jedoch langsamer als die Simulation auf einem CPU, da die Synchronisatio
+n sehr viel Leistung benötigt)
 \end_layout
 
 \begin_layout Standard
-Um die Vorteile einer Markuplanguage wirklich auszunutzen müssten Tools
- zum Einsatz kommen die aufgrund der Lizenzkosten nicht generell zur Verfügung
+Um die Vorteile einer Markuplanguage wirklich auszunutzen, müssten Tools
+ zum Einsatz kommen, die aufgrund der Lizenzkosten nicht generell zur Verfügung
  stehen.
- Ob diese bezüglich den oben genannten Punkten besser zu handhaben sind
+ Ob diese bezüglich den oben genannten Punkten besser zu handhaben sind,
  wurde nicht geprüft.
 \end_layout
 
@@ -4574,8 +4684,8 @@ Codeanmerkungen
 Der Javacode wurde mit Tabulatoren eingerückt, welche auf 4 Leerzeichen
  eingestellt sind.
  Das Encoding der Dateien ist UTF-8.
- Wird das Encoding falsch eingestellt können Sonderzeichen und Umlaute nicht
- mehr dargestellt werden.
+ Wird das Encoding falsch eingestellt, können Sonderzeichen und Umlaute
+ nicht mehr dargestellt werden.
 \end_layout
 
 \begin_layout Section
@@ -4595,15 +4705,16 @@ Weiterentwicklung
 \end_layout
 
 \begin_layout Standard
-Hier wird anhand von Beispielen beschrieben wie die Applikation weiterentwickelt
- werden kann.
- Die Beispiele an sich sind erfüllen nur den Zweck der Illustration.
+Hier wird anhand von Beispielen beschrieben, wie die Applikation weiterentwickel
+t werden kann.
+ Die Beispiele an sich erfüllen nur den Zweck der Illustration.
  Die Anleitung bezieht sich auf Eclipse unter Linux, es ist jedoch nicht
  relevant welche IDE das verwendet wird.
- Java Kenntnisse sind erforderlich, es wird davon ausgegangen das alle Projekte
- der Simulation bereits importiert wurden und fehlerfrei kompilieren (Innerhalb
- der IDE, Ant ist für diese Beispiele nicht erforderlich, da Eclipse, InteliJ,
- Netbeans und alle modernen IDEs automatisch den Javacode kompilieren).
+ Java Kenntnisse sind erforderlich.
+ Es wird davon ausgegangen, dass alle Projekte der Simulation bereits importiert
+ wurden und fehlerfrei kompilieren (Innerhalb der IDE, Ant ist für diese
+ Beispiele nicht erforderlich, da Eclipse, InteliJ, Netbeans und alle modernen
+ IDEs automatisch den Javacode kompilieren).
 \end_layout
 
 \begin_layout Subsection
@@ -4709,6 +4820,18 @@ pdfTeX: 3.1415926-1.40.10-2.2
 GIMP: 2.6.11
 \end_layout
 
+\begin_layout Itemize
+Dia 0.97.2
+\end_layout
+
+\begin_layout Itemize
+Microsoft Visio 2010
+\end_layout
+
+\begin_layout Itemize
+Microsoft Excel 2007
+\end_layout
+
 \end_deeper
 \begin_layout Subsection
 
@@ -4727,7 +4850,7 @@ Erstellen eines neuen Simulationsplugins
 \end_layout
 
 \begin_layout Standard
-Es wird ein neues Javaprojekt erstellt, mit den Name «SimulationPlugin.Sinnlos».
+Es wird ein neues Javaprojekt erstellt, mit dem Namen «SimulationPlugin.Sinnlos».
  In den Projekteinstellungen wird der «Java Build Path» konfiguriert, es
  werden folgende Projekte referenziert:
 \end_layout
@@ -4774,8 +4897,8 @@ Java Buildpath
 \begin_layout Itemize
 BJavalibs: Nötig für die Klasse Settings, welche die Einstellungen der Applikati
 on zur Verfügung stellt.
- Alle Einstellungen die gelesen/geschrieben werden erhalten zusätzlich ein
- prefix beim Namen.
+ Alle Einstellungen, die gelesen/geschrieben werden, erhalten zusätzlich
+ ein Prefix beim Namen.
  Wird also z.B.
  der Key 
 \begin_inset Quotes eld
@@ -4785,7 +4908,7 @@ hallo
 \begin_inset Quotes erd
 \end_inset
 
- gelesen wird intern 
+ gelesen, wird intern 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4810,11 +4933,11 @@ ExternLibraries: wird benötigt für «JXTaskPane», welches von SwingX stammt.
 \end_layout
 
 \begin_layout Itemize
-Model: Das Model wird benötigt da es alle Daten enthält
+Model: Das Model wird benötigt, da es alle Daten enthält
 \end_layout
 
 \begin_layout Itemize
-Plugin: Die generelle definition des Plugins, wird benötigt weil wir ein
+Plugin: Die generelle definition des Plugins wird benötigt, weil wir ein
  Plugin implementieren
 \end_layout
 
@@ -4849,19 +4972,19 @@ public boolean load() throws Exception: Die Initialisierung des Plugins
 \begin_layout Itemize
 public void unload(): Diese Methode wird vor dem Beenden der Applikation
  aufgerufen.
- Grundsätzlich ist es möglich Plugins wärend der Laufzeit zu entladen/neu
+ Grundsätzlich ist es möglich, Plugins wärend der Laufzeit zu entladen/neu
  zu laden, wird jedoch hier von der Applikation nicht unterstützt.
 \end_layout
 
 \begin_layout Itemize
-public JPanel getSettingsPanel(): Wird hier ein Wert != null zurückgegeben
+public JPanel getSettingsPanel(): Wird hier ein Wert != null zurückgegeben,
  wird dieser als eigener Tab in den Einstellungen angezeigt.
 \end_layout
 
 \begin_layout Itemize
 public JXTaskPane getConfigurationSidebar(SimulationType type): Wird hier
- ein Wert != null zurückgegeben wird das Panel in der Sidebar angezeigt.
- «type» gibt an ob die Konfiguration für ein XY oder für ein Flow model
+ ein Wert != null zurückgegeben, wird das Panel in der Sidebar angezeigt.
+ «type» gibt an, ob die Konfiguration für ein XY oder für ein Flow-Model
  benötigt wird.
 \end_layout
 
@@ -4872,7 +4995,7 @@ ovider provider): Hier wird das Plugin normalerweise initialisiert.
 rt werden, wie z.B.
  Defaultwerte.
  «config» sind die Einstellungen des aktuellen Dokuments, werden gespeichert
- aber sind immer vom aktuellen Dokument abhängig, und nicht global! «provider»
+ aber sind immer vom aktuellen Dokument abhängig und nicht global! «provider»
  stellt Objekte zur Verfügung, die z.B.
  für die GUI benötigt werden:
 \end_layout
@@ -4898,7 +5021,7 @@ public SimulationType getSimulationType(): Hier erhalten wir nochmals den
 \begin_layout Itemize
 public void checkDocument(SimulationDocument doc) throws SimulationModelExceptio
 n: Prüft ob eine Simulation möglich ist.
- Wenn das Plugin keine Dichten unterstützt kann dies hier abgefangen werden.
+ Wenn das Plugin keine Dichten unterstützt, kann dies hier abgefangen werden.
 \end_layout
 
 \begin_layout Itemize
@@ -4918,15 +5041,15 @@ public Vector<XYDensityRaw> getXYResults(SimulationDocument doc): Gibt die
 \end_layout
 
 \begin_layout Itemize
-public void cancelSimulation(): Wird aufgerufen wenn die Simulation abgebrochen
+public void cancelSimulation(): Wird aufgerufen, wenn die Simulation abgebrochen
  werden soll (von extern)
 \end_layout
 
 \begin_layout Standard
-Es ist davon auszugehen das alle Daten die dem Simulationsplugin übergeben
- werden bereits validiert sind, also Formeln etc., daher ist keine Validierung
- im Plugin erforderlich.
- Wenn ungültige Daten übergeben werden ist dies nicht im Plugin abzufangen,
+Es ist davon auszugehen, dass alle Daten, die dem Simulationsplugin übergeben
+ werden, bereits validiert sind, also Formeln etc.
+ Daher ist keine Validierung im Plugin erforderlich.
+ Wenn ungültige Daten übergeben werden, ist dies nicht im Plugin abzufangen,
  sondern in der Applikation.
  Wir vervollständigen nun den Code mit folgendem Beispiel:
 \end_layout
@@ -5575,12 +5698,12 @@ end{lstlisting}
 \end_layout
 
 \begin_layout Standard
-Um das Plugin nun zu kompilieren muss noch ein Antfile erstellt werden,
- auch dieses kann von einem bestehenden Plugin kopiert werden.
+Um das Plugin nun zu kompilieren, muss noch ein Antfile erstellt werden.
+ Auch dieses kann von einem bestehenden Plugin kopiert werden.
  Jedoch muss dann bei jeder Änderung das Antfile erneut ausgeführt werden,
- was ziemlich mühsam ist, daher gehen wir einen einfacheren Weg: wir kopieren
- das plugin.xml im Projekt «Simulation» in den Ordner «plugin/simulation»
- unter dem Name «Sinnlos.xml»
+ was ziemlich mühsam ist.
+ Daher gehen wir einen einfacheren Weg: wir kopieren das plugin.xml im Projekt
+ «Simulation» in den Ordner «plugin/simulation» unter dem Name «Sinnlos.xml»
 \end_layout
 
 \begin_layout Standard
@@ -5623,8 +5746,9 @@ Sinnlos.xml im korrekten Verzeichnis
 \end_layout
 
 \begin_layout Standard
-Danach wird die Applikation gestartet, dies geschieht durch ausführen der
- Klasse «ch.zhaw.simulation.startup.SimulationMain» aus dem Projekt «Simulation».
+Danach wird die Applikation gestartet.
+ Dies geschieht durch ausführen der Klasse «ch.zhaw.simulation.startup.SimulationMai
+n» aus dem Projekt «Simulation».
 \end_layout
 
 \begin_layout Standard
@@ -5667,9 +5791,10 @@ Nun erscheint ein Fehler, dass das Plugin nicht geladen werden konnte.
  Der Fehler wird geloggt, jedoch wird die Exception incl.
  allen Texten (in diesem Fall sind keine Zusatzlichen Texte vorhanden) auf
  der Konsole ausgegeben.
- In diesem Fall konnte die Klasse nicht geladen werden, dies kann einfach
- gelöst werden, indem beim Projekt «Simulation» das Projekt «SimulationPlugin.Sin
-nlos» in den Referenzierten Projekte (Java Build Path) hinzugefügt wird.
+ In diesem Fall konnte die Klasse nicht geladen werden.
+ Dies kann einfach gelöst werden, indem beim Projekt «Simulation» das Projekt
+ «SimulationPlugin.Sinnlos» in den Referenzierten Projekte (Java Build Path)
+ hinzugefügt wird.
 \end_layout
 
 \begin_layout Standard
@@ -5795,10 +5920,11 @@ Erstellen eines neuen GUI Elementes
 \end_layout
 
 \begin_layout Standard
-Hier wird erklärt wie ein neues Element eingefügt werden kann.
- Diese Anleitung ist stark vereinfacht, als Referenz sollten bereits vorhandene
- Implementationen verwendet werden, und nicht diese Anleitung.
- (Das Beispiel basiert auf dem Meso-Kompartment, und hat auch einige Codestücke
+Hier wird erklärt, wie ein neues Element eingefügt werden kann.
+ Diese Anleitung ist stark vereinfacht.
+ Als Referenz sollten bereits vorhandene Implementationen verwendet werden
+ und nicht diese Anleitung.
+ (Das Beispiel basiert auf dem Meso-Kompartment und hat auch einige Codestücke
  von dort, die der einfachheitshalber übernommen wurden)
 \end_layout
 
@@ -6276,8 +6402,9 @@ end{lstlisting}
 \end_layout
 
 \begin_layout Enumerate
-Nun muss ein Button eingefügt werden um den Block hinzuzufügen.
- Dies geschieht in ch.zhaw.simulation.toolbar.xy.XYToolbar, hier wird vor 
+Nun muss ein Button eingefügt werden, um den Block hinzuzufügen.
+ Dies geschieht in ch.zhaw.simulation.toolbar.xy.XYToolbar.
+ Hier wird vor 
 \begin_inset Quotes eld
 \end_inset
 
@@ -6437,10 +6564,10 @@ end{lstlisting}
 \end_layout
 
 \begin_layout Enumerate
-Nun wird ein Block element erstellt wenn wir auf den Button drücken.
+Nun wird ein Blockelement erstellt, wenn wir auf den Button drücken.
  Wir sind noch nicht fertig, aber wir starten nun die Applikation (SimulationMai
 n) und drücken auf den Button: Es erscheint eine Exception, welche uns auch
- sagt wo wir noch arbeiten müssen: 
+ sagt, wo wir noch arbeiten müssen: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -6516,8 +6643,8 @@ end{lstlisting}
 \end_layout
 
 \begin_layout Enumerate
-Danach versuchen fügen wir nochmals so ein Block ein, und siehe da, es funktioni
-ert!
+Danach fügen wir nochmals einen solchen Block ein, und siehe da, es funktioniert
+!
 \begin_inset Newline newline
 \end_inset
 
@@ -6561,12 +6688,12 @@ Block
 \end_layout
 
 \begin_layout Enumerate
-Was jetzt noch fehlt ist das laden/speichern des Blocks.
+Was jetzt noch fehlt, ist das Laden/Speichern des Blocks.
  Dies muss in «XmlModelLoader» und «XmlContentsSaver» implementiert werden.
- Beim speichern muss eine Implementation für «visitSimulationData» erstellt
- werden, und beim laden in der Methode «parseNode» dies erfolgt analog des
- vorhandenen Codes für andere Elemente, und wir hier nicht mehr im Detail
- erläutert.
+ Beim Speichern muss eine Implementation für «visitSimulationData» erstellt
+ werden und beim Laden in der Methode «parseNode».
+ Dies erfolgt analog des vorhandenen Codes für andere Elemente und wird
+ hier nicht mehr im Detail erläutert.
 \end_layout
 
 \begin_layout Subsection
@@ -6581,9 +6708,9 @@ name "sub:Einfügen-neuer-Icons"
 \end_layout
 
 \begin_layout Standard
-Als Icons wurden hauptsächlich SVG Icons verwendet, dies bedeutet das die
- Icons auf eine beliebige Grösse Skaliert werden könne, und trotzdem nicht
- an Qualität verlieren.
+Als Icons wurden hauptsächlich SVG Icons verwendet.
+ Dies bedeutet, dass die Icons auf eine beliebige Grösse skaliert werden
+ können und trotzdem nicht an Qualität verlieren.
  Die Icons stammen von:
 \end_layout
 
@@ -6596,18 +6723,19 @@ Humanity (Ubuntu/Canonical): https://launchpad.net/humanity
 \end_layout
 
 \begin_layout Standard
-Die Icons wurden Teilweise angepasst, dies wurde mit Inkscape vorgenommen.
+Die Icons wurden teilweise angepasst.
+ Dies wurde mit Inkscape vorgenommen.
 \end_layout
 
 \begin_layout Standard
-Anfangs wollten wird die Icons mit einem Java SVG Parser öffnen und darstellen,
- dies ist jedoch relativ langsam, zudem waren die SVG Libraries extrem langsam,
- verglichem mit dem laden eines .png.
- Daher haben wir uns entschieden das wir zwar immer noch bei den SVG bleiben,
+Anfangs wollten wird die Icons mit einem Java SVG Parser öffnen und darstellen.
+ Dies ist jedoch relativ langsam, zudem waren die SVG Libraries extrem langsam,
+ verglichem mit dem Laden eines .png.
+ Daher haben wir uns entschieden, dass wir zwar immer noch bei den SVG bleiben,
  es wird jedoch bei der ersten Verwendung durch Inkscape in ein PNG der
  richtigen Grösse konvertiert.
  Dadurch ist die Grafik immer noch beliebig skalierbar, aber auch schnell
- im laden.
+ im Laden.
  Die Klasse «IconLoader» konvertiert die Bilder automatisch, sofern:
 \end_layout
 
@@ -6646,9 +6774,9 @@ IconLoader.getIcon("<name ohne extension>", <Grösse in px>)
 \end_inset
 
 .
- Das Bild wird automatisch konvertiert und geladen, wenn es nicht klappt
- wird auf «stderr» ein Fehler ausgegeben, und stattdessen ein komplett rotes
- Bild angezeigt.
+ Das Bild wird automatisch konvertiert und geladen.
+ Wenn es nicht klappt, wird auf «stderr» ein Fehler ausgegeben und stattdessen
+ ein komplett rotes Bild angezeigt.
 \end_layout
 
 \begin_layout Subsection
@@ -6663,12 +6791,12 @@ Um das Projekt zu builden wird Ant verwendet.
 \end_layout
 
 \begin_layout Standard
-Das Projekt indem gebuildet wird ist «SimulationBuild», dieses enthält ein
- «build.xml», welches alle «build.xml» der Projekt aufruft.
- Dieses kompiliert alle Java Projekt, und kopiert die nötigen Ressourcen
+Das Projekt, in welchem gebuildet wird, ist «SimulationBuild».
+ Dieses enthält ein «build.xml», welches alle «build.xml» der Projekt aufruft.
+ Dieses kompiliert alle Java Projekte und kopiert die nötigen Ressourcen
  in den Ordner build/distrib bzw.
  build/tmp.
- Diese Skripts funktionieren grundsätzlich Systemunabhängig.
+ Diese Skripts funktionieren grundsätzlich systemunabhängig.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6678,7 +6806,7 @@ Setup
 \begin_layout Standard
 Der Setup wird ebenfalls vom Ant Buildsystem erstellt.
  Es hat separate Skripts für jedes Betriebssystem, welche nicht unter allen
- Betriebssystem ausgeführt werden könne, aufgrund von technischen Beschränkungen.
+ Betriebssystem ausgeführt werden können aufgrund von technischen Beschränkungen.
  Verschiedene Betriebssysteme handhaben Einstellungen wie Dateitypen, Icons,
  Executable, Setup etc.
  verschieden.
@@ -6784,8 +6912,8 @@ Icons, Übersetzungen etc.
 \end_layout
 
 \begin_layout Itemize
-Libraries, sind entweder bereits im System vorhanden, oder können in den
- Packages untergebracht werden, und sind somit der Applikation zugeordnet.
+Libraries sind entweder bereits im System vorhanden, oder können in den
+ Packages untergebracht werden und sind somit der Applikation zugeordnet.
 \end_layout
 
 \end_deeper
@@ -6795,7 +6923,7 @@ Windows (Microsoft Windows)
 
 \begin_deeper
 \begin_layout Itemize
-Applikationen werden im Normalfall von Hand installiert, und können über
+Applikationen werden im Normalfall von Hand installiert und können über
  einen Setup.exe oder über ein .msi Paket installiert werden.
 \end_layout
 
@@ -6805,7 +6933,7 @@ Updates werden von Hand installiert, sofern die Applikation keinen Mechanismus
 \end_layout
 
 \begin_layout Itemize
-Die Zuordnungen der Dateien liegt in der Registrierung, und muss entweder
+Die Zuordnungen der Dateien liegt in der Registrierung und muss entweder
  vom Setup oder von Programm selbst beim Starten angelegt werden.
  Dieser muss bei der Deinstallation auch wider entfernt werden.
 \end_layout
@@ -6814,8 +6942,8 @@ Die Zuordnungen der Dateien liegt in der Registrierung, und muss entweder
 Ausführbare Dateien (.exe) können Ressourcen enthalten, z.B.
  Icons.
  Aber z.B.
- Shared Libraries (.dll) können nicht als Ressourcen geladen werden, und
- müssen als separate Datei abgelegt werden.
+ Shared Libraries (.dll) können nicht als Ressourcen geladen werden und müssen
+ als separate Datei abgelegt werden.
 \end_layout
 
 \begin_layout Itemize
@@ -6828,9 +6956,9 @@ ichnis oder auch das System32 Verzeichnis sein.
 \end_deeper
 \begin_layout Standard
 Unser Setup wird infolge auf drei verschiedene Arten erstellt.
- Für Linux wird keine Package sondern nur eine .zip Datei mit allen zur Laufzeit
- erforderlichen Daten bereitgestellt.
- Da es sich um eine Open Source Applikation handelt ist anzustreben das
+ Für Linux wird keine Package, sondern nur eine .zip Datei mit allen zur
+ Laufzeit erforderlichen Daten bereitgestellt.
+ Da es sich um eine Open Source Applikation handelt, ist anzustreben, dass
  diese in die offiziellen Repositories gebracht wird und somit Updates und
  Abhängigkeiten automatisch installiert werden können.
 \end_layout
@@ -6839,11 +6967,11 @@ Unser Setup wird infolge auf drei verschiedene Arten erstellt.
 Für Mac OS X wird eine Package erstellt, welche einfach per Drag & Drop
  installiert werden kann.
  Dies wird mit «build.xml» aus dem Unterordner «mac» vorgenommen.
- Um den Setup zu erstellen muss php-cli installiert sein, es wird ein PHP
- File verwendet um das info.plist File zu erstellen (es handelt sich um ein
- sehr kleines Skript, welches problemlos auf eine andere Skriptsprache portiert
- werden könnte).
- Zu beachten ist das die Erstellung des Mac OS X Setup auf Windows nicht
+ Um den Setup zu erstellen, muss php-cli installiert sein.
+ Es wird ein PHP File verwendet, um das info.plist File zu erstellen (es
+ handelt sich um ein sehr kleines Skript, welches problemlos auf eine andere
+ Skriptsprache portiert werden könnte).
+ Zu beachten ist, dass die Erstellung des Mac OS X Setup auf Windows nicht
  funktioniert, da unter Windows die Executable Flags im Filesystem nicht
  vorhanden sind.
  Der Wrapper für Mac OS X kann mit 
@@ -6879,14 +7007,14 @@ Vorhandene Fehler/Fehlende Funktionalität
 \begin_layout Standard
 Die Applikation ist noch nicht fertig, es gibt noch Fehler in der Applikation
  und es gibt noch Funktionen die wünschenswert wären.
- Hier wird aufgelistet was bekannt ist bzw.
+ Hier wird aufgelistet, was bekannt ist bzw.
  besprochen wurde.
  Fehler sind teilweise mit TODOs im Code markiert, auch noch einige Details,
  welche hier nicht aufgelistet sind.
 \end_layout
 
 \begin_layout Itemize
-Bugs, Fehler: Fehler die Behoben werden müssen um die korrekte Funktionalität
+Bugs, Fehler: Fehler, die behoben werden müssen, um die korrekte Funktionalität
  zu gewährleisten
 \end_layout
 
@@ -6899,8 +7027,8 @@ Fehler im Simulationsmodell werden meist korrekt erkannt und dargestellt,
 \end_layout
 
 \begin_layout Itemize
-Im Flow Model wird nicht immer eine genug grosse Fläche neu gezeichnet wenn
- ein Fluss verändert wird.
+Im Flow Model wird nicht immer eine genug grosse Fläche neu gezeichnet,
+ wenn ein Fluss verändert wird.
  Teilweise wird sichtbar nur ein Teil neu gezeichnet, was dann ein 
 \begin_inset Quotes eld
 \end_inset
@@ -6918,8 +7046,8 @@ Loch
 
 \begin_layout Itemize
 Beim exportieren eines XY Diagramms wird die Dichte nicht exportiert.
- Die Dichte wird jedoch exportiert wenn die Simulationsresultate angezeigt
- werden, und dann ein Bild exportiert wird.
+ Die Dichte wird jedoch exportiert, wenn die Simulationsresultate angezeigt
+ werden und dann ein Bild exportiert wird.
 \end_layout
 
 \begin_layout Itemize
@@ -6929,21 +7057,22 @@ Beim exportieren eines XY Diagramms wird die Dichte nicht exportiert.
 
 \end_deeper
 \begin_layout Itemize
-Darstellungs Unschönheiten
+Darstellungsunschönheiten
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Die Mac OS X Toolbar Implementation funktioniert nicht überall korrekt,
- und musste daher teilweise abgeschaltet werden.
- Dies hat zur Folge das Buttons angezeigt werden, welche bei Mac OS X unüblich
- sind.
+Die Mac OS X Toolbar Implementation funktioniert nicht überall korrekt und
+ musste daher teilweise abgeschaltet werden.
+ Dies hat zur Folge, dass Buttons angezeigt werden, welche bei Mac OS X
+ unüblich sind.
 \end_layout
 
 \begin_layout Itemize
 Die Density Legende ist nicht besonders schön dargestellt, es wird viel
- Platz verschwendet, ggf.
- könnte die legende auch horizontal statt vertikal angezeigt werden.
+ Platz verschwendet.
+ Gegebenenfalls könnte die Legende auch horizontal statt vertikal angezeigt
+ werden.
 \end_layout
 
 \end_deeper
@@ -6953,14 +7082,15 @@ Missing Features
 
 \begin_deeper
 \begin_layout Itemize
-Beim Copy & Paste und beim Vektorgrafik Export wäre es wünschenswert Teilbereich
-e exportieren zu können, das Interface «ImageExportable» sieht dies vor,
- jedoch wird es bisher von keiner Implementation unterstützt.
+Beim Copy & Paste und beim Vektorgrafik Export wäre es wünschenswert, Teilbereic
+he exportieren zu können.
+ Das Interface «ImageExportable» sieht dies vor, jedoch wird es bisher von
+ keiner Implementation unterstützt.
 \end_layout
 
 \begin_layout Itemize
 Wird ein Name eines Simulationsobjekt angepasst, z.B.
- einem Container, wäre es wünschenswert wenn alle Formeln refactored werden.
+ einem Container, wäre es wünschenswert, wenn alle Formeln refactored werden.
 \end_layout
 
 \begin_layout Itemize
@@ -6969,10 +7099,10 @@ Die Dichte sollte nicht nur farblich, sondern auch mit Pfeilen dargestellt
 \end_layout
 
 \begin_layout Itemize
-Die Klasse «ArrowDragView» ist zuständig um eine Verbindung zwischen z.B.
+Die Klasse «ArrowDragView» ist zuständig, um eine Verbindung zwischen z.B.
  zwei Containern herzustellen.
- Auch wenn mit dem blauen Pfeil verbunden wird (beim selektierten Container)
- kann keine Flussverbindung mehr herstellt werden wenn bereits eine Parameter
+ Auch wenn mit dem blauen Pfeil verbunden wird (beim selektierten Container),
+ kann keine Flussverbindung mehr herstellt werden, wenn bereits eine Parameter
  Verbindung besteht.
  Die Verbindung kann nur über den Flusspfeil in der Toolbar hergestellt
  werden.
@@ -6982,12 +7112,13 @@ Die Klasse «ArrowDragView» ist zuständig um eine Verbindung zwischen z.B.
 \begin_layout Itemize
 Es sollte möglich sein in einem Flussdiagramm, das sich innerhalb eines
  XY-Diagramms befindet, auf z.B.
- die globalen des XY-Diagramms zuzugreifen, dies ist momentan nicht möglich.
+ die Globalen des XY-Diagramms zuzugreifen,.
+ Dies ist momentan nicht möglich.
 \end_layout
 
 \begin_layout Itemize
-Es ist nicht möglich das Meso-Kompartments verschmelzen/sich teilen, dies
- sollte noch nachgeführt werden
+Es ist nicht möglich, dass Meso-Kompartments verschmelzen/sich teilen.
+ Dies sollte noch nachgeführt werden
 \end_layout
 
 \begin_layout Itemize
@@ -7005,8 +7136,8 @@ Benutzerhandbuch
 \begin_layout Standard
 Das Benutzerhandbuch soll die Grundlegenden Funktionen der Applikation beschreib
 en.
- Es wird davon ausgegangen das die grundlegende Funktionsweise von Simulationsto
-ols bereits bekannt ist, wie z.B.
+ Es wird davon ausgegangen, dass die grundlegende Funktionsweise von Simulations
+tools bereits bekannt ist, wie z.B.
  von Berkeley Madonna/Dynasys, die ähnlich funktionieren.
 \end_layout
 
@@ -7473,11 +7604,11 @@ Ordner für die Installation wählen, normalerweise kann diese auf dem Standard
 \end_layout
 
 \begin_layout Standard
-Wurde die Installation an einem falschen Ort durchgeführt so muss die Applikatio
-n deinstalliert und erneut installiert werden, wird die Applikation einfach
- verschoben, so stimmen die Pfade die in die vom Setup in die Registrierung
- geschrieben wurden nicht mehr, und die Applikation lässt sich unter Umständen
- nicht einmal mehr deinstallieren.
+Wurde die Installation an einem falschen Ort durchgeführt, so muss die Applikati
+on deinstalliert und erneut installiert werden.
+ Wird die Applikation einfach verschoben, so stimmen die Pfade, die in die
+ vom Setup in die Registrierung geschrieben wurden, nicht mehr und die Applikati
+on lässt sich unter Umständen nicht einmal mehr deinstallieren.
 \end_layout
 
 \begin_layout Standard
@@ -7508,10 +7639,6 @@ Installation erfolgreich
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-Vorhandene Fehler/Fehlende Funktionalität
 \end_layout
 
 \end_inset
@@ -7599,20 +7726,20 @@ Portable Version
 
 \begin_layout Standard
 Die Portable Version benötigt keine Installation.
- Die Applikation wird als .zip zur Verfügung gestellt, und wird einfach entpackt.
- Ist die Applikation entpackt kann der komplette Ordner einfach kopiert
+ Die Applikation wird als .zip zur Verfügung gestellt und wird einfach entpackt.
+ Ist die Applikation entpackt, kann der komplette Ordner einfach kopiert
  werden, z.B.
  auf einen USB Stick, und kann dann an jedem beliebigen PC der über eine
  Java Runtime verfügt gestartet werden.
 \end_layout
 
 \begin_layout Standard
-Unter Linux/Unix/Mac OS X wird die Applikation gestartet indem das Shellscript
+Unter Linux/Unix/Mac OS X wird die Applikation gestartet, indem das Shellscript
  Simulation.sh gestartet wird.
 \end_layout
 
 \begin_layout Standard
-Unter Windows wird die Applikation gestartet indem Simulation.exe gestartet
+Unter Windows wird die Applikation gestartet, indem Simulation.exe gestartet
  wird.
 \end_layout
 
@@ -7629,9 +7756,9 @@ Das Bedienkonzept der Applikation ist relativ einfach.
 \end_layout
 
 \begin_layout Standard
-Alle Wichtigen Operationen werden in der Toolbar dargestellt, diese kann
- auch über ein Drop-Down Menü verfügen, dies wird mit einem kleinen Pfeil
- nach unten signalisiert.
+Alle Wichtigen Operationen werden in der Toolbar dargestellt.
+ Diese kann auch über ein Drop-Down Menü verfügen, dies wird mit einem kleinen
+ Pfeil nach unten signalisiert.
  Für alle gebräuchlichen Aktionen wird eine Tastenkombination angeboten,
  siehe 
 \begin_inset CommandInset ref
@@ -7654,7 +7781,7 @@ Sind Sie sicher...
 \end_inset
 
  Nachfragen verzichtet.
- Trotzdem liegt es in der Verantwortung des Benutzers regelmässig zu speichern,
+ Trotzdem liegt es in der Verantwortung des Benutzers, regelmässig zu speichern
  und ggf.
  Backups anzulegen.
 \end_layout
@@ -7706,8 +7833,9 @@ Hauptfenster
 \series default
  angezeigt.
  Dieses gibt es in zwei Varianten, eine für die XY Simulation und eine für
- die Flow Simulation, diese sind abgesehen von einer leicht verschiedene
- Funktionalität jedoch identisch.
+ die Flow Simulation.
+ Diese sind abgesehen von einer leicht verschiedene Funktionalität jedoch
+ identisch.
 \end_layout
 
 \begin_layout Enumerate
@@ -7748,7 +7876,7 @@ Die
 Statusleiste
 \series default
 .
- Hier wird der Benutzer darüber Informiert was er als nächstes machen kann.
+ Hier wird der Benutzer darüber informiert, was er als nächstes machen kann.
 \end_layout
 
 \begin_layout Subsection
@@ -7756,25 +7884,26 @@ Erstellen eines einfachen Flowmodells
 \end_layout
 
 \begin_layout Standard
-Hier wird erläutert wie ein Flow Modell erstellt werden kann.
+Hier wird erläutert, wie ein Flow Modell erstellt werden kann.
 \end_layout
 
 \begin_layout Enumerate
 Die Applikation wird gestartet/es wird «Datei/Neu» bzw.
- «Datei/Neu - Flow Model» gewählt, je nachdem ob man bereits ein Flow oder
+ «Datei/Neu - Flow Model» gewählt, je nachdem, ob man bereits ein Flow oder
  ein XY Modell geöffnet hat.
 \end_layout
 
 \begin_layout Enumerate
 Es wird ein Container erstellt: Entweder wird auf den grauen Zylinder in
- der Toolbar geklickt oder es wird «C» gedrückt.
+ der Toolbar geklickt, oder es wird «C» gedrückt.
  Danach wird in die Zeichnungsfläche geklickt.
 \end_layout
 
 \begin_layout Enumerate
-Wenn auf den Container geklickt wird wird er orange, er ist nun selektiert.
- Zudem wird oben rechts vom Container ein kleiner blauer Pfeil dargestellt,
- mit diesem Pfeil können direkt Verbindungen vorgenommen werden.
+Wenn auf den Container geklickt wird, wird er orange.
+ Er ist nun selektiert.
+ Zudem wird oben rechts vom Container ein kleiner blauer Pfeil dargestellt.
+ Mit diesem Pfeil können direkt Verbindungen vorgenommen werden.
  Verbindungen können aber auch über die Toolbar erstellt werden (der blaue,
  dicke Pfeil).
 \end_layout
@@ -7914,7 +8043,7 @@ Grundlegend
 \end_layout
 
 \begin_layout Standard
-Dies ist Liste mit den gängigen/nützlichen Tastenkombinationen die oftmals
+Dies ist Liste mit den gängigen/nützlichen Tastenkombinationen, die oftmals
  bereits vom Betriebssystem bereitgestellt werden.
  Diese Liste ist nicht vollständig.
  Diese Kombinationen funktionieren an vielen Orten der Applikation, z.B.
@@ -8101,7 +8230,7 @@ Hauptfenster
 \begin_layout Standard
 Für die Tastenkombinationen ohne Hilfstaste (CTRL etc.) muss der Fokus auf
  der Zeichnungsfläche liegen.
- Dies geschieht indem einfach kurz in einen freien Bereich der Zeichnungsfläche
+ Dies geschieht, indem einfach kurz in einen freien Bereich der Zeichnungsfläche
  geklickt wird.
  Die Meisten Tastenkombinationen werden im Menü angegeben, oder in den Tooltips
  der Toolbuttons in Klammern angegeben.
