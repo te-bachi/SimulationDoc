@@ -2999,7 +2999,8 @@ version
 \end_layout
 
 \begin_layout Standard
-Version ist ein Java Property File, mit zwei Einträgen:
+Die Datei «version» ist ein Java Property File, mit zwei Einträgen, beides
+ Integer.
 \end_layout
 
 \begin_layout Quote
@@ -3011,18 +3012,13 @@ compatible=1
 \end_layout
 
 \begin_layout Standard
-«version» ist ein Ganzzahlwert, die Version die Datei, «compatible» ist
- ebenfalls eine Ganzzahl, die angibt mit welcher Version die Datei immer
- noch eingelesen werden kann, ohne dass Probleme auftreten.
- Kleinere Unstimmigkeiten werden in Kauf genommen, aber das Modell kann
- immer noch eingelesen werden, somit ist die Rückwärtskompatibilität genau
- geregelt.
-\end_layout
-
-\begin_layout Standard
-Wird eine Inkompatible Änderung am Dateiformat vorgenommen, so müssen beide
+Der Eintrag «version=» ist die Version des Dateiformates.
+ Der Eintrag «compatible=» ist die Version des Dateiformates zu der diese
+ Datei abwärtskompatibel ist, also immer noch eingelesen werden kann, ohne
+ das grössere Probleme auftreten.
+ Wird eine Inkompatible Änderung am Dateiformat vorgenommen, so müssen beide
  Versionsnummern um eins hochgezählt werden, wird eine kompatible Erweiterung
- am Dateisystem vorgenommen so wird lediglich «version» hochgezählt.
+ am Dateiformat vorgenommen, so wird lediglich «version=» hochgezählt.
 \end_layout
 
 \begin_layout Standard
@@ -4126,9 +4122,24 @@ predefinedDash: Die Liniendefinitionen für das Diagram.
 \end_layout
 
 \begin_layout Itemize
-defaultsFonts: Die Fonts, die verwendet werden für das Diagramm, die erste
- Schrift, die installiert ist, der mit Semikolon (;) separierter Liste wird
- verwendet
+defaultsFonts: Eine mit Semikolon (;) getrennte Liste von Schriftnamen.
+ Die erste Schrift, welche auf dem System installiert ist wird verwendet
+ für die Diagramme.
+\begin_inset Newline newline
+\end_inset
+
+Dies wird benötigt um eine passende, installierte Schrift zu finden, denn
+ wird eine Java Schrift wie 
+\begin_inset Quotes eld
+\end_inset
+
+Sans
+\begin_inset Quotes erd
+\end_inset
+
+ verwendet, so wird dieser Name auf eine installierte Schrift gemappt.
+ Dieses Mapping kann zu Inkonsistenzen bei der JFreeChart Schriftenkonfiguration
+ führen.
 \end_layout
 
 \begin_layout Itemize
