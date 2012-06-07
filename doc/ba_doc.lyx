@@ -4684,6 +4684,16 @@ GIMP: 2.6.11
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+Codedokumentation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Doxygen: 1.7.3
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 
 \series bold
@@ -4694,6 +4704,31 @@ SimulationJepLib-2.4.1
 Der Projekt SimulationJepLib-2.4.1 enthält den von uns verwendeten Parser,
  der auch für die Berechnungen des Internen Simulationsplugins verwendet
  wird.
+ Dieser Parser steht unter der GPL, wird jedoch leider nicht mehr weiterentwicke
+lt.
+ Es gibt nun eine kommerzielle Lösung, die etwas mehr Funktionsumfang hat
+ und laut der Herstellerfirma Faktor 2 schneller ist.
+ Die Komerzielle Lösung kommt für unser Projekt nicht in Frage, wir haben
+ den Parser komplett ins Projekt übernommen, und auch Anpassungen vorgenommen,
+ z.B.
+ um Warnungen mit Java 1.6 zu vermeiden und um kleine Fehler zu beheben.
+\end_layout
+
+\begin_layout Standard
+Somit ist dies ein 
+\begin_inset Quotes eld
+\end_inset
+
+Fork
+\begin_inset Quotes erd
+\end_inset
+
+ des Originals, und muss innerhalb des Simulationsprojektes gewartet werden,
+ es sind keine externen Updates zu erwarten.
+ Der Parser hat jedoch ein weitaus höheren Umfang als bei der Simulation
+ benötigt wird, und es sind Unittests für den Parser vorhanden.
+ Daher sollte dies kein Problem darstellen, da warscheinlich keine Fehler
+ mehr im Parser vorhanden sind, welche die Simulation beeinträchtigen könnten.
 \end_layout
 
 \begin_layout Subsection
@@ -7726,7 +7761,7 @@ Statusleiste
 \end_layout
 
 \begin_layout Subsection
-Erstellen eines einfachen Flowmodells
+Erstellen eines einfachen Flow-Modells
 \end_layout
 
 \begin_layout Standard
@@ -7857,6 +7892,534 @@ Interpretation des Diagramms: Der Container (rote Linie) enthält anfangs
  100, wird dann mit 1/Zeiteinheit entleert und erhält dann logischerweise
  beim Zeitpunkt 100 nur noch 0.
  Danach wird der Inhalt des Countainers negativ.
+\end_layout
+
+\begin_layout Subsection
+Generelle Verwendung der Simulationsapplikation
+\end_layout
+
+\begin_layout Standard
+Das Diagramm verfügt über Einstellungen, welche über das Kontextmenü oder
+ über die Buttons in der Toolbar konfiguriert werden kann.
+ Der Einstellungsdialog ermöglicht das Anpassen der Farben, der Schrift
+ und der Beschriftung.
+ Bei der Beschriftung wurde noch eine Spezialzeichen Tastatur angebracht,
+ welche es ermöglicht Symbole zu wählen welche auf der Schweizer Tastatur
+ nicht zur Verfügung stehen.
+ Alle Änderungen der Einstellungen werden direkt im Diagramm dargestellt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Diagramm Einstellungen1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Diagramm Einstellungen 2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagramm Einstellungen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Formeleditor, der überall zum Einsatz kommt verfügt über eine Toolbar,
+ bei der alle Verfügbaren Variablen (Systemdefiniert, oder verbundene Parameter
+ / Container) anzeigt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Formelditor.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Formeleditor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Formelditor parst die Formel automatisch.
+ Ca.
+ 1 Sekunde nach der letzten Eingabe steht in der Statusleiste ob die Formel
+ fehlerfrei ist, oder was für Fehler das vorhanden sind.
+ Der Formeleditor verfügt über Syntaxhilighting, welches z.B.
+ Variablen farblich hervorhebt, und er verfügt über Autocompletion, welche
+ die Eingabe langer Namen abkürzt: Es kann einfach «Enter» gedrückt werden,
+ um die Eingabe zu übernehmen.
+\end_layout
+
+\begin_layout Standard
+Der Editor ist mehrzeilig, und wenn die Interne Simulation verwendet wird
+ ist es auch möglich Variable zu definieren (Dies funktioniert nicht mit
+ der Matlab Simulation!), und dann später auf diese zurückzugreifen.
+ Dies könnte dann in etwa so aussehen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Mehrzeilige Formel.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Formeleditor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hierbei werden zuerst die ersten beiden Formel ausgerechnet, danach werden
+ diese Zahlen in der dritten Formel eingesetzt und das Resultat der letzten
+ Formel wird verwendet.
+\end_layout
+
+\begin_layout Standard
+Es gibt die Möglichkeit Modelle und Diagramme/XY-Resultate als Bild zu exportier
+en.
+ Ein entsprechender Button ist entweder im Menü oder in der Toolbar zu finden.
+ Es wird dann folgender Dialog angezeigt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Image export.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Bilderexport
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wenn gespeichert wird, wird an den Namen automatisch eine fortlaufende Nummer
+ angehängt.
+ Es können somit mehre Bilder stellt werden mit dem gleichen Namen ohne
+ das alte Bild zu überschreiben.
+\end_layout
+
+\begin_layout Standard
+Die Ordnerauswahl ist Betriebssystem Abhängig, und stellt die Typischen
+ Ordner wie Desktop bereit.
+ Es kann auch ein Benutzerdefinierter Ordner gewählt werden (unterster Menüeintr
+ag).
+\end_layout
+
+\begin_layout Standard
+Wahl der Bildformate:
+\end_layout
+
+\begin_layout Itemize
+PNG (Portable Network Graphics): Eine Rastergrafik ohne Qualitätsverluste,
+ geeignet für die Darstellung in Webseiten, nicht geeignet für den Druck
+\end_layout
+
+\begin_layout Itemize
+SVG (Scalable Vector Graphics): Vektorgrafik, geeignet für Darstellungen
+ im Web, kann direkt in HTML Seiten eingebunden werden.
+\end_layout
+
+\begin_layout Itemize
+PS (PostScript): Vektorgrafik.
+ Technisch mit PDFs verwandt, geeignet für Druck, meist können Drucker PS
+ direkt verarbeiten.
+\end_layout
+
+\begin_layout Itemize
+EMF (Windows Enhanced Metafile): Dieses Format stammt von Microsoft, und
+ findet hauptsächlich in Microsoft Produkten Verwendung.
+ Bei älteren Office Versionen ist dies das einzige Vektorgrafikformat das
+ unterstützt wird.
+\end_layout
+
+\begin_layout Standard
+In die Zwischenablage wird immer nur eine Rastergrafik kopiert (Jedes Betriebssy
+stem handhabt Vektorgrafiken anders, daher ist der Austausch vom Vektorgrafiken
+ nur über Dateien möglich).
+\end_layout
+
+\begin_layout Subsection
+Erstellen eines XY-Modells
+\end_layout
+
+\begin_layout Standard
+Das erstellen des XY-Modells erfolgt analog zum erstellen eines Flow-Modellen.
+ Es wird hier nur noch beschrieben was spezifisch das XY-Modell betrifft.
+\end_layout
+
+\begin_layout Standard
+Zusammenhang zwischen den Meso-Kompartimenten und den darunterliegenden
+ Flow-Modellen (genannt 
+\begin_inset Quotes eld
+\end_inset
+
+Sumbodell
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Ganz links in der Toolbar, der graue Kreis, ist das Meso-Kompartiment,
+ rechts davon ist der Pfeil für das Drop-Down Menü, welches es ermöglicht
+ Submodelle zu erstellen, zu löschen und zu wählen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Bildschirmfoto-10.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Submodell erstellen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Farbe der Sumodelle wird auf dem Farbkreis gleichmässig gewählt, die
+ ermöglicht den höchstmöglichen Farbunterschied.
+ Theoretisch sind somit bis zu 360 Verschiedene Farben möglich, währen praktisch
+ diese natürlich nicht mehr alle unterschieden werden können.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Submodellwahl.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Submodell wählen für neue Meso-Kompartimente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wird ein Sumodell gewählt so nimmt das Meso-Kompartiment in der Toolbar
+ die Farbe an, und alle neu erstellten Meso-Kompartimente sind diesem Submodel
+ zugeordnet.
+ In diesem Menü können auch die Namen der Submodelle geändert werden, und
+ es können Submodelle gelöscht werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Submodel Sidebar.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Submodell wählen für bestehende Meso-Kompartimente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wird ein Meso-Kompartiment markiert, so kann das darunterliegende Submodell
+ gewählt werden.
+ Es können ebenfalls die Gleichungen für die Position X und Y bzw.
+ dessen Ableitungen eingegeben werden.
+ Hier wäre auch zu erkennen welches Submodell das gewählt ist, falls dies
+ Aufgrund zu vieler Farben oder z.B.
+ Farbenblindheit nicht möglich ist.
+\end_layout
+
+\begin_layout Standard
+Wird auf ein Meso-Kompartiment doppelgeklickt, so erscheint das darunterliegende
+ Submodell.
+ Falls mehrere Meso-Kompartimente dem gleichen Submodell zugeordnet sind
+ spielt es keine Rolle auf welches das geklickt wird, es wird immer das
+ gleiche Modell angezeigt, und wird dieses editiert betrifft dies auch alle
+ 
+\begin_inset Quotes eld
+\end_inset
+
+gleichfarbigen
+\begin_inset Quotes erd
+\end_inset
+
+ Meso-Kompartimente.
+\end_layout
+
+\begin_layout Standard
+Unterhalb der «Eigenschaften» Sidebar ist noch die «Dichte Sidebar», hier
+ können die Dichten erfasst werden.
+ Durch drücken von [+] wird eine neue Dichte erstellt, danach wird auf den
+ Schreiber geklickt, um die Dichte zu bearbeiten.
+ Wir wählen hier mal 
+\begin_inset Quotes eld
+\end_inset
+
+sin(x/10)+sin(y/10)
+\begin_inset Quotes erd
+\end_inset
+
+, dies ergibt ein Karo-Muster.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Dichte.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Submodell wählen für bestehende Meso-Kompartimente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wenn wir nun auf unser Meso-Kompartiment Doppelklicken erscheint das Submodell.
+ Neu gibt es nun in der Toolbar auch ein rechteckiger Container, nicht nur
+ ein Runder.
+ Dieser Container bezieht sich auf eine Dichte des XY-Modells, und ist nur
+ im Submodel verfügbar, nicht im Flow-Modell.
+ Wir erstellen einen Dichtecontainer.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/handbuch/Dichtecontainer.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Submodell wählen für bestehende Meso-Kompartimente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dieser Dichtecontainer kann in der Sidebar einer Dichte zugeordnet werden.
+ Werden nun Ein-/Ausflüsse gemacht, so wird die Dichte verändert, an der
+ Position, an der sich das Meso-Kompartiment befindet.
 \end_layout
 
 \begin_layout Subsection
@@ -8263,6 +8826,10 @@ Inhalt der CD
 \end_deeper
 \begin_layout Itemize
 /doku: Die Dokumentation, als Source und PDF
+\end_layout
+
+\begin_layout Itemize
+/codedoku: Mit Doxygen generierte Sourcecode Dokumentation
 \end_layout
 
 \begin_layout Itemize
