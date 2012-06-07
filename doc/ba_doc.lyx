@@ -1760,6 +1760,12 @@ Diffusionsgleichung
 \end_layout
 
 \begin_layout Standard
+Weiten wir das Beispiel in der Gleichung ...
+ aus.
+ 
+\end_layout
+
+\begin_layout Standard
 Ein Beispiel aus der Natur soll eines von vielen Anwendungsgebieten aufzeigen.
  Eine Zelle ist von einer Zellmembran umschlossen, die die Zelle schützt.
  Die Zelle kann aber durch ihre teildurchlässige Membran Nährstoffe aufnehmen
@@ -4166,20 +4172,20 @@ Dies kann zu probleme führen, z.B.
 schirm zentriert angezeigt.
 \end_layout
 
-\begin_layout Section
-Numerische Lösungsverfahren
-\end_layout
-
-\begin_layout Subsection
-Tests und Validierung
+\begin_layout Subsubsection
+Matlab Code Generator
 \end_layout
 
 \begin_layout Standard
-Test der Matheengine, Vergleich mit Berkeley-Madonna
+
 \end_layout
 
 \begin_layout Section
 Resultate
+\end_layout
+
+\begin_layout Standard
+Test der Matheengine, Vergleich mit Berkeley-Madonna
 \end_layout
 
 \begin_layout Standard
