@@ -2823,6 +2823,51 @@ TODO Querverweis
 \end_layout
 
 \begin_layout Subsubsection
+Vorhandene Simulationplugins
+\end_layout
+
+\begin_layout Standard
+Es sind bereits zwei Plugins vorhanden, eines das alles Intern Simuliert,
+ und eines das Matlab Code generiert und diesen Ausführt.
+\end_layout
+
+\begin_layout Itemize
+Internes Plugin
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Kann nur Flow Modelle Simulieren
+\end_layout
+
+\begin_layout Itemize
+Simulationsverfahren: Euler Verfahren, Runge Kutta 4
+\end_layout
+
+\begin_layout Itemize
+Funktionsweise: Es wird alles mit dem intern vorhandenen JEP Parser gerechnet
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Matlab Plugin
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Kann Flow und XY Modelle Simulieren
+\end_layout
+
+\begin_layout Itemize
+Simulationsverfahren: 
+\color red
+TODO Bachi!
+\color inherit
+ Für XY-Modell: Runge Kutta 4
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
 Dateiformat
 \end_layout
 
@@ -4540,10 +4585,21 @@ Verwendete Tools/Libraries
 \end_layout
 
 \begin_layout Itemize
+Runtime
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 Java Version: 1.6/6 (Java 1.6 ist die interne Versionsnummer, Java 6 ist die
  Marketingbezeichnung)
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+Entwicklungsumgebung
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 Eclipse: 3.7.1
 \end_layout
@@ -4552,6 +4608,16 @@ Eclipse: 3.7.1
 IntelliJ: 11.1.1
 \end_layout
 
+\begin_layout Itemize
+Inkscape: 0.48.1
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Setup / Launcher
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 NSIS: 2.46 (18.04.2010)
 \end_layout
@@ -4565,9 +4631,19 @@ Launch4J: 3.0.2 (02.01.2011)
 \end_layout
 
 \begin_layout Itemize
-Inkscape: 0.48.1
+Ant: 1.8.1
 \end_layout
 
+\begin_layout Itemize
+Jar Bundler: 13.7.0 (Mac OS X 10.6.8)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Libraries
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 JFreechart: 1.0.14 (incl.
  JCommon: 1.0.17)
@@ -4585,6 +4661,7 @@ SwingX: 1.6
 Freeheap: 2.1.1
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 Dokumentation:
 \end_layout
@@ -4603,10 +4680,22 @@ pdfTeX: 3.1415926-1.40.10-2.2
 \end_layout
 
 \begin_layout Itemize
-GIMP: 2.6.11 
+GIMP: 2.6.11
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+
+\series bold
+SimulationJepLib-2.4.1
+\end_layout
+
+\begin_layout Standard
+Der Projekt SimulationJepLib-2.4.1 enthält den von uns verwendeten Parser,
+ der auch für die Berechnungen des Internen Simulationsplugins verwendet
+ wird.
+\end_layout
+
 \begin_layout Subsection
 Erstellen eines neuen Simulationsplugins
 \end_layout
@@ -6766,8 +6855,8 @@ Die Applikation ist noch nicht fertig, es gibt noch Fehler in der Applikation
  und es gibt noch Funktionen die wünschenswert wären.
  Hier wird aufgelistet was bekannt ist bzw.
  besprochen wurde.
- Fehler sind teilweise mit TODOs im Code markiert, auch weniger wichtige
- Punkte die hier nicht aufgelistet sind.
+ Fehler sind teilweise mit TODOs im Code markiert, auch noch einige Details,
+ welche hier nicht aufgelistet sind.
 \end_layout
 
 \begin_layout Itemize
@@ -6784,8 +6873,8 @@ Fehler im Simulationsmodell werden meist korrekt erkannt und dargestellt,
 \end_layout
 
 \begin_layout Itemize
-Im Flow Model wird nicht immer genug neu gezeichnet wenn ein Fluss verändert
- wird.
+Im Flow Model wird nicht immer eine genug grosse Fläche neu gezeichnet wenn
+ ein Fluss verändert wird.
  Teilweise wird sichtbar nur ein Teil neu gezeichnet, was dann ein 
 \begin_inset Quotes eld
 \end_inset
@@ -6795,14 +6884,14 @@ Loch
 \end_inset
 
  im Fluss zur Folge hat.
- Durch aufspannenen eines Selektionsvierecks wird alles korrekt neu gezeichnet.
- Das Problem ist das, dass die Bounds der Bezierkurve beim verschieben nicht
- immer korrekt berechnet wird, es muss der alte und der neue Bereich berechnet
+ Durch aufspannen eines Selektionsvierecks wird alles korrekt neu gezeichnet.
+ Das Problem ist, dass die Bounds der Bezierkurve beim verschieben nicht
+ immer korrekt berechnet werden, es muss der alte und der neue Bereich berechnet
  und die Vereinigungsmenge neu gezeichnet werden.
 \end_layout
 
 \begin_layout Itemize
-Beim exportieren eines XY Diagrammes wird die dichte nicht exportiert.
+Beim exportieren eines XY Diagramms wird die Dichte nicht exportiert.
  Die Dichte wird jedoch exportiert wenn die Simulationsresultate angezeigt
  werden, und dann ein Bild exportiert wird.
 \end_layout
@@ -6814,7 +6903,7 @@ Beim exportieren eines XY Diagrammes wird die dichte nicht exportiert.
 
 \end_deeper
 \begin_layout Itemize
-Darstellungs unschönheiten
+Darstellungs Unschönheiten
 \end_layout
 
 \begin_deeper
@@ -6833,19 +6922,19 @@ Die Density Legende ist nicht besonders schön dargestellt, es wird viel
 
 \end_deeper
 \begin_layout Itemize
-Missing features
+Missing Features
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Beim Copy & Paste und beim Vektorgrafik Export wäre es wünschenswert teilbereich
+Beim Copy & Paste und beim Vektorgrafik Export wäre es wünschenswert Teilbereich
 e exportieren zu können, das Interface «ImageExportable» sieht dies vor,
  jedoch wird es bisher von keiner Implementation unterstützt.
 \end_layout
 
 \begin_layout Itemize
 Wird ein Name eines Simulationsobjekt angepasst, z.B.
- einem Container, wäre es wünschenswert wenn alle Formel refactored werden.
+ einem Container, wäre es wünschenswert wenn alle Formeln refactored werden.
 \end_layout
 
 \begin_layout Itemize
