@@ -2827,8 +2827,8 @@ Vorhandene Simulationplugins
 \end_layout
 
 \begin_layout Standard
-Es sind bereits zwei Plugins vorhanden, eines das alles Intern Simuliert,
- und eines das Matlab Code generiert und diesen Ausführt.
+Es sind bereits zwei Plugins vorhanden, eines das alles intern simuliert,
+ und eines das Matlab Code generiert und diesen ausführt.
 \end_layout
 
 \begin_layout Itemize
@@ -2860,10 +2860,30 @@ Kann Flow und XY Modelle Simulieren
 
 \begin_layout Itemize
 Simulationsverfahren: 
-\color red
-TODO Bachi!
-\color inherit
- Für XY-Modell: Runge Kutta 4
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Für Flow-Modell: Euler, Runge-Kutta 4.
+ Nicht ausführliche getestet: Fehlberg, Cash-Karp, Dormand-Prince
+\end_layout
+
+\begin_layout Itemize
+Für XY-Modell: Runge Kutta 4
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Funktionsweise: Beim JEP Parser, der bei jeder Eingabe im GUI eine Verifikation
+ vornimmt und bei einer fehlerhaften Formel einen Fehler ausgibt, werden
+ alle Formeln zuerst aufbereitet und in Matlab Code herausgeschrieben.
+ Matlab wird gestartet und der Matlab Code wird ausführt.
+ Falls der zuvor generierte Code keine Fehler hat, werden pro Resultat eine
+ Text-Datei erstellt, die dann nach beenden von Matlab in der Simulation
+ geladen und dargestellt werden.
+ Bei fehlerhaftem Code bricht Matlab die Ausführung ab, beendet sich aber
+ nicht.
+ Der Prozess muss dann manuell beendet werden.
 \end_layout
 
 \end_deeper
