@@ -151,6 +151,13 @@ status open
 
 
 \backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ThisTileWallPaper{
 \backslash
 paperwidth}{
@@ -194,10 +201,10 @@ Zusammenfassung
 
 \begin_layout Standard
 Im Rahmen dieser Bachelor Arbeit wurde ein Simulationswerkzeug erstellt,
- welches sich durch eine einfache Benutzeroberfläche und Plattformunabhängigkeit
- auszeichnet.
+ welches sich durch eine benutzerfreundliche Benutzeroberfläche und Plattformuna
+bhängigkeit auszeichnet.
  Zudem ist es möglich biologische Prozesse, wie das innere einer Zelle,
- einfach zu modellieren.
+ zu modellieren.
  Es wird eine Simulation mit Containern und Flüssen, welche mathematisch
  ein Integral darstellen, unterstützt.
  Zusätzlich ist die Simulation im zweidimensionalen Raum möglich.
@@ -259,11 +266,6 @@ eren.
 g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
  Simulationen von Biologischen Abläufen, wie das innere einer Zelle, darstellen
  soll.
- 
-\color red
-TODO: Danksagung
-\color inherit
-
 \begin_inset Newpage newpage
 \end_inset
 
