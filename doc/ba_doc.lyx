@@ -185,7 +185,22 @@ Abstract
 \end_layout
 
 \begin_layout Standard
-Englische Version von “Zusammenfassung”
+In the context of this bachelor thesis a simulation-tool has been implemented.
+ Some of the features of this tool are a simple graphical user interface
+ and operating system independence.
+ Moreover it's easily possible to model biological processes like inside
+ cells.
+ The simulation-tool supports containers and flows.
+ Flows are represented as a mathematical integral.
+ In addition it enables two-dimensional simulations.
+ In this mode a meso-compartment can move over a surface.
+ The movement can be implemented upon density dependencies as different
+ concentrations on different positions.
+ Therefore it's possible that a meso-compartment could move always to a
+ local peak, thus the highest concentration, and consume it.
+ Produce something like excretions occur on other densities that could affect
+ other meso-compartments.
+ As a consequence interactions of meso-compartments are ensured.
 \end_layout
 
 \begin_layout Section*
@@ -219,7 +234,17 @@ Berggipfel
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset Graphics
+	filename Transparent.png
+	scale 200
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
 \end_inset
 
 
@@ -264,7 +289,17 @@ g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
 TODO: Danksagung
 \color inherit
 
-\begin_inset Newpage newpage
+\begin_inset Graphics
+	filename Transparent.png
+	scale 200
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
 \end_inset
 
 
