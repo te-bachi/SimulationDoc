@@ -188,15 +188,19 @@ paperheight}{Titelseite/Titelseite.pdf}
 \end_layout
 
 \begin_layout Section*
+
+\lang english
 Abstract
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 In the context of this bachelor thesis a simulation-tool has been implemented.
  Some of the features of this tool are a user-friendly graphical user interface
  and operating system independence.
- Moreover it's easily possible to model biological processes like inside
- cells.
+ Moreover it's easily possible to model biological processes like the inside
+ of cells.
  The simulation-tool supports containers and flows.
  Flows are represented as a mathematical integral.
  In addition it enables two-dimensional simulations.
