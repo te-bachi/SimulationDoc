@@ -7297,7 +7297,7 @@ Updates werden von Hand installiert, sofern die Applikation keinen Mechanismus
 \begin_layout Itemize
 Die Zuordnungen der Dateien liegt in der Registrierung und muss entweder
  vom Setup oder von Programm selbst beim Starten angelegt werden.
- Dieser muss bei der Deinstallation auch wider entfernt werden.
+ Dieser muss bei der Deinstallation auch wieder entfernt werden.
 \end_layout
 
 \begin_layout Itemize
@@ -8211,7 +8211,7 @@ Menübar
 \series default
 .
  Links in der Toolbar sind die Elemente die eingefügt werden können.
- Weiter rechts sind die Speichern/Rückgängig/Widerherstellen und Layout
+ Weiter rechts sind die Speichern/Rückgängig/Wiederherstellen und Layout
  Buttons
 \end_layout
 
@@ -8312,7 +8312,7 @@ Ergebnis von Punkt 1 - 4
 
 \begin_layout Enumerate
 Es wird auf «con0» doppelgeklickt, dann wird der Wert 100 eingetragen und
- das Fenster wider geschlossen.
+ das Fenster wieder geschlossen.
  Das Fragezeichen müsste nun verschwunden sein.
 \end_layout
 
@@ -8641,7 +8641,7 @@ Zusammenhang zwischen den Meso-Kompartimenten und den darunterliegenden
 \begin_inset Quotes eld
 \end_inset
 
-Sumbodell
+Submodell
 \begin_inset Quotes erd
 \end_inset
 
@@ -8691,9 +8691,9 @@ Submodell erstellen
 \end_layout
 
 \begin_layout Standard
-Die Farbe der Sumodelle wird auf dem Farbkreis gleichmässig gewählt, die
- ermöglicht den höchstmöglichen Farbunterschied.
- Theoretisch sind somit bis zu 360 Verschiedene Farben möglich, währen praktisch
+Die Farbe der Sumodelle wird auf dem Farbkreis gleichmässig gewähl.
+ Dies ermöglicht den höchstmöglichen Farbunterschied.
+ Theoretisch sind somit bis zu 360 verschiedene Farben möglich, währen praktisch
  diese natürlich nicht mehr alle unterschieden werden können.
 \end_layout
 
@@ -8803,8 +8803,8 @@ gleichfarbigen
 \end_layout
 
 \begin_layout Standard
-Unterhalb der «Eigenschaften» Sidebar ist noch die «Dichte Sidebar», hier
- können die Dichten erfasst werden.
+Unterhalb der «Eigenschaften» Sidebar ist noch die «Dichte Sidebar».
+ Hier können die Dichten erfasst werden.
  Durch drücken von [+] wird eine neue Dichte erstellt, danach wird auf den
  Schreiber geklickt, um die Dichte zu bearbeiten.
  Wir wählen hier mal 
@@ -8902,6 +8902,74 @@ Submodell wählen für bestehende Meso-Kompartimente
 Dieser Dichtecontainer kann in der Sidebar einer Dichte zugeordnet werden.
  Werden nun Ein-/Ausflüsse gemacht, so wird die Dichte verändert, an der
  Position, an der sich das Meso-Kompartiment befindet.
+\end_layout
+
+\begin_layout Standard
+Zurück im XY Modell in einem der ausgewählten Meso-Kompartimente kann die
+ Bewegung dieses Meso-Kompartimentes formuliert werden.
+ Zuerst kann zwischen «Keine Ableitung» (keine Bewegung), «Erste Ableitung»
+ (Geschwindigkeit) und «Zweite Ableitung» (Beschleunigung) ausgewählt werden.
+ Danach kann in zwei unterschiedlichen Richtungen eine Formel eingegeben
+ werden.
+ Es ist zwingend pro Meso-Kompartiment zwei Bewegungs-Formeln einzugeben
+ um eine Simulation zu starten.
+ Als Beispiel soll ein Meso-Kompartiment dem Gradient einer Dichte als Geschwind
+igkeit folgen.
+ Dabei wird zuerst die Ableitung auf «Erste Ableitung» gesetzt und in 
+\begin_inset Formula $\dot{x}$
+\end_inset
+
+-Richtung 
+\family typewriter
+grad(
+\begin_inset Quotes eld
+\end_inset
+
+d1
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+x
+\begin_inset Quotes erd
+\end_inset
+
+)
+\family default
+ und in 
+\begin_inset Formula $\dot{y}$
+\end_inset
+
+-Richtung 
+\family typewriter
+grad(
+\begin_inset Quotes eld
+\end_inset
+
+d1
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+y
+\begin_inset Quotes erd
+\end_inset
+
+)
+\family default
+ geschrieben.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+TODO: Screenshot Gradient?
 \end_layout
 
 \begin_layout Subsection
