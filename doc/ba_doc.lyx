@@ -193,7 +193,29 @@ Zusammenfassung
 \end_layout
 
 \begin_layout Standard
-Wird erst am Ende der Arbeit geschrieben
+Im Rahmen dieser Bachelor Arbeit wurde ein Simulationswerkzeug erstellt,
+ welches sich durch eine einfache Benutzeroberfläche und Plattformunabhängigkeit
+ auszeichnet.
+ Zudem ist es möglich biologische Prozesse, wie das innere einer Zelle,
+ einfach zu modellieren.
+ Es wird eine Simulation mit Containern und Flüssen, welche mathematisch
+ ein Integral darstellen, unterstützt, und zusätzlich ist die Simulation
+ im Zweidimensionalen Raum möglich.
+ Hierbei bewegen sich sogenannten Meso-Kompartimente auf einer Flache.
+ Die Bewegung kann abhängig von Dichten, was verschiedenen Konzentrationen
+ an verschiedenen Stellen entspricht, ausgeführt werden.
+ Somit ist es möglich das sich ein Meso-Kompartiment immer gegen die 
+\begin_inset Quotes eld
+\end_inset
+
+Berggipfel
+\begin_inset Quotes erd
+\end_inset
+
+, also die höchstmögliche Konzentration bewegt, und diese konsumiert.
+ Ausscheidungen können dann auf eine andere Dichte erfolgen, welche andere
+ Meso-Kompartimente beeinflussen kann.
+ Somit ist eine Interaktion der Meso-Kompartimente gewährleistet.
 \end_layout
 
 \begin_layout Standard
@@ -218,12 +240,6 @@ LatexCommand tableofcontents
 
 \begin_layout Section*
 Vorwort
-\end_layout
-
-\begin_layout Standard
-
-\color red
-(= persönliches)
 \end_layout
 
 \begin_layout Standard
@@ -348,32 +364,26 @@ Problemstellung (oder Motivation)
 \end_layout
 
 \begin_layout Standard
-
-\color red
-Motivation durch Problemstellung! signalig chains (SimuLink), Biologie.
- Motivation->Problem->Insiliko
+In der Biologie gibt es oft Probleme welche simuliert werden sollen.
+ Oftmals bestehen diese Probleme aus mehreren Komponenten, von uns Meso-Komparti
+mente genannt, welche zusammenspielen.
+ Im kleinen könnte dies das innere einer Zelle sein, im grossen könnten
+ dies Kaninchen sein welche sich auf einer Wiese bewegen.
+ In beiden Fällen gibt es Konzentrationen, wie Löwenzahn (Pflanzen pro Position)
+ oder die Höhe des Grases, welche die Kaninchen beeinflusst.
+ Die Kaninchen werden natürlich sich dahin bewegen wo das beste Futter zu
+ finden ist, werden es fressen und müssen sich dann erneut auf die Suche
+ machen, da es an der alten Stelle kein Futter mehr hat.
 \end_layout
 
 \begin_layout Standard
-Statt: unsere Simulation, Andreas, oder so andere Formen wählen
-\end_layout
-
-\begin_layout Standard
-
-\color magenta
-Mit unserer Simulation
-\color inherit
- ist es zusätzlich möglich in einem XY Modell mehrere Meso-Kompartimente
- abzubilden, ein Meso-Kompartment ist das vorhin genannte Flussmodel.
- Diese Meso-Kompartimente können sich wären der Simulation im XY-Raum bewegen.
- Es können Dichten angegeben werden, die über den XY Raum verteilt sind,
- und die Meso-Kompartimente können an Ihrer aktuellen Position von der Dichte
- konsumieren oder Dichte produzieren, somit kann die Umgebung beeinflusst
- werden.
- Mit diesen Fähigkeiten ist es möglich, das Innenleben einer Zelle oder
- andere biologische Prozesse einfach, grafisch abzubilden.
- Die Idee und Vorgabe dieser Simulationsmethode stammt von Herr Scheidegger,
- und wurde zusammen mit Herr Füchslin und uns ausgearbeitet.
+Simulationen dieser Art bringen wichtige Erkenntnisse in der Biologie, jedoch
+ gibt es noch keine Werkzeuge mit denen solche Simulationen einfach durchgeführt
+ werden können, bis jetzt mussten die Simulationen programmiert werden,
+ was nicht in der Natur des Biologen liegt.
+ Mithilfe dieser Bachelor Arbeit soll es möglich sein solche Probleme ohne
+ Programmierung, nur durch grafische Modellierung und erfassen von Mathematische
+n Formeln solche Simulationen zu ermöglichen.
 \end_layout
 
 \begin_layout Section
