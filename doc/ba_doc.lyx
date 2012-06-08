@@ -151,6 +151,13 @@ status open
 
 
 \backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ThisTileWallPaper{
 \backslash
 paperwidth}{
@@ -209,10 +216,10 @@ Zusammenfassung
 
 \begin_layout Standard
 Im Rahmen dieser Bachelor Arbeit wurde ein Simulationswerkzeug erstellt,
- welches sich durch eine einfache Benutzeroberfläche und Plattformunabhängigkeit
- auszeichnet.
+ welches sich durch eine benutzerfreundliche Benutzeroberfläche und Plattformuna
+bhängigkeit auszeichnet.
  Zudem ist es möglich biologische Prozesse, wie das innere einer Zelle,
- einfach zu modellieren.
+ zu modellieren.
  Es wird eine Simulation mit Containern und Flüssen, welche mathematisch
  ein Integral darstellen, unterstützt.
  Zusätzlich ist die Simulation im zweidimensionalen Raum möglich.
@@ -284,11 +291,9 @@ eren.
 g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
  Simulationen von Biologischen Abläufen, wie das innere einer Zelle, darstellen
  soll.
- 
-\color red
-TODO: Danksagung
-\color inherit
+\end_layout
 
+\begin_layout Standard
 \begin_inset Graphics
 	filename Transparent.png
 	scale 200
@@ -7190,18 +7195,6 @@ Um die Vorteile einer Markuplanguage wirklich auszunutzen, müssten Tools
  wurde nicht geprüft.
 \end_layout
 
-\begin_layout Subsection*
-TODO
-\end_layout
-
-\begin_layout Standard
-Was Fehlt noch, was muss noch gemacht werden? Interpretation und Validierung
- der Resultate Rückblick auf Aufgabenstellung, erreicht bzw.
- nicht erreicht Legt dar, wie an die Resultate (konkret vom Industriepartner
- oder weiteren Forschungsarbeiten; allgemein) angeschlossen werden kann;
- legt dar, welche Chancen die Resultate bieten 18.
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -11190,12 +11183,6 @@ y
 )
 \family default
  geschrieben.
-\end_layout
-
-\begin_layout Standard
-
-\color red
-TODO: Screenshot Gradient?
 \end_layout
 
 \begin_layout Subsection
