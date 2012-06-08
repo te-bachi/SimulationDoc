@@ -8633,22 +8633,11 @@ Erstellen eines XY-Modells
 \begin_layout Standard
 Das erstellen des XY-Modells erfolgt analog zum erstellen eines Flow-Modellen.
  Es wird hier nur noch beschrieben was spezifisch das XY-Modell betrifft.
-\end_layout
-
-\begin_layout Standard
-Zusammenhang zwischen den Meso-Kompartimenten und den darunterliegenden
- Flow-Modellen (genannt 
-\begin_inset Quotes eld
-\end_inset
-
-Sumbodell
-\begin_inset Quotes erd
-\end_inset
-
-).
  Ganz links in der Toolbar, der graue Kreis, ist das Meso-Kompartiment,
  rechts davon ist der Pfeil für das Drop-Down Menü, welches es ermöglicht
  Submodelle zu erstellen, zu löschen und zu wählen.
+ Ein Submodell ist ein Flow-Modell, welches zusätzlich die Dichte verändern
+ kann.
 \end_layout
 
 \begin_layout Standard
