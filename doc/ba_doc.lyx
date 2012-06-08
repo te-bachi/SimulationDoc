@@ -199,12 +199,12 @@ Im Rahmen dieser Bachelor Arbeit wurde ein Simulationswerkzeug erstellt,
  Zudem ist es möglich biologische Prozesse, wie das innere einer Zelle,
  einfach zu modellieren.
  Es wird eine Simulation mit Containern und Flüssen, welche mathematisch
- ein Integral darstellen, unterstützt, und zusätzlich ist die Simulation
- im Zweidimensionalen Raum möglich.
- Hierbei bewegen sich sogenannten Meso-Kompartimente auf einer Flache.
+ ein Integral darstellen, unterstützt.
+ Zusätzlich ist die Simulation im zweidimensionalen Raum möglich.
+ Hierbei bewegen sich sogenannten Meso-Kompartimente auf einer Fläche.
  Die Bewegung kann abhängig von Dichten, was verschiedenen Konzentrationen
  an verschiedenen Stellen entspricht, ausgeführt werden.
- Somit ist es möglich das sich ein Meso-Kompartiment immer gegen die 
+ Somit ist es möglich, dass sich ein Meso-Kompartiment immer gegen die 
 \begin_inset Quotes eld
 \end_inset
 
