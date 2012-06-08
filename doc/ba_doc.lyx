@@ -151,7 +151,11 @@ status open
 
 
 \backslash
-include{titlepage}
+ThisTileWallPaper{
+\backslash
+paperwidth}{
+\backslash
+paperheight}{Titelseite/Titelseite.pdf}
 \end_layout
 
 \end_inset
@@ -160,7 +164,17 @@ include{titlepage}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset Graphics
+	filename Transparent.png
+	scale 200
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
 \end_inset
 
 
