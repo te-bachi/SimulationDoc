@@ -2965,7 +2965,7 @@ Für XY-Modell: Runge Kutta 4
 Funktionsweise: Beim JEP Parser, der bei jeder Eingabe im GUI eine Verifikation
  vornimmt und bei einer fehlerhaften Formel einen Fehler ausgibt, werden
  alle Formeln zuerst aufbereitet und in Matlab Code herausgeschrieben.
- Matlab wird gestartet und der Matlab Code wird ausführt.
+ Matlab wird gestartet und der Matlab Code wird ausgeführt.
  Falls der zuvor generierte Code keine Fehler hat, werden pro Resultat eine
  Text-Datei erstellt, die dann nach beenden von Matlab in der Simulation
  geladen und dargestellt werden.
@@ -4295,14 +4295,60 @@ Eines der Simulations-Plugins ist das Matlab Plugin.
  Flow-Modell pro Meso-Kompartiment unterschieden.
  Beim Flow-Modell können verschiedene Simulationsverfahren ausgewählt werden.
  Beim XY-Modell kann nur das Runge-Kutta-4-Verfahren gewählt werden.
+ Der Matlab-Code wird in temporäre Dateien eines einstellbaren Verzechnisses
+ geschrieben.
+ Welche Version von Matlab oder einer kompatiblen Software verwendet wird,
+ kann in den Einstellungen festgelegt werden.
 \end_layout
 
 \begin_layout Standard
-Zur kompakten Berechnung und für die Übergabe als Argument wird ein Vektor
- verwendet, der alle aktuellen Container-Werte beinhaltet.
- 
+Der Matlab Code ist mit Kommentaren ausgestattet, die eine Nachvollziehbarkeit
+ bei Fehlern anstrebt.
+ Zur kompakten Berechnung und für die Übergabe als Argument wird im Matlan
+ Code ein Vektor verwendet, der alle aktuellen Container-Werte beinhaltet.
+ Dabei gibt es zwei Algorithmen in Abbildung xxx und Abbildung yyy, die
+ seine Lösungen in Text-Dateien herausschreibt.
+ Alle Formeln aus dem GUI werden zuerst aufbereitet und in Matlab Code herausges
+chrieben.
+ Matlab wird gestartet und der Matlab Code wird ausgeführt.
+ Falls der zuvor generierte Code keine Fehler hat, werden pro Resultat eine
+ Text-Datei erstellt, die dann nach beenden von Matlab in der Simulation
+ geladen und dargestellt werden.
+ Bei fehlerhaftem Code bricht Matlab die Ausführung ab, beendet sich aber
+ nicht.
+ Der Prozess muss dann manuell beendet werden.
 \end_layout
 
+\begin_layout Standard
+Folgenden Parameter können pro Simulationsverfahren eingestellt werden:
+\end_layout
+
+\begin_layout Itemize
+Flow-Modell:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Euler, Runge-Kutta 4: Start- und Endzeit, Schrittweite dt
+\end_layout
+
+\begin_layout Itemize
+Fehlberg, Cash-Karp, Dormand-Prince: Start- und Endzeit, Schritt-Erhöhungsfaktor
+, Maximaler Schritt, Fehlertoleranz
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+XY-Modell:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Runge-Kutta 4: Start- und Endzeit, Schrittweite dt, Bilder pro Zeitschritt,
+ Diffusionskoeffizient
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 Folgenden Dateien werden pro Simulationsverfahren generiert:
 \end_layout
@@ -4374,6 +4420,13 @@ status open
 
 \begin_layout Plain Layout
 Flow Model Algorithmus
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flow-Model-Algorithmus"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4413,6 +4466,13 @@ status open
 
 \begin_layout Plain Layout
 XY Model Algorithmus
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:XY-Model-Algorithmus"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
