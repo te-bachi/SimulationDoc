@@ -193,7 +193,7 @@ Abstract
 
 \begin_layout Standard
 In the context of this bachelor thesis a simulation-tool has been implemented.
- Some of the features of this tool are a simple graphical user interface
+ Some of the features of this tool are a user-friendly graphical user interface
  and operating system independence.
  Moreover it's easily possible to model biological processes like inside
  cells.
