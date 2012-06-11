@@ -132,7 +132,7 @@ figs-within-sections
 \paragraph_indentation default
 \quotes_language english
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -187,20 +187,57 @@ paperheight}{Titelseite/Titelseite.pdf}
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+\begin_inset ERT
+status open
 
-\lang english
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ThisTileWallPaper{
+\backslash
+paperwidth}{
+\backslash
+paperheight}{Titelseite/images/Erklaerung_BA.pdf}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Transparent.png
+	scale 200
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
 Abstract
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 In the context of this bachelor thesis a simulation-tool has been implemented.
  Some of the features of this tool are a user-friendly graphical user interface
  and operating system independence.
- Moreover it's easily possible to model biological processes like the inside
- of cells.
+ Moreover it's easily possible to model biological processes like inside
+ cells.
  The simulation-tool supports containers and flows.
  Flows are represented as a mathematical integral.
  In addition it enables two-dimensional simulations.
@@ -245,16 +282,6 @@ Berggipfel
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename Transparent.png
-	scale 200
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage clearpage
 \end_inset
 
@@ -268,6 +295,9 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -295,16 +325,6 @@ eren.
 g sein soll, sondern auch bisher nicht vorhandene Möglichkeiten für die
  Simulationen von Biologischen Abläufen, wie das innere einer Zelle, darstellen
  soll.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename Transparent.png
-	scale 200
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -4310,8 +4330,21 @@ Der Matlab Code ist mit Kommentaren ausgestattet, die eine Nachvollziehbarkeit
  bei Fehlern anstrebt.
  Zur kompakten Berechnung und für die Übergabe als Argument wird im Matlan
  Code ein Vektor verwendet, der alle aktuellen Container-Werte beinhaltet.
- Dabei gibt es zwei Algorithmen in Abbildung xxx und Abbildung yyy, die
- seine Lösungen in Text-Dateien herausschreibt.
+ Dabei gibt es zwei Algorithmen in Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flow-Model-Algorithmus"
+
+\end_inset
+
+ und Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:XY-Model-Algorithmus"
+
+\end_inset
+
+, die seine Lösungen in Text-Dateien herausschreibt.
  Alle Formeln aus dem GUI werden zuerst aufbereitet und in Matlab Code herausges
 chrieben.
  Matlab wird gestartet und der Matlab Code wird ausgeführt.
@@ -4365,19 +4398,27 @@ Flow-Modell:
 \begin_layout Itemize
 Euler:
 \family typewriter
- simulation_euler.m
+ 
+\size footnotesize
+simulation_euler.m
 \end_layout
 
 \begin_layout Itemize
 Runge-Kutta 4: 
 \family typewriter
+\size footnotesize
 simulation_rk_main.m, simulation_rk_ode.m
 \end_layout
 
 \begin_layout Itemize
 Fehlberg, Cash-Karp, Dormand-Prince: 
 \family typewriter
-simulation_adaptive.m, simulation_adaptive_ode.m
+\size footnotesize
+simulation_adaptive.m,
+\begin_inset Newline newline
+\end_inset
+
+simulation_adaptive_ode.m
 \end_layout
 
 \end_deeper
@@ -4389,6 +4430,7 @@ XY-Modell:
 \begin_layout Itemize
 Runge-Kutta 4: 
 \family typewriter
+\size footnotesize
 xy_main.m, sim_gradient.m, sim_diffusion.m, sim_density_out.m, xy_
 \shape italic
 densityN
@@ -4403,6 +4445,7 @@ _dy.m
 \end_deeper
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -4449,6 +4492,7 @@ name "fig:Flow-Model-Algorithmus"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -8384,8 +8428,15 @@ Sinnlos.xml im korrekten Verzeichnis
 
 \begin_layout Standard
 Danach wird die Applikation gestartet.
- Dies geschieht durch ausführen der Klasse «ch.zhaw.simulation.startup.SimulationMai
-n» aus dem Projekt «Simulation».
+ Dies geschieht durch ausführen der Klasse
+\end_layout
+
+\begin_layout Standard
+«ch.zhaw.simulation.startup.SimulationMain» aus dem Projekt «Simulation».
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8432,6 +8483,13 @@ Nun erscheint ein Fehler, dass das Plugin nicht geladen werden konnte.
  Dies kann einfach gelöst werden, indem beim Projekt «Simulation» das Projekt
  «SimulationPlugin.Sinnlos» in den Referenzierten Projekte (Java Build Path)
  hinzugefügt wird.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -9208,8 +9266,12 @@ n) und drücken auf den Button: Es erscheint eine Exception, welche uns auch
 \begin_inset Quotes eld
 \end_inset
 
-Unknown SimulationObject: ch.zhaw.simulation.model.xy.BlockData at ch.zhaw.simulation.ed
-itor.view.AbstractEditorView.dataAdded(AbstractEditorView.java:495)
+Unknown SimulationObject: ch.zhaw.simulation.model.xy.BlockData at
+\begin_inset Newline newline
+\end_inset
+
+ch.zhaw.simulation.editor.view.AbstractEditorView.dataAdded(AbstractEditorView.java:495
+)
 \begin_inset Quotes erd
 \end_inset
 
@@ -10719,6 +10781,13 @@ Der Formeleditor, der überall zum Einsatz kommt verfügt über eine Toolbar,
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -10769,6 +10838,13 @@ Der Editor ist mehrzeilig, und wenn die Interne Simulation verwendet wird
  ist es auch möglich Variable zu definieren (Dies funktioniert nicht mit
  der Matlab Simulation!), und dann später auf diese zurückzugreifen.
  Dies könnte dann in etwa so aussehen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11128,6 +11204,13 @@ Wenn wir nun auf unser Meso-Kompartiment Doppelklicken erscheint das Submodell.
  im Submodell verfügbar, nicht im Flow-Modell.
  Wir erstellen einen Dichtecontainer.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
