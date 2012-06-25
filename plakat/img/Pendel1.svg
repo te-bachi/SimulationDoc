@@ -1,0 +1,1621 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg 
+     version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     x="0px"
+     y="0px"
+     width="842px"
+     height="622px"
+     viewBox="0 0 842 622"
+     >
+<title></title>
+<desc>Creator: FreeHEP Graphics2D Driver Producer: org.freehep.graphicsio.svg.SVGGraphics2D Source: </desc>
+<g stroke-linejoin="miter" stroke-dashoffset="0" stroke-dasharray="none" stroke-width="1" stroke-miterlimit="10" stroke-linecap="square">
+<g stroke-width="5" fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 113 160 C 136 162 136 162 159 165"/>
+</g> <!-- drawing style -->
+<defs>
+  <linearGradient id="gradient-0" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#1a80ff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#bedbff" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-0)">
+<g transform="matrix(1, 0, 0, 1, 226, 156)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-0)">
+  <path d="M 11 15 C 11 7.268013502368893 9.209138999323173 1 7 1 C 4.790861000676827 1 3.0000000000000004 7.268013502368891 3 14.999999999999998 C 3 22.731986497631105 4.790861000676825 29 6.999999999999999 29 C 9.209138999323173 29 11 22.73198649763111 11 15.000000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 226, 156)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 7 1 C 4.790861000676827 1 3.0000000000000004 7.268013502368891 3 14.999999999999998 C 3 22.731986497631105 4.790861000676825 29 6.999999999999999 29"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 226, 156)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#808080">
+  <path d="M 0 11 L 13 11 L 13 20 L 0 20 L 0 11 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<defs>
+  <linearGradient id="gradient-1" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#bedbff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#1a80ff" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-1)">
+<g transform="matrix(1, 0, 0, 1, 226, 156)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-1)">
+  <path d="M 8 1 L 8 1.4410631334461745 L 8.00000214846361 1.4410631334461745 C 9.725228271204816 2.995215524095638 11 8.476564703604264 11 15 C 11 21.523438005331556 9.725227212475676 27.004789028297967 7.999999999200004 28.558938802693827 L 8 28.558938802693827 L 8 29 L 29 15 L 29 14 L 8 1 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 226, 156)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 8 1 L 8 1.4410631334461745 L 8.00000214846361 1.4410631334461745 C 9.725228271204816 2.995215524095638 11 8.476564703604264 11 15 C 11 21.523438005331556 9.725227212475676 27.004789028297967 7.999999999200004 28.558938802693827 L 8 28.558938802693827 L 8 29 L 29 15 L 29 14 L 8 1 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 226, 156)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 7 29 C 9.209138999323173 29 11 22.731986497631105 11 15 C 11 7.268013502368893 9.209138999323173 1 7 1"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+</g> <!-- color -->
+<g stroke-width="5" fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 209 165 C 232 168 232 168 226 171"/>
+</g> <!-- drawing style -->
+<g stroke-width="5" fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 464 203 C 487 205 487 205 511 208"/>
+</g> <!-- drawing style -->
+<defs>
+  <linearGradient id="gradient-2" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#1a80ff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#bedbff" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-2)">
+<g transform="matrix(1, 0, 0, 1, 579, 198)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-2)">
+  <path d="M 11 15 C 11 7.268013502368893 9.209138999323173 1 7 1 C 4.790861000676827 1 3.0000000000000004 7.268013502368891 3 14.999999999999998 C 3 22.731986497631105 4.790861000676825 29 6.999999999999999 29 C 9.209138999323173 29 11 22.73198649763111 11 15.000000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 579, 198)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 7 1 C 4.790861000676827 1 3.0000000000000004 7.268013502368891 3 14.999999999999998 C 3 22.731986497631105 4.790861000676825 29 6.999999999999999 29"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 579, 198)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#808080">
+  <path d="M 0 11 L 13 11 L 13 20 L 0 20 L 0 11 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<defs>
+  <linearGradient id="gradient-3" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#bedbff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#1a80ff" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-3)">
+<g transform="matrix(1, 0, 0, 1, 579, 198)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-3)">
+  <path d="M 8 1 L 8 1.4410631334461745 L 8.00000214846361 1.4410631334461745 C 9.725228271204816 2.995215524095638 11 8.476564703604264 11 15 C 11 21.523438005331556 9.725227212475676 27.004789028297967 7.999999999200004 28.558938802693827 L 8 28.558938802693827 L 8 29 L 29 15 L 29 14 L 8 1 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 579, 198)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 8 1 L 8 1.4410631334461745 L 8.00000214846361 1.4410631334461745 C 9.725228271204816 2.995215524095638 11 8.476564703604264 11 15 C 11 21.523438005331556 9.725227212475676 27.004789028297967 7.999999999200004 28.558938802693827 L 8 28.558938802693827 L 8 29 L 29 15 L 29 14 L 8 1 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 579, 198)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 7 29 C 9.209138999323173 29 11 22.731986497631105 11 15 C 11 7.268013502368893 9.209138999323173 1 7 1"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+</g> <!-- color -->
+<g stroke-width="5" fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 561 208 C 585 210 585 210 579 213"/>
+</g> <!-- drawing style -->
+<g stroke-width="5" fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 303 426 C 326 426 326 426 349 426"/>
+</g> <!-- drawing style -->
+<defs>
+  <linearGradient id="gradient-4" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#1a80ff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#bedbff" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-4)">
+<g transform="matrix(1, 0, 0, 1, 415, 412)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-4)">
+  <path d="M 11 15 C 11 7.268013502368893 9.209138999323173 1 7 1 C 4.790861000676827 1 3.0000000000000004 7.268013502368891 3 14.999999999999998 C 3 22.731986497631105 4.790861000676825 29 6.999999999999999 29 C 9.209138999323173 29 11 22.73198649763111 11 15.000000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 415, 412)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 7 1 C 4.790861000676827 1 3.0000000000000004 7.268013502368891 3 14.999999999999998 C 3 22.731986497631105 4.790861000676825 29 6.999999999999999 29"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 415, 412)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#808080">
+  <path d="M 0 11 L 13 11 L 13 20 L 0 20 L 0 11 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<defs>
+  <linearGradient id="gradient-5" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#bedbff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#1a80ff" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-5)">
+<g transform="matrix(1, 0, 0, 1, 415, 412)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-5)">
+  <path d="M 8 1 L 8 1.4410631334461745 L 8.00000214846361 1.4410631334461745 C 9.725228271204816 2.995215524095638 11 8.476564703604264 11 15 C 11 21.523438005331556 9.725227212475676 27.004789028297967 7.999999999200004 28.558938802693827 L 8 28.558938802693827 L 8 29 L 29 15 L 29 14 L 8 1 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 415, 412)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 8 1 L 8 1.4410631334461745 L 8.00000214846361 1.4410631334461745 C 9.725228271204816 2.995215524095638 11 8.476564703604264 11 15 C 11 21.523438005331556 9.725227212475676 27.004789028297967 7.999999999200004 28.558938802693827 L 8 28.558938802693827 L 8 29 L 29 15 L 29 14 L 8 1 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 415, 412)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 7 29 C 9.209138999323173 29 11 22.731986497631105 11 15 C 11 7.268013502368893 9.209138999323173 1 7 1"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+</g> <!-- color -->
+<g stroke-width="5" fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 399 426 C 422 426 422 426 415 427"/>
+</g> <!-- drawing style -->
+<g stroke-width="5" fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 655 446 C 674 442 674 442 693 439"/>
+</g> <!-- drawing style -->
+<defs>
+  <linearGradient id="gradient-6" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#1a80ff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#bedbff" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-6)">
+<g transform="matrix(1, 0, 0, 1, 752, 418)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-6)">
+  <path d="M 11 15 C 11 7.268013502368893 9.209138999323173 1 7 1 C 4.790861000676827 1 3.0000000000000004 7.268013502368891 3 14.999999999999998 C 3 22.731986497631105 4.790861000676825 29 6.999999999999999 29 C 9.209138999323173 29 11 22.73198649763111 11 15.000000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 752, 418)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 7 1 C 4.790861000676827 1 3.0000000000000004 7.268013502368891 3 14.999999999999998 C 3 22.731986497631105 4.790861000676825 29 6.999999999999999 29"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 752, 418)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#808080">
+  <path d="M 0 11 L 13 11 L 13 20 L 0 20 L 0 11 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<defs>
+  <linearGradient id="gradient-7" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#bedbff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#1a80ff" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-7)">
+<g transform="matrix(1, 0, 0, 1, 752, 418)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-7)">
+  <path d="M 8 1 L 8 1.4410631334461745 L 8.00000214846361 1.4410631334461745 C 9.725228271204816 2.995215524095638 11 8.476564703604264 11 15 C 11 21.523438005331556 9.725227212475676 27.004789028297967 7.999999999200004 28.558938802693827 L 8 28.558938802693827 L 8 29 L 29 15 L 29 14 L 8 1 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 752, 418)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 8 1 L 8 1.4410631334461745 L 8.00000214846361 1.4410631334461745 C 9.725228271204816 2.995215524095638 11 8.476564703604264 11 15 C 11 21.523438005331556 9.725227212475676 27.004789028297967 7.999999999200004 28.558938802693827 L 8 28.558938802693827 L 8 29 L 29 15 L 29 14 L 8 1 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 752, 418)">
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 7 29 C 9.209138999323173 29 11 22.731986497631105 11 15 C 11 7.268013502368893 9.209138999323173 1 7 1"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+</g> <!-- color -->
+<g stroke-width="5" fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 743 439 C 762 436 762 436 752 433"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 191.5 518.5 L 205.5 504.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 206.5 523.5 L 205.5 504.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 182 562 C 193 538 193 538 205 504"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 186.5 497.5 L 205.5 504.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 186.5 512.5 L 205.5 504.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 121 520 C 147 507 147 507 205 504"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 195.5 486.5 L 205.5 504.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 185.5 498.5 L 205.5 504.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 128 483 C 143 454 143 454 205 504"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 390.5 389.5 L 374.5 401.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 377.5 381.5 L 374.5 401.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 508 370 C 409 348 409 348 374 401"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 379.5 431.5 L 399.5 426.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 388.5 443.5 L 399.5 426.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 454 507 C 391 432 391 432 399 426"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 355.5 443.5 L 374.5 451.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 355.5 458.5 L 374.5 451.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 418 488 C 357 451 357 451 374 451"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 329.5 427.5 L 349.5 426.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 336.5 441.5 L 349.5 426.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 255 504 C 288 458 288 458 349 426"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 190.5 209.5 L 184.5 190.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 201.5 199.5 L 184.5 190.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 278 391 C 221 233 221 233 184 190"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 344.5 406.5 L 349.5 426.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 332.5 415.5 L 349.5 426.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 278 391 C 294 349 294 349 349 426"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 725.5 428.5 L 743.5 439.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 723.5 443.5 L 743.5 439.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 800 487 C 730 437 730 437 743 439"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 736.5 457.5 L 718.5 464.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 726.5 445.5 L 718.5 464.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 716 487 C 729 454 729 454 718 464"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 711.5 395.5 L 718.5 414.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 699.5 405.5 L 718.5 414.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 634 248 C 634 323 634 323 718 414"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 549.5 333.5 L 533.5 345.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 536.5 325.5 L 533.5 345.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 634 248 C 577 275 577 275 533 345"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 381.5 382.5 L 374.5 401.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 366.5 382.5 L 374.5 401.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 281 206 C 374 316 374 316 374 401"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 499.5 351.5 L 508.5 370.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 489.5 363.5 L 508.5 370.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 281 206 C 375 250 375 250 508 370"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 545.5 250.5 L 536.5 233.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 555.5 238.5 L 536.5 233.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 630 411 C 593 280 593 280 536 233"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 596.5 110.5 L 584.5 95.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 603.5 97.5 L 584.5 95.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 634 178 C 601 105 601 105 584 95"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 515.5 86.5 L 534.5 95.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 515.5 101.5 L 534.5 95.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 281 136 C 379 88 379 88 534 95"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 730.5 398.5 L 718.5 414.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 716.5 394.5 L 718.5 414.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 584 95 C 788 191 788 191 718 414"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 688.5 419.5 L 693.5 439.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 676.5 428.5 L 693.5 439.5"/>
+</g> <!-- drawing style -->
+<g fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 630 411 C 651 380 651 380 693 439"/>
+</g> <!-- drawing style -->
+<defs>
+  <linearGradient id="gradient-8" x1="0" y1="0" x2="50" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#ffffff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#cccccc" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-8)">
+<g transform="matrix(1, 0, 0, 1, 256, 136)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-8)">
+  <path d="M 1 13 L 49 13 L 49 56 L 1 56 L 1 13 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 256, 136)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 13.5 L 0.5 56.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 256, 136)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 48.5 13.5 L 48.5 56.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 256, 136)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#eeeeee">
+  <path d="M 48 13.5 C 48 6.596440627115083 37.254833995939045 1 24 1 C 10.745166004060962 1 0.00000000000000355271 6.596440627115082 0 13.499999999999998 C 0 20.403559372884914 10.745166004060955 26 23.999999999999996 26 C 37.25483399593904 26 48 20.40355937288492 48 13.500000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 256, 136)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 48 13.5 C 48 6.596440627115083 37.254833995939045 1 24 1 C 10.745166004060962 1 0.00000000000000355271 6.596440627115082 0 13.499999999999998 C 0 20.403559372884914 10.745166004060955 26 23.999999999999996 26 C 37.25483399593904 26 48 20.40355937288492 48 13.500000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<defs>
+  <linearGradient id="gradient-9" x1="0" y1="0" x2="50" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#ffffff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#cccccc" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-9)">
+<g transform="matrix(1, 0, 0, 1, 256, 136)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-9)">
+  <path d="M 0 55.5 C 0 62.403559372884914 10.745166004060955 68 23.999999999999996 68 C 37.25483399593904 68 48 62.40355937288492 48 55.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 256, 136)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0 55.5 C 0 62.403559372884914 10.745166004060955 68 23.999999999999996 68 C 37.25483399593904 68 48 62.40355937288492 48 55.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 256, 136)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 22.3125 38.625 L 22.3125 39.65625 Q 21.859375 39.421875 21.3671875 39.3046875 Q 20.875 39.1875 20.34375 39.1875 Q 19.546875 39.1875 19.140625 39.4296875 Q 18.734375 39.671875 18.734375 40.171875 Q 18.734375 40.546875 19.0234375 40.7578125 Q 19.3125 40.96875 20.1875 41.15625 L 20.546875 41.25 Q 21.703125 41.484375 22.1875 41.9375 Q 22.671875 42.390625 22.671875 43.1875 Q 22.671875 44.109375 21.9453125 44.640625 Q 21.21875 45.171875 19.953125 45.171875 Q 19.421875 45.171875 18.8515625 45.0703125 Q 18.28125 44.96875 17.65625 44.765625 L 17.65625 43.640625 Q 18.25 43.953125 18.828125 44.109375 Q 19.40625 44.265625 19.984375 44.265625 Q 20.734375 44.265625 21.1484375 44.0078125 Q 21.5625 43.75 21.5625 43.265625 Q 21.5625 42.828125 21.265625 42.59375 Q 20.96875 42.359375 19.96875 42.140625 L 19.59375 42.0625 Q 18.59375 41.84375 18.1484375 41.40625 Q 17.703125 40.96875 17.703125 40.21875 Q 17.703125 39.28125 18.359375 38.78125 Q 19.015625 38.28125 20.21875 38.28125 Q 20.8125 38.28125 21.34375 38.3671875 Q 21.875 38.453125 22.3125 38.625 z M 24.734375 44 L 26.671875 44 L 26.671875 37.328125 L 24.5625 37.75 L 24.5625 36.671875 L 26.65625 36.25 L 27.84375 36.25 L 27.84375 44 L 29.78125 44 L 29.78125 45 L 24.734375 45 L 24.734375 44 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-10" x1="0" y1="0" x2="50" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#ffffff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#cccccc" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-10)">
+<g transform="matrix(1, 0, 0, 1, 253, 391)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-10)">
+  <path d="M 1 13 L 49 13 L 49 56 L 1 56 L 1 13 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 253, 391)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 13.5 L 0.5 56.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 253, 391)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 48.5 13.5 L 48.5 56.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 253, 391)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#eeeeee">
+  <path d="M 48 13.5 C 48 6.596440627115083 37.254833995939045 1 24 1 C 10.745166004060962 1 0.00000000000000355271 6.596440627115082 0 13.499999999999998 C 0 20.403559372884914 10.745166004060955 26 23.999999999999996 26 C 37.25483399593904 26 48 20.40355937288492 48 13.500000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 253, 391)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 48 13.5 C 48 6.596440627115083 37.254833995939045 1 24 1 C 10.745166004060962 1 0.00000000000000355271 6.596440627115082 0 13.499999999999998 C 0 20.403559372884914 10.745166004060955 26 23.999999999999996 26 C 37.25483399593904 26 48 20.40355937288492 48 13.500000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<defs>
+  <linearGradient id="gradient-11" x1="0" y1="0" x2="50" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#ffffff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#cccccc" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-11)">
+<g transform="matrix(1, 0, 0, 1, 253, 391)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-11)">
+  <path d="M 0 55.5 C 0 62.403559372884914 10.745166004060955 68 23.999999999999996 68 C 37.25483399593904 68 48 62.40355937288492 48 55.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 253, 391)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0 55.5 C 0 62.403559372884914 10.745166004060955 68 23.999999999999996 68 C 37.25483399593904 68 48 62.40355937288492 48 55.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 253, 391)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 18.359375 38.4375 L 19.5 38.4375 L 21.546875 43.9375 L 23.609375 38.4375 L 24.75 38.4375 L 22.28125 45 L 20.8125 45 L 18.359375 38.4375 z M 26.578125 44 L 28.515625 44 L 28.515625 37.328125 L 26.40625 37.75 L 26.40625 36.671875 L 28.5 36.25 L 29.6875 36.25 L 29.6875 44 L 31.625 44 L 31.625 45 L 26.578125 45 L 26.578125 44 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-12" x1="0" y1="0" x2="50" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#ffffff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#cccccc" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-12)">
+<g transform="matrix(1, 0, 0, 1, 609, 178)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-12)">
+  <path d="M 1 13 L 49 13 L 49 56 L 1 56 L 1 13 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 609, 178)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 13.5 L 0.5 56.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 609, 178)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 48.5 13.5 L 48.5 56.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 609, 178)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#eeeeee">
+  <path d="M 48 13.5 C 48 6.596440627115083 37.254833995939045 1 24 1 C 10.745166004060962 1 0.00000000000000355271 6.596440627115082 0 13.499999999999998 C 0 20.403559372884914 10.745166004060955 26 23.999999999999996 26 C 37.25483399593904 26 48 20.40355937288492 48 13.500000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 609, 178)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 48 13.5 C 48 6.596440627115083 37.254833995939045 1 24 1 C 10.745166004060962 1 0.00000000000000355271 6.596440627115082 0 13.499999999999998 C 0 20.403559372884914 10.745166004060955 26 23.999999999999996 26 C 37.25483399593904 26 48 20.40355937288492 48 13.500000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<defs>
+  <linearGradient id="gradient-13" x1="0" y1="0" x2="50" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#ffffff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#cccccc" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-13)">
+<g transform="matrix(1, 0, 0, 1, 609, 178)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-13)">
+  <path d="M 0 55.5 C 0 62.403559372884914 10.745166004060955 68 23.999999999999996 68 C 37.25483399593904 68 48 62.40355937288492 48 55.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 609, 178)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0 55.5 C 0 62.403559372884914 10.745166004060955 68 23.999999999999996 68 C 37.25483399593904 68 48 62.40355937288492 48 55.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 609, 178)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 22.3125 38.625 L 22.3125 39.65625 Q 21.859375 39.421875 21.3671875 39.3046875 Q 20.875 39.1875 20.34375 39.1875 Q 19.546875 39.1875 19.140625 39.4296875 Q 18.734375 39.671875 18.734375 40.171875 Q 18.734375 40.546875 19.0234375 40.7578125 Q 19.3125 40.96875 20.1875 41.15625 L 20.546875 41.25 Q 21.703125 41.484375 22.1875 41.9375 Q 22.671875 42.390625 22.671875 43.1875 Q 22.671875 44.109375 21.9453125 44.640625 Q 21.21875 45.171875 19.953125 45.171875 Q 19.421875 45.171875 18.8515625 45.0703125 Q 18.28125 44.96875 17.65625 44.765625 L 17.65625 43.640625 Q 18.25 43.953125 18.828125 44.109375 Q 19.40625 44.265625 19.984375 44.265625 Q 20.734375 44.265625 21.1484375 44.0078125 Q 21.5625 43.75 21.5625 43.265625 Q 21.5625 42.828125 21.265625 42.59375 Q 20.96875 42.359375 19.96875 42.140625 L 19.59375 42.0625 Q 18.59375 41.84375 18.1484375 41.40625 Q 17.703125 40.96875 17.703125 40.21875 Q 17.703125 39.28125 18.359375 38.78125 Q 19.015625 38.28125 20.21875 38.28125 Q 20.8125 38.28125 21.34375 38.3671875 Q 21.875 38.453125 22.3125 38.625 z M 25.546875 44 L 29.6875 44 L 29.6875 45 L 24.125 45 L 24.125 44 Q 24.796875 43.3125 25.9609375 42.1328125 Q 27.125 40.953125 27.421875 40.609375 Q 28 39.984375 28.2265625 39.5390625 Q 28.453125 39.09375 28.453125 38.671875 Q 28.453125 37.96875 27.9609375 37.53125 Q 27.46875 37.09375 26.6875 37.09375 Q 26.125 37.09375 25.5078125 37.28125 Q 24.890625 37.46875 24.1875 37.875 L 24.1875 36.671875 Q 24.90625 36.390625 25.5234375 36.2421875 Q 26.140625 36.09375 26.65625 36.09375 Q 28.015625 36.09375 28.828125 36.7734375 Q 29.640625 37.453125 29.640625 38.59375 Q 29.640625 39.125 29.4375 39.609375 Q 29.234375 40.09375 28.703125 40.75 Q 28.546875 40.921875 27.765625 41.734375 Q 26.984375 42.546875 25.546875 44 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-14" x1="0" y1="0" x2="50" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#ffffff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#cccccc" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-14)">
+<g transform="matrix(1, 0, 0, 1, 605, 411)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-14)">
+  <path d="M 1 13 L 49 13 L 49 56 L 1 56 L 1 13 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 605, 411)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 13.5 L 0.5 56.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 605, 411)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 48.5 13.5 L 48.5 56.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 605, 411)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#eeeeee">
+  <path d="M 48 13.5 C 48 6.596440627115083 37.254833995939045 1 24 1 C 10.745166004060962 1 0.00000000000000355271 6.596440627115082 0 13.499999999999998 C 0 20.403559372884914 10.745166004060955 26 23.999999999999996 26 C 37.25483399593904 26 48 20.40355937288492 48 13.500000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 605, 411)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 48 13.5 C 48 6.596440627115083 37.254833995939045 1 24 1 C 10.745166004060962 1 0.00000000000000355271 6.596440627115082 0 13.499999999999998 C 0 20.403559372884914 10.745166004060955 26 23.999999999999996 26 C 37.25483399593904 26 48 20.40355937288492 48 13.500000000000004"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<defs>
+  <linearGradient id="gradient-15" x1="0" y1="0" x2="50" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#ffffff" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#cccccc" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-15)">
+<g transform="matrix(1, 0, 0, 1, 605, 411)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-15)">
+  <path d="M 0 55.5 C 0 62.403559372884914 10.745166004060955 68 23.999999999999996 68 C 37.25483399593904 68 48 62.40355937288492 48 55.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 605, 411)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0 55.5 C 0 62.403559372884914 10.745166004060955 68 23.999999999999996 68 C 37.25483399593904 68 48 62.40355937288492 48 55.5"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 605, 411)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 18.359375 38.4375 L 19.5 38.4375 L 21.546875 43.9375 L 23.609375 38.4375 L 24.75 38.4375 L 22.28125 45 L 20.8125 45 L 18.359375 38.4375 z M 27.390625 44 L 31.53125 44 L 31.53125 45 L 25.96875 45 L 25.96875 44 Q 26.640625 43.3125 27.8046875 42.1328125 Q 28.96875 40.953125 29.265625 40.609375 Q 29.84375 39.984375 30.0703125 39.5390625 Q 30.296875 39.09375 30.296875 38.671875 Q 30.296875 37.96875 29.8046875 37.53125 Q 29.3125 37.09375 28.53125 37.09375 Q 27.96875 37.09375 27.3515625 37.28125 Q 26.734375 37.46875 26.03125 37.875 L 26.03125 36.671875 Q 26.75 36.390625 27.3671875 36.2421875 Q 27.984375 36.09375 28.5 36.09375 Q 29.859375 36.09375 30.671875 36.7734375 Q 31.484375 37.453125 31.484375 38.59375 Q 31.484375 39.125 31.28125 39.609375 Q 31.078125 40.09375 30.546875 40.75 Q 30.390625 40.921875 29.609375 41.734375 Q 28.828125 42.546875 27.390625 44 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-16" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-16)">
+<g transform="matrix(1, 0, 0, 1, 534, 70)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-16)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 534, 70)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 534, 70)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 17.109375 26.703125 Q 15.8125 26.703125 15.3046875 27 Q 14.796875 27.296875 14.796875 28.015625 Q 14.796875 28.59375 15.1796875 28.9296875 Q 15.5625 29.265625 16.203125 29.265625 Q 17.109375 29.265625 17.6484375 28.6328125 Q 18.1875 28 18.1875 26.9375 L 18.1875 26.703125 L 17.109375 26.703125 z M 19.265625 26.25 L 19.265625 30 L 18.1875 30 L 18.1875 29 Q 17.8125 29.59375 17.265625 29.8828125 Q 16.71875 30.171875 15.921875 30.171875 Q 14.90625 30.171875 14.3125 29.6015625 Q 13.71875 29.03125 13.71875 28.09375 Q 13.71875 26.984375 14.4609375 26.421875 Q 15.203125 25.859375 16.671875 25.859375 L 18.1875 25.859375 L 18.1875 25.75 Q 18.1875 25 17.6953125 24.59375 Q 17.203125 24.1875 16.328125 24.1875 Q 15.765625 24.1875 15.2265625 24.328125 Q 14.6875 24.46875 14.203125 24.734375 L 14.203125 23.734375 Q 14.796875 23.5 15.3515625 23.390625 Q 15.90625 23.28125 16.4375 23.28125 Q 17.859375 23.28125 18.5625 24.015625 Q 19.265625 24.75 19.265625 26.25 z M 21.828125 29 L 23.765625 29 L 23.765625 22.328125 L 21.65625 22.75 L 21.65625 21.671875 L 23.75 21.25 L 24.9375 21.25 L 24.9375 29 L 26.875 29 L 26.875 30 L 21.828125 30 L 21.828125 29 z M 30.28125 29 L 34.421875 29 L 34.421875 30 L 28.859375 30 L 28.859375 29 Q 29.53125 28.3125 30.6953125 27.1328125 Q 31.859375 25.953125 32.15625 25.609375 Q 32.734375 24.984375 32.9609375 24.5390625 Q 33.1875 24.09375 33.1875 23.671875 Q 33.1875 22.96875 32.6953125 22.53125 Q 32.203125 22.09375 31.421875 22.09375 Q 30.859375 22.09375 30.2421875 22.28125 Q 29.625 22.46875 28.921875 22.875 L 28.921875 21.671875 Q 29.640625 21.390625 30.2578125 21.2421875 Q 30.875 21.09375 31.390625 21.09375 Q 32.75 21.09375 33.5625 21.7734375 Q 34.375 22.453125 34.375 23.59375 Q 34.375 24.125 34.171875 24.609375 Q 33.96875 25.09375 33.4375 25.75 Q 33.28125 25.921875 32.5 26.734375 Q 31.71875 27.546875 30.28125 29 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-17" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-17)">
+<g transform="matrix(1, 0, 0, 1, 691, 487)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-17)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 691, 487)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 691, 487)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 3.125 20.875 L 4.203125 20.875 L 4.203125 30 L 3.125 30 L 3.125 20.875 z M 9.4375 26.703125 Q 8.140625 26.703125 7.6328125 27 Q 7.125 27.296875 7.125 28.015625 Q 7.125 28.59375 7.5078125 28.9296875 Q 7.890625 29.265625 8.53125 29.265625 Q 9.4375 29.265625 9.9765625 28.6328125 Q 10.515625 28 10.515625 26.9375 L 10.515625 26.703125 L 9.4375 26.703125 z M 11.59375 26.25 L 11.59375 30 L 10.515625 30 L 10.515625 29 Q 10.140625 29.59375 9.59375 29.8828125 Q 9.046875 30.171875 8.25 30.171875 Q 7.234375 30.171875 6.640625 29.6015625 Q 6.046875 29.03125 6.046875 28.09375 Q 6.046875 26.984375 6.7890625 26.421875 Q 7.53125 25.859375 9 25.859375 L 10.515625 25.859375 L 10.515625 25.75 Q 10.515625 25 10.0234375 24.59375 Q 9.53125 24.1875 8.65625 24.1875 Q 8.09375 24.1875 7.5546875 24.328125 Q 7.015625 24.46875 6.53125 24.734375 L 6.53125 23.734375 Q 7.125 23.5 7.6796875 23.390625 Q 8.234375 23.28125 8.765625 23.28125 Q 10.1875 23.28125 10.890625 24.015625 Q 11.59375 24.75 11.59375 26.25 z M 18.921875 24.703125 Q 19.328125 23.96875 19.890625 23.625 Q 20.453125 23.28125 21.21875 23.28125 Q 22.25 23.28125 22.8046875 24 Q 23.359375 24.71875 23.359375 26.03125 L 23.359375 30 L 22.28125 30 L 22.28125 26.078125 Q 22.28125 25.125 21.9453125 24.671875 Q 21.609375 24.21875 20.921875 24.21875 Q 20.078125 24.21875 19.59375 24.7734375 Q 19.109375 25.328125 19.109375 26.296875 L 19.109375 30 L 18.03125 30 L 18.03125 26.078125 Q 18.03125 25.125 17.6953125 24.671875 Q 17.359375 24.21875 16.65625 24.21875 Q 15.828125 24.21875 15.34375 24.7734375 Q 14.859375 25.328125 14.859375 26.296875 L 14.859375 30 L 13.78125 30 L 13.78125 23.4375 L 14.859375 23.4375 L 14.859375 24.453125 Q 15.234375 23.859375 15.75 23.5703125 Q 16.265625 23.28125 16.96875 23.28125 Q 17.6875 23.28125 18.1875 23.640625 Q 18.6875 24 18.921875 24.703125 z M 30.21875 26.71875 Q 30.21875 25.53125 29.7265625 24.859375 Q 29.234375 24.1875 28.390625 24.1875 Q 27.53125 24.1875 27.0390625 24.859375 Q 26.546875 25.53125 26.546875 26.71875 Q 26.546875 27.90625 27.0390625 28.5859375 Q 27.53125 29.265625 28.390625 29.265625 Q 29.234375 29.265625 29.7265625 28.5859375 Q 30.21875 27.90625 30.21875 26.71875 z M 26.546875 24.4375 Q 26.890625 23.84375 27.40625 23.5625 Q 27.921875 23.28125 28.640625 23.28125 Q 29.84375 23.28125 30.59375 24.2265625 Q 31.34375 25.171875 31.34375 26.71875 Q 31.34375 28.265625 30.59375 29.21875 Q 29.84375 30.171875 28.640625 30.171875 Q 27.921875 30.171875 27.40625 29.8828125 Q 26.890625 29.59375 26.546875 29.015625 L 26.546875 30 L 25.46875 30 L 25.46875 20.875 L 26.546875 20.875 L 26.546875 24.4375 z M 37.4375 24.4375 L 37.4375 20.875 L 38.515625 20.875 L 38.515625 30 L 37.4375 30 L 37.4375 29.015625 Q 37.09375 29.59375 36.578125 29.8828125 Q 36.0625 30.171875 35.328125 30.171875 Q 34.140625 30.171875 33.390625 29.21875 Q 32.640625 28.265625 32.640625 26.71875 Q 32.640625 25.171875 33.390625 24.2265625 Q 34.140625 23.28125 35.328125 23.28125 Q 36.0625 23.28125 36.578125 23.5625 Q 37.09375 23.84375 37.4375 24.4375 z M 33.765625 26.71875 Q 33.765625 27.90625 34.25 28.5859375 Q 34.734375 29.265625 35.59375 29.265625 Q 36.453125 29.265625 36.9453125 28.5859375 Q 37.4375 27.90625 37.4375 26.71875 Q 37.4375 25.53125 36.9453125 24.859375 Q 36.453125 24.1875 35.59375 24.1875 Q 34.734375 24.1875 34.25 24.859375 Q 33.765625 25.53125 33.765625 26.71875 z M 40.890625 28.515625 L 42.125 28.515625 L 42.125 30 L 40.890625 30 L 40.890625 28.515625 z M 44.703125 28.515625 L 45.9375 28.515625 L 45.9375 30 L 44.703125 30 L 44.703125 28.515625 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-18" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-18)">
+<g transform="matrix(1, 0, 0, 1, 454, 482)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-18)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 454, 482)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 454, 482)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 3.125 20.875 L 4.203125 20.875 L 4.203125 30 L 3.125 30 L 3.125 20.875 z M 9.4375 26.703125 Q 8.140625 26.703125 7.6328125 27 Q 7.125 27.296875 7.125 28.015625 Q 7.125 28.59375 7.5078125 28.9296875 Q 7.890625 29.265625 8.53125 29.265625 Q 9.4375 29.265625 9.9765625 28.6328125 Q 10.515625 28 10.515625 26.9375 L 10.515625 26.703125 L 9.4375 26.703125 z M 11.59375 26.25 L 11.59375 30 L 10.515625 30 L 10.515625 29 Q 10.140625 29.59375 9.59375 29.8828125 Q 9.046875 30.171875 8.25 30.171875 Q 7.234375 30.171875 6.640625 29.6015625 Q 6.046875 29.03125 6.046875 28.09375 Q 6.046875 26.984375 6.7890625 26.421875 Q 7.53125 25.859375 9 25.859375 L 10.515625 25.859375 L 10.515625 25.75 Q 10.515625 25 10.0234375 24.59375 Q 9.53125 24.1875 8.65625 24.1875 Q 8.09375 24.1875 7.5546875 24.328125 Q 7.015625 24.46875 6.53125 24.734375 L 6.53125 23.734375 Q 7.125 23.5 7.6796875 23.390625 Q 8.234375 23.28125 8.765625 23.28125 Q 10.1875 23.28125 10.890625 24.015625 Q 11.59375 24.75 11.59375 26.25 z M 18.921875 24.703125 Q 19.328125 23.96875 19.890625 23.625 Q 20.453125 23.28125 21.21875 23.28125 Q 22.25 23.28125 22.8046875 24 Q 23.359375 24.71875 23.359375 26.03125 L 23.359375 30 L 22.28125 30 L 22.28125 26.078125 Q 22.28125 25.125 21.9453125 24.671875 Q 21.609375 24.21875 20.921875 24.21875 Q 20.078125 24.21875 19.59375 24.7734375 Q 19.109375 25.328125 19.109375 26.296875 L 19.109375 30 L 18.03125 30 L 18.03125 26.078125 Q 18.03125 25.125 17.6953125 24.671875 Q 17.359375 24.21875 16.65625 24.21875 Q 15.828125 24.21875 15.34375 24.7734375 Q 14.859375 25.328125 14.859375 26.296875 L 14.859375 30 L 13.78125 30 L 13.78125 23.4375 L 14.859375 23.4375 L 14.859375 24.453125 Q 15.234375 23.859375 15.75 23.5703125 Q 16.265625 23.28125 16.96875 23.28125 Q 17.6875 23.28125 18.1875 23.640625 Q 18.6875 24 18.921875 24.703125 z M 30.21875 26.71875 Q 30.21875 25.53125 29.7265625 24.859375 Q 29.234375 24.1875 28.390625 24.1875 Q 27.53125 24.1875 27.0390625 24.859375 Q 26.546875 25.53125 26.546875 26.71875 Q 26.546875 27.90625 27.0390625 28.5859375 Q 27.53125 29.265625 28.390625 29.265625 Q 29.234375 29.265625 29.7265625 28.5859375 Q 30.21875 27.90625 30.21875 26.71875 z M 26.546875 24.4375 Q 26.890625 23.84375 27.40625 23.5625 Q 27.921875 23.28125 28.640625 23.28125 Q 29.84375 23.28125 30.59375 24.2265625 Q 31.34375 25.171875 31.34375 26.71875 Q 31.34375 28.265625 30.59375 29.21875 Q 29.84375 30.171875 28.640625 30.171875 Q 27.921875 30.171875 27.40625 29.8828125 Q 26.890625 29.59375 26.546875 29.015625 L 26.546875 30 L 25.46875 30 L 25.46875 20.875 L 26.546875 20.875 L 26.546875 24.4375 z M 37.4375 24.4375 L 37.4375 20.875 L 38.515625 20.875 L 38.515625 30 L 37.4375 30 L 37.4375 29.015625 Q 37.09375 29.59375 36.578125 29.8828125 Q 36.0625 30.171875 35.328125 30.171875 Q 34.140625 30.171875 33.390625 29.21875 Q 32.640625 28.265625 32.640625 26.71875 Q 32.640625 25.171875 33.390625 24.2265625 Q 34.140625 23.28125 35.328125 23.28125 Q 36.0625 23.28125 36.578125 23.5625 Q 37.09375 23.84375 37.4375 24.4375 z M 33.765625 26.71875 Q 33.765625 27.90625 34.25 28.5859375 Q 34.734375 29.265625 35.59375 29.265625 Q 36.453125 29.265625 36.9453125 28.5859375 Q 37.4375 27.90625 37.4375 26.71875 Q 37.4375 25.53125 36.9453125 24.859375 Q 36.453125 24.1875 35.59375 24.1875 Q 34.734375 24.1875 34.25 24.859375 Q 33.765625 25.53125 33.765625 26.71875 z M 40.890625 28.515625 L 42.125 28.515625 L 42.125 30 L 40.890625 30 L 40.890625 28.515625 z M 44.703125 28.515625 L 45.9375 28.515625 L 45.9375 30 L 44.703125 30 L 44.703125 28.515625 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-19" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-19)">
+<g transform="matrix(1, 0, 0, 1, 775, 487)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-19)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 775, 487)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 775, 487)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 3.671875 24.1875 Q 2.8125 24.1875 2.3046875 24.8671875 Q 1.796875 25.546875 1.796875 26.71875 Q 1.796875 27.90625 2.296875 28.578125 Q 2.796875 29.25 3.671875 29.25 Q 4.53125 29.25 5.0390625 28.5703125 Q 5.546875 27.890625 5.546875 26.71875 Q 5.546875 25.5625 5.0390625 24.875 Q 4.53125 24.1875 3.671875 24.1875 z M 3.671875 23.28125 Q 5.078125 23.28125 5.8828125 24.1953125 Q 6.6875 25.109375 6.6875 26.71875 Q 6.6875 28.328125 5.8828125 29.25 Q 5.078125 30.171875 3.671875 30.171875 Q 2.265625 30.171875 1.4609375 29.25 Q 0.65625 28.328125 0.65625 26.71875 Q 0.65625 25.109375 1.4609375 24.1953125 Q 2.265625 23.28125 3.671875 23.28125 z M 13.5625 24.703125 Q 13.96875 23.96875 14.53125 23.625 Q 15.09375 23.28125 15.859375 23.28125 Q 16.890625 23.28125 17.4453125 24 Q 18 24.71875 18 26.03125 L 18 30 L 16.921875 30 L 16.921875 26.078125 Q 16.921875 25.125 16.5859375 24.671875 Q 16.25 24.21875 15.5625 24.21875 Q 14.71875 24.21875 14.234375 24.7734375 Q 13.75 25.328125 13.75 26.296875 L 13.75 30 L 12.671875 30 L 12.671875 26.078125 Q 12.671875 25.125 12.3359375 24.671875 Q 12 24.21875 11.296875 24.21875 Q 10.46875 24.21875 9.984375 24.7734375 Q 9.5 25.328125 9.5 26.296875 L 9.5 30 L 8.421875 30 L 8.421875 23.4375 L 9.5 23.4375 L 9.5 24.453125 Q 9.875 23.859375 10.390625 23.5703125 Q 10.90625 23.28125 11.609375 23.28125 Q 12.328125 23.28125 12.828125 23.640625 Q 13.328125 24 13.5625 24.703125 z M 25.78125 26.453125 L 25.78125 26.96875 L 20.8125 26.96875 Q 20.890625 28.09375 21.4921875 28.671875 Q 22.09375 29.25 23.15625 29.25 Q 23.78125 29.25 24.3671875 29.1015625 Q 24.953125 28.953125 25.53125 28.640625 L 25.53125 29.671875 Q 24.9375 29.90625 24.328125 30.0390625 Q 23.71875 30.171875 23.09375 30.171875 Q 21.53125 30.171875 20.609375 29.2578125 Q 19.6875 28.34375 19.6875 26.78125 Q 19.6875 25.171875 20.5625 24.2265625 Q 21.4375 23.28125 22.90625 23.28125 Q 24.234375 23.28125 25.0078125 24.1328125 Q 25.78125 24.984375 25.78125 26.453125 z M 24.703125 26.125 Q 24.6875 25.25 24.203125 24.71875 Q 23.71875 24.1875 22.921875 24.1875 Q 22.015625 24.1875 21.4765625 24.703125 Q 20.9375 25.21875 20.859375 26.140625 L 24.703125 26.125 z M 31.859375 26.640625 Q 31.859375 25.46875 31.375 24.828125 Q 30.890625 24.1875 30.015625 24.1875 Q 29.15625 24.1875 28.671875 24.828125 Q 28.1875 25.46875 28.1875 26.640625 Q 28.1875 27.8125 28.671875 28.453125 Q 29.15625 29.09375 30.015625 29.09375 Q 30.890625 29.09375 31.375 28.453125 Q 31.859375 27.8125 31.859375 26.640625 z M 32.9375 29.1875 Q 32.9375 30.859375 32.1953125 31.6796875 Q 31.453125 32.5 29.90625 32.5 Q 29.34375 32.5 28.8359375 32.4140625 Q 28.328125 32.328125 27.859375 32.15625 L 27.859375 31.109375 Q 28.328125 31.359375 28.796875 31.484375 Q 29.265625 31.609375 29.734375 31.609375 Q 30.796875 31.609375 31.328125 31.0546875 Q 31.859375 30.5 31.859375 29.375 L 31.859375 28.84375 Q 31.515625 29.421875 31 29.7109375 Q 30.484375 30 29.75 30 Q 28.546875 30 27.8046875 29.078125 Q 27.0625 28.15625 27.0625 26.640625 Q 27.0625 25.125 27.8046875 24.203125 Q 28.546875 23.28125 29.75 23.28125 Q 30.484375 23.28125 31 23.5703125 Q 31.515625 23.859375 31.859375 24.4375 L 31.859375 23.4375 L 32.9375 23.4375 L 32.9375 29.1875 z M 38.140625 26.703125 Q 36.84375 26.703125 36.3359375 27 Q 35.828125 27.296875 35.828125 28.015625 Q 35.828125 28.59375 36.2109375 28.9296875 Q 36.59375 29.265625 37.234375 29.265625 Q 38.140625 29.265625 38.6796875 28.6328125 Q 39.21875 28 39.21875 26.9375 L 39.21875 26.703125 L 38.140625 26.703125 z M 40.296875 26.25 L 40.296875 30 L 39.21875 30 L 39.21875 29 Q 38.84375 29.59375 38.296875 29.8828125 Q 37.75 30.171875 36.953125 30.171875 Q 35.9375 30.171875 35.34375 29.6015625 Q 34.75 29.03125 34.75 28.09375 Q 34.75 26.984375 35.4921875 26.421875 Q 36.234375 25.859375 37.703125 25.859375 L 39.21875 25.859375 L 39.21875 25.75 Q 39.21875 25 38.7265625 24.59375 Q 38.234375 24.1875 37.359375 24.1875 Q 36.796875 24.1875 36.2578125 24.328125 Q 35.71875 24.46875 35.234375 24.734375 L 35.234375 23.734375 Q 35.828125 23.5 36.3828125 23.390625 Q 36.9375 23.28125 37.46875 23.28125 Q 38.890625 23.28125 39.59375 24.015625 Q 40.296875 24.75 40.296875 26.25 z M 43.671875 29 L 47.8125 29 L 47.8125 30 L 42.25 30 L 42.25 29 Q 42.921875 28.3125 44.0859375 27.1328125 Q 45.25 25.953125 45.546875 25.609375 Q 46.125 24.984375 46.3515625 24.5390625 Q 46.578125 24.09375 46.578125 23.671875 Q 46.578125 22.96875 46.0859375 22.53125 Q 45.59375 22.09375 44.8125 22.09375 Q 44.25 22.09375 43.6328125 22.28125 Q 43.015625 22.46875 42.3125 22.875 L 42.3125 21.671875 Q 43.03125 21.390625 43.6484375 21.2421875 Q 44.265625 21.09375 44.78125 21.09375 Q 46.140625 21.09375 46.953125 21.7734375 Q 47.765625 22.453125 47.765625 23.59375 Q 47.765625 24.125 47.5625 24.609375 Q 47.359375 25.09375 46.828125 25.75 Q 46.671875 25.921875 45.890625 26.734375 Q 45.109375 27.546875 43.671875 29 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-20" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-20)">
+<g transform="matrix(1, 0, 0, 1, 205, 479)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-20)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 205, 479)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 205, 479)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 21.109375 26.703125 Q 19.8125 26.703125 19.3046875 27 Q 18.796875 27.296875 18.796875 28.015625 Q 18.796875 28.59375 19.1796875 28.9296875 Q 19.5625 29.265625 20.203125 29.265625 Q 21.109375 29.265625 21.6484375 28.6328125 Q 22.1875 28 22.1875 26.9375 L 22.1875 26.703125 L 21.109375 26.703125 z M 23.265625 26.25 L 23.265625 30 L 22.1875 30 L 22.1875 29 Q 21.8125 29.59375 21.265625 29.8828125 Q 20.71875 30.171875 19.921875 30.171875 Q 18.90625 30.171875 18.3125 29.6015625 Q 17.71875 29.03125 17.71875 28.09375 Q 17.71875 26.984375 18.4609375 26.421875 Q 19.203125 25.859375 20.671875 25.859375 L 22.1875 25.859375 L 22.1875 25.75 Q 22.1875 25 21.6953125 24.59375 Q 21.203125 24.1875 20.328125 24.1875 Q 19.765625 24.1875 19.2265625 24.328125 Q 18.6875 24.46875 18.203125 24.734375 L 18.203125 23.734375 Q 18.796875 23.5 19.3515625 23.390625 Q 19.90625 23.28125 20.4375 23.28125 Q 21.859375 23.28125 22.5625 24.015625 Q 23.265625 24.75 23.265625 26.25 z M 25.828125 29 L 27.765625 29 L 27.765625 22.328125 L 25.65625 22.75 L 25.65625 21.671875 L 27.75 21.25 L 28.9375 21.25 L 28.9375 29 L 30.875 29 L 30.875 30 L 25.828125 30 L 25.828125 29 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-21" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-21)">
+<g transform="matrix(1, 0, 0, 1, 393, 488)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-21)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 393, 488)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 393, 488)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 3.671875 24.1875 Q 2.8125 24.1875 2.3046875 24.8671875 Q 1.796875 25.546875 1.796875 26.71875 Q 1.796875 27.90625 2.296875 28.578125 Q 2.796875 29.25 3.671875 29.25 Q 4.53125 29.25 5.0390625 28.5703125 Q 5.546875 27.890625 5.546875 26.71875 Q 5.546875 25.5625 5.0390625 24.875 Q 4.53125 24.1875 3.671875 24.1875 z M 3.671875 23.28125 Q 5.078125 23.28125 5.8828125 24.1953125 Q 6.6875 25.109375 6.6875 26.71875 Q 6.6875 28.328125 5.8828125 29.25 Q 5.078125 30.171875 3.671875 30.171875 Q 2.265625 30.171875 1.4609375 29.25 Q 0.65625 28.328125 0.65625 26.71875 Q 0.65625 25.109375 1.4609375 24.1953125 Q 2.265625 23.28125 3.671875 23.28125 z M 13.5625 24.703125 Q 13.96875 23.96875 14.53125 23.625 Q 15.09375 23.28125 15.859375 23.28125 Q 16.890625 23.28125 17.4453125 24 Q 18 24.71875 18 26.03125 L 18 30 L 16.921875 30 L 16.921875 26.078125 Q 16.921875 25.125 16.5859375 24.671875 Q 16.25 24.21875 15.5625 24.21875 Q 14.71875 24.21875 14.234375 24.7734375 Q 13.75 25.328125 13.75 26.296875 L 13.75 30 L 12.671875 30 L 12.671875 26.078125 Q 12.671875 25.125 12.3359375 24.671875 Q 12 24.21875 11.296875 24.21875 Q 10.46875 24.21875 9.984375 24.7734375 Q 9.5 25.328125 9.5 26.296875 L 9.5 30 L 8.421875 30 L 8.421875 23.4375 L 9.5 23.4375 L 9.5 24.453125 Q 9.875 23.859375 10.390625 23.5703125 Q 10.90625 23.28125 11.609375 23.28125 Q 12.328125 23.28125 12.828125 23.640625 Q 13.328125 24 13.5625 24.703125 z M 25.78125 26.453125 L 25.78125 26.96875 L 20.8125 26.96875 Q 20.890625 28.09375 21.4921875 28.671875 Q 22.09375 29.25 23.15625 29.25 Q 23.78125 29.25 24.3671875 29.1015625 Q 24.953125 28.953125 25.53125 28.640625 L 25.53125 29.671875 Q 24.9375 29.90625 24.328125 30.0390625 Q 23.71875 30.171875 23.09375 30.171875 Q 21.53125 30.171875 20.609375 29.2578125 Q 19.6875 28.34375 19.6875 26.78125 Q 19.6875 25.171875 20.5625 24.2265625 Q 21.4375 23.28125 22.90625 23.28125 Q 24.234375 23.28125 25.0078125 24.1328125 Q 25.78125 24.984375 25.78125 26.453125 z M 24.703125 26.125 Q 24.6875 25.25 24.203125 24.71875 Q 23.71875 24.1875 22.921875 24.1875 Q 22.015625 24.1875 21.4765625 24.703125 Q 20.9375 25.21875 20.859375 26.140625 L 24.703125 26.125 z M 31.859375 26.640625 Q 31.859375 25.46875 31.375 24.828125 Q 30.890625 24.1875 30.015625 24.1875 Q 29.15625 24.1875 28.671875 24.828125 Q 28.1875 25.46875 28.1875 26.640625 Q 28.1875 27.8125 28.671875 28.453125 Q 29.15625 29.09375 30.015625 29.09375 Q 30.890625 29.09375 31.375 28.453125 Q 31.859375 27.8125 31.859375 26.640625 z M 32.9375 29.1875 Q 32.9375 30.859375 32.1953125 31.6796875 Q 31.453125 32.5 29.90625 32.5 Q 29.34375 32.5 28.8359375 32.4140625 Q 28.328125 32.328125 27.859375 32.15625 L 27.859375 31.109375 Q 28.328125 31.359375 28.796875 31.484375 Q 29.265625 31.609375 29.734375 31.609375 Q 30.796875 31.609375 31.328125 31.0546875 Q 31.859375 30.5 31.859375 29.375 L 31.859375 28.84375 Q 31.515625 29.421875 31 29.7109375 Q 30.484375 30 29.75 30 Q 28.546875 30 27.8046875 29.078125 Q 27.0625 28.15625 27.0625 26.640625 Q 27.0625 25.125 27.8046875 24.203125 Q 28.546875 23.28125 29.75 23.28125 Q 30.484375 23.28125 31 23.5703125 Q 31.515625 23.859375 31.859375 24.4375 L 31.859375 23.4375 L 32.9375 23.4375 L 32.9375 29.1875 z M 38.140625 26.703125 Q 36.84375 26.703125 36.3359375 27 Q 35.828125 27.296875 35.828125 28.015625 Q 35.828125 28.59375 36.2109375 28.9296875 Q 36.59375 29.265625 37.234375 29.265625 Q 38.140625 29.265625 38.6796875 28.6328125 Q 39.21875 28 39.21875 26.9375 L 39.21875 26.703125 L 38.140625 26.703125 z M 40.296875 26.25 L 40.296875 30 L 39.21875 30 L 39.21875 29 Q 38.84375 29.59375 38.296875 29.8828125 Q 37.75 30.171875 36.953125 30.171875 Q 35.9375 30.171875 35.34375 29.6015625 Q 34.75 29.03125 34.75 28.09375 Q 34.75 26.984375 35.4921875 26.421875 Q 36.234375 25.859375 37.703125 25.859375 L 39.21875 25.859375 L 39.21875 25.75 Q 39.21875 25 38.7265625 24.59375 Q 38.234375 24.1875 37.359375 24.1875 Q 36.796875 24.1875 36.2578125 24.328125 Q 35.71875 24.46875 35.234375 24.734375 L 35.234375 23.734375 Q 35.828125 23.5 36.3828125 23.390625 Q 36.9375 23.28125 37.46875 23.28125 Q 38.890625 23.28125 39.59375 24.015625 Q 40.296875 24.75 40.296875 26.25 z M 42.859375 29 L 44.796875 29 L 44.796875 22.328125 L 42.6875 22.75 L 42.6875 21.671875 L 44.78125 21.25 L 45.96875 21.25 L 45.96875 29 L 47.90625 29 L 47.90625 30 L 42.859375 30 L 42.859375 29 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-22" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-22)">
+<g transform="matrix(1, 0, 0, 1, 96, 520)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-22)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 96, 520)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 96, 520)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 9.109375 26.703125 Q 7.8125 26.703125 7.3046875 27 Q 6.796875 27.296875 6.796875 28.015625 Q 6.796875 28.59375 7.1796875 28.9296875 Q 7.5625 29.265625 8.203125 29.265625 Q 9.109375 29.265625 9.6484375 28.6328125 Q 10.1875 28 10.1875 26.9375 L 10.1875 26.703125 L 9.109375 26.703125 z M 11.265625 26.25 L 11.265625 30 L 10.1875 30 L 10.1875 29 Q 9.8125 29.59375 9.265625 29.8828125 Q 8.71875 30.171875 7.921875 30.171875 Q 6.90625 30.171875 6.3125 29.6015625 Q 5.71875 29.03125 5.71875 28.09375 Q 5.71875 26.984375 6.4609375 26.421875 Q 7.203125 25.859375 8.671875 25.859375 L 10.1875 25.859375 L 10.1875 25.75 Q 10.1875 25 9.6953125 24.59375 Q 9.203125 24.1875 8.328125 24.1875 Q 7.765625 24.1875 7.2265625 24.328125 Q 6.6875 24.46875 6.203125 24.734375 L 6.203125 23.734375 Q 6.796875 23.5 7.3515625 23.390625 Q 7.90625 23.28125 8.4375 23.28125 Q 9.859375 23.28125 10.5625 24.015625 Q 11.265625 24.75 11.265625 26.25 z M 17.796875 24.4375 L 17.796875 20.875 L 18.875 20.875 L 18.875 30 L 17.796875 30 L 17.796875 29.015625 Q 17.453125 29.59375 16.9375 29.8828125 Q 16.421875 30.171875 15.6875 30.171875 Q 14.5 30.171875 13.75 29.21875 Q 13 28.265625 13 26.71875 Q 13 25.171875 13.75 24.2265625 Q 14.5 23.28125 15.6875 23.28125 Q 16.421875 23.28125 16.9375 23.5625 Q 17.453125 23.84375 17.796875 24.4375 z M 14.125 26.71875 Q 14.125 27.90625 14.609375 28.5859375 Q 15.09375 29.265625 15.953125 29.265625 Q 16.8125 29.265625 17.3046875 28.5859375 Q 17.796875 27.90625 17.796875 26.71875 Q 17.796875 25.53125 17.3046875 24.859375 Q 16.8125 24.1875 15.953125 24.1875 Q 15.09375 24.1875 14.609375 24.859375 Q 14.125 25.53125 14.125 26.71875 z M 24.078125 26.703125 Q 22.78125 26.703125 22.2734375 27 Q 21.765625 27.296875 21.765625 28.015625 Q 21.765625 28.59375 22.1484375 28.9296875 Q 22.53125 29.265625 23.171875 29.265625 Q 24.078125 29.265625 24.6171875 28.6328125 Q 25.15625 28 25.15625 26.9375 L 25.15625 26.703125 L 24.078125 26.703125 z M 26.234375 26.25 L 26.234375 30 L 25.15625 30 L 25.15625 29 Q 24.78125 29.59375 24.234375 29.8828125 Q 23.6875 30.171875 22.890625 30.171875 Q 21.875 30.171875 21.28125 29.6015625 Q 20.6875 29.03125 20.6875 28.09375 Q 20.6875 26.984375 21.4296875 26.421875 Q 22.171875 25.859375 23.640625 25.859375 L 25.15625 25.859375 L 25.15625 25.75 Q 25.15625 25 24.6640625 24.59375 Q 24.171875 24.1875 23.296875 24.1875 Q 22.734375 24.1875 22.1953125 24.328125 Q 21.65625 24.46875 21.171875 24.734375 L 21.171875 23.734375 Q 21.765625 23.5 22.3203125 23.390625 Q 22.875 23.28125 23.40625 23.28125 Q 24.828125 23.28125 25.53125 24.015625 Q 26.234375 24.75 26.234375 26.25 z M 33.171875 23.6875 L 33.171875 24.703125 Q 32.703125 24.4375 32.25 24.3125 Q 31.796875 24.1875 31.328125 24.1875 Q 30.265625 24.1875 29.6875 24.8515625 Q 29.109375 25.515625 29.109375 26.71875 Q 29.109375 27.921875 29.6875 28.5859375 Q 30.265625 29.25 31.328125 29.25 Q 31.796875 29.25 32.25 29.125 Q 32.703125 29 33.171875 28.75 L 33.171875 29.75 Q 32.71875 29.953125 32.234375 30.0625 Q 31.75 30.171875 31.203125 30.171875 Q 29.71875 30.171875 28.84375 29.2421875 Q 27.96875 28.3125 27.96875 26.71875 Q 27.96875 25.125 28.8515625 24.203125 Q 29.734375 23.28125 31.28125 23.28125 Q 31.765625 23.28125 32.2421875 23.3828125 Q 32.71875 23.484375 33.171875 23.6875 z M 40.515625 26.03125 L 40.515625 30 L 39.4375 30 L 39.4375 26.078125 Q 39.4375 25.140625 39.0703125 24.6796875 Q 38.703125 24.21875 37.984375 24.21875 Q 37.109375 24.21875 36.6015625 24.7734375 Q 36.09375 25.328125 36.09375 26.296875 L 36.09375 30 L 35.015625 30 L 35.015625 20.875 L 36.09375 20.875 L 36.09375 24.453125 Q 36.484375 23.859375 37.0078125 23.5703125 Q 37.53125 23.28125 38.21875 23.28125 Q 39.34375 23.28125 39.9296875 23.9765625 Q 40.515625 24.671875 40.515625 26.03125 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-23" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-23)">
+<g transform="matrix(1, 0, 0, 1, 78, 458)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-23)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 78, 458)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 78, 458)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 24.203125 21.578125 L 24.203125 23.4375 L 26.421875 23.4375 L 26.421875 24.28125 L 24.203125 24.28125 L 24.203125 27.84375 Q 24.203125 28.640625 24.421875 28.8671875 Q 24.640625 29.09375 25.3125 29.09375 L 26.421875 29.09375 L 26.421875 30 L 25.3125 30 Q 24.0625 30 23.5859375 29.53125 Q 23.109375 29.0625 23.109375 27.84375 L 23.109375 24.28125 L 22.328125 24.28125 L 22.328125 23.4375 L 23.109375 23.4375 L 23.109375 21.578125 L 24.203125 21.578125 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-24" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-24)">
+<g transform="matrix(1, 0, 0, 1, 508, 345)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-24)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 508, 345)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 508, 345)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 17.109375 26.703125 Q 15.8125 26.703125 15.3046875 27 Q 14.796875 27.296875 14.796875 28.015625 Q 14.796875 28.59375 15.1796875 28.9296875 Q 15.5625 29.265625 16.203125 29.265625 Q 17.109375 29.265625 17.6484375 28.6328125 Q 18.1875 28 18.1875 26.9375 L 18.1875 26.703125 L 17.109375 26.703125 z M 19.265625 26.25 L 19.265625 30 L 18.1875 30 L 18.1875 29 Q 17.8125 29.59375 17.265625 29.8828125 Q 16.71875 30.171875 15.921875 30.171875 Q 14.90625 30.171875 14.3125 29.6015625 Q 13.71875 29.03125 13.71875 28.09375 Q 13.71875 26.984375 14.4609375 26.421875 Q 15.203125 25.859375 16.671875 25.859375 L 18.1875 25.859375 L 18.1875 25.75 Q 18.1875 25 17.6953125 24.59375 Q 17.203125 24.1875 16.328125 24.1875 Q 15.765625 24.1875 15.2265625 24.328125 Q 14.6875 24.46875 14.203125 24.734375 L 14.203125 23.734375 Q 14.796875 23.5 15.3515625 23.390625 Q 15.90625 23.28125 16.4375 23.28125 Q 17.859375 23.28125 18.5625 24.015625 Q 19.265625 24.75 19.265625 26.25 z M 22.640625 29 L 26.78125 29 L 26.78125 30 L 21.21875 30 L 21.21875 29 Q 21.890625 28.3125 23.0546875 27.1328125 Q 24.21875 25.953125 24.515625 25.609375 Q 25.09375 24.984375 25.3203125 24.5390625 Q 25.546875 24.09375 25.546875 23.671875 Q 25.546875 22.96875 25.0546875 22.53125 Q 24.5625 22.09375 23.78125 22.09375 Q 23.21875 22.09375 22.6015625 22.28125 Q 21.984375 22.46875 21.28125 22.875 L 21.28125 21.671875 Q 22 21.390625 22.6171875 21.2421875 Q 23.234375 21.09375 23.75 21.09375 Q 25.109375 21.09375 25.921875 21.7734375 Q 26.734375 22.453125 26.734375 23.59375 Q 26.734375 24.125 26.53125 24.609375 Q 26.328125 25.09375 25.796875 25.75 Q 25.640625 25.921875 24.859375 26.734375 Q 24.078125 27.546875 22.640625 29 z M 29.46875 29 L 31.40625 29 L 31.40625 22.328125 L 29.296875 22.75 L 29.296875 21.671875 L 31.390625 21.25 L 32.578125 21.25 L 32.578125 29 L 34.515625 29 L 34.515625 30 L 29.46875 30 L 29.46875 29 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-25" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-25)">
+<g transform="matrix(1, 0, 0, 1, 157, 562)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-25)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 157, 562)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 157, 562)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 6.671875 24.1875 Q 5.8125 24.1875 5.3046875 24.8671875 Q 4.796875 25.546875 4.796875 26.71875 Q 4.796875 27.90625 5.296875 28.578125 Q 5.796875 29.25 6.671875 29.25 Q 7.53125 29.25 8.0390625 28.5703125 Q 8.546875 27.890625 8.546875 26.71875 Q 8.546875 25.5625 8.0390625 24.875 Q 7.53125 24.1875 6.671875 24.1875 z M 6.671875 23.28125 Q 8.078125 23.28125 8.8828125 24.1953125 Q 9.6875 25.109375 9.6875 26.71875 Q 9.6875 28.328125 8.8828125 29.25 Q 8.078125 30.171875 6.671875 30.171875 Q 5.265625 30.171875 4.4609375 29.25 Q 3.65625 28.328125 3.65625 26.71875 Q 3.65625 25.109375 4.4609375 24.1953125 Q 5.265625 23.28125 6.671875 23.28125 z M 16.5625 24.703125 Q 16.96875 23.96875 17.53125 23.625 Q 18.09375 23.28125 18.859375 23.28125 Q 19.890625 23.28125 20.4453125 24 Q 21 24.71875 21 26.03125 L 21 30 L 19.921875 30 L 19.921875 26.078125 Q 19.921875 25.125 19.5859375 24.671875 Q 19.25 24.21875 18.5625 24.21875 Q 17.71875 24.21875 17.234375 24.7734375 Q 16.75 25.328125 16.75 26.296875 L 16.75 30 L 15.671875 30 L 15.671875 26.078125 Q 15.671875 25.125 15.3359375 24.671875 Q 15 24.21875 14.296875 24.21875 Q 13.46875 24.21875 12.984375 24.7734375 Q 12.5 25.328125 12.5 26.296875 L 12.5 30 L 11.421875 30 L 11.421875 23.4375 L 12.5 23.4375 L 12.5 24.453125 Q 12.875 23.859375 13.390625 23.5703125 Q 13.90625 23.28125 14.609375 23.28125 Q 15.328125 23.28125 15.828125 23.640625 Q 16.328125 24 16.5625 24.703125 z M 28.78125 26.453125 L 28.78125 26.96875 L 23.8125 26.96875 Q 23.890625 28.09375 24.4921875 28.671875 Q 25.09375 29.25 26.15625 29.25 Q 26.78125 29.25 27.3671875 29.1015625 Q 27.953125 28.953125 28.53125 28.640625 L 28.53125 29.671875 Q 27.9375 29.90625 27.328125 30.0390625 Q 26.71875 30.171875 26.09375 30.171875 Q 24.53125 30.171875 23.609375 29.2578125 Q 22.6875 28.34375 22.6875 26.78125 Q 22.6875 25.171875 23.5625 24.2265625 Q 24.4375 23.28125 25.90625 23.28125 Q 27.234375 23.28125 28.0078125 24.1328125 Q 28.78125 24.984375 28.78125 26.453125 z M 27.703125 26.125 Q 27.6875 25.25 27.203125 24.71875 Q 26.71875 24.1875 25.921875 24.1875 Q 25.015625 24.1875 24.4765625 24.703125 Q 23.9375 25.21875 23.859375 26.140625 L 27.703125 26.125 z M 34.859375 26.640625 Q 34.859375 25.46875 34.375 24.828125 Q 33.890625 24.1875 33.015625 24.1875 Q 32.15625 24.1875 31.671875 24.828125 Q 31.1875 25.46875 31.1875 26.640625 Q 31.1875 27.8125 31.671875 28.453125 Q 32.15625 29.09375 33.015625 29.09375 Q 33.890625 29.09375 34.375 28.453125 Q 34.859375 27.8125 34.859375 26.640625 z M 35.9375 29.1875 Q 35.9375 30.859375 35.1953125 31.6796875 Q 34.453125 32.5 32.90625 32.5 Q 32.34375 32.5 31.8359375 32.4140625 Q 31.328125 32.328125 30.859375 32.15625 L 30.859375 31.109375 Q 31.328125 31.359375 31.796875 31.484375 Q 32.265625 31.609375 32.734375 31.609375 Q 33.796875 31.609375 34.328125 31.0546875 Q 34.859375 30.5 34.859375 29.375 L 34.859375 28.84375 Q 34.515625 29.421875 34 29.7109375 Q 33.484375 30 32.75 30 Q 31.546875 30 30.8046875 29.078125 Q 30.0625 28.15625 30.0625 26.640625 Q 30.0625 25.125 30.8046875 24.203125 Q 31.546875 23.28125 32.75 23.28125 Q 33.484375 23.28125 34 23.5703125 Q 34.515625 23.859375 34.859375 24.4375 L 34.859375 23.4375 L 35.9375 23.4375 L 35.9375 29.1875 z M 41.140625 26.703125 Q 39.84375 26.703125 39.3359375 27 Q 38.828125 27.296875 38.828125 28.015625 Q 38.828125 28.59375 39.2109375 28.9296875 Q 39.59375 29.265625 40.234375 29.265625 Q 41.140625 29.265625 41.6796875 28.6328125 Q 42.21875 28 42.21875 26.9375 L 42.21875 26.703125 L 41.140625 26.703125 z M 43.296875 26.25 L 43.296875 30 L 42.21875 30 L 42.21875 29 Q 41.84375 29.59375 41.296875 29.8828125 Q 40.75 30.171875 39.953125 30.171875 Q 38.9375 30.171875 38.34375 29.6015625 Q 37.75 29.03125 37.75 28.09375 Q 37.75 26.984375 38.4921875 26.421875 Q 39.234375 25.859375 40.703125 25.859375 L 42.21875 25.859375 L 42.21875 25.75 Q 42.21875 25 41.7265625 24.59375 Q 41.234375 24.1875 40.359375 24.1875 Q 39.796875 24.1875 39.2578125 24.328125 Q 38.71875 24.46875 38.234375 24.734375 L 38.234375 23.734375 Q 38.828125 23.5 39.3828125 23.390625 Q 39.9375 23.28125 40.46875 23.28125 Q 41.890625 23.28125 42.59375 24.015625 Q 43.296875 24.75 43.296875 26.25 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-26" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-26)">
+<g transform="matrix(1, 0, 0, 1, 63, 135)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-26)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 63, 135)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 63, 135)">
+<clipPath id="clip1">
+  <path d="M 0 0 L 0 50 L 50 50 L 50 0 z"/>
+</clipPath>
+<g clip-path="url(#clip1)">
+<image x="0" y="0" width="50" height="50" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADR0lEQVR42u2YbWiOURjHn8f2eFma
+aIRQoi0N8wHhg5ZP9sEXH0xellZskfLStCIlShF5L0/kJbKEL0ibvGwfhmgiqeGLl2VqXpa3bHj8
+r7qeujqd+zznnNtSOnf9Wu0553+d/33Odc657kQmk0n8DySCkWAkGAlGgpFgJBgJRvpgIIlEPzAa
+JPvUCJ6poBacBi/AB9AMDoFyz8GPAHvBXfAVZFj3KtgMZv01I3jywVEOYuIiGG9pIAXWg08Wujtp
+tmIZwTMM3LQIluULmG1h4pqDJnEZFHoZwTMKPHcMmF0akyM0k+CMhybxlJaij5GDngGJDjBOo7nH
+om8X+BbxW9rJCO8e3zVCbeAE2ACWgHrOnw5N20ZFs9ww+NdgBZgg8rKM8+izaPcLTHExsl8J9B5U
+GmZvAKgBb5R+i8XAnkSYOA+GGrRLwCPRvsnKCG+JcjYe0gxZ7kYjwX3R9y0YAtZFmDhuqVsIOkW/
+Chsj80WHXjDN8WwooLcmNBpAt8YEzVCBg2616HvAxshq0WGX50E3HLwz5AQdfqWOmkmxPJtsjOwW
+AcfGuHIsMBip99Q8xv1f2hi5wI27Y96disS1Q92aB3lq1rHGb3VZ6hq3cePWmEaizoyaGJoLhU6Z
+rZErMQKOiTiHntFWHEN3jdAqzWXkHDdsjxEwHTEb1TFn+YjQyrm0tomtN+URrJj76ow029xkDdot
+rNNpk+xLReB5joH6g3s57lKbPE3M4STX5q+uwwwR9LHLmqaDKmLw8sb7gw5dRxP5PJasxlkbIynl
++r7RMlhlhInb/HuD+F8PzbzDLB9WNKtsL41ym6Pp3B61tvHkcV791Jigtz9J3OG6FN2TphOe6hq+
+66k7X55LPdKiCNzg/CnmDwX0twrcMeTDDkVzmaYNGbrFy3Itb7FpzrUeTfvlroXVdJFcKr0WBRK9
+iIEa3VMxCrZ23WzY1Ox1XMy4BnwQVWPzUrzkofkRzI3zFaWCRWwD0g21KIcmFWKNDpqUFyWxv2vh
+mWio8OQXlC265WSYmZVcfJl0r5sqSJ8PdLQtz+Rqj8rTV/ym6La81baK1OgOBqs42akgawX7wCK6
+s4Vvv8FIMBKMBCPBSDASjAQj/54/TnXUfIx8cZAAAAAASUVORK5CYII="/>
+</g> <!-- clip1 -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-27" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-27)">
+<g transform="matrix(1, 0, 0, 1, 414, 178)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-27)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 414, 178)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 414, 178)">
+<clipPath id="clip2">
+  <path d="M 0 0 L 0 50 L 50 50 L 50 0 z"/>
+</clipPath>
+<g clip-path="url(#clip2)">
+<image x="0" y="0" width="50" height="50" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADR0lEQVR42u2YbWiOURjHn8f2eFma
+aIRQoi0N8wHhg5ZP9sEXH0xellZskfLStCIlShF5L0/kJbKEL0ibvGwfhmgiqeGLl2VqXpa3bHj8
+r7qeujqd+zznnNtSOnf9Wu0553+d/33Odc657kQmk0n8DySCkWAkGAlGgpFgJBgJRvpgIIlEPzAa
+JPvUCJ6poBacBi/AB9AMDoFyz8GPAHvBXfAVZFj3KtgMZv01I3jywVEOYuIiGG9pIAXWg08Wujtp
+tmIZwTMM3LQIluULmG1h4pqDJnEZFHoZwTMKPHcMmF0akyM0k+CMhybxlJaij5GDngGJDjBOo7nH
+om8X+BbxW9rJCO8e3zVCbeAE2ACWgHrOnw5N20ZFs9ww+NdgBZgg8rKM8+izaPcLTHExsl8J9B5U
+GmZvAKgBb5R+i8XAnkSYOA+GGrRLwCPRvsnKCG+JcjYe0gxZ7kYjwX3R9y0YAtZFmDhuqVsIOkW/
+Chsj80WHXjDN8WwooLcmNBpAt8YEzVCBg2616HvAxshq0WGX50E3HLwz5AQdfqWOmkmxPJtsjOwW
+AcfGuHIsMBip99Q8xv1f2hi5wI27Y96disS1Q92aB3lq1rHGb3VZ6hq3cePWmEaizoyaGJoLhU6Z
+rZErMQKOiTiHntFWHEN3jdAqzWXkHDdsjxEwHTEb1TFn+YjQyrm0tomtN+URrJj76ow029xkDdot
+rNNpk+xLReB5joH6g3s57lKbPE3M4STX5q+uwwwR9LHLmqaDKmLw8sb7gw5dRxP5PJasxlkbIynl
++r7RMlhlhInb/HuD+F8PzbzDLB9WNKtsL41ym6Pp3B61tvHkcV791Jigtz9J3OG6FN2TphOe6hq+
+66k7X55LPdKiCNzg/CnmDwX0twrcMeTDDkVzmaYNGbrFy3Itb7FpzrUeTfvlroXVdJFcKr0WBRK9
+iIEa3VMxCrZ23WzY1Ox1XMy4BnwQVWPzUrzkofkRzI3zFaWCRWwD0g21KIcmFWKNDpqUFyWxv2vh
+mWio8OQXlC265WSYmZVcfJl0r5sqSJ8PdLQtz+Rqj8rTV/ym6La81baK1OgOBqs42akgawX7wCK6
+s4Vvv8FIMBKMBCPBSDASjAQj/54/TnXUfIx8cZAAAAAASUVORK5CYII="/>
+</g> <!-- clip2 -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-28" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-28)">
+<g transform="matrix(1, 0, 0, 1, 445, 402)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-28)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 445, 402)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 445, 402)">
+<clipPath id="clip3">
+  <path d="M 0 0 L 0 50 L 50 50 L 50 0 z"/>
+</clipPath>
+<g clip-path="url(#clip3)">
+<image x="0" y="0" width="50" height="50" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADR0lEQVR42u2YbWiOURjHn8f2eFma
+aIRQoi0N8wHhg5ZP9sEXH0xellZskfLStCIlShF5L0/kJbKEL0ibvGwfhmgiqeGLl2VqXpa3bHj8
+r7qeujqd+zznnNtSOnf9Wu0553+d/33Odc657kQmk0n8DySCkWAkGAlGgpFgJBgJRvpgIIlEPzAa
+JPvUCJ6poBacBi/AB9AMDoFyz8GPAHvBXfAVZFj3KtgMZv01I3jywVEOYuIiGG9pIAXWg08Wujtp
+tmIZwTMM3LQIluULmG1h4pqDJnEZFHoZwTMKPHcMmF0akyM0k+CMhybxlJaij5GDngGJDjBOo7nH
+om8X+BbxW9rJCO8e3zVCbeAE2ACWgHrOnw5N20ZFs9ww+NdgBZgg8rKM8+izaPcLTHExsl8J9B5U
+GmZvAKgBb5R+i8XAnkSYOA+GGrRLwCPRvsnKCG+JcjYe0gxZ7kYjwX3R9y0YAtZFmDhuqVsIOkW/
+Chsj80WHXjDN8WwooLcmNBpAt8YEzVCBg2616HvAxshq0WGX50E3HLwz5AQdfqWOmkmxPJtsjOwW
+AcfGuHIsMBip99Q8xv1f2hi5wI27Y96disS1Q92aB3lq1rHGb3VZ6hq3cePWmEaizoyaGJoLhU6Z
+rZErMQKOiTiHntFWHEN3jdAqzWXkHDdsjxEwHTEb1TFn+YjQyrm0tomtN+URrJj76ow029xkDdot
+rNNpk+xLReB5joH6g3s57lKbPE3M4STX5q+uwwwR9LHLmqaDKmLw8sb7gw5dRxP5PJasxlkbIynl
++r7RMlhlhInb/HuD+F8PzbzDLB9WNKtsL41ym6Pp3B61tvHkcV791Jigtz9J3OG6FN2TphOe6hq+
+66k7X55LPdKiCNzg/CnmDwX0twrcMeTDDkVzmaYNGbrFy3Itb7FpzrUeTfvlroXVdJFcKr0WBRK9
+iIEa3VMxCrZ23WzY1Ox1XMy4BnwQVWPzUrzkofkRzI3zFaWCRWwD0g21KIcmFWKNDpqUFyWxv2vh
+mWio8OQXlC265WSYmZVcfJl0r5sqSJ8PdLQtz+Rqj8rTV/ym6La81baK1OgOBqs42akgawX7wCK6
+s4Vvv8FIMBKMBCPBSDASjAQj/54/TnXUfIx8cZAAAAAASUVORK5CYII="/>
+</g> <!-- clip3 -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-29" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-29)">
+<g transform="matrix(1, 0, 0, 1, 782, 408)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-29)">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 782, 408)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 49 25 C 49 11.745166004060959 38.254833995939045 1 25 1 C 11.745166004060962 1 1.0000000000000036 11.745166004060957 1 24.999999999999996 C 1 38.25483399593904 11.745166004060955 49 24.999999999999996 49 C 38.25483399593904 49 49 38.254833995939045 49 25.000000000000007"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 782, 408)">
+<clipPath id="clip4">
+  <path d="M 0 0 L 0 50 L 50 50 L 50 0 z"/>
+</clipPath>
+<g clip-path="url(#clip4)">
+<image x="0" y="0" width="50" height="50" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADR0lEQVR42u2YbWiOURjHn8f2eFma
+aIRQoi0N8wHhg5ZP9sEXH0xellZskfLStCIlShF5L0/kJbKEL0ibvGwfhmgiqeGLl2VqXpa3bHj8
+r7qeujqd+zznnNtSOnf9Wu0553+d/33Odc657kQmk0n8DySCkWAkGAlGgpFgJBgJRvpgIIlEPzAa
+JPvUCJ6poBacBi/AB9AMDoFyz8GPAHvBXfAVZFj3KtgMZv01I3jywVEOYuIiGG9pIAXWg08Wujtp
+tmIZwTMM3LQIluULmG1h4pqDJnEZFHoZwTMKPHcMmF0akyM0k+CMhybxlJaij5GDngGJDjBOo7nH
+om8X+BbxW9rJCO8e3zVCbeAE2ACWgHrOnw5N20ZFs9ww+NdgBZgg8rKM8+izaPcLTHExsl8J9B5U
+GmZvAKgBb5R+i8XAnkSYOA+GGrRLwCPRvsnKCG+JcjYe0gxZ7kYjwX3R9y0YAtZFmDhuqVsIOkW/
+Chsj80WHXjDN8WwooLcmNBpAt8YEzVCBg2616HvAxshq0WGX50E3HLwz5AQdfqWOmkmxPJtsjOwW
+AcfGuHIsMBip99Q8xv1f2hi5wI27Y96disS1Q92aB3lq1rHGb3VZ6hq3cePWmEaizoyaGJoLhU6Z
+rZErMQKOiTiHntFWHEN3jdAqzWXkHDdsjxEwHTEb1TFn+YjQyrm0tomtN+URrJj76ow029xkDdot
+rNNpk+xLReB5joH6g3s57lKbPE3M4STX5q+uwwwR9LHLmqaDKmLw8sb7gw5dRxP5PJasxlkbIynl
++r7RMlhlhInb/HuD+F8PzbzDLB9WNKtsL41ym6Pp3B61tvHkcV791Jigtz9J3OG6FN2TphOe6hq+
+66k7X55LPdKiCNzg/CnmDwX0twrcMeTDDkVzmaYNGbrFy3Itb7FpzrUeTfvlroXVdJFcKr0WBRK9
+iIEa3VMxCrZ23WzY1Ox1XMy4BnwQVWPzUrzkofkRzI3zFaWCRWwD0g21KIcmFWKNDpqUFyWxv2vh
+mWio8OQXlC265WSYmZVcfJl0r5sqSJ8PdLQtz+Rqj8rTV/ym6La81baK1OgOBqs42akgawX7wCK6
+s4Vvv8FIMBKMBCPBSDASjAQj/54/TnXUfIx8cZAAAAAASUVORK5CYII="/>
+</g> <!-- clip4 -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-30" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-30)">
+<g transform="matrix(1, 0, 0, 1, 159, 140)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-30)">
+  <path d="M 0 0 L 50 0 L 50 50 L 0 50 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 159, 140)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 49.5 0.5 L 49.5 49.5 L 0.5 49.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 159, 140)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 18.453125 24.4375 L 18.453125 20.875 L 19.53125 20.875 L 19.53125 30 L 18.453125 30 L 18.453125 29.015625 Q 18.109375 29.59375 17.59375 29.8828125 Q 17.078125 30.171875 16.34375 30.171875 Q 15.15625 30.171875 14.40625 29.21875 Q 13.65625 28.265625 13.65625 26.71875 Q 13.65625 25.171875 14.40625 24.2265625 Q 15.15625 23.28125 16.34375 23.28125 Q 17.078125 23.28125 17.59375 23.5625 Q 18.109375 23.84375 18.453125 24.4375 z M 14.78125 26.71875 Q 14.78125 27.90625 15.265625 28.5859375 Q 15.75 29.265625 16.609375 29.265625 Q 17.46875 29.265625 17.9609375 28.5859375 Q 18.453125 27.90625 18.453125 26.71875 Q 18.453125 25.53125 17.9609375 24.859375 Q 17.46875 24.1875 16.609375 24.1875 Q 15.75 24.1875 15.265625 24.859375 Q 14.78125 25.53125 14.78125 26.71875 z M 25.921875 23.625 L 25.921875 24.65625 Q 25.46875 24.421875 24.9765625 24.3046875 Q 24.484375 24.1875 23.953125 24.1875 Q 23.15625 24.1875 22.75 24.4296875 Q 22.34375 24.671875 22.34375 25.171875 Q 22.34375 25.546875 22.6328125 25.7578125 Q 22.921875 25.96875 23.796875 26.15625 L 24.15625 26.25 Q 25.3125 26.484375 25.796875 26.9375 Q 26.28125 27.390625 26.28125 28.1875 Q 26.28125 29.109375 25.5546875 29.640625 Q 24.828125 30.171875 23.5625 30.171875 Q 23.03125 30.171875 22.4609375 30.0703125 Q 21.890625 29.96875 21.265625 29.765625 L 21.265625 28.640625 Q 21.859375 28.953125 22.4375 29.109375 Q 23.015625 29.265625 23.59375 29.265625 Q 24.34375 29.265625 24.7578125 29.0078125 Q 25.171875 28.75 25.171875 28.265625 Q 25.171875 27.828125 24.875 27.59375 Q 24.578125 27.359375 23.578125 27.140625 L 23.203125 27.0625 Q 22.203125 26.84375 21.7578125 26.40625 Q 21.3125 25.96875 21.3125 25.21875 Q 21.3125 24.28125 21.96875 23.78125 Q 22.625 23.28125 23.828125 23.28125 Q 24.421875 23.28125 24.953125 23.3671875 Q 25.484375 23.453125 25.921875 23.625 z M 28.34375 29 L 30.28125 29 L 30.28125 22.328125 L 28.171875 22.75 L 28.171875 21.671875 L 30.265625 21.25 L 31.453125 21.25 L 31.453125 29 L 33.390625 29 L 33.390625 30 L 28.34375 30 L 28.34375 29 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-31" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-31)">
+<g transform="matrix(1, 0, 0, 1, 131, 157)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-31)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 131, 157)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-32" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-32)">
+<g transform="matrix(1, 0, 0, 1, 227, 163)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-32)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 227, 163)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-33" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-33)">
+<g transform="matrix(1, 0, 0, 1, 511, 183)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-33)">
+  <path d="M 0 0 L 50 0 L 50 50 L 0 50 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 511, 183)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 49.5 0.5 L 49.5 49.5 L 0.5 49.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 511, 183)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 18.453125 24.4375 L 18.453125 20.875 L 19.53125 20.875 L 19.53125 30 L 18.453125 30 L 18.453125 29.015625 Q 18.109375 29.59375 17.59375 29.8828125 Q 17.078125 30.171875 16.34375 30.171875 Q 15.15625 30.171875 14.40625 29.21875 Q 13.65625 28.265625 13.65625 26.71875 Q 13.65625 25.171875 14.40625 24.2265625 Q 15.15625 23.28125 16.34375 23.28125 Q 17.078125 23.28125 17.59375 23.5625 Q 18.109375 23.84375 18.453125 24.4375 z M 14.78125 26.71875 Q 14.78125 27.90625 15.265625 28.5859375 Q 15.75 29.265625 16.609375 29.265625 Q 17.46875 29.265625 17.9609375 28.5859375 Q 18.453125 27.90625 18.453125 26.71875 Q 18.453125 25.53125 17.9609375 24.859375 Q 17.46875 24.1875 16.609375 24.1875 Q 15.75 24.1875 15.265625 24.859375 Q 14.78125 25.53125 14.78125 26.71875 z M 25.921875 23.625 L 25.921875 24.65625 Q 25.46875 24.421875 24.9765625 24.3046875 Q 24.484375 24.1875 23.953125 24.1875 Q 23.15625 24.1875 22.75 24.4296875 Q 22.34375 24.671875 22.34375 25.171875 Q 22.34375 25.546875 22.6328125 25.7578125 Q 22.921875 25.96875 23.796875 26.15625 L 24.15625 26.25 Q 25.3125 26.484375 25.796875 26.9375 Q 26.28125 27.390625 26.28125 28.1875 Q 26.28125 29.109375 25.5546875 29.640625 Q 24.828125 30.171875 23.5625 30.171875 Q 23.03125 30.171875 22.4609375 30.0703125 Q 21.890625 29.96875 21.265625 29.765625 L 21.265625 28.640625 Q 21.859375 28.953125 22.4375 29.109375 Q 23.015625 29.265625 23.59375 29.265625 Q 24.34375 29.265625 24.7578125 29.0078125 Q 25.171875 28.75 25.171875 28.265625 Q 25.171875 27.828125 24.875 27.59375 Q 24.578125 27.359375 23.578125 27.140625 L 23.203125 27.0625 Q 22.203125 26.84375 21.7578125 26.40625 Q 21.3125 25.96875 21.3125 25.21875 Q 21.3125 24.28125 21.96875 23.78125 Q 22.625 23.28125 23.828125 23.28125 Q 24.421875 23.28125 24.953125 23.3671875 Q 25.484375 23.453125 25.921875 23.625 z M 29.15625 29 L 33.296875 29 L 33.296875 30 L 27.734375 30 L 27.734375 29 Q 28.40625 28.3125 29.5703125 27.1328125 Q 30.734375 25.953125 31.03125 25.609375 Q 31.609375 24.984375 31.8359375 24.5390625 Q 32.0625 24.09375 32.0625 23.671875 Q 32.0625 22.96875 31.5703125 22.53125 Q 31.078125 22.09375 30.296875 22.09375 Q 29.734375 22.09375 29.1171875 22.28125 Q 28.5 22.46875 27.796875 22.875 L 27.796875 21.671875 Q 28.515625 21.390625 29.1328125 21.2421875 Q 29.75 21.09375 30.265625 21.09375 Q 31.625 21.09375 32.4375 21.7734375 Q 33.25 22.453125 33.25 23.59375 Q 33.25 24.125 33.046875 24.609375 Q 32.84375 25.09375 32.3125 25.75 Q 32.15625 25.921875 31.375 26.734375 Q 30.59375 27.546875 29.15625 29 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-34" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-34)">
+<g transform="matrix(1, 0, 0, 1, 482, 200)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-34)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 482, 200)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-35" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-35)">
+<g transform="matrix(1, 0, 0, 1, 580, 205)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-35)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 580, 205)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-36" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-36)">
+<g transform="matrix(1, 0, 0, 1, 349, 401)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-36)">
+  <path d="M 0 0 L 50 0 L 50 50 L 0 50 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 349, 401)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 49.5 0.5 L 49.5 49.5 L 0.5 49.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 349, 401)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 19.453125 24.4375 L 19.453125 20.875 L 20.53125 20.875 L 20.53125 30 L 19.453125 30 L 19.453125 29.015625 Q 19.109375 29.59375 18.59375 29.8828125 Q 18.078125 30.171875 17.34375 30.171875 Q 16.15625 30.171875 15.40625 29.21875 Q 14.65625 28.265625 14.65625 26.71875 Q 14.65625 25.171875 15.40625 24.2265625 Q 16.15625 23.28125 17.34375 23.28125 Q 18.078125 23.28125 18.59375 23.5625 Q 19.109375 23.84375 19.453125 24.4375 z M 15.78125 26.71875 Q 15.78125 27.90625 16.265625 28.5859375 Q 16.75 29.265625 17.609375 29.265625 Q 18.46875 29.265625 18.9609375 28.5859375 Q 19.453125 27.90625 19.453125 26.71875 Q 19.453125 25.53125 18.9609375 24.859375 Q 18.46875 24.1875 17.609375 24.1875 Q 16.75 24.1875 16.265625 24.859375 Q 15.78125 25.53125 15.78125 26.71875 z M 21.96875 23.4375 L 23.109375 23.4375 L 25.15625 28.9375 L 27.21875 23.4375 L 28.359375 23.4375 L 25.890625 30 L 24.421875 30 L 21.96875 23.4375 z M 30.203125 29 L 32.140625 29 L 32.140625 22.328125 L 30.03125 22.75 L 30.03125 21.671875 L 32.125 21.25 L 33.3125 21.25 L 33.3125 29 L 35.25 29 L 35.25 30 L 30.203125 30 L 30.203125 29 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-37" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-37)">
+<g transform="matrix(1, 0, 0, 1, 321, 421)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-37)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 321, 421)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-38" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-38)">
+<g transform="matrix(1, 0, 0, 1, 417, 421)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-38)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 417, 421)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-39" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-39)">
+<g transform="matrix(1, 0, 0, 1, 693, 414)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-39)">
+  <path d="M 0 0 L 50 0 L 50 50 L 0 50 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 693, 414)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 49.5 0.5 L 49.5 49.5 L 0.5 49.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 693, 414)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 19.453125 24.4375 L 19.453125 20.875 L 20.53125 20.875 L 20.53125 30 L 19.453125 30 L 19.453125 29.015625 Q 19.109375 29.59375 18.59375 29.8828125 Q 18.078125 30.171875 17.34375 30.171875 Q 16.15625 30.171875 15.40625 29.21875 Q 14.65625 28.265625 14.65625 26.71875 Q 14.65625 25.171875 15.40625 24.2265625 Q 16.15625 23.28125 17.34375 23.28125 Q 18.078125 23.28125 18.59375 23.5625 Q 19.109375 23.84375 19.453125 24.4375 z M 15.78125 26.71875 Q 15.78125 27.90625 16.265625 28.5859375 Q 16.75 29.265625 17.609375 29.265625 Q 18.46875 29.265625 18.9609375 28.5859375 Q 19.453125 27.90625 19.453125 26.71875 Q 19.453125 25.53125 18.9609375 24.859375 Q 18.46875 24.1875 17.609375 24.1875 Q 16.75 24.1875 16.265625 24.859375 Q 15.78125 25.53125 15.78125 26.71875 z M 21.96875 23.4375 L 23.109375 23.4375 L 25.15625 28.9375 L 27.21875 23.4375 L 28.359375 23.4375 L 25.890625 30 L 24.421875 30 L 21.96875 23.4375 z M 31.015625 29 L 35.15625 29 L 35.15625 30 L 29.59375 30 L 29.59375 29 Q 30.265625 28.3125 31.4296875 27.1328125 Q 32.59375 25.953125 32.890625 25.609375 Q 33.46875 24.984375 33.6953125 24.5390625 Q 33.921875 24.09375 33.921875 23.671875 Q 33.921875 22.96875 33.4296875 22.53125 Q 32.9375 22.09375 32.15625 22.09375 Q 31.59375 22.09375 30.9765625 22.28125 Q 30.359375 22.46875 29.65625 22.875 L 29.65625 21.671875 Q 30.375 21.390625 30.9921875 21.2421875 Q 31.609375 21.09375 32.125 21.09375 Q 33.484375 21.09375 34.296875 21.7734375 Q 35.109375 22.453125 35.109375 23.59375 Q 35.109375 24.125 34.90625 24.609375 Q 34.703125 25.09375 34.171875 25.75 Q 34.015625 25.921875 33.234375 26.734375 Q 32.453125 27.546875 31.015625 29 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-40" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-40)">
+<g transform="matrix(1, 0, 0, 1, 669, 437)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-40)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 669, 437)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-41" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-41)">
+<g transform="matrix(1, 0, 0, 1, 757, 431)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-41)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 757, 431)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-42" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-42)">
+<g transform="matrix(1, 0, 0, 1, 188, 533)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-42)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 188, 533)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-43" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-43)">
+<g transform="matrix(1, 0, 0, 1, 142, 502)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-43)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 142, 502)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-44" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-44)">
+<g transform="matrix(1, 0, 0, 1, 138, 449)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-44)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 138, 449)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-45" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-45)">
+<g transform="matrix(1, 0, 0, 1, 404, 343)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-45)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 404, 343)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-46" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-46)">
+<g transform="matrix(1, 0, 0, 1, 386, 427)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-46)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 386, 427)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-47" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-47)">
+<g transform="matrix(1, 0, 0, 1, 352, 446)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-47)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 352, 446)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-48" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-48)">
+<g transform="matrix(1, 0, 0, 1, 283, 453)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-48)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 283, 453)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-49" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-49)">
+<g transform="matrix(1, 0, 0, 1, 216, 228)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-49)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 216, 228)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-50" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-50)">
+<g transform="matrix(1, 0, 0, 1, 289, 344)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-50)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 289, 344)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-51" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-51)">
+<g transform="matrix(1, 0, 0, 1, 725, 432)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-51)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 725, 432)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-52" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-52)">
+<g transform="matrix(1, 0, 0, 1, 724, 449)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-52)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 724, 449)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-53" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-53)">
+<g transform="matrix(1, 0, 0, 1, 629, 318)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-53)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 629, 318)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-54" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-54)">
+<g transform="matrix(1, 0, 0, 1, 572, 270)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-54)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 572, 270)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-55" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-55)">
+<g transform="matrix(1, 0, 0, 1, 369, 311)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-55)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 369, 311)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-56" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-56)">
+<g transform="matrix(1, 0, 0, 1, 370, 245)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-56)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 370, 245)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-57" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-57)">
+<g transform="matrix(1, 0, 0, 1, 588, 275)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-57)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 588, 275)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-58" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-58)">
+<g transform="matrix(1, 0, 0, 1, 596, 100)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-58)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 596, 100)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-59" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-59)">
+<g transform="matrix(1, 0, 0, 1, 374, 83)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-59)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 374, 83)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-60" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-60)">
+<g transform="matrix(1, 0, 0, 1, 783, 186)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-60)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 783, 186)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+<defs>
+  <linearGradient id="gradient-61" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse" spreadMethod="pad" >
+    <stop offset="0" stop-color="#fffec3" opacity-stop="1.0" />
+    <stop offset="1" stop-color="#fffd57" opacity-stop="1.0" />
+  </linearGradient>
+</defs>
+<g stroke="url(#gradient-61)">
+<g transform="matrix(1, 0, 0, 1, 646, 375)">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="url(#gradient-61)">
+  <path d="M 0 0 L 10 0 L 10 10 L 0 10 L 0 0 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+<g transform="matrix(1, 0, 0, 1, 646, 375)">
+<g fill="none" stroke-opacity="1" stroke="#808080">
+  <path d="M 0.5 0.5 L 9.5 0.5 L 9.5 9.5 L 0.5 9.5 L 0.5 0.5 z"/>
+</g> <!-- drawing style -->
+</g> <!-- transform -->
+</g> <!-- color -->
+</g> <!-- default stroke -->
+</svg> <!-- bounding box -->
